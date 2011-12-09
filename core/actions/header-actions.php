@@ -186,9 +186,7 @@ function chimps_link_rel() {
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/960/reset.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/960/text.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/grid.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/text.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
