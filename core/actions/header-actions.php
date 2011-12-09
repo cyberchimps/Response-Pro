@@ -185,6 +185,11 @@ function chimps_link_rel() {
 	}?>
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/ie.css" type="text/css" media="screen" /><![endif]-->
+	
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/1140.css" type="text/css" />
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/text.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
