@@ -27,9 +27,10 @@
 
 function ifeature_header_standard_content() {
 ?>
-	<div class="container_12">
+	<div class="container">
+		<div class="row">
 		
-			<div class="grid_6">
+			<div class="sixcol">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
@@ -38,7 +39,7 @@ function ifeature_header_standard_content() {
 				
 			</div>	
 			
-			<div class="grid_6">
+			<div class="sixcol last">
 			
 			
 				<!-- Begin @Core header social icon hook -->
@@ -46,11 +47,9 @@ function ifeature_header_standard_content() {
 				<!-- End @Core header contact social icon hook -->
 				
 			</div>	
+		</div><!--end row-->	
+	</div><!--end container-->
 		
-	</div><!--end container 12-->
-		
-	<div class='clear'>&nbsp;</div>
-
 <?php
 }
 

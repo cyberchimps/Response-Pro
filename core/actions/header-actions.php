@@ -384,7 +384,7 @@ function chimps_nav() {
 	
 	?>
 	
-	<div class="container_12">
+	<div class="container">
 
 	<div class="grid_12" id="imenu">
 
