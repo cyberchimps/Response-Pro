@@ -389,7 +389,7 @@ function chimps_nav() {
 	
 	<div class="container">
 
-	<div class="grid_12" id="imenu">
+	<div class="twelvecol" class="row" id="imenu">
 
 		<div id="nav" class="<?php echo $grid; ?>">
 			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
@@ -401,7 +401,7 @@ function chimps_nav() {
     	?>
    		</div>
    		<?php if ($options->get($themeslug.'_hide_search') != "0"):?>
-		<div class="grid_2">
+		<div class="twocol">
 			<?php get_search_form(); ?>
 		</div>
 		<?php endif;?>
