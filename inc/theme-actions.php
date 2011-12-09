@@ -62,9 +62,10 @@ function ifeature_header_standard_content() {
 function ifeature_header_extra_content() {
 global $options, $themeslug;?>
 	
-	<div class="container_12">
+	<div class="container">
+		<div class="row">
 		
-		<div class="grid_6">
+		<div class="sixcol">
 				
 			<!-- Begin @Core header sitename hook -->
 				<?php chimps_header_sitename(); ?> 
@@ -72,7 +73,7 @@ global $options, $themeslug;?>
 				
 		</div>	
 			
-				<div id="header_contact" class="grid_6">
+				<div id="header_contact" class="sixcol last">
 				&nbsp;
 			<?php if ($options->get($themeslug.'_enable_header_contact') == '1'	): ?>
 
@@ -82,13 +83,13 @@ global $options, $themeslug;?>
 					<?php endif ; ?>
 		</div>	
 		
-	</div>
+		</div><!--end row-->	
+	</div><!--end container-->
 		
-	<div class='clear'>&nbsp;</div>
-		
-	<div class="container_12" id="head2">
+	<div class="container" id="head2">
+		<div class="row">
 				
-		<div class="grid_6">
+		<div class="sixcol">
 		&nbsp;
 			<?php if ($options->get($themeslug.'_show_description') == '1'	): ?>
 			<!-- Begin @Core header description hook -->
@@ -97,7 +98,7 @@ global $options, $themeslug;?>
 			<?php endif; ?>
 		</div>
 			
-		<div class="grid_6">
+		<div class="sixcol last">
 			
 			<!-- Begin @Core header social icon hook -->
 				<?php chimps_header_social_icons(); ?> 
@@ -105,9 +106,8 @@ global $options, $themeslug;?>
 				
 		</div>
 			
-	</div>
-		
-	<div class='clear'>&nbsp;</div>
+		</div><!--end row-->	
+	</div><!--end container-->
 
 <?php
 }
