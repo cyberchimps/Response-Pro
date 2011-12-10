@@ -14,9 +14,7 @@
 
 ?>
 
-<div class="container_12">
-
-	<div id="content" class="grid_12">
+	<div id="content" class="twelcol">
 		<div class="content_padding">
 		
 			<!-- Begin @Core before_404 hook content-->
@@ -33,10 +31,5 @@
       		
 		</div><!--end content_padding-->
 	</div><!--end content_left-->
-
-
-	
-</div><!--end content_wrap-->
-<div class='clear'>&nbsp;</div>
 
 <?php get_footer(); ?>

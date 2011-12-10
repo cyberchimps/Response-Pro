@@ -32,7 +32,6 @@
 
 get_header(); ?>
 
-<div class="container_12">
 <?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
 
 	
@@ -89,11 +88,5 @@ get_header(); ?>
 	<!--Begin @Core index after entry hook-->
 	<?php chimps_index_after_entry(); ?>
 	<!--End @Core index after entry hook-->
-
-
-
-</div><!--end container_12-->
-
-<div style="clear:both;"></div>
 
 <?php get_footer(); ?>

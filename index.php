@@ -14,34 +14,30 @@
 	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
 	
 	if ($sidebar == "1" OR $sidebar == "2" OR $blogsidebar == 'two-right' OR $blogsidebar == 'right-left' ) {
-		$content_grid = 'grid_6';
+		$content_grid = 'sixcol';
 	}
 	
 	elseif ($sidebar == "3" OR $blogsidebar == 'none' ) {
-		$content_grid = 'grid_12';
+		$content_grid = 'twelvecol';
 	}
 	
 	else {
-		$content_grid = 'grid_8';
+		$content_grid = 'eightcol';
 	}
 
 ?>
 
 <?php get_header(); ?>
 
-<div class="container_12">
-
-
-		<?php chimps_index_carousel_section() ?>	
-
+	<?php chimps_index_carousel_section() ?>	
 
 	<!--Begin @Core index entry hook-->
 		<?php chimps_index_before_entry(); ?>
 	<!--End @Core index entry hook-->
 
-		<div id="content" class="<?php echo $content_grid; ?>">
+	<div id="content" class="eightcol">
 		
-		<!--Begin @Core index entry hook-->
+	<!--Begin @Core index entry hook-->
 	<?php chimps_index_entry(); ?>
 	<!--End @Core index entry hook-->
 
@@ -95,11 +91,5 @@
 	<!--Begin @Core index after entry hook-->
 	<?php chimps_index_after_entry(); ?>
 	<!--End @Core index after entry hook-->
-
-	
-
-</div><!--end container_12-->
-
-<div class='clear'>&nbsp;</div>
 
 <?php get_footer(); ?>

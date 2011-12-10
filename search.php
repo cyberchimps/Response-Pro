@@ -12,9 +12,7 @@ get_header();
 
 ?>
 
-<div class="container_12">
-
-	<div id="content" class="grid_8">
+	<div id="content" class="eightcol">
 	<!-- Begin @Core before_search hook -->
 		<?php chimps_before_search(); ?>
 	<!-- End @Core before_search hook -->
@@ -29,12 +27,9 @@ get_header();
 		
 	</div>
 	
-	<div id="sidebar" class="grid_4">
-				<?php get_sidebar(); ?>
-		</div>
+	<div id="sidebar" class="fourcol last">
+		<?php get_sidebar(); ?>
+	</div>
 	
-
-</div><!--end content_wrap-->
-<div class="clear"></div>
 
 <?php get_footer(); ?>
