@@ -161,13 +161,10 @@ a:hover {color: #5ca9d6;}
 }
 
 .postbar {
-	margin: -3px -15px -10px -15px;
 	border-top: 1px #e5e5e5 solid;
 	border-radius: 0px 0px 4px 4px;
 	-moz-border-radius: 0px 0px 4px 4px;
 	padding: 0 10px 0 10px;
-	position: absolute;
-	width: 96.7%;
 	height: 22px;
 	background: #f8f8f8; /* Old browsers */
 	background: -moz-linear-gradient(top,  #f8f8f8 0%, #ededed 40%, #dddddd 100%); /* FF3.6+ */

@@ -79,19 +79,19 @@ function chimps_index_after_entry_sidebar() {
 	
 	
 	<?php if ($sidebar == "0" OR $blogsidebar == 'right' OR $blogsidebar == '' ): ?>
-	<div id="sidebar" class="grid_4">
+	<div id="sidebar" class="fourcol last">
 		<?php get_sidebar(); ?>
 	</div>
 	<?php endif;?>
 	
 	<?php if ($sidebar == "3" OR $blogsidebar == 'two-right' ): ?>
-	<div id="sidebar" class="grid_3">
+	<div id="sidebar" class="threecol">
 		<?php get_sidebar('left'); ?>
 	</div>
 	<?php endif;?> 
 	
 	<?php if ($sidebar == "2" OR $sidebar == "3" OR $blogsidebar == 'two-right' OR $blogsidebar == 'right-left' ): ?>
-	<div id="sidebar" class="grid_3">
+	<div id="sidebar" class="threecol">
 		<?php get_sidebar('right'); ?>
 	</div>
 	<?php endif;?> <?php 
