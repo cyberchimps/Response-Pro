@@ -161,6 +161,7 @@ a:hover {color: #5ca9d6;}
 }
 
 .postbar {
+	margin: -3px -15px -20px -15px;
 	border-top: 1px #e5e5e5 solid;
 	border-radius: 0px 0px 4px 4px;
 	-moz-border-radius: 0px 0px 4px 4px;
@@ -180,9 +181,9 @@ a:hover {color: #5ca9d6;}
 
 .prev-posts-single {text-align:left;padding:5px; margin-top: -10px; margin-bottom: 5px; margin-left: -5px; max-width:300px;}
 
-.comments {text-align: left;float: left;padding-top: 3px;font-size: 12px;}
+.comments {text-align: left;float: left;padding-top: 4px;font-size: 12px;}
 
-.share {text-align:right;float:right;}
+.share {text-align:right;float:right;padding-top: 2px;}
 
 .share a img {opacity:.8;}
 
