@@ -8,7 +8,6 @@
 	Version 3.0
 */
 
-
 /* Define global variables. */	
 
 	$themename = 'ifeature';
@@ -505,5 +504,7 @@ require_once ( get_template_directory() . '/inc/meta-box.php' );
 require_once ( get_template_directory() . '/inc/update.php' ); // Include automatic updater
 require_once ( get_template_directory() . '/inc/theme-hooks.php' ); // Include automatic updater
 require_once ( get_template_directory() . '/inc/theme-actions.php' ); // Include automatic updater
+
+remove_action ( 'chimps_afterfooter', 'chimps_afterfooter_menu' );
 
 ?>
