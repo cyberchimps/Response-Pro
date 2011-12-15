@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="row">
 		
-			<div class="ninecol">
+			<div class="eightcol">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
@@ -50,7 +50,7 @@
 				
 			</div>	
 			
-			<div class="threecol last">
+			<div class="fourcol last">
 				
 			<!-- Begin @Core header social icon hook -->
 				<?php chimps_header_social_icons(); ?> 
@@ -64,13 +64,13 @@
 	<div class="container">
 		<div class="row">
 		
-			<div class="ninecol">
+			<div class="eightcol">
 				
 				<?php chimps_header_site_description(); ?> 
 
 			</div>	
 			
-			<div class="threecol last">
+			<div class="fourcol last">
 				
 			<?php get_search_form(); ?>
 				
