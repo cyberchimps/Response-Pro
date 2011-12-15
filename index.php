@@ -37,7 +37,7 @@
 
 	<div id="content" class="eightcol">
 	
-	<div style="font-size:22px;border-bottom: 1px solid #bbb;padding: 3px;color:#444;">Blog</div>
+	<div class="page-titles">Blog</div>
 	
 	<!--Begin @Core index entry hook-->
 	<?php chimps_index_entry(); ?>

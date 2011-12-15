@@ -48,13 +48,13 @@ function chimps_page_section_content() {
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-			<div class="post_container">
+			<div class="page_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
 				<?php if ($hidetitle == ""): ?>
 				
 
-					<h2 class="posts_title"><?php the_title(); ?></h2>
+					<h2 class="page-titles"><?php the_title(); ?></h2>
 						<?php endif;?>
 
 					<div class="entry">

@@ -21,7 +21,7 @@ a{outline:none}
 
 .meta {color: #989898;font-size: 12px;font-weight: 500;padding-bottom: 10px;}
 
-.entry {}
+.entry {margin-top: 10px;}
 
 .entry p {clear: none;}
 
@@ -107,6 +107,8 @@ a:hover {color: #5ca9d6;}
 .searchform .searchsubmit {display:none;}
 
 /* Post Container Styling  */
+
+.page-titles {font-size:22px;border-bottom: 1px solid #bbb;padding: 3px;color:#444;}
 
 .post_container {
 	padding: 5px 15px 20px 15px;
@@ -199,7 +201,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;margin: 0 -10px 0 -10px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;}
+.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;}
+
 .widget-container ul{padding-top:10px; margin-left: 0px;}
 
 /* Blog and Post Styles */
