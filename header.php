@@ -37,12 +37,11 @@
 	<header id="head">
 		
 	<?php if ($options->get($themeslug.'_disable_header') != "0"):?>
-	
 
 	<div class="container">
 		<div class="row">
 		
-			<div class="fourcol">
+			<div class="ninecol">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
@@ -51,17 +50,26 @@
 				
 			</div>	
 			
-			<div class="eightcol last">
+			<div class="threecol last">
 				
-		<!-- Begin @Core navigation contact area hook -->
-			<?php chimps_navigation(); ?> 
-		<!-- End @Core navigation contact area hook -->
+			<!-- Begin @Core header social icon hook -->
+				<?php chimps_header_social_icons(); ?> 
+			<!-- End @Core header contact social icon hook -->	
 				
 			</div>	
 		</div><!--end row-->
 	</div><!--end container-->
+	
+	<div class="container">
+		
+		<!-- Begin @Core navigation contact area hook -->
+			<?php chimps_navigation(); ?> 
+		<!-- End @Core navigation contact area hook -->
+		
+	</div><!--end container-->
 		
 	<?php endif;?>
+
 
 	</header>
 		
