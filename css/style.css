@@ -112,13 +112,14 @@ a:hover {color: #5ca9d6;}
 
 .post_container {
 	padding: 5px 5px 20px 5px;
-	border-bottom: 1px solid #9ac8e2;
+	border-bottom: 1px solid #ddd;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
 .post_container:hover{
-background-color: #fff;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #9ac8e2;
 }
 
 .post_container ul {list-style: disc;margin-left: 21px;list-style-position: inside;}
@@ -229,8 +230,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 /* Footer  */
 
 #footer {
-	background: #222;
-	border-top: 2px solid #ccc;
+	background-image:url(../images/denim.png);
+	border-top: 2px solid #9ac8e2;
 }
 
 .footer-widgets {
