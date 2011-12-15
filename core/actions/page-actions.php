@@ -18,24 +18,23 @@ function chimps_page_section_content() {
 	$test = get_post_meta($post->ID, 'page_section_order' , true);
 	
 	if ($sidebar == "1" OR $sidebar == "2" ) {
-		$content_grid = 'grid_6';
+		$content_grid = 'sixcol';
 	}
 	
 	elseif ($sidebar == "3") {
-		$content_grid = 'grid_12';
+		$content_grid = 'twelvecol';
 	}
 	
 	else {
-		$content_grid = 'grid_8';
+		$content_grid = 'eightcol';
 	}
 
 
 
 ?>
-<div class="container_12">
 
 	<?php if ($sidebar == "2"): ?>
-		<div id="sidebar" class="grid_3">
+		<div id="sidebar" class="threecol">
 			<?php get_sidebar('left'); ?>
 		</div>
 	<?php endif;?>
@@ -43,7 +42,7 @@ function chimps_page_section_content() {
 	
 <?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
 		
-		<div id="content" class="<?php echo $content_grid; ?>">
+		<div id="content" class="eightcol">
 		
 		<?php chimps_page_content_slider(); ?>
 		
@@ -82,26 +81,23 @@ function chimps_page_section_content() {
 	</div><!--end content_left-->
 	
 	<?php if ($sidebar == "0" OR $sidebar == ""): ?>
-		<div id="sidebar" class="grid_4">
+		<div id="sidebar" class="fourcol last">
 			<?php get_sidebar(); ?>
 		</div>
 	<?php endif;?>
 	
 	<?php if ($sidebar == "1"): ?>
-		<div id="sidebar" class="grid_3">
+		<div id="sidebar" class="threecol last">
 			<?php get_sidebar('left'); ?>
 		</div>
 	<?php endif;?>
 	
 	<?php if ($sidebar == "1" OR $sidebar == "2"): ?>
-		<div id="sidebar" class="grid_3">
+		<div id="sidebar" class="threecol last">
 			<?php get_sidebar('right'); ?>
 		</div>
 	<?php endif;?>
 
-</div><!--end container_12-->
-
-<div class='clear'>&nbsp;</div>
 <?php
 }
 

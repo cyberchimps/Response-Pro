@@ -15,15 +15,15 @@
 	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
 	
 	if ($sidebar == "1" OR $sidebar == "2" OR $blogsidebar == 'two-right' OR $blogsidebar == 'right-left' ) {
-		$content_grid = 'grid_6';
+		$content_grid = 'sixcol';
 	}
 	
 	elseif ($sidebar == "3" OR $blogsidebar == 'none' ) {
-		$content_grid = 'grid_12';
+		$content_grid = 'twelvecol';
 	}
 	
 	else {
-		$content_grid = 'grid_8';
+		$content_grid = 'eightcol';
 	}
 
 
@@ -35,7 +35,7 @@ get_header(); ?>
 <?php if (function_exists('chimps_breadcrumbs')) chimps_breadcrumbs(); ?>
 
 	
-		<div id="content" class="<?php echo $content_grid; ?>">
+	<div id="content" class="eightcol">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			

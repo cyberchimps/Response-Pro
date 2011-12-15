@@ -59,6 +59,8 @@ add_action ('chimps_page_content_slider', 'chimps_page_slider_content' );
 
 ?>
 
+<div class="twelvecol">
+
 <?php
 	foreach(explode(",", $page_section_order) as $key) {
 		$fn = 'chimps_' . $key;
