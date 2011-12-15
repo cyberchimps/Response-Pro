@@ -63,11 +63,11 @@
 		
 	<?php endif;?>
 
-		</header>
+	</header>
 		
 <script type="text/javascript">jQuery(document).ready(function($) {$("ul").parent("li").addClass("parent"); });</script>		
 
-<div class="container"><div class="row"><!--main wrap-->	
+<div class="container" style="margin-top: 25px;"><div class="row"><!--main wrap-->	
 <!-- Begin @Core after_header hook -->
 	<?php chimps_after_header(); ?> 
 <!-- End @Core after_header hook -->

@@ -25,34 +25,6 @@
 
 
 
-function ifeature_header_standard_content() {
-?>
-	<div class="container">
-		<div class="row">
-		
-			<div class="sixcol">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php chimps_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-				
-			</div>	
-			
-			<div class="sixcol last">
-			
-			
-				<!-- Begin @Core header social icon hook -->
-					<?php chimps_header_social_icons(); ?> 
-				<!-- End @Core header contact social icon hook -->
-				
-			</div>	
-		</div><!--end row-->	
-	</div><!--end container-->
-		
-<?php
-}
-
 
 /**
 * Header content extra
