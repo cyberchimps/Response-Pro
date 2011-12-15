@@ -38,15 +38,31 @@
 		
 	<?php if ($options->get($themeslug.'_disable_header') != "0"):?>
 	
-		<!-- Begin @iFeature header content hook-->
-			<?php ifeature_header_content(); ?> 
-		<!-- End @iFeature header content hook -->	
-				
-	<?php endif;?>
 
+	<div class="container">
+		<div class="row">
+		
+			<div class="sixcol">
+				
+				<!-- Begin @Core header sitename hook -->
+					<?php chimps_header_sitename(); ?> 
+				<!-- End @Core header sitename hook -->
+			
+				
+			</div>	
+			
+			<div class="sixcol last">
+				
 		<!-- Begin @Core navigation contact area hook -->
 			<?php chimps_navigation(); ?> 
 		<!-- End @Core navigation contact area hook -->
+				
+			</div>	
+		</div><!--end row-->	
+	</div><!--end container-->
+		
+	<?php endif;?>
+
 		</header>
 		
 <script type="text/javascript">jQuery(document).ready(function($) {$("ul").parent("li").addClass("parent"); });</script>		
