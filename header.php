@@ -46,9 +46,6 @@
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
-				
-								<?php chimps_header_site_description(); ?> 
-
 			
 				
 			</div>	
@@ -61,6 +58,25 @@
 				
 			</div>	
 		</div><!--end row-->
+		
+	</div><!--end container-->
+	
+	<div class="container">
+		<div class="row">
+		
+			<div class="ninecol">
+				
+				<?php chimps_header_site_description(); ?> 
+
+			</div>	
+			
+			<div class="threecol last">
+				
+			<?php get_search_form(); ?>
+				
+			</div>	
+		</div><!--end row-->
+		
 	</div><!--end container-->
 	
 	<div class="container">

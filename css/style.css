@@ -72,15 +72,15 @@ a:hover {color: #5ca9d6;}
 /* Search Bar */
 
 .searchform {
-	-moz-border-radius: 15px; 
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	width: 160px;
 	padding: 0;
-	margin: 7px 5px 5px 10px;
 	height: 20px;
-	box-shadow:inset 0 0 1px #222;
 	background: #fff;
+	border: 1px solid #ccc;
+	float: right;
 }
 
 .center .searchform {float:none;}
