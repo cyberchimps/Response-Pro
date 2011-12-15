@@ -1,10 +1,9 @@
 /* Black */
 
-a {color: #555;}
+a {color: #666;}
 
-a:hover {color: #888;}
+a:hover {color: #9ac8e2;}
 
 #imenu	{
 	background: transparent;
-	margin-bottom: 15px;
 }

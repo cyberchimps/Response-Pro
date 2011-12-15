@@ -16,23 +16,6 @@ input[type=reset]{font-size: 12px;padding: 2px;margin-top: 5px;border: 1px solid
 a img{border:none}
 a{outline:none}
 
-#container {
-	margin-left: auto;
-	margin-right: auto;
-	width: 950px;
-	padding: 5px 15px 20px 15px;
-	border: 1px solid;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #BBB;
-	border-bottom: 1px solid #BBB;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow:inset 0 0 2px #ccc;
-	background: #fff;
-	margin-bottom: 15px;
-}
-
 /* Fonts  */
 
 
@@ -48,7 +31,7 @@ a:hover {color: #5ca9d6;}
 
 /* Header  */
 
-#head {margin-top: 15px;min-height:50px;}
+#head {margin-top: 15px;}
 
 #logo {margin-bottom: 5px;}
 
@@ -128,6 +111,7 @@ a:hover {color: #5ca9d6;}
 .post_container {
 	padding: 5px 15px 20px 15px;
 	border-bottom: 1px solid #9ac8e2;
+	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
@@ -147,7 +131,6 @@ a:hover {color: #5ca9d6;}
 	margin: -3px -15px -20px -15px;
 	padding: 0 10px 0 10px;
 	height: 22px;
-	background: #fff;
 }
 
 .next-posts-single {text-align:right;padding:5px; margin-top:-35px;}
@@ -219,7 +202,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;margin: 0 -10px 0 -10px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #aaa;}
+.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;margin: 0 -10px 0 -10px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;}
 .widget-container ul{padding-top:10px; margin-left: 0px;}
 
 /* Blog and Post Styles */

@@ -58,7 +58,8 @@
 		<!-- End @Core navigation contact area hook -->
 				
 			</div>	
-		</div><!--end row-->	
+		</div><!--end row-->
+		<hr>
 	</div><!--end container-->
 		
 	<?php endif;?>
