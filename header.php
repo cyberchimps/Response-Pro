@@ -46,6 +46,9 @@
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
+				
+								<?php chimps_header_site_description(); ?> 
+
 			
 				
 			</div>	
