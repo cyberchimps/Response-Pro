@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row">
 		
-			<div class="sixcol">
+			<div class="fourcol">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php chimps_header_sitename(); ?> 
@@ -51,7 +51,7 @@
 				
 			</div>	
 			
-			<div class="sixcol last">
+			<div class="eightcol last">
 				
 		<!-- Begin @Core navigation contact area hook -->
 			<?php chimps_navigation(); ?> 
