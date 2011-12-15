@@ -59,7 +59,6 @@
 				
 			</div>	
 		</div><!--end row-->
-		<hr>
 	</div><!--end container-->
 		
 	<?php endif;?>

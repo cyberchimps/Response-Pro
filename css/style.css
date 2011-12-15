@@ -120,11 +120,8 @@ a:hover {color: #5ca9d6;}
 .postformats {
 	float:right;
 	margin: -5px -15px 0 0px;
-	background: #dedede;
 	height: 46px;
 	width: 50px;
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
 }
 
 .postbar {
