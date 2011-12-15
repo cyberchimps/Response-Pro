@@ -127,9 +127,7 @@ a:hover {color: #5ca9d6;}
 
 .post_container {
 	padding: 5px 15px 20px 15px;
-	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #9ac8e2;
-	background: #fff;
 	margin-bottom: 15px;
 }
 
@@ -221,7 +219,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:24px;color:#444;text-shadow:none;padding:3px;margin: 0 -10px 0 -10px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #aaa;}
+.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;margin: 0 -10px 0 -10px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #aaa;}
 .widget-container ul{padding-top:10px; margin-left: 0px;}
 
 /* Blog and Post Styles */
