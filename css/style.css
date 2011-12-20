@@ -36,9 +36,9 @@ a:hover {color: #5ca9d6;}
 #logo {margin-bottom: 5px;}
 
 #headbar {
-	background-image:url(../images/bgnoise_lg-dark.png);
+	background-image:url(../images/roughcloth-dark.png);
 	margin-top: -15px;
-	border-bottom: 2px solid #ccc;
+	border-bottom: 2px solid #888;
 }
 
 /* Social Icons  */
@@ -53,7 +53,7 @@ a:hover {color: #5ca9d6;}
 
 /* Nav  */
 
-#nav{margin-top: 15px;border-top: 1px solid #bbb;border-bottom: 1px solid #bbb;position:relative;z-index:2000;}
+#nav{margin-top: 15px;border: 1px solid #bbb;border-bottom: 1px solid #bbb;position:relative;z-index:2000;background: url(../images/noise-dark.png);}
 #nav .parent > a, #nav .parent > a:hover{background-image:url(../images/arrow.png);background-position:right;background-repeat:no-repeat;}
 #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow-right.png);background-position:right;background-repeat:no-repeat;}
 #nav ul, #nav ul li{display:inline;list-style:none;padding:0;margin:0;}
@@ -215,7 +215,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;}
+.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;
+}
 
 .widget-container ul{padding-top:10px; margin-left: 0px;}
 
@@ -239,8 +240,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 /* Footer  */
 
 #footer {
-	background-image:url(../images/fake_brick.png);
-	border-top: 2px solid #9ac8e2;
+	background-image:url(../images/roughcloth-dark.png);
+	border-top: 2px solid #888;
 }
 
 .footer-widgets {
@@ -268,7 +269,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	width: 100%; 
 	background: black; 
 	color: white;
-	border-top: 2px solid #333;
+	border-top: 2px solid #222;
 }
 
 #afterfooterwrap {
