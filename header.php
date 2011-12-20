@@ -38,7 +38,25 @@
 		
 	<?php if ($options->get($themeslug.'_disable_header') != "0"):?>
 
-	<div class="container">
+	<div class="container" id="headbar">
+		<div class="row">
+		
+			<div class="eightcol" style="margin-top: 5px;">
+				
+				<?php chimps_header_site_description(); ?> 
+
+			</div>	
+			
+			<div class="fourcol last" style="margin-top: 5px;">
+				
+			<?php get_search_form(); ?>
+				
+			</div>	
+		</div><!--end row-->
+		
+	</div><!--end container-->
+
+	<div class="container" style="margin-top: 15px;">
 		<div class="row">
 		
 			<div class="eightcol">
@@ -55,24 +73,6 @@
 			<!-- Begin @Core header social icon hook -->
 				<?php chimps_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
-				
-			</div>	
-		</div><!--end row-->
-		
-	</div><!--end container-->
-	
-	<div class="container">
-		<div class="row">
-		
-			<div class="eightcol">
-				
-				<?php chimps_header_site_description(); ?> 
-
-			</div>	
-			
-			<div class="fourcol last">
-				
-			<?php get_search_form(); ?>
 				
 			</div>	
 		</div><!--end row-->

@@ -35,6 +35,12 @@ a:hover {color: #5ca9d6;}
 
 #logo {margin-bottom: 5px;}
 
+#headbar {
+	background-image:url(../images/bgnoise_lg-dark.png);
+	margin-top: -15px;
+	border-bottom: 2px solid #ccc;
+}
+
 /* Social Icons  */
 
 #social {margin-bottom: 5px;}
@@ -77,10 +83,12 @@ a:hover {color: #5ca9d6;}
 	border-radius: 3px;
 	width: 160px;
 	padding: 0;
-	height: 20px;
-	background: #fff;
+	height: 15px;
+	margin-bottom: 5px;
+	background: #333;
 	border: 1px solid #ccc;
 	float: right;
+	border: 1px solid #888;
 }
 
 .center .searchform {float:none;}
@@ -90,15 +98,16 @@ a:hover {color: #5ca9d6;}
 .searchform .s{
 	margin:0;
 	border: none;
-	margin: 3px 2px 2px 20px;
+	margin: 1px 2px 2px 20px;
 	font-size: 12px;
 	height: 14px;
 	width:	130px;
-	color: #333;
+	color: #aaa;
+	background: transparent;
 	overflow: hidden;
 }
 
-#magnify {float:left;position:absolute;margin: 5px 0 0 5px;}
+#magnify {float:left;position:absolute;margin: 2px 0 0 5px;}
 
 #magnify {margin: 0 0 0 5px\0/IE8+9; /* IE8+9  */}
 
@@ -230,7 +239,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 /* Footer  */
 
 #footer {
-	background-image:url(../images/denim.png);
+	background-image:url(../images/fake_brick.png);
 	border-top: 2px solid #9ac8e2;
 }
 
