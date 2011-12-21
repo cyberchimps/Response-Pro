@@ -22,6 +22,10 @@ a{outline:none}
 
 .meta a{color: #222;}
 
+#metalist ul{
+	margin-left: 0px;
+}
+
 #metalist li{
 	display: inline;
 	list-style-type: none;
