@@ -291,7 +291,7 @@ function add_menulink_color() {
 	global $themename, $themeslug, $options;
 
 	if (!$options->get($themeslug.'_menulink_color')) {
-		$sitelink = '#FFFFFF';
+		$sitelink = '#000';
 	}
 	
 	else{ 
