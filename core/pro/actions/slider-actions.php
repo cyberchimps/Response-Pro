@@ -208,7 +208,7 @@ echo "<div class='flex-container'>";
 	}
 
 	else {
-		$wordthumb = "h=$height&w=640";
+		$wordthumb = "h=$height&w=755";
 	}
 
 /* End define wordthumb. */
