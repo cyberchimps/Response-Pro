@@ -145,8 +145,6 @@ function chimps_index_loop_content($content) { ?>
 			</div><!--end format-icon-->
 			<?php endif; ?>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					<!--Call @Core Meta hook-->
-			<?php chimps_post_byline(); ?>
 				<?php
 				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1'  && !is_single()) {
  		 			echo '<div class="featured-image">';
@@ -166,6 +164,7 @@ function chimps_index_loop_content($content) { ?>
 						}
 					 ?>
 				</div><!--end entry-->
+				<?php chimps_post_byline(); ?>
 				
 				<div class='clear'>&nbsp;</div>
 			<?php	

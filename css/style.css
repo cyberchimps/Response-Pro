@@ -120,15 +120,15 @@ a:hover {color: #5ca9d6;}
 .page-titles {font-size:22px;border-bottom: 1px solid #bbb;padding: 3px;color:#444; margin-bottom: 10px;}
 
 .post_container {
-	padding: 5px 5px 20px 5px;
-	border-bottom: 1px solid #ddd;
+	background: #FDFDFD;
+	border: 1px solid #E6E6E6;
+	padding: 10px 15px 20px 15px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
 .post_container:hover{
-	background-color: #f8f8f8;
-	border-bottom: 1px solid #9ac8e2;
+	border: 1px solid #9ac8e2;
 }
 
 .post_container ul {list-style: disc;margin-left: 21px;list-style-position: inside;}
