@@ -324,11 +324,11 @@ add_action( 'save_post', 'custom_taxonomy_default', 100, 2 );
 
 function nivoslider(){
 	 
-	$path =  get_template_directory_uri() ."/core/library/ns";
+	$path =  get_template_directory_uri() ."/core/library/js";
 
 	$script = "
 		
-		<script type=\"text/javascript\" src=\"".$path."/jquery.nivo.slider.js\"></script>
+		<script type=\"text/javascript\" src=\"".$path."/jquery.flexslider.js\"></script>
 		";
 	
 	echo $script;
