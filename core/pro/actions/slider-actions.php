@@ -55,7 +55,7 @@ function chimps_blog_slider_content() {
 	
 
    
-echo "<div id='slider-wrapper'>";
+echo "<div class='flex-container'>";
 	
 /* End define variables. */	
 
@@ -254,7 +254,7 @@ echo "<div id='slider-wrapper'>";
 /* Establish post counter */  
   	
 	if (have_posts()) :
-	    $out = "<div id='slider' class='nivoSlider'>"; 
+	  $out = "<div class='flexslider'> <ul class='slides'>"; 
 	    $i = 0;
 
 	if ($options->get($themeslug.'_slider_posts_number') == '') {
@@ -392,23 +392,29 @@ echo "<div id='slider-wrapper'>";
 	       
 	     	/* End image/thumb */	
 
-	     	/* Markup for slides */
-
-	    	$out .= "<a href='$link'>	
-	    				<img src='$image' height='$height' width='$csWidth' title='$titlevar' rel='$thumbnail' alt='iFeaturePro' />
-	    					<span id='caption$i' class='nivo-html-caption'>
-                				<font size='4'>$title </font> <br />
+	   /* Markup for slides */
+			
+	    	$out .= "
+	    	<li>
+	    	<a href='$link'>	
+	    				<img src='$image' />
+	    					<p class='flex-caption'>
+                				$title <br />
                 				$text 
-                			</span>
+                			</p>
 	    				</a>
+	    				</li>
+	    			
 	    			";
+	    
 
-	    	/* End slide markup */
+	    	/* End slide markup */	
+
 	      	$i++;
 	      	endwhile;
 	      	
 	
-	      	$out .= "</div>";
+	      	$out .= "</ul> </div>";
 	      	
 	      	else:
 	      
@@ -494,44 +500,13 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
     
     $out .= <<<OUT
 	<script type="text/javascript">
-		
-	jQuery(document).ready(function($) {
-	$(window).load(function() {
-    $('#slider').nivoSlider({
-        effect:'$animation', // Specify sets like: 'fold,fade,sliceDown'
-        slices:15, // For slice animations
-        boxCols: 8, // For box animations
-        boxRows: 4, // For box animations
-        animSpeed:500, // Slide transition speed
-        pauseTime:'$delay', // How long each slide will show
-        startSlide:0, // Set starting Slide (0 index)
-        directionNav:$hidenavigation, // Next  Prev navigation
-        directionNavHide:$autohide, // Only show on hover
-        controlNavThumbs:true, // Use thumbnails for Control Nav
-        controlNavThumbsFromRel:true, // Use image rel for thumbs
-        controlNavThumbsSearch: '.jpg', // Replace this with...
-        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
-        keyboardNav:true, // Use left  right arrows
-        pauseOnHover:true, // Stop animation while hovering
-        manualAdvance:false, // Force manual transitions
-        captionOpacity:0.7, // Universal caption opacity
-        prevText: 'Prev', // Prev directionNav text
-        nextText: 'Next', // Next directionNav text
-        beforeChange: function(){}, // Triggers before a slide transition
-        afterChange: function(){}, // Triggers after a slide transition
-        slideshowEnd: function(){}, // Triggers after all slides have been shown
-        lastSlide: function(){}, // Triggers when last slide is shown
-        afterLoad: function(){} // Triggers when slider has loaded
-    });
-	$('#slider').each(function(){
-    var \$this = $(this), \$control = $(".nivo-controlNav", this);
-    \$control.css({left: (\$this.width() - \$control.width()) / 2}); 
-});
-});
-});
-
-</script>
-
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+				  animation: "slide",
+				  controlsContainer: ".flex-container"
+			  });
+			});
+		</script>
 OUT;
 
 /* End NivoSlider javascript */ 
@@ -541,11 +516,6 @@ echo $out;
 /* END */ 
 
 echo "</div>";
-
-?>
-<div class="slider_nav" style="width: <?php echo $csWidth ?>px; ">&nbsp;</div>
-<div class='clear'>&nbsp;</div>
-<?php
 
 }
 
@@ -785,7 +755,7 @@ function chimps_page_slider_content() { ?>
 /* Establish post counter */  
   	
 	if (have_posts()) :
-	    $out = "<div class='flexslider'>"; 
+	    $out = "<div class='flexslider'> <ul class='slides'>"; 
 	    $i = 0;
 
 
@@ -923,7 +893,7 @@ function chimps_page_slider_content() { ?>
 
 	     	/* Markup for slides */
 
-	    	$out .= "<ul class='slides'>
+	    	$out .= "
 	    	<li>
 	    	<a href='$link'>	
 	    				<img src='$image' />
@@ -933,14 +903,14 @@ function chimps_page_slider_content() { ?>
                 			</p>
 	    				</a>
 	    				</li>
-	    			</ul>
+	    			
 	    			";
 
 	    	/* End slide markup */	
 
 	      	$i++;
 	      	endwhile;
-	      	$out .= "</div>";
+	      	$out .= "</ul> </div>";
 	      	 
 	      	else:
 	      
