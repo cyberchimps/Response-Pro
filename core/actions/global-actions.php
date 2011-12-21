@@ -39,10 +39,14 @@ function chimps_post_byline_content() {
 	global $options, $themeslug; //call globals  
 	$hidden = $options->get($themeslug.'_hide_byline');?>
 	
-	<div class="meta">
-		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a><?php endif;?>
-		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
-		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>
+	<div class="meta" class="eightcol">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/meta/User.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '&nbsp;', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?>&nbsp;|&nbsp;
+		<img src="<?php echo get_template_directory_uri(); ?>/images/meta/Calendar.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( '&nbsp;', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a><?php endif;?>&nbsp;|&nbsp;
+		<img src="<?php echo get_template_directory_uri(); ?>/images/meta/DrawerOpen.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '&nbsp;', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>&nbsp;|&nbsp;
+		<img src="<?php echo get_template_directory_uri(); ?>/images/meta/Comment.png" height="16px" width="16px" />&nbsp;<?php comments_popup_link( __('No Comments &#187;', 'core' ), __('1 Comment &#187;', 'core' ), __('% Comments &#187;' , 'core' )); //need a filer here ?>
+		
+		
+		
 		</div> <?php
 }
 
@@ -57,6 +61,12 @@ function chimps_post_bar_content() {
 	
 	
 		<div class="postbar" class="eightcol">
+		
+		
+		<?php chimps_post_byline(); ?>
+
+		
+		
 		<?php if (($hidden[$themeslug.'_hide_share']) != '0'):?>
 			<div class="share">
 		<a href="http://www.facebook.com/share.php?u=<?php the_permalink() ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/share/facebook.png" alt="Share on Facebook" height="16px" width="16px" /></a> 

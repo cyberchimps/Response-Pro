@@ -36,9 +36,7 @@
 	<!--End @Core index entry hook-->
 
 	<div id="content" class="eightcol">
-	
-	<div class="page-titles">Blog</div>
-	
+		
 	<!--Begin @Core index entry hook-->
 	<?php chimps_index_entry(); ?>
 	<!--End @Core index entry hook-->
@@ -68,10 +66,8 @@
 				<!--Begin @Core post tags hook-->
 					<?php chimps_post_tags(); ?>
 				<!--End @Core post tags hook-->
-			
-				<!--Begin @Core post bar hook-->
-					<?php chimps_post_bar(); ?>
-				<!--End @Core post bar hook-->
+				
+					<?php chimps_post_byline(); ?>
 			
 				</div><!--end post_class-->	
 		</div><!--end post container--> 

@@ -164,8 +164,6 @@ function chimps_index_loop_content($content) { ?>
 						}
 					 ?>
 				</div><!--end entry-->
-				<?php chimps_post_byline(); ?>
-				
 				<div class='clear'>&nbsp;</div>
 			<?php	
 		
