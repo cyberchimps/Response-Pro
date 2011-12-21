@@ -53,7 +53,7 @@ a:hover {color: #5ca9d6;}
 
 /* Nav  */
 
-#nav{margin-top: 15px;border: 1px solid #bbb;border-bottom: 1px solid #bbb;position:relative;z-index:2000;background: url(../images/noise-dark.png);}
+#nav{margin-top: 15px;border: 1px solid #bbb;border-bottom: 1px solid #bbb;position:relative;z-index:2000;background: url(../images/noise-dark.png); margin: auto; max-width: 1140px;}
 #nav .parent > a, #nav .parent > a:hover{background-image:url(../images/arrow.png);background-position:right;background-repeat:no-repeat;}
 #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow-right.png);background-position:right;background-repeat:no-repeat;}
 #nav ul, #nav ul li{display:inline;list-style:none;padding:0;margin:0;}
