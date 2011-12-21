@@ -117,7 +117,7 @@ a:hover {color: #5ca9d6;}
 
 /* Post Container Styling  */
 
-.page-titles {font-size:22px;border-bottom: 1px solid #bbb;padding: 3px;color:#444;}
+.page-titles {font-size:22px;border-bottom: 1px solid #bbb;padding: 3px;color:#444; margin-bottom: 10px;}
 
 .post_container {
 	padding: 5px 5px 20px 5px;
