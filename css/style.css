@@ -18,9 +18,9 @@ a{outline:none}
 
 /* Fonts  */
 
-.meta {color: #989898;font-size: 12px;font-weight: 500;padding-top: 10px;padding-bottom: 20px;}
+.meta {color: #989898;font-size: 12px;font-weight: 500;padding-top: 10px;padding-bottom: 15px;}
 
-.meta a{color: #222;line-height: 20px;}
+.meta a{color: #222;}
 
 #metalist {
 	margin-left: 0px;
@@ -33,13 +33,11 @@ a{outline:none}
 }
 
 .metatext {
-	float: left;
 	font-size: 11px;
+	padding: 0 15px 2px 0;
 }
 
 .metaimg {
-	float: left;
-	margin-top: 1px;
 }
 
 
@@ -160,12 +158,7 @@ a:hover {color: #5ca9d6;}
 	margin: -5px -15px 0 0px;
 	height: 46px;
 	width: 50px;
-}
-
-.postbar {
-	margin: -3px -15px -20px -15px;
-	padding: 0 10px 0 10px;
-	height: 22px;
+	background: #ccc;
 }
 
 .next-posts-single {text-align:right;padding:5px; margin-top:-35px;}
