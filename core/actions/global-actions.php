@@ -41,12 +41,11 @@ function chimps_post_byline_content() {
 	
 	<div class="meta" class="eightcol">
 		<ul id="metalist">
-			<li><img src="<?php echo get_template_directory_uri(); ?>/images/meta/User.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '&nbsp;', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?>&nbsp;|&nbsp;</i>
+			<li><img src="<?php echo get_template_directory_uri(); ?>/images/meta/User.png" height="16px" width="16px" /><span class="metatext"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '&nbsp;', 'core' )); ?> <?php the_author_posts_link(); ?><?php endif;?></span>&nbsp;|&nbsp;</i>
 			<li><img src="<?php echo get_template_directory_uri(); ?>/images/meta/Calendar.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( '&nbsp;', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a><?php endif;?>&nbsp;|&nbsp;</i>
 			<li><img src="<?php echo get_template_directory_uri(); ?>/images/meta/DrawerOpen.png" height="16px" width="16px" /><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '&nbsp;', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>&nbsp;|&nbsp;</i>
 			<li><img src="<?php echo get_template_directory_uri(); ?>/images/meta/Comment.png" height="16px" width="16px" />&nbsp;<?php comments_popup_link( __('No Comments &#187;', 'core' ), __('1 Comment &#187;', 'core' ), __('% Comments &#187;' , 'core' )); //need a filer here ?></i>
-		</ul>
-		
+		</ul>		
 		</div> <?php
 }
 
