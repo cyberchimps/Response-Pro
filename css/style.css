@@ -18,9 +18,9 @@ a{outline:none}
 
 /* Fonts  */
 
-.meta {color: #989898;font-size: 12px;font-weight: 500;padding-top: 10px;padding-bottom: 10px;}
+.meta {color: #989898;font-size: 12px;font-weight: 500;padding-top: 10px;padding-bottom: 20px;}
 
-.meta a{color: #222;}
+.meta a{color: #222;line-height: 20px;}
 
 #metalist {
 	margin-left: 0px;
@@ -33,12 +33,15 @@ a{outline:none}
 }
 
 .metatext {
-
+	float: left;
+	font-size: 11px;
 }
 
-.meta img{
-
+.metaimg {
+	float: left;
+	margin-top: 1px;
 }
+
 
 .entry {}
 
