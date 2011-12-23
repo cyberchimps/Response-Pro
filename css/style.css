@@ -155,7 +155,7 @@ a:hover {color: #5ca9d6;}
 
 .postformats {
 	float:right;
-	margin: -5px -15px 0 0px;
+	margin: -5px -10px 0 0px;
 	height: 46px;
 	width: 50px;
 	background: #ccc;
@@ -230,7 +230,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:22px;color:#444;text-shadow:none;padding:3px;padding: 2px 0px 2px 0px;border-bottom: 1px solid #bbb;
+.widget-title{font-size:22px;color:#444;text-shadow:none;padding: 2px 0px 2px 0px;
 }
 
 .widget-container ul{padding-top:10px; margin-left: 0px;}
