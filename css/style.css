@@ -58,7 +58,7 @@ a:hover {color: #5ca9d6;}
 #headbar {
 	background-image:url(../images/roughcloth-dark.png);
 	margin-top: -15px;
-	border-bottom: 2px solid #888;
+	border-bottom: 1px solid #888;
 }
 
 /* Social Icons  */
@@ -73,7 +73,7 @@ a:hover {color: #5ca9d6;}
 
 /* Nav  */
 
-#nav{margin-top: 15px;border: 1px solid #bbb;border-bottom: 1px solid #bbb;position:relative;z-index:2000;background: url(../images/noise-dark.png); margin: auto; max-width: 1140px;}
+#nav{border: 1px solid #E6E6E6;border-bottom: 1px solid #E6E6E6;position:relative;z-index:2000;background: #fff; margin: auto; max-width: 1140px;}
 #nav .parent > a, #nav .parent > a:hover{background-image:url(../images/arrow.png);background-position:right;background-repeat:no-repeat;}
 #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow-right.png);background-position:right;background-repeat:no-repeat;}
 #nav ul, #nav ul li{display:inline;list-style:none;padding:0;margin:0;}
@@ -282,7 +282,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #afterfooter {
 	width: 100%; 
-	background: black; 
+	background-image:url(../images/roughcloth-darker.png);
 	color: white;
 	border-top: 2px solid #222;
 }

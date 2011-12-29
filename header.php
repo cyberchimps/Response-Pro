@@ -41,13 +41,13 @@
 	<div class="container" id="headbar">
 		<div class="row">
 		
-			<div class="eightcol" style="margin-top: 5px;">
+			<div class="sixcol" style="margin-top: 5px;">
 				
 				<?php chimps_header_site_description(); ?> 
 
 			</div>	
 			
-			<div class="fourcol last" style="margin-top: 5px;">
+			<div class="sixcol last" style="margin-top: 5px;">
 				
 			<?php get_search_form(); ?>
 				
@@ -79,7 +79,7 @@
 		
 	</div><!--end container-->
 	
-	<div class="container">
+	<div class="container" style="margin-top: 15px;">
 		
 		<!-- Begin @Core navigation contact area hook -->
 			<?php chimps_navigation(); ?> 
