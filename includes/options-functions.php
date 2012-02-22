@@ -218,24 +218,6 @@ function add_posttitle_color() {
 }
 add_action( 'wp_head', 'add_posttitle_color');
 
-/* Footer Color */
-
-function add_footer_color() {
-
-	global $themename, $themeslug, $options;
-
-	if ($options->get($themeslug.'_footer_color') != "" ) {
-	
-		$footercolor = $options->get($themeslug.'_footer_color'); 
-	
-	
-		echo '<style type="text/css">';
-		echo "#footer {background: $footercolor;}";
-		echo '</style>';
-	}
-}
-add_action( 'wp_head', 'add_footer_color');
-
 /* Menu Font */
  
 function add_menu_font() {

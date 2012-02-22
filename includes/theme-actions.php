@@ -21,7 +21,7 @@
 
 add_action( 'response_header_content', 'response_header_standard_content');
 
-add_action( 'response_sitename_register', 'response_sitename_register_content');
+
 add_action( 'response_sitename_contact', 'response_sitename_contact_content');
 add_action( 'response_description_icons', 'response_description_icons_content');
 add_action( 'response_logo_menu', 'response_logo_menu_content');
@@ -29,45 +29,6 @@ add_action( 'response_logo_description', 'response_logo_description_content');
 add_action( 'response_banner', 'response_banner_content');
 add_action( 'response_icons', 'response_icons_content');
 
-/**
-* Sitename/Register
-*
-* @since 3.0
-*/
-function response_sitename_register_content() {
-global $current_user;
-?>
-
-	<div class="container">
-		<div class="row">
-		
-			<div class="seven columns">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php response_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-				
-			</div>	
-			
-			<div id="register" class="five columns">
-			
-			<?php if(!is_user_logged_in()) :?>
-
-		<li><?php wp_loginout(); ?></li> <?php wp_meta(); ?><li> |<?php wp_register(); ?>  </li>
-
-			<?php else :?>
-
-			Welcome back <strong><?php global $current_user; get_currentuserinfo(); echo ($current_user->user_login); ?></strong> | <?php wp_loginout(); ?>
-
-		<?php endif;?>
-				
-			</div>	
-		</div><!--end row-->
-	</div>
-
-<?php
-}
 
 /**
 * Sitename/Contact

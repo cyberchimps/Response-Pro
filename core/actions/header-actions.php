@@ -32,6 +32,7 @@ add_action( 'response_navigation', 'response_nav' );
 add_action( 'response_404_content', 'response_404_content_handler' );
 
 add_action( 'response_custom_header_element', 'response_custom_header_element_content');
+add_action( 'response_sitename_register', 'response_sitename_register_content');
 
 /**
 * Establishes the theme font family.
@@ -389,6 +390,45 @@ function response_custom_header_element_content() {
 	</div>	
 
 <?php	
+}
+
+/**
+* Sitename/Register
+*
+* @since 3.0
+*/
+function response_sitename_register_content() {
+global $current_user;
+?>
+
+	<div class="container">
+		<div class="row">
+		
+			<div class="seven columns">
+				
+				<!-- Begin @Core header sitename hook -->
+					<?php response_header_sitename(); ?> 
+				<!-- End @Core header sitename hook -->
+		
+			</div>	
+			
+			<div id="register" class="five columns">
+			
+			<?php if(!is_user_logged_in()) :?>
+
+		<li><?php wp_loginout(); ?></li> <?php wp_meta(); ?><li> |<?php wp_register(); ?>  </li>
+
+			<?php else :?>
+
+			Welcome back <strong><?php global $current_user; get_currentuserinfo(); echo ($current_user->user_login); ?></strong> | <?php wp_loginout(); ?>
+
+		<?php endif;?>
+				
+			</div>	
+		</div><!--end row-->
+	</div>
+
+<?php
 }
 
 
