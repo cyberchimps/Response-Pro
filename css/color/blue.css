@@ -1,13 +1,13 @@
 /* Blue */
 
-a {color: #0085CF;}
+a {color: #5ca9d6;}
 
-a:hover {color: #5ca9d6;}
+a:hover {color: #0085CF;}
 
 #imenu {
 	background: #fff;
 	color: #0085CF;
-	border: 1px solid #aaa;
+	border: 1px solid #ddd;
 	text-decoration: none;
 	overflow: visible;
 	margin-bottom: 15px;
