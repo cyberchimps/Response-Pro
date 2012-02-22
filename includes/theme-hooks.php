@@ -25,15 +25,6 @@ function ifeature_header_content() {
 	do_action('ifeature_header_content');
 }
 
-/**
-* Hook for the Header Contact Area
-*
-* @since 3.0.5
-*/
-function ifeature_header_contact_area() {
-	do_action('ifeature_header_contact_area');
-}
-
 function ifeature_sitename_register() {
 	do_action('ifeature_sitename_register');
 }
@@ -62,6 +53,3 @@ function ifeature_icons() {
 	do_action('ifeature_icons');
 }
 
-function ifeature_custom_header_element() {
-	do_action('ifeature_custom_header_element');
-}

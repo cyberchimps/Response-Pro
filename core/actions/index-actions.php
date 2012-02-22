@@ -61,10 +61,7 @@ function response_index_content() {
 					<?php response_edit_link(); ?>
 				<!--End @response post edit link hook-->
 			
-				<!--Begin @response FB like hook-->
-					<?php response_fb_like_plus_one(); ?>
-				<!--End @response FB like hook-->
-			
+							
 				<!--Begin @response post tags hook-->
 					<?php response_post_tags(); ?>
 				<!--End @response post tags hook-->

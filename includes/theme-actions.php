@@ -29,53 +29,6 @@ add_action( 'response_logo_description', 'response_logo_description_content');
 add_action( 'response_banner', 'response_banner_content');
 add_action( 'response_icons', 'response_icons_content');
 
-remove_action( 'response_head_tag', 'response_link_rel' );
-add_action( 'response_head_tag', 'response_link_rel' );
-
-/**
-* Sets the header link rel attributes
-*
-* @since 3.0.2
-*/
-function response_link_rel() {
-	global $themeslug, $options; //Call global variables
-	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
-	
-	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'response_default_font', 'Arial' );
-	}		
-	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
-		$font = $options->get($themeslug.'_custom_font');	
-	}	
-	else {
-		$font = $options->get($themeslug.'_font'); 
-	} 
-	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
-	}
-	else {
-		$color = $options->get($themeslug.'_color_scheme');
-	}?>
-	
-<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
-
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/ie.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
-
-<?php if (is_child_theme()) :  //add support for child themes?>
-	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />
-<?php endif; ?>
-
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' /> <?php
-}
-
 /**
 * Sitename/Register
 *

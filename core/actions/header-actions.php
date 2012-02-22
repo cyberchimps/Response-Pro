@@ -169,7 +169,7 @@ function response_title_tag() {
 * @since 1.0
 */
 function response_link_rel() {
-	global $themeslug, $options; //Call global variables
+global $themeslug, $options; //Call global variables
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
@@ -180,14 +180,23 @@ function response_link_rel() {
 	}	
 	else {
 		$font = $options->get($themeslug.'_font'); 
+	} 
+	if ($options->get($themeslug.'_color_scheme') == '') {
+		$color = 'blue';
+	}
+	else {
+		$color = $options->get($themeslug.'_color_scheme');
 	}?>
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/960/reset.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/960/text.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/grid.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
+
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/ie.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 
 <?php if (is_child_theme()) :  //add support for child themes?>
 	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />
