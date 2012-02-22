@@ -19,6 +19,8 @@ remove_action( 'response_after_head_tag', 'response_font' );
 add_action( 'response_after_head_tag', 'response_pro_font' );
 
 add_action( 'response_header_contact_area', 'response_header_contact_area_content' );
+add_action( 'response_logo_contact', 'response_logo_contact_content');
+add_action( 'response_description_icons', 'response_description_icons_content');
 
 /**
 * Establishes the Pro theme font family.
@@ -64,6 +66,70 @@ function response_header_contact_area_content() {
 	if ($options->get($themeslug.'_header_contact') == 'hide' ) {
 		echo "<div style ='height: 10%;'>&nbsp;</div> ";
 	}
+}
+
+/**
+* Sitename/Contact
+*
+* @since 1.0
+*/
+function response_sitename_contact_content() {
+?>
+	<div class="container">
+		<div class="row">
+		
+			<div class="seven columns">
+				
+				<!-- Begin @Core header sitename hook -->
+					<?php response_header_sitename(); ?> 
+				<!-- End @Core header sitename hook -->
+			
+				
+			</div>	
+			
+			<div class="five columns">
+			
+			<!-- Begin @Core header contact area hook -->
+			<?php response_header_contact_area(); ?>
+		<!-- End @Core header contact area hook -->
+						
+			</div>	
+		</div><!--end row-->
+	</div>
+	
+<?php
+}
+
+/**
+* Description/Icons
+*
+* @since 1.0
+*/
+function response_description_icons_content() {
+?>
+	<div class="container">
+		<div class="row">
+		
+			<div class="five columns">
+				
+			<!-- Begin @Core header description hook -->
+				<?php response_header_site_description(); ?> 
+			<!-- End @Core header description hook -->
+			
+				
+			</div>	
+			
+			<div class="seven columns">
+			
+			<!-- Begin @Core header social icon hook -->
+				<?php response_header_social_icons(); ?> 
+			<!-- End @Core header contact social icon hook -->	
+						
+			</div>	
+		</div><!--end row-->
+	</div>	
+
+<?php
 }
 
 

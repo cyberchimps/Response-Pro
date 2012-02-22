@@ -19,13 +19,8 @@
 
 
 
-function response_sitename_contact() {
-	do_action('response_sitename_contact');
-}
 
-function response_description_icons() {
-	do_action('response_description_icons');
-}
+
 
 function response_logo_menu() {
 	do_action('response_logo_menu');

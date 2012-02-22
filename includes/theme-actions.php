@@ -20,46 +20,12 @@
 */
 
 
-
-add_action( 'response_sitename_contact', 'response_sitename_contact_content');
-add_action( 'response_description_icons', 'response_description_icons_content');
 add_action( 'response_logo_menu', 'response_logo_menu_content');
 add_action( 'response_logo_description', 'response_logo_description_content');
 add_action( 'response_banner', 'response_banner_content');
 add_action( 'response_icons', 'response_icons_content');
 
 
-/**
-* Sitename/Contact
-*
-* @since 3.0
-*/
-function response_sitename_contact_content() {
-?>
-	<div class="container">
-		<div class="row">
-		
-			<div class="seven columns">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php response_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-				
-			</div>	
-			
-			<div class="five columns">
-			
-			<!-- Begin @Core header contact area hook -->
-			<?php response_header_contact_area(); ?>
-		<!-- End @Core header contact area hook -->
-						
-			</div>	
-		</div><!--end row-->
-	</div>
-	
-<?php
-}
 
 /**
 * Full-Width Logo
@@ -147,38 +113,6 @@ function response_logo_description_content() {
 			<!-- Begin @Core header description hook -->
 				<?php response_header_site_description(); ?> 
 			<!-- End @Core header description hook -->
-						
-			</div>	
-		</div><!--end row-->
-	</div>	
-
-<?php
-}
-
-/**
-* Description/Icons
-*
-* @since 3.0
-*/
-function response_description_icons_content() {
-?>
-	<div class="container">
-		<div class="row">
-		
-			<div class="five columns">
-				
-			<!-- Begin @Core header description hook -->
-				<?php response_header_site_description(); ?> 
-			<!-- End @Core header description hook -->
-			
-				
-			</div>	
-			
-			<div class="seven columns">
-			
-			<!-- Begin @Core header social icon hook -->
-				<?php response_header_social_icons(); ?> 
-			<!-- End @Core header contact social icon hook -->	
 						
 			</div>	
 		</div><!--end row-->
