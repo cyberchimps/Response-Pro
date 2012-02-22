@@ -1,6 +1,6 @@
 <?php
 /**
-* Search actions used by the CyberChimps Synapse Core Framework
+* Search actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,24 +11,24 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse search actions
+* Response search actions
 */
-add_action( 'synapse_search', 'synapse_search_content' );
+add_action( 'response_search', 'response_search_content' );
 
 /**
 * Search results output
 *
 * @since 1.0
 */
-function synapse_search_content() { 
+function response_search_content() { 
 	global $options, $themeslug;
-	$results = apply_filters( 'synapse_search_results_message', 'Search Results For: %s' ); 
-	$noresults = apply_filters( 'synapse_no_search_results_message', 'No posts found.' ); ?>
+	$results = apply_filters( 'response_search_results_message', 'Search Results For: %s' ); 
+	$noresults = apply_filters( 'response_no_search_results_message', 'No posts found.' ); ?>
 	
 	<div id="content_left">
 		<div class="content_padding">
@@ -64,11 +64,11 @@ function synapse_search_content() {
 		</div><!--end post_container-->
 		<?php endwhile; ?>
 
-		<?php synapse_pagination(); ?>
+		<?php response_pagination(); ?>
 
 	<?php else : ?>
 
-		<h2><?php printf( __( $noresults, 'core' )) ; ?></h2>
+		<h2><?php printf( __( $noresults, 'response' )) ; ?></h2>
 
 	<?php endif; ?>
 		</div><!--end content_padding-->

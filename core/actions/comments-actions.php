@@ -1,9 +1,9 @@
 <?php
 /**
-* Comments actions used by the CyberChimps Synapse Core Framework
+* Comments actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,28 +11,28 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse comments actions
+* Response comments actions
 */
-add_action( 'synapse_comments', 'synapse_comments_password_required' );
-add_action( 'synapse_comments', 'synapse_comments_loop' );
+add_action( 'response_comments', 'response_comments_password_required' );
+add_action( 'response_comments', 'response_comments_loop' );
 
 /**
 * Checks if password is required to comment, sets a filter for text that displays.
 *
 * @since 1.0
 */
-function synapse_comments_password_required() {
+function response_comments_password_required() {
 	
 	global $post;
 	
-	$password_text = apply_filters( 'synapse_password_required_text', 'This post is password protected. Enter the password to view comments.');
+	$password_text = apply_filters( 'response_password_required_text', 'This post is password protected. Enter the password to view comments.');
 	if ( post_password_required() ) { 
-		printf( __( $password_text, 'core' )); 
+		printf( __( $password_text, 'response' )); 
 		return;
 	}
 }
@@ -42,11 +42,11 @@ function synapse_comments_password_required() {
 *
 * @since 1.0
 */
-function synapse_comments_loop() { 
+function response_comments_loop() { 
 	global $post; ?>
 <?php if ( have_comments() ) : ?>
 	<div class="comments_container">
-		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'core' ), __( 'One Response', 'core' ), __('% Responses', 'core' ));?></h2>
+		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
 
 		<div class="navigation">
 			<div class="next-posts"><?php previous_comments_link() ?></div>
@@ -54,7 +54,7 @@ function synapse_comments_loop() {
 		</div>
 
 		<ol class="commentlist">
-			<?php wp_list_comments('callback=synapse_comment'); ?>
+			<?php wp_list_comments('callback=response_comment'); ?>
 		</ol>
 
 		<div class="navigation">
@@ -86,7 +86,7 @@ function synapse_comments_loop() {
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p><?php printf (__( 'You must be', 'core' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'core' ), '</a>', __('to post a comment.', 'core' )); ?></p>
+		<p><?php printf (__( 'You must be', 'response' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'response' ), '</a>', __('to post a comment.', 'response' )); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>

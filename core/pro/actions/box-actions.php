@@ -1,6 +1,6 @@
 <?php
 /**
-* Box section actions used by the CyberChimps Synapse Core Framework Pro Extension
+* Box section actions used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -16,16 +16,16 @@
 */
 
 /**
-* Synapse Box Section actions
+* Response Box Section actions
 */
-add_action( 'synapse_box_section', 'synapse_box_section_content' );
+add_action( 'response_box_section', 'response_box_section_content' );
 
 /**
 * Sets up the Box Section wigetized area
 *
 * @since 1.0
 */
-function synapse_box_section_content() { 
+function response_box_section_content() { 
 	global $post; //call globals
 	
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);

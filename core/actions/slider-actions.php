@@ -1,6 +1,6 @@
 <?php
 /**
-* Slider actions used by the CyberChimps Synapse Core Framework
+* Slider actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,20 +11,20 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse slider actions
+* Response slider actions
 */
 
-add_action ('synapse_blog_slider_lite', 'synapse_blog_slider_lite_content' );
+add_action ('response_blog_slider_lite', 'response_blog_slider_lite_content' );
 
 /**
 * Lite slider functions
 */
-function synapse_blog_slider_lite_content() {
+function response_blog_slider_lite_content() {
 
 /* Call globals. */	
 

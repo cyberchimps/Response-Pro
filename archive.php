@@ -1,56 +1,59 @@
 <?php 
-
-/*
-	Archive
-	Creates the iFeature archive pages.
-	Copyright (C) 2011 CyberChimps
-	Version 2.0
+/**
+* Archive template used by the CyberChimps Response Core Framework
+*
+* Authors: Tyler Cunningham, Trent Lapinski
+* Copyright: © 2012
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Response
+* @since 1.0
 */
 
-	global $options, $themeslug, $post, $content_grid; // call globals
-	
-/* Header call. */
-
-	synapse_sidebar_init();
-	get_header(); 
-	
-/* End header. */
+	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals
+	response_sidebar_init(); // sidebar init
+	get_header(); // call header
 
 ?>
 
 <div class="container">
 	<div class="row">
-		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
+		<?php if (function_exists('response_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { response_breadcrumbs(); }?>
 	</div>
 	<div class="row">
-	<!--Begin @synapse before content sidebar hook-->
-		<?php synapse_before_content_sidebar(); ?>
-	<!--End @synapse before content sidebar hook-->
+	<!--Begin @response before content sidebar hook-->
+		<?php response_before_content_sidebar(); ?>
+	<!--End @response before content sidebar hook-->
 	<?php if (have_posts()) : ?>
 	
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
-			<!--Begin @synapse archive hook-->
-			<?php synapse_archive_title(); ?>
-			<!--End @synapse archive hook-->
+			<!--Begin @response archive hook-->
+			<?php response_archive_title(); ?>
+			<!--End @response archive hook-->
 		
-		<!--Begin @synapse before_archive hook-->
-			<?php synapse_before_archive(); ?>
-		<!--End @synapse before_archive hook-->
+		<!--Begin @response before_archive hook-->
+			<?php response_before_archive(); ?>
+		<!--End @response before_archive hook-->
 		
 		<?php while (have_posts()) : the_post(); ?>
 		
 		<div class="post_container">
 			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
-			<!--Begin @synapse archive hook-->
-				<?php synapse_loop(); ?>
-			<!--End @synapse archive hook-->
+			<!--Begin @response archive hook-->
+				<?php response_loop(); ?>
+			<!--End @response archive hook-->
 			
 			</div><!--end post_class-->	
 		</div><!--end post container--> 
 		<!--Begin @iFeature post bar hook-->
-				<?php synapse_post_bar(); ?>
+				<?php response_post_bar(); ?>
 			<!--End @iFeature post bar hook-->
 
 		 <?php endwhile; ?>
@@ -61,19 +64,19 @@
 
 	<?php endif; ?>
 
-		<!--Begin @synapse pagination hook-->
-			<?php synapse_pagination(); ?>
-		<!--End @synapse pagination hook-->
+		<!--Begin @response pagination hook-->
+			<?php response_pagination(); ?>
+		<!--End @response pagination hook-->
 		
-		<!--Begin @synapse after_archive hook-->
-			<?php synapse_after_archive(); ?>
-		<!--End @synapse after_archive hook-->
+		<!--Begin @response after_archive hook-->
+			<?php response_after_archive(); ?>
+		<!--End @response after_archive hook-->
 	
 		</div><!--end content_padding-->
 
-	<!--Begin @synapse after content sidebar hook-->
-		<?php synapse_after_content_sidebar(); ?>
-	<!--End @synapse after content sidebar hook-->
+	<!--Begin @response after content sidebar hook-->
+		<?php response_after_content_sidebar(); ?>
+	<!--End @response after content sidebar hook-->
 	
 		</div><!--end content-->
 	</div><!--end row-->

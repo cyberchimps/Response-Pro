@@ -1,15 +1,21 @@
-<?php
-
-/*
-	
-	Footer
-	Establishes the widgetized footer and static post-footer section of iFeature. 
-	Copyright (C) 2011 CyberChimps
-	Version 2.0
-	
+<?php 
+/**
+* Footer template used by the CyberChimps Response Core Framework
+*
+* Authors: Tyler Cunningham, Trent Lapinski
+* Copyright: © 2012
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Response
+* @since 1.0
 */
 
-global $options, $themeslug;
+	global $options, $themeslug // call globals
 
 ?>
 	
@@ -21,9 +27,9 @@ global $options, $themeslug;
      	<div class="container">
      		<div class="row">
     	
-	<!-- Begin @synapse footer hook content-->
-		<?php synapse_footer(); ?>
-	<!-- End @synapse footer hook content-->
+	<!-- Begin @response footer hook content-->
+		<?php response_footer(); ?>
+	<!-- End @response footer hook content-->
 	
 	<?php endif;?>
 	
@@ -37,9 +43,9 @@ global $options, $themeslug;
 	<div id="afterfooter">
 		<div id="afterfooterwrap">
 		<div class="row">	
-		<!-- Begin @synapse afterfooter hook content-->
-			<?php synapse_secondary_footer(); ?>
-		<!-- End @synapse afterfooter hook content-->
+		<!-- Begin @response afterfooter hook content-->
+			<?php response_secondary_footer(); ?>
+		<!-- End @response afterfooter hook content-->
 				
 		</div>  <!--end afterfooterwrap-->	
 	</div> <!--end afterfooter-->	

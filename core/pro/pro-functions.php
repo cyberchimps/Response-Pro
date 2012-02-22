@@ -1,6 +1,6 @@
 <?php
 /**
-* CyberChimps Synapse Core Framework Pro Extension functions
+* CyberChimps Response Core Framework Pro Extension functions
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -18,7 +18,7 @@
 /**
 * Load jQuery and register additional scripts.
 */ 
-function synapse_pro_scripts() {	
+function response_pro_scripts() {	
 	$path =  get_template_directory_uri() ."/core/pro/library/";
 	
 	wp_register_script( 'easing' ,$path.'js/jquery.easing.1.3.js');
@@ -30,7 +30,7 @@ function synapse_pro_scripts() {
 	wp_enqueue_script ('elastislide');
 	wp_enqueue_script ('nivoslider');
 }
-add_action('wp_enqueue_scripts', 'synapse_pro_scripts');	
+add_action('wp_enqueue_scripts', 'response_pro_scripts');	
 
 /**
 * End

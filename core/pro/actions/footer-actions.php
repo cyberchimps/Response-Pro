@@ -1,6 +1,6 @@
 <?php
 /**
-* Footer actions used by the CyberChimps Synapse Core Framework Pro Extension
+* Footer actions used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -15,15 +15,15 @@
 * @since 1.0
 */
 
-remove_action ( 'synapse_secondary_footer', 'synapse_secondary_footer_credit' );
-add_action ( 'synapse_secondary_footer', 'synapse_pro_secondary_footer_credit' );
+remove_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
+add_action ( 'response_secondary_footer', 'response_pro_secondary_footer_credit' );
 
 /**
 * Adds the CyberChimps Pro credit link.
 *
 * @since 1.0
 */
-function synapse_pro_secondary_footer_credit() { 
+function response_pro_secondary_footer_credit() { 
 	global $options, $themeslug; //call globals
 	
 	if ($options->get($themeslug.'_hide_link') == "1") {?>

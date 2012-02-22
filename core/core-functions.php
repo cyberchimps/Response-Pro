@@ -1,6 +1,6 @@
 <?php
 /**
-* CyberChimps Synapse Core Framework functions
+* CyberChimps Response Core Framework Functions
 *
 * Authors: Tyler Cunningham
 * Copyright: © 2011
@@ -11,17 +11,17 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Establishes 'core' as the textdomain, sets $locale and file path
+* Establishes 'response' as the textdomain, sets $locale and file path
 *
 * @since 1.0
 */
-function synapse_text_domain() {
-	load_theme_textdomain( 'core', TEMPLATEPATH . '/core/languages' );
+function response_text_domain() {
+	load_theme_textdomain( 'response', TEMPLATEPATH . '/core/languages' );
 
 	    $locale = get_locale();
 	    $locale_file = TEMPLATEPATH . "/core/languages/$locale.php";
@@ -30,12 +30,12 @@ function synapse_text_domain() {
 		
 		return;    
 }
-add_action('after_setup_theme', 'synapse_text_domain');
+add_action('after_setup_theme', 'response_text_domain');
 
 /**
 * Load jQuery and register additional scripts.
 */ 
-function synapse_scripts() {
+function response_scripts() {
 	global $options, $themeslug;
 	if ( !is_admin() ) {
 	wp_enqueue_script('jquery');
@@ -69,16 +69,16 @@ function synapse_scripts() {
 	
 	}
 }
-add_action('wp_enqueue_scripts', 'synapse_scripts');	
+add_action('wp_enqueue_scripts', 'response_scripts');	
 
 /**
 * Adds "untitled" to posts with no title.
 *
 * @since 1.0
 */
-add_filter('the_title', 'synapse_title');
+add_filter('the_title', 'response_title');
 
-function synapse_title($title) {
+function response_title($title) {
 
 	if ($title == '') {
 		return 'Untitled';
@@ -92,7 +92,7 @@ function synapse_title($title) {
 *
 * @since 1.0
 */
-function synapse_shorten_linktext($linkstring,$link) {
+function response_shorten_linktext($linkstring,$link) {
 	$characters = 33;
 	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
 	$displayedTitle = $matches[1];
@@ -104,15 +104,15 @@ function shorten_with_ellipsis($inputstring,$characters) {
   return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
 }
 
-add_filter('previous_post_link','synapse_shorten_linktext',10,2);
-add_filter('next_post_link','synapse_shorten_linktext',10,2);
+add_filter('previous_post_link','response_shorten_linktext',10,2);
+add_filter('next_post_link','response_shorten_linktext',10,2);
 
 /**
 * Comment function
 *
 * @since 1.0
 */
-function synapse_comment($comment, $args, $depth) {
+function response_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
@@ -143,7 +143,7 @@ function synapse_comment($comment, $args, $depth) {
 *
 * @since 1.0
 */
-function synapse_breadcrumbs() {
+function response_breadcrumbs() {
  
   $delimiter = '&raquo;';
   $home = 'Home'; // text for the 'Home' link

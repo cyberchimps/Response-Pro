@@ -1,6 +1,6 @@
 <?php
 /**
-* Header section actions used by the CyberChimps Synapse Core Framework Pro Extension
+* Header section actions used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -15,20 +15,20 @@
 * @since 1.0
 */
 
-remove_action( 'synapse_after_head_tag', 'synapse_font' );
-add_action( 'synapse_after_head_tag', 'synapse_pro_font' );
+remove_action( 'response_after_head_tag', 'response_font' );
+add_action( 'response_after_head_tag', 'response_pro_font' );
 
 /**
 * Establishes the Pro theme font family.
 *
 * @since 1.0
 */
-function synapse_pro_font() {
+function response_pro_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'synapse_default_font_family', 'Helvetica, serif' );
+	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'synapse_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
 		$font = $options->get($themeslug.'_custom_font');	

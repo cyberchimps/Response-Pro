@@ -1,9 +1,9 @@
 <?php
 /**
-* Hook wrappers used by the CyberChimps Synapse Core Framework
+* Hook wrappers used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
@@ -20,8 +20,8 @@
 *
 * @since 1.0
 */
-function synapse_sidebar_init() {
-	do_action ('synapse_sidebar_init');
+function response_sidebar_init() {
+	do_action ('response_sidebar_init');
 }
 
 /**
@@ -29,8 +29,8 @@ function synapse_sidebar_init() {
 *
 * @since 1.0
 */
-function synapse_before_404() {
-	do_action('synapse_before_404');
+function response_before_404() {
+	do_action('response_before_404');
 }
 
 /**
@@ -38,8 +38,8 @@ function synapse_before_404() {
 *
 * @since 1.0
 */
-function synapse_404() {
-	do_action('synapse_404');
+function response_404() {
+	do_action('response_404');
 }
 
 /**
@@ -47,8 +47,8 @@ function synapse_404() {
 *
 * @since 1.0
 */
-function synapse_after_404() {
-	do_action('synapse_after_404');
+function response_after_404() {
+	do_action('response_after_404');
 }
 
 /**
@@ -56,8 +56,8 @@ function synapse_after_404() {
 *
 * @since 1.0
 */
-function synapse_before_archive() {
-	do_action('synapse_before_archive');
+function response_before_archive() {
+	do_action('response_before_archive');
 }
 
 /**
@@ -65,8 +65,8 @@ function synapse_before_archive() {
 *
 * @since 1.0
 */
-function synapse_archive_title() {
-	do_action('synapse_archive_title');
+function response_archive_title() {
+	do_action('response_archive_title');
 }
 
 /**
@@ -74,8 +74,8 @@ function synapse_archive_title() {
 *
 * @since 1.0
 */
-function synapse_archive() {
-	do_action('synapse_archive');
+function response_archive() {
+	do_action('response_archive');
 }
 
 /**
@@ -83,8 +83,8 @@ function synapse_archive() {
 *
 * @since 1.0
 */
-function synapse_after_archive() {
-	do_action('synapse_after_archive');
+function response_after_archive() {
+	do_action('response_after_archive');
 }
 
 /**
@@ -92,8 +92,8 @@ function synapse_after_archive() {
 *
 * @since 1.0
 */
-function synapse_before_comments() {
-	do_action('synapse_before_comments');
+function response_before_comments() {
+	do_action('response_before_comments');
 }
 
 /**
@@ -101,8 +101,8 @@ function synapse_before_comments() {
 *
 * @since 1.0
 */
-function synapse_comments() {
-	do_action('synapse_comments');
+function response_comments() {
+	do_action('response_comments');
 }
 
 /**
@@ -110,8 +110,8 @@ function synapse_comments() {
 *
 * @since 1.0
 */
-function synapse_after_comments() {
-	do_action('synapse_after_comments');
+function response_after_comments() {
+	do_action('response_after_comments');
 }
 
 /**
@@ -119,8 +119,8 @@ function synapse_after_comments() {
 *
 * @since 1.0
 */
-function synapse_before_page_content() {
-	do_action('synapse_before_page_content');
+function response_before_page_content() {
+	do_action('response_before_page_content');
 }
 
 /**
@@ -128,8 +128,8 @@ function synapse_before_page_content() {
 *
 * @since 1.0
 */
-function synapse_after_page_content() {
-	do_action('synapse_after_page_content');
+function response_after_page_content() {
+	do_action('response_after_page_content');
 }
 
 /**
@@ -137,8 +137,8 @@ function synapse_after_page_content() {
 *
 * @since 1.0
 */
-function synapse_after_entry() {
-	do_action('synapse_after_entry');
+function response_after_entry() {
+	do_action('response_after_entry');
 }
 
 /**
@@ -146,8 +146,8 @@ function synapse_after_entry() {
 *
 * @since 1.0
 */
-function synapse_before_loop() {
-	do_action('synapse_before_loop');
+function response_before_loop() {
+	do_action('response_before_loop');
 }
 
 /**
@@ -155,8 +155,8 @@ function synapse_before_loop() {
 *
 * @since 1.0
 */
-function synapse_loop() {
-	do_action('synapse_loop');
+function response_loop() {
+	do_action('response_loop');
 }
 
 /**
@@ -164,8 +164,8 @@ function synapse_loop() {
 *
 * @since 1.0
 */
-function synapse_single_loop() {
-	do_action('synapse_single_loop');
+function response_single_loop() {
+	do_action('response_single_loop');
 }
 
 /**
@@ -173,8 +173,8 @@ function synapse_single_loop() {
 *
 * @since 1.0
 */
-function synapse_after_loop() {
-	do_action('synapse_after_loop');
+function response_after_loop() {
+	do_action('response_after_loop');
 }
 
 /**
@@ -182,8 +182,8 @@ function synapse_after_loop() {
 *
 * @since 1.0
 */
-function synapse_before_footer() {
-	do_action('synapse_before_footer_content');
+function response_before_footer() {
+	do_action('response_before_footer_content');
 }
 
 /**
@@ -191,8 +191,8 @@ function synapse_before_footer() {
 *
 * @since 1.0
 */
-function synapse_footer() {
-	do_action('synapse_footer');
+function response_footer() {
+	do_action('response_footer');
 }
 
 /**
@@ -200,8 +200,8 @@ function synapse_footer() {
 *
 * @since 1.0
 */
-function synapse_after_footer() {
-	do_action('synapse_after_footer_content');
+function response_after_footer() {
+	do_action('response_after_footer_content');
 }
 
 /**
@@ -209,8 +209,8 @@ function synapse_after_footer() {
 *
 * @since 1.0
 */
-function synapse_secondary_footer() { 
-	do_action('synapse_secondary_footer');
+function response_secondary_footer() { 
+	do_action('response_secondary_footer');
 }
 
 /**
@@ -218,8 +218,8 @@ function synapse_secondary_footer() {
 *
 * @since 1.0
 */
-function synapse_single_post_byline() {
-	do_action('synapse_single_post_byline');
+function response_single_post_byline() {
+	do_action('response_single_post_byline');
 }
 
 /**
@@ -227,8 +227,8 @@ function synapse_single_post_byline() {
 *
 * @since 1.0
 */
-function synapse_archive_post_byline() {
-	do_action('synapse_archive_post_byline');
+function response_archive_post_byline() {
+	do_action('response_archive_post_byline');
 }
 
 
@@ -237,8 +237,8 @@ function synapse_archive_post_byline() {
 *
 * @since 1.0
 */
-function synapse_single_post_tags() {
-	do_action('synapse_single_post_tags');
+function response_single_post_tags() {
+	do_action('response_single_post_tags');
 }
 
 /**
@@ -246,8 +246,8 @@ function synapse_single_post_tags() {
 *
 * @since 1.0
 */
-function synapse_post_byline() {
-	do_action('synapse_post_byline');
+function response_post_byline() {
+	do_action('response_post_byline');
 }
 
 /**
@@ -255,8 +255,8 @@ function synapse_post_byline() {
 *
 * @since 1.0
 */
-function synapse_post_tags() {
-	do_action('synapse_post_tags');
+function response_post_tags() {
+	do_action('response_post_tags');
 }
 
 /**
@@ -264,8 +264,8 @@ function synapse_post_tags() {
 *
 * @since 1.0
 */
-function synapse_archive_post_tags() {
-	do_action('synapse_archive_post_tags');
+function response_archive_post_tags() {
+	do_action('response_archive_post_tags');
 }
 
 /**
@@ -273,8 +273,8 @@ function synapse_archive_post_tags() {
 *
 * @since 1.0
 */
-function synapse_link_pages() {
-	do_action('synapse_link_pages');
+function response_link_pages() {
+	do_action('response_link_pages');
 }
 
 /**
@@ -282,8 +282,8 @@ function synapse_link_pages() {
 *
 * @since 1.0
 */
-function synapse_edit_link() {
-	do_action('synapse_edit_link');
+function response_edit_link() {
+	do_action('response_edit_link');
 }
 
 /**
@@ -291,8 +291,8 @@ function synapse_edit_link() {
 *
 * @since 1.0
 */
-function synapse_head_tag() {
-	do_action('synapse_head_tag');
+function response_head_tag() {
+	do_action('response_head_tag');
 }
 
 /**
@@ -300,8 +300,8 @@ function synapse_head_tag() {
 *
 * @since 1.0
 */
-function synapse_after_head_tag() {
-	do_action('synapse_after_head_tag');
+function response_after_head_tag() {
+	do_action('response_after_head_tag');
 }
 
 /**
@@ -309,8 +309,8 @@ function synapse_after_head_tag() {
 *
 * @since 1.0
 */
-function synapse_before_header() {
-	do_action('synapse_before_header');
+function response_before_header() {
+	do_action('response_before_header');
 }
 
 /**
@@ -318,8 +318,8 @@ function synapse_before_header() {
 *
 * @since 1.0
 */
-function synapse_after_header() {
-	do_action('synapse_after_header');
+function response_after_header() {
+	do_action('response_after_header');
 }
 
 /**
@@ -327,8 +327,8 @@ function synapse_after_header() {
 *
 * @since 1.0
 */
-function synapse_header_sitename() {
-	do_action('synapse_header_sitename');
+function response_header_sitename() {
+	do_action('response_header_sitename');
 }
 
 /**
@@ -336,8 +336,8 @@ function synapse_header_sitename() {
 *
 * @since 1.0
 */
-function synapse_header_site_description() {
-	do_action('synapse_header_site_description');
+function response_header_site_description() {
+	do_action('response_header_site_description');
 }
 
 /**
@@ -345,8 +345,8 @@ function synapse_header_site_description() {
 *
 * @since 1.0
 */
-function synapse_header_social_icons() {
-	do_action('synapse_header_social_icons');
+function response_header_social_icons() {
+	do_action('response_header_social_icons');
 }
 
 /**
@@ -354,8 +354,8 @@ function synapse_header_social_icons() {
 *
 * @since 1.0
 */
-function synapse_navigation() {
-	do_action('synapse_navigation');
+function response_navigation() {
+	do_action('response_navigation');
 }
 
 /**
@@ -363,8 +363,8 @@ function synapse_navigation() {
 *
 * @since 1.0
 */
-function synapse_pagination() { 
-	do_action('synapse_pagination');
+function response_pagination() { 
+	do_action('response_pagination');
 }
 
 /**
@@ -372,8 +372,8 @@ function synapse_pagination() {
 *
 * @since 1.0
 */
-function synapse_links_pages() { 
-	do_action('synapse_links_pages');
+function response_links_pages() { 
+	do_action('response_links_pages');
 }
 
 /**
@@ -381,8 +381,8 @@ function synapse_links_pages() {
 *
 * @since 1.0
 */
-function synapse_post_pagination() { 
-	do_action('synapse_post_pagination');
+function response_post_pagination() { 
+	do_action('response_post_pagination');
 }
 
 /**
@@ -390,8 +390,8 @@ function synapse_post_pagination() {
 *
 * @since 1.0
 */
-function synapse_page_section() {
-	do_action('synapse_page_section');
+function response_page_section() {
+	do_action('response_page_section');
 }
 
 /**
@@ -399,8 +399,8 @@ function synapse_page_section() {
 *
 * @since 1.0
 */
-function synapse_before_search() {
-	do_action('synapse_before_search');
+function response_before_search() {
+	do_action('response_before_search');
 }
 
 /**
@@ -408,8 +408,8 @@ function synapse_before_search() {
 *
 * @since 1.0
 */
-function synapse_search() {
-	do_action('synapse_search');
+function response_search() {
+	do_action('response_search');
 }
 
 /**
@@ -417,8 +417,8 @@ function synapse_search() {
 *
 * @since 1.0
 */
-function synapse_after_search() {
-	do_action('synapse_after_search');
+function response_after_search() {
+	do_action('response_after_search');
 }
 
 /**
@@ -426,8 +426,8 @@ function synapse_after_search() {
 *
 * @since 1.0
 */
-function synapse_blog_slider_lite() {
-	do_action('synapse_blog_slider_lite');
+function response_blog_slider_lite() {
+	do_action('response_blog_slider_lite');
 }
 
 /**
@@ -435,8 +435,8 @@ function synapse_blog_slider_lite() {
 *
 * @since 1.0
 */
-function synapse_twitterbar_section() {
-	do_action ('synapse_twitterbar_section');
+function response_twitterbar_section() {
+	do_action ('response_twitterbar_section');
 }
 
 /**
@@ -444,8 +444,8 @@ function synapse_twitterbar_section() {
 *
 * @since 1.0
 */
-function synapse_before_content_sidebar() {
-	do_action ('synapse_before_content_sidebar');
+function response_before_content_sidebar() {
+	do_action ('response_before_content_sidebar');
 }
 
 /**
@@ -453,8 +453,8 @@ function synapse_before_content_sidebar() {
 *
 * @since 1.0
 */
-function synapse_after_content_sidebar() {
-	do_action ('synapse_after_content_sidebar');
+function response_after_content_sidebar() {
+	do_action ('response_after_content_sidebar');
 }
 
 /**
@@ -462,8 +462,8 @@ function synapse_after_content_sidebar() {
 *
 * @since 1.0
 */
-function synapse_index() {
-	do_action ('synapse_index');
+function response_index() {
+	do_action ('response_index');
 }
 
 /**
@@ -471,8 +471,8 @@ function synapse_index() {
 *
 * @since 1.0
 */
-function synapse_post_bar() {
-	do_action ('synapse_post_bar');
+function response_post_bar() {
+	do_action ('response_post_bar');
 }
 
 /**
@@ -480,8 +480,8 @@ function synapse_post_bar() {
 *
 * @since 1.0
 */
-function synapse_fb_like_plus_one() {
-	do_action ('synapse_fb_like_plus_one');
+function response_fb_like_plus_one() {
+	do_action ('response_fb_like_plus_one');
 }
 
 /**

@@ -1,9 +1,9 @@
 <?php
 /**
-* Global actions used by the CyberChimps Synapse Core Framework
+* Global actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,27 +11,27 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse global actions
+* Response global actions
 */
 
-add_action( 'synapse_loop', 'synapse_loop_content' );
-add_action( 'synapse_post_byline', 'synapse_post_byline_content' );
-add_action( 'synapse_edit_link', 'synapse_edit_link_content' );
-add_action( 'synapse_post_tags', 'synapse_post_tags_content' );
-add_action( 'synapse_post_bar', 'synapse_post_bar_content' );
-add_action( 'synapse_fb_like_plus_one', 'synapse_fb_like_plus_one_content' );
+add_action( 'response_loop', 'response_loop_content' );
+add_action( 'response_post_byline', 'response_post_byline_content' );
+add_action( 'response_edit_link', 'response_edit_link_content' );
+add_action( 'response_post_tags', 'response_post_tags_content' );
+add_action( 'response_post_bar', 'response_post_bar_content' );
+add_action( 'response_fb_like_plus_one', 'response_fb_like_plus_one_content' );
 
 /**
 * Check for post format type, apply filter based on post format name for easy modification.
 *
 * @since 1.0
 */
-function synapse_loop_content($content) { 
+function response_loop_content($content) { 
 
 	global $options, $themeslug, $post; //call globals
 	
@@ -66,8 +66,8 @@ function synapse_loop_content($content) {
 			</div><!--end format-icon-->
 			<?php endif; ?>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					<!--Call @Core Meta hook-->
-			<?php synapse_post_byline(); ?>
+					<!--Call @response Meta hook-->
+			<?php response_post_byline(); ?>
 				<?php
 				if ( has_post_thumbnail() && $featured_images == '1') {
  		 			echo '<div class="featured-image">';
@@ -92,7 +92,7 @@ function synapse_loop_content($content) {
 			<?php	
 		
 		$content = ob_get_clean();
-		$content = apply_filters( 'synapse_post_formats_'.$format.'_content', $content );
+		$content = apply_filters( 'response_post_formats_'.$format.'_content', $content );
 	
 		echo $content; 
 }
@@ -102,7 +102,7 @@ function synapse_loop_content($content) {
 *
 * @since 3.1
 */
-function synapse_post_bar_content() { 
+function response_post_bar_content() { 
 	global $options, $themeslug; 
 	
 	if (is_single()) {
@@ -125,7 +125,7 @@ function synapse_post_bar_content() {
 				</div><!--end share-->
 				<div class="six columns" id="comments">
 					<?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?>
-					<?php comments_popup_link( __('No Comments', 'core' ), __('1 Comment', 'core' ), __('% Comments' , 'core' )); //need a filer here ?>&nbsp;&nbsp;<img src="<?php echo get_template_directory_uri(); ?>/images/Commentsgrey.png" alt="comments"/>&nbsp;
+					<?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?>&nbsp;&nbsp;<img src="<?php echo get_template_directory_uri(); ?>/images/Commentsgrey.png" alt="comments"/>&nbsp;
 					<?php endif;?>
 				</div><!--end comments-->
 		</div><!--end postbar--> 
@@ -137,7 +137,7 @@ function synapse_post_bar_content() {
 *
 * @since 1.0
 */
-function synapse_post_byline_content() {
+function response_post_byline_content() {
 	global $options, $themeslug; //call globals.  
 	if (is_single()) {
 		$hidden = $options->get($themeslug.'_single_hide_byline'); 
@@ -150,9 +150,9 @@ function synapse_post_byline_content() {
 	}?>
 	
 	<div class="meta">
-		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'core' )); ?> <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?>
-		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'core' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
-		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'core' )); ?> <?php the_category(', ') ?> <?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'response' )); ?> <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'response' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
+		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'response' )); ?> <?php the_category(', ') ?> <?php endif;?>
 	</div> <?php
 }
 
@@ -161,7 +161,7 @@ function synapse_post_byline_content() {
 *
 * @since 1.0
 */
-function synapse_edit_link_content() {
+function response_edit_link_content() {
 	edit_post_link('Edit', '<p>', '</p>');
 }
 
@@ -170,7 +170,7 @@ function synapse_edit_link_content() {
 *
 * @since 1.0
 */
-function synapse_post_tags_content() {
+function response_post_tags_content() {
 	global $options, $themeslug; 
 	if (is_single()) {
 		$hidden = $options->get($themeslug.'_single_hide_byline'); 
@@ -195,7 +195,7 @@ function synapse_post_tags_content() {
 *
 * @since 3.1
 */
-function synapse_fb_like_plus_one_content() {
+function response_fb_like_plus_one_content() {
 	global $options, $themeslug; 
 	
 	if (is_single()) {
