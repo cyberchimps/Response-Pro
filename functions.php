@@ -10,18 +10,15 @@
 /**
 * Define global theme functions.
 */ 
-	$themename = 'ifeature';
-	$themenamefull = 'iFeature Pro';
-	$themeslug = 'if';
+	$themename = 'response';
+	$themenamefull = 'Response';
+	$themeslug = 're';
 	$root = get_template_directory_uri(); 
-	$slider_default = "$root/images/ifeaturefree.jpg";
-	$pagedocs = 'http://cyberchimps.com/question/using-the-ifeature-pro-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-ifeature-pro-3-slider/';
-
+	
 /**
 * Basic theme setup.
 */ 
-function if_theme_setup() {
+function response_theme_setup() {
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
 	add_theme_support(
@@ -33,29 +30,29 @@ function if_theme_setup() {
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
 }
-add_action( 'after_setup_theme', 'if_theme_setup' );
+add_action( 'after_setup_theme', 'response_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
 */ 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
-	wp_redirect( 'themes.php?page=ifeature' );
+	wp_redirect( 'themes.php?page=response' );
 }
 
 /**
 * Add link to theme options in Admin bar.
 */ 
-function admin_link() {
+function response_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Pro Options', 'href' => admin_url('themes.php?page=ifeature')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
 }
-add_action( 'admin_bar_menu', 'admin_link', 113 );
+add_action( 'admin_bar_menu', 'response_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function custom_gallery_post_format( $content ) {
+function response_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
@@ -68,7 +65,7 @@ function custom_gallery_post_format( $content ) {
 		<?php endif;?>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<!--Call @Core Meta hook-->
-			<?php synapse_post_byline(); ?>
+			<?php response_post_byline(); ?>
 				<?php
 				if ( has_post_thumbnail() && $options->get($themeslug.'_show_featured_images') == '1' && !is_single() ) {
  		 			echo '<div class="featured-image">';
@@ -107,12 +104,12 @@ function custom_gallery_post_format( $content ) {
 	
 	return $content;
 }
-add_filter('synapse_post_formats_gallery_content', 'custom_gallery_post_format' ); 
+add_filter('response_post_formats_gallery_content', 'response_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function new_excerpt_more($more) {
+function response_excerpt_link($more) {
 
 	global $themename, $themeslug, $options, $post;
     
@@ -125,12 +122,12 @@ function new_excerpt_more($more) {
 
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'response_excerpt_link');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function new_excerpt_length($length) {
+function response_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -143,12 +140,12 @@ function new_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'response_excerpt_length');
 
 /**
 * Custom featured image size based on theme options.
 */ 
-function init_featured_image() {	
+function response_featured_image() {	
 	if ( function_exists( 'add_theme_support' ) ) {
 	
 	global $themename, $themeslug, $options;
@@ -168,12 +165,12 @@ function init_featured_image() {
 	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
-add_action( 'init', 'init_featured_image', 11);	
+add_action( 'init', 'response_featured_image', 11);	
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function render_ie_pie() { ?>
+function response_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3, .es-carousel-wrapper
@@ -185,12 +182,12 @@ function render_ie_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'render_ie_pie', 8);
+add_action('wp_head', 'response_pie', 8);
 
 /**
 * Custom post types for Slider, Carousel.
 */ 
-function create_post_type() {
+function response_create_post_type() {
 
 	global $themename, $themeslug, $options, $root;
 	
@@ -226,12 +223,12 @@ function create_post_type() {
 		)
 	);
 }
-add_action( 'init', 'create_post_type' );
+add_action( 'init', 'response_create_post_type' );
 
 /**
 * Custom taxonomies for Slider, Carousel.
 */ 
-function custom_taxonomies() {
+function response_custom_taxonomies() {
 
 	global $themename, $themeslug, $options;
 	
@@ -256,12 +253,12 @@ function custom_taxonomies() {
 		)
 	);
 }
-add_action('init', 'custom_taxonomies', 0);
+add_action('init', 'response_custom_taxonomies', 0);
 
 /**
 * Assign default category for Slider, Carousel posts.
 */ 
-function custom_taxonomy_default( $post_id, $post ) {
+function response_custom_taxonomy_default( $post_id, $post ) {
 
 	global $themename, $themeslug, $options;	
 
@@ -288,12 +285,12 @@ function custom_taxonomy_default( $post_id, $post ) {
 	}
 }
 
-add_action( 'save_post', 'custom_taxonomy_default', 100, 2 );
+add_action( 'save_post', 'response_custom_taxonomy_default', 100, 2 );
 
 /**
 * Add TypeKit support based on theme option.
 */ 
-function typekit_support() {
+function response_typekit_support() {
 	global $themename, $themeslug, $options;
 	
 	$embed = $options->get($themeslug.'_typekit');
@@ -301,45 +298,45 @@ function typekit_support() {
 	echo stripslashes($embed);
 
 }
-add_action('wp_head', 'typekit_support');
+add_action('wp_head', 'response_typekit_support');
 
 /**
 * Add Google Analytics support based on theme option.
 */ 
-function google_analytics() {
+function response_google_analytics() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_ga_code'));
 
 }
-add_action('wp_head', 'google_analytics');
+add_action('wp_head', 'response_google_analytics');
 
 /**
 * Add custom header scripts support based on theme option.
 */ 
-function custom_scripts() {
+function response_custom_scripts() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_custom_header_scripts'));
 
 }
-add_action('wp_head', 'custom_scripts');
+add_action('wp_head', 'response_custom_scripts');
 
 	
 /**
 * Register custom menus for header, footer.
 */ 
-function register_menus() {
+function response_register_menus() {
 	register_nav_menus(
 	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ))
   );
 }
-add_action( 'init', 'register_menus' );
+add_action( 'init', 'response_register_menus' );
 	
 /**
 * Menu fallback if custom menu not used.
 */ 
-function menu_fallback() {
+function response_menu_fallback() {
 	global $post; ?>
 	
 	<ul id="nav_menu">
@@ -349,7 +346,7 @@ function menu_fallback() {
 /**
 * Register widgets.
 */ 
-function ifp_widgets_init() {
+function response_widgets_init() {
     register_sidebar(array(
     	'name' => 'Sidebar Widgets',
     	'id'   => 'sidebar-widgets',
@@ -415,10 +412,10 @@ function ifp_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'ifp_widgets_init');
+add_action ('widgets_init', 'response_widgets_init');
 
 /**
-* Initialize Synapse Core Framework and Pro Extension.
+* Initialize response Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/core/pro/pro-init.php' );

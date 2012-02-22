@@ -1,6 +1,6 @@
 <?php
 /**
-* Initializes the CyberChimps Synapse Core Framework Pro Extension 
+* Initializes the CyberChimps Response Core Framework Pro Extension 
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -18,61 +18,61 @@
 /** 
 * Box Section
 */
-function synapse_box_section() {
-	do_action ('synapse_box_section');
+function response_box_section() {
+	do_action ('response_box_section');
 }
 
 /** 
 * Callout Section
 */
-function synapse_callout_section() {
-	do_action ('synapse_callout_section');
+function response_callout_section() {
+	do_action ('response_callout_section');
 }
 
 /** 
 * Carousel Section
 */
-function synapse_index_carousel_section() {
-	do_action ('synapse_index_carousel_section');
+function response_index_carousel_section() {
+	do_action ('response_index_carousel_section');
 }
 
-function synapse_carousel_section() {
-	do_action ('synapse_carousel_section');
+function response_carousel_section() {
+	do_action ('response_carousel_section');
 }
 
 /** 
 * Entry 
 */
-function synapse_pro_before_entry() {
-	do_action('synapse_pro_before_entry');
+function response_pro_before_entry() {
+	do_action('response_pro_before_entry');
 }
 
-function synapse_pro_entry() {
-	do_action('synapse_pro_entry');
+function response_pro_entry() {
+	do_action('response_pro_entry');
 }
 
 /** 
 * Slider
 */
-function synapse_blog_slider() {
-	do_action ('synapse_blog_slider');
+function response_blog_slider() {
+	do_action ('response_blog_slider');
 }
-function synapse_blog_content_slider() {
-	do_action ('synapse_blog_content_slider');
+function response_blog_content_slider() {
+	do_action ('response_blog_content_slider');
 }
-function synapse_page_slider() {
-	do_action ('synapse_page_slider');
+function response_page_slider() {
+	do_action ('response_page_slider');
 }
-function synapse_page_content_slider() {
-	do_action ('synapse_page_content_slider');
-}
-
-function synapse_blog_nivoslider() {
-	do_action ('synapse_blog_nivoslider');
+function response_page_content_slider() {
+	do_action ('response_page_content_slider');
 }
 
-function synapse_page_nivoslider() {
-	do_action ('synapse_page_nivoslider');
+function response_blog_nivoslider() {
+	do_action ('response_blog_nivoslider');
+}
+
+function response_page_nivoslider() {
+	do_action ('response_page_nivoslider');
 }
 
 

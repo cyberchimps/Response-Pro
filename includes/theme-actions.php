@@ -30,11 +30,11 @@ add_action( 'ifeature_banner', 'ifeature_banner_content');
 add_action( 'ifeature_icons', 'ifeature_icons_content');
 add_action( 'ifeature_custom_header_element', 'ifeature_custom_header_element_content');
 
-remove_action( 'synapse_head_tag', 'synapse_link_rel' );
-add_action( 'synapse_head_tag', 'ifeature_link_rel' );
+remove_action( 'response_head_tag', 'response_link_rel' );
+add_action( 'response_head_tag', 'ifeature_link_rel' );
 
-remove_action( 'synapse_box_section', 'synapse_box_section_content' );
-add_action( 'synapse_box_section', 'ifeature_box_section_content' );
+remove_action( 'response_box_section', 'response_box_section_content' );
+add_action( 'response_box_section', 'ifeature_box_section_content' );
 
 
 /**
@@ -67,7 +67,7 @@ function ifeature_custom_header_element_content() {
 */
 function ifeature_header_contact_area_content() { 
 	global $themeslug, $options; 
-	$contactdefault = apply_filters( 'synapse_header_contact_default_text', 'Enter Contact Information Here' ); 
+	$contactdefault = apply_filters( 'response_header_contact_default_text', 'Enter Contact Information Here' ); 
 	
 	if ($options->get($themeslug.'_header_contact') == '' ) {
 		echo "<div id='header_contact'>";
@@ -108,14 +108,14 @@ function ifeature_box_section_content() {
 			<div id="box2" class="four columns">
 				<h2 class="box-widget-title">Responsive Design</h2>
 					<img src="<?php echo $root ; ?>/images/icons/blueprint.png" height="100" alt="blueprint" class="aligncenter" />
-					<p>With Responsive Design, and <a href="http://cybersynapse.com/ifeaturepro/">iFeature Pro</a> your website will now magically adjust to mobile devices such as the iPhone, iPad, and Android devices.</p>
+					<p>With Responsive Design, and <a href="http://cyberresponse.com/ifeaturepro/">iFeature Pro</a> your website will now magically adjust to mobile devices such as the iPhone, iPad, and Android devices.</p>
 			</div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
 			<div id="box3" class="four columns">
 				<h2 class="box-widget-title">Excellent Support</h2>
 				<img src="<?php echo $root ; ?>/images/icons/docs.png" height="100" alt="docs" class="aligncenter" />
-				<p>We designed iFeature Pro to be as easy to design with as possible, if you do run into trouble we provide a <a href="http://cybersynapse.com/forum">support forum</a>, and <a href="http://www.cybersynapse.com/ifeaturepro/docs/">precise documentation</a>.</p>
+				<p>We designed iFeature Pro to be as easy to design with as possible, if you do run into trouble we provide a <a href="http://cyberresponse.com/forum">support forum</a>, and <a href="http://www.cyberresponse.com/ifeaturepro/docs/">precise documentation</a>.</p>
 			</div><!--end box3-->
 		<?php endif; ?>
 </div>
@@ -133,7 +133,7 @@ function ifeature_link_rel() {
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'synapse_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
 		$font = $options->get($themeslug.'_custom_font');	
@@ -187,7 +187,7 @@ global $current_user;
 			<div class="seven columns">
 				
 				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
 			
 				
@@ -225,7 +225,7 @@ function ifeature_sitename_contact_content() {
 			<div class="seven columns">
 				
 				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
 			
 				
@@ -294,7 +294,7 @@ $default = "$root/images/pro/banner.jpg";
 			<div class="twelve columns">
 			
 			<!-- Begin @Core header social icon hook -->
-				<?php synapse_header_social_icons(); ?> 
+				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 
 			
@@ -319,7 +319,7 @@ function ifeature_logo_description_content() {
 			<div class="seven columns">
 				
 			<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 			<!-- End @Core header sitename hook -->
 			
 				
@@ -328,7 +328,7 @@ function ifeature_logo_description_content() {
 			<div class="five columns" style="text-align: right;">
 			
 			<!-- Begin @Core header description hook -->
-				<?php synapse_header_site_description(); ?> 
+				<?php response_header_site_description(); ?> 
 			<!-- End @Core header description hook -->
 						
 			</div>	
@@ -351,7 +351,7 @@ function ifeature_description_icons_content() {
 			<div class="five columns">
 				
 			<!-- Begin @Core header description hook -->
-				<?php synapse_header_site_description(); ?> 
+				<?php response_header_site_description(); ?> 
 			<!-- End @Core header description hook -->
 			
 				
@@ -360,7 +360,7 @@ function ifeature_description_icons_content() {
 			<div class="seven columns">
 			
 			<!-- Begin @Core header social icon hook -->
-				<?php synapse_header_social_icons(); ?> 
+				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 						
 			</div>	
@@ -384,7 +384,7 @@ function ifeature_logo_menu_content() {
 			<div class="five columns">
 				
 				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
 			
 			</div>	
@@ -417,7 +417,7 @@ function ifeature_header_standard_content() {
 			<div class="seven columns">
 				
 				<!-- Begin @Core header sitename hook -->
-					<?php synapse_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
 			
 				
@@ -426,7 +426,7 @@ function ifeature_header_standard_content() {
 			<div id ="register" class="five columns">
 				
 			<!-- Begin @Core header social icon hook -->
-				<?php synapse_header_social_icons(); ?> 
+				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 				
 			</div>	

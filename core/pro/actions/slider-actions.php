@@ -1,6 +1,6 @@
 <?php
 /**
-* Slider section actions used by the CyberChimps Synapse Core Framework Pro Extension
+* Slider section actions used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -19,16 +19,16 @@
 * Extend slider actions
 */
 
-add_action ('synapse_blog_slider', 'synapse_slider_content' );
-add_action ('synapse_page_slider', 'synapse_slider_content' );
+add_action ('response_blog_slider', 'response_slider_content' );
+add_action ('response_page_slider', 'response_slider_content' );
 
-add_action ('synapse_blog_nivoslider', 'synapse_nivoslider_content' );
-add_action ('synapse_page_nivoslider', 'synapse_nivoslider_content' );
+add_action ('response_blog_nivoslider', 'response_nivoslider_content' );
+add_action ('response_page_nivoslider', 'response_nivoslider_content' );
 
 /**
 * Nivoslider
 */
-function synapse_nivoslider_content() {
+function response_nivoslider_content() {
 
 /* Call globals. */	
 
@@ -507,7 +507,7 @@ echo $out; ?> </div> <div class="nivoslider_nav" style="width: <?php echo $csWid
 /**
 * Extend slider functions
 */
-function synapse_slider_content() {
+function response_slider_content() {
 
 /* Call globals. */	
 

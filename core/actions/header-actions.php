@@ -1,9 +1,9 @@
 <?php
 /**
-* Header actions used by the CyberChimps Synapse Core Framework
+* Header actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,37 +11,37 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse header actions
+* Response header actions
 */
-add_action( 'synapse_after_head_tag', 'synapse_font' );
-add_action( 'synapse_head_tag', 'synapse_html_attributes' );
-add_action( 'synapse_head_tag', 'synapse_meta_tags' );
-add_action( 'synapse_head_tag', 'synapse_title_tag' );
-add_action( 'synapse_head_tag', 'synapse_link_rel' );
+add_action( 'response_after_head_tag', 'response_font' );
+add_action( 'response_head_tag', 'response_html_attributes' );
+add_action( 'response_head_tag', 'response_meta_tags' );
+add_action( 'response_head_tag', 'response_title_tag' );
+add_action( 'response_head_tag', 'response_link_rel' );
 
-add_action( 'synapse_header_sitename', 'synapse_header_sitename_content');
-add_action( 'synapse_header_site_description', 'synapse_header_site_description_content' );
-add_action( 'synapse_header_social_icons', 'synapse_header_social_icons_content' );
+add_action( 'response_header_sitename', 'response_header_sitename_content');
+add_action( 'response_header_site_description', 'response_header_site_description_content' );
+add_action( 'response_header_social_icons', 'response_header_social_icons_content' );
 
-add_action( 'synapse_navigation', 'synapse_nav' );
-add_action( 'synapse_404_content', 'synapse_404_content_handler' );
+add_action( 'response_navigation', 'response_nav' );
+add_action( 'response_404_content', 'response_404_content_handler' );
 
 /**
 * Establishes the theme font family.
 *
 * @since 1.0
 */
-function synapse_font() {
+function response_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'synapse_default_font_family', 'Helvetica, serif' );
+	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" ) {
-		$font = apply_filters( 'synapse_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	else {
 		$font = $options->get($themeslug.'_font'); 
@@ -55,7 +55,7 @@ function synapse_font() {
 *
 * @since 1.0
 */
-function synapse_html_attributes() { ?>
+function response_html_attributes() { ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes('xhtml'); ?>>
 <head profile="http://gmpg.org/xfn/11"> <?php 
@@ -66,7 +66,7 @@ function synapse_html_attributes() { ?>
 *
 * @since 1.0
 */
-function synapse_meta_tags() { ?>
+function response_meta_tags() { ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <?php
 	global $themeslug, $options, $post; //Call global variables
 	if(!$post) return; // in case of 404 page or something
@@ -107,7 +107,7 @@ function synapse_meta_tags() { ?>
 *
 * @since 1.0
 */
-function synapse_title_tag() {
+function response_title_tag() {
 	global $options, $themeslug, $query, $post; 
 	$blogtitle = ($options->get($themeslug.'_home_title'));
 	if (!is_404()) {
@@ -166,12 +166,12 @@ function synapse_title_tag() {
 *
 * @since 1.0
 */
-function synapse_link_rel() {
+function response_link_rel() {
 	global $themeslug, $options; //Call global variables
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'synapse_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
 		$font = $options->get($themeslug.'_custom_font');	
@@ -181,9 +181,9 @@ function synapse_link_rel() {
 	}?>
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/960/reset.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/960/text.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/grid.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/960/reset.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/960/text.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/response/css/grid.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 
@@ -202,7 +202,7 @@ function synapse_link_rel() {
 *
 * @since 1.0
 */
-function synapse_header_sitename_content() {
+function response_header_sitename_content() {
 	global $themeslug, $options; //Call global variables
 	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
 
@@ -218,7 +218,7 @@ function synapse_header_sitename_content() {
 	}						 
 }
 
-function synapse_header_site_description_content() {
+function response_header_site_description_content() {
 	global $themeslug, $options; ?>
 	
 	<div id="description">
@@ -232,7 +232,7 @@ function synapse_header_site_description_content() {
 *
 * @since 1.0
 */
-function synapse_header_social_icons_content() { 
+function response_header_social_icons_content() { 
 	global $options, $themeslug; //call globals
 	
 	$facebook		= $options->get($themeslug.'_facebook');
@@ -333,7 +333,7 @@ function synapse_header_social_icons_content() {
 *
 * @since 1.0
 */
-function synapse_nav() {
+function response_nav() {
 	global $options, $themeslug; //call globals 
 	
 	if ($options->get($themeslug.'_hide_home_icon') == "0" && $options->get($themeslug.'_hide_search') == "0" OR $options->get($themeslug.'_hide_home_icon') == "1" && $options->get($themeslug.'_hide_search') == "0" ) {
@@ -358,7 +358,7 @@ function synapse_nav() {
 			<?php endif;?>
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
-		    'fallback_cb' => 'menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
 			    )
 			);

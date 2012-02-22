@@ -1,6 +1,6 @@
 <?php
 /**
-* Page actions used by the CyberChimps Synapse Core Framework
+* Page actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,38 +11,38 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse page actions
+* Response page actions
 */
 
-add_action('synapse_page_section', 'synapse_page_section_content' );
+add_action('response_page_section', 'response_page_section_content' );
 
 /**
 * Sets up the page content. 
 *
 * @since 1.0
 */
-function synapse_page_section_content() { 
+function response_page_section_content() { 
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 	
-	synapse_sidebar_init();
+	response_sidebar_init();
 	
 	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
 
 
 ?>
 <div class="row">
-	<!--Begin @Core before content sidebar hook-->
-		<?php synapse_before_content_sidebar(); ?>
-	<!--End @Core before content sidebar hook-->
+	<!--Begin @response before content sidebar hook-->
+		<?php response_before_content_sidebar(); ?>
+	<!--End @response before content sidebar hook-->
 			
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
-		<?php synapse_page_content_slider(); ?>
+		<?php response_page_content_slider(); ?>
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -76,9 +76,9 @@ function synapse_page_section_content() {
 				
 	</div><!--end content_left-->
 	
-	<!--Begin @Core after content sidebar hook-->
-		<?php synapse_after_content_sidebar(); ?>
-	<!--End @Core after content sidebar hook-->
+	<!--Begin @response after content sidebar hook-->
+		<?php response_after_content_sidebar(); ?>
+	<!--End @response after content sidebar hook-->
 </div>
 <?php
 }

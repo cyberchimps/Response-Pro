@@ -1,11 +1,18 @@
 <?php 
-
-/*
-	Page
-	Establishes the iFeature Pro page tempate.
-	Version: 3.0
-	Copyright (C) 2011 CyberChimps
-
+/**
+* Page template used by the CyberChimps Response Core Framework
+*
+* Authors: Tyler Cunningham, Trent Lapinski
+* Copyright: © 2012
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Response
+* @since 1.0
 */
 
 /* Header call. */
@@ -28,13 +35,13 @@
 /* Set slider hook based on page option */
 
 if (preg_match("/page_slider/", $page_section_order ) && $size == "1" ) {
-	remove_action ('synapse_page_slider', 'synapse_slider_content' );
-	add_action ('synapse_page_content_slider', 'synapse_slider_content' );
+	remove_action ('response_page_slider', 'response_slider_content' );
+	add_action ('response_page_content_slider', 'response_slider_content' );
 }
 
 if (preg_match("/page_nivoslider/", $page_section_order ) && $nivosize == "1" ) {
-	remove_action ('synapse_page_nivoslider', 'synapse_nivoslider_content' );
-	add_action ('synapse_page_content_slider', 'synapse_nivoslider_content' );
+	remove_action ('response_page_nivoslider', 'response_nivoslider_content' );
+	add_action ('response_page_content_slider', 'response_nivoslider_content' );
 }
 
 /* End set slider hook*/
@@ -42,12 +49,12 @@ if (preg_match("/page_nivoslider/", $page_section_order ) && $nivosize == "1" ) 
 
 <div class="container">
 	<div class="row">
-		<?php if (function_exists('synapse_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { synapse_breadcrumbs(); }?>
+		<?php if (function_exists('response_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { response_breadcrumbs(); }?>
 	</div>
 	<div class="row"> 
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
-				$fn = 'synapse_' . $key;
+				$fn = 'response_' . $key;
 				if(function_exists($fn)) {
 					call_user_func_array($fn, array());
 				}

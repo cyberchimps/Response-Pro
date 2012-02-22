@@ -1,6 +1,6 @@
 <?php
 /**
-* Sidebar actions used by the CyberChimps Synapse Core Framework
+* Sidebar actions used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,16 +11,16 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
 /**
-* Synapse sidebar actions
+* Response sidebar actions
 */
-add_action( 'synapse_sidebar_init', 'synapse_sidebar_init_content' );
-add_action( 'synapse_before_content_sidebar', 'synapse_before_content_sidebar_markup' );
-add_action( 'synapse_after_content_sidebar', 'synapse_after_content_sidebar_markup' );
+add_action( 'response_sidebar_init', 'response_sidebar_init_content' );
+add_action( 'response_before_content_sidebar', 'response_before_content_sidebar_markup' );
+add_action( 'response_after_content_sidebar', 'response_after_content_sidebar_markup' );
 
 
 /**
@@ -28,7 +28,7 @@ add_action( 'synapse_after_content_sidebar', 'synapse_after_content_sidebar_mark
 *
 * @since 1.0
 */
-function synapse_sidebar_init_content() {
+function response_sidebar_init_content() {
 
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 	
@@ -67,7 +67,7 @@ function synapse_sidebar_init_content() {
 *
 * @since 1.0
 */
-function synapse_before_content_sidebar_markup() { 
+function response_before_content_sidebar_markup() { 
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 				
 	<?php if ($sidebar == 'right-left' OR $sidebar == "2"): ?>
@@ -88,7 +88,7 @@ function synapse_before_content_sidebar_markup() {
 *
 * @since 1.0
 */
-function synapse_after_content_sidebar_markup() {
+function response_after_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 	
 	<?php if ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '' ): ?>

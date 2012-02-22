@@ -1,6 +1,6 @@
 <?php
 /**
-* Callout section actions used by the CyberChimps Synapse Core Framework Pro Extension
+* Callout section actions used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -18,14 +18,14 @@
 /**
 * Pro callout actions
 */
-add_action ( 'synapse_callout_section', 'synapse_callout_section_content' );
+add_action ( 'response_callout_section', 'response_callout_section_content' );
 
 /**
 * Retrieves the Callout Section options and sets up the HTML
 *
 * @since 1.0
 */
-function synapse_callout_section_content() {
+function response_callout_section_content() {
 
 	global $options, $themeslug, $post; //call globals
 	$root = get_template_directory_uri();  
