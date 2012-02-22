@@ -162,7 +162,7 @@ header {margin-top: 15px;}
 /* Post Container Styling  */
 
 .post_container {
-	padding: 10px;
+	padding: 15px;
 	background: #fff;
 	margin-bottom: 10px;
 	margin-left: 0px;
@@ -594,6 +594,11 @@ h6 {
 .posts_title a{
 	text-decoration: none;
 	font-weight: 400;
+	color: #151515;
+}
+
+.posts_title a:hover{
+	color: #5ca9d6;
 }
 
 h1.description, h1.sitename {margin-bottom: 0px;}
