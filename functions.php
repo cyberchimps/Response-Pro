@@ -11,7 +11,7 @@
 * Define global theme functions.
 */ 
 	$themename = 'response';
-	$themenamefull = 'Response';
+	$themenamefull = 'Response Pro';
 	$themeslug = 're';
 	$root = get_template_directory_uri(); 
 	
@@ -46,7 +46,7 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 function response_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'iFeature', 'title' => 'iFeature Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'Response', 'title' => 'Response Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
 }
 add_action( 'admin_bar_menu', 'response_admin_link', 113 );
 
@@ -428,8 +428,6 @@ require_once ( get_template_directory() . '/includes/classy-options-init.php' );
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 require_once ( get_template_directory() . '/includes/update.php' ); // Notify user of theme update on "Updates" page in Dashboard.
-require_once ( get_template_directory() . '/includes/theme-hooks.php' ); // Theme specific hooks.
-require_once ( get_template_directory() . '/includes/theme-actions.php' ); // Actions for theme specific hooks.
 
 // Presstrends
 function presstrends() {

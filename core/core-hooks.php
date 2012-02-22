@@ -503,6 +503,15 @@ function response_logo_icons() {
 }
 
 /**
+* Banner header element
+*
+* @since 1.0
+*/
+function response_banner() {
+	do_action('response_banner');
+}
+
+/**
 * End
 */
 

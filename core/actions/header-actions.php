@@ -34,6 +34,7 @@ add_action( 'response_404_content', 'response_404_content_handler' );
 add_action( 'response_logo_icons', 'response_logo_icons_content');
 add_action( 'response_custom_header_element', 'response_custom_header_element_content');
 add_action( 'response_logo_register', 'response_logo_register_content');
+add_action( 'response_banner', 'response_banner_content');
 
 /**
 * Establishes the theme font family.
@@ -460,6 +461,39 @@ function response_logo_icons_content() {
 			</div>	
 		</div><!--end row-->
 	</div>
+
+<?php
+}
+
+/**
+* Full-Width Logo
+*
+* @since 3.0
+*/
+function response_banner_content() {
+global $themeslug, $options, $root; //Call global variables
+$banner = $options->get($themeslug.'_banner'); //Calls the logo URL from the theme options
+$default = "$root/images/pro/banner.jpg";
+
+?>
+	<div class="container">
+		<div class="row">
+		
+			<div class="twelve columns">
+			<div id="banner">
+			
+			<?php if ($banner != ""):?>
+				<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($banner['url']); ?>" alt="logo"></a>		
+			<?php endif; ?>
+			
+			<?php if ($banner == ""):?>
+				<a href="<?php echo home_url(); ?>/"><img src="<?php echo $default; ?>" alt="logo"></a>		
+			<?php endif; ?>
+			
+			</div>		
+			</div>	
+		</div><!--end row-->
+	</div>	
 
 <?php
 }

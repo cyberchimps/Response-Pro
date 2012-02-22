@@ -21,6 +21,8 @@ add_action( 'response_after_head_tag', 'response_pro_font' );
 add_action( 'response_header_contact_area', 'response_header_contact_area_content' );
 add_action( 'response_logo_contact', 'response_logo_contact_content');
 add_action( 'response_description_icons', 'response_description_icons_content');
+add_action( 'response_logo_menu', 'response_logo_menu_content');
+add_action( 'response_logo_description', 'response_logo_description_content');
 
 /**
 * Establishes the Pro theme font family.
@@ -132,6 +134,71 @@ function response_description_icons_content() {
 <?php
 }
 
+/**
+* Description/Icons
+*
+* @since 3.0
+*/
+function response_logo_menu_content() {
+?>
+	
+	<div class="container">
+		<div class="row">	
+			
+			<div class="five columns">
+				
+				<!-- Begin @Core header sitename hook -->
+					<?php response_header_sitename(); ?> 
+				<!-- End @Core header sitename hook -->
+			
+			</div>	
+			
+			<div class="seven columns">
+			<div id="halfnav">
+			<?php wp_nav_menu( array(
+		    'theme_location' => 'sub-menu' // Setting up the location for the main-menu, Main Navigation.
+			    )
+			);
+	    	?>
+			</div>					
+			</div>	
+		
+		</div><!--end row-->
+	</div>
+<?php
+}
+
+/**
+* Logo/Description
+*
+* @since 3.0
+*/
+function response_logo_description_content() {
+?>
+	<div class="container">
+		<div class="row">
+		
+			<div class="seven columns">
+				
+			<!-- Begin @Core header sitename hook -->
+					<?php response_header_sitename(); ?> 
+			<!-- End @Core header sitename hook -->
+			
+				
+			</div>	
+			
+			<div class="five columns" style="text-align: right;">
+			
+			<!-- Begin @Core header description hook -->
+				<?php response_header_site_description(); ?> 
+			<!-- End @Core header description hook -->
+						
+			</div>	
+		</div><!--end row-->
+	</div>	
+
+<?php
+}
 
 /**
 * End
