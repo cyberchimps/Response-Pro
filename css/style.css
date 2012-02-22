@@ -263,7 +263,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 .widget-title{font-size:18px;color:#444;text-shadow:none;}
 
-.widget-container ul{padding-top:10px; margin-left: 0px;}
+.widget-container ul{margin-left: 0px;margin-bottom:10px;}
 
 /* Blog and Post Styles */
 
