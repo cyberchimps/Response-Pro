@@ -75,6 +75,15 @@ function response_page_nivoslider() {
 	do_action ('response_page_nivoslider');
 }
 
+/**
+* Hook for the Header Contact Area
+*
+* @since 3.0.5
+*/
+function response_header_contact_area() {
+	do_action('response_header_contact_area');
+}
+
 
 /**
 * End

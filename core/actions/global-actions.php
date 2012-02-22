@@ -24,7 +24,6 @@ add_action( 'response_post_byline', 'response_post_byline_content' );
 add_action( 'response_edit_link', 'response_edit_link_content' );
 add_action( 'response_post_tags', 'response_post_tags_content' );
 add_action( 'response_post_bar', 'response_post_bar_content' );
-add_action( 'response_fb_like_plus_one', 'response_fb_like_plus_one_content' );
 
 /**
 * Check for post format type, apply filter based on post format name for easy modification.
@@ -187,40 +186,6 @@ function response_post_tags_content() {
 			<?php the_tags('Tags: ', ', ', '<br />'); ?>
 		
 	</div><!--end tags--> 
-	<?php endif;
-}
-
-/**
-* Sets up the Facebook Like and Google Plus One area
-*
-* @since 3.1
-*/
-function response_fb_like_plus_one_content() {
-	global $options, $themeslug; 
-	
-	if (is_single()) {
-		 $fb = $options->get($themeslug.'_single_show_fb_like');
-		 $gplus = $options->get($themeslug.'_single_show_gplus');
-	}
-	elseif (is_archive()) {
-		 $fb = $options->get($themeslug.'_archive_show_fb_like');
-		 $gplus = $options->get($themeslug.'_archive_show_gplus');
-	}
-	else {
-		 $fb = $options->get($themeslug.'_show_fb_like');
-		 $gplus = $options->get($themeslug.'_show_gplus');
-	}?>
-
-	<?php if ($gplus == "1"):?>
-		<div class="gplusone">	
-			<g:plusone size="standard" count="true"></g:plusone>
-		</div>
-	<?php endif;?>
-						
-	<?php if ($fb == "1"):?>			
-		<div id="fb">
-			<iframe src="http://www.facebook.com/plugins/like.php?href=<?php the_permalink() ?>&layout=standard&show_faces=true&width=450&action=like&colorscheme=light" scrolling="no" frameborder="0"  allowTransparency="true" style="border:none; overflow:hidden; width:330px; height:28px"></iframe>
-		</div>
 	<?php endif;
 }
 

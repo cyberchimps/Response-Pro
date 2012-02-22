@@ -476,12 +476,12 @@ function response_post_bar() {
 }
 
 /**
-* Facebook like and plus one. 
+* Custom HTML header element. 
 *
 * @since 1.0
 */
-function response_fb_like_plus_one() {
-	do_action ('response_fb_like_plus_one');
+function ifeature_custom_header_element() {
+	do_action('ifeature_custom_header_element');
 }
 
 /**

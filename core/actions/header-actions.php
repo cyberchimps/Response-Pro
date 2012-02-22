@@ -31,6 +31,8 @@ add_action( 'response_header_social_icons', 'response_header_social_icons_conten
 add_action( 'response_navigation', 'response_nav' );
 add_action( 'response_404_content', 'response_404_content_handler' );
 
+add_action( 'response_custom_header_element', 'response_custom_header_element_content');
+
 /**
 * Establishes the theme font family.
 *
@@ -357,6 +359,29 @@ function response_nav() {
 </div>
  <?php
 }
+
+/**
+* Custom HTML header element.
+*
+* @since 1.0
+*/
+function response_custom_header_element_content() { 
+	global $themeslug, $options; ?>
+	
+	<div class="container">
+		<div class="row">
+		
+			<div class="twelve columns">
+				
+				<?php echo stripslashes ($options->get($themeslug.'_custom_header_element')); 	?>
+						
+			</div>	
+		</div><!--end row-->
+	</div>	
+
+<?php	
+}
+
 
 /**
 * End
