@@ -335,15 +335,7 @@ function response_header_social_icons_content() {
 */
 function response_nav() {
 	global $options, $themeslug; //call globals 
-	
-	if ($options->get($themeslug.'_hide_home_icon') == "0" && $options->get($themeslug.'_hide_search') == "0" OR $options->get($themeslug.'_hide_home_icon') == "1" && $options->get($themeslug.'_hide_search') == "0" ) {
-		$grid = 'twelve columns';
-	}
-	
-	else {
-		$grid = 'nine columns';
-	}
-	
+		
 	?>
 		
 	<div class="container">
@@ -351,11 +343,7 @@ function response_nav() {
 
 			<div class="twelve columns" id="imenu">
 
-			<div id="nav" class="<?php echo $grid; ?>">
-			<?php if ($options->get($themeslug.'_hide_home_icon') != "0"):?><div id="home"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ;?>/images/home.png" alt="home" /></a></div><?php endif;?>
-			<?php if ($options->get($themeslug.'_hide_home_icon') == "0"):?>
-			<div id="nohome"></div>
-			<?php endif;?>
+			<div id="nav" class="twelve columns">
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
@@ -364,11 +352,6 @@ function response_nav() {
 			);
 	    	?>
    			</div>
-   			<?php if ($options->get($themeslug.'_hide_search') != "0"):?>
-			<div class="three columns">
-				<?php get_search_form(); ?>
-			</div>
-			<?php endif;?>
 		</div>
 	</div>
 </div>

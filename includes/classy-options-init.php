@@ -81,7 +81,6 @@ $options
 ")
 	->section("Design")
 		->open_outersection()
-			->checkbox($themeslug."_responsive_design", "Responsive Design", array('default' => true))
 			->select($themeslug."_color_scheme", "Select a Skin Color", array( 'options' => array("blue" => "Blue (default)", "black" => "Black", "darkblue" => "Dark Blue", "green" => "Green", "grey" => "Grey", "orange" => "Orange", "pink" => "Pink", "red" => "Red", "white" => "White"), 'default' => 'blue'))
 		->close_outersection()
 		->subsection("Typopgraphy")
