@@ -1,0 +1,572 @@
+/* Page Elements */
+
+#orbitDemo {border: 1px solid #ccc;}
+
+/*============================*/
+/*===== Nivo Slider ======*/
+/*============================*/
+
+.nivoSlider {
+	position:relative;
+}
+
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+/* If an image is wrapped in a link */
+
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+
+/* The slices and boxes in the Slider */
+
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.7; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+	text-align: left;
+	
+}
+
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+	
+}
+
+.nivo-caption a {
+	display:inline !important;
+}
+
+
+/* Direction nav styles (e.g. Next & Prev) */
+
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+
+.nivo-prevNav {
+	left:0px;
+}
+
+.nivo-nextNav {
+	right:0px;
+}
+
+/* Custom Slider Styles */
+
+#slider-wrapper {
+	height: 380px;
+    margin: auto;
+    margin-bottom: 50px;
+    -moz-box-shadow:0 0 4px #AAAAAA;
+    -webkit-box-shadow:0 0 4px #AAAAAA;
+    box-shadow:0 0 4px #AAAAAA;
+    height: 380px;
+    border: 1px solid;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	background: #FFF;
+}
+
+.nivoslider_nav {
+	height: 50px;
+	box-shadow:0 0 4px #AAAAAA;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 0px 0px 4px 4px;
+	-moz-border-radius: 0px 0px 4px 4px;
+	margin: auto;
+	margin-bottom: 20px;
+	background: #f8f8f8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f8f8f8 0%, #ededed 40%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(40%,#ededed), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.nivo-controlNav {
+	position:absolute;
+	bottom:-40px; /* Put the nav below the slider */
+}
+	
+/* Slider Thumbnail Nav Style */
+	
+.nivo-controlNav a{
+	z-index:9;
+	width:50px;
+	height:30px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	display: block;
+}
+
+
+#slider .nivo-controlNav img {
+	display: inline;
+	position: relative;
+	margin-right: 10px;
+}
+
+/* End slider thumbs */
+
+#slider {
+	position:relative;
+    margin:auto;
+	background: #fff url(../images/slider/loading.gif) no-repeat 50% 50%;
+	border-bottom: 1px solid #bbb;
+}
+
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+
+#slider a {
+	border:0;
+	display:inline;
+}
+
+#slider a.active img {
+	border: 1px solid black;
+}
+
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/slider/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-html-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.7; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+	display:none;
+}
+
+.nivo-html-caption-right {
+	position:relative;
+	float:right;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.7; /* Overridden by captionOpacity setting */
+	width:250px;
+	height: 330px;
+	z-index:8;
+}
+
+.nivo-html-caption-left {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.7; /* Overridden by captionOpacity setting */
+	width:250px;
+	height: 330px;
+	z-index:8;
+}
+
+
+#customcaption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+
+.nivo-caption p {
+	padding:5px;
+	margin:0; 
+	color: white;
+}
+
+
+.slider_nav {
+	height: 50px;
+	width: 99.8%;
+	margin-top: -45px !important;
+	*margin-top: -25px !important;
+	box-shadow:0 0 4px #AAAAAA;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 0px 0px 4px 4px;
+	-moz-border-radius: 0px 0px 4px 4px;
+	margin: auto;
+	margin-bottom: 7px;
+	background: #f8f8f8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f8f8f8 0%, #ededed 40%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(40%,#ededed), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top,  #f8f8f8 0%,#ededed 40%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+
+/*============================*/
+/*===== Carousel Styles ======*/
+/*============================*/
+/* Elastislide Style */
+.es-carousel-wrapper{
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	box-shadow:inset 0 0 2px #ccc;
+	padding:10px 37px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	position:relative;
+	margin-bottom: 7px;
+	margin-bottom: 7px;
+}
+.es-carousel{
+	overflow:hidden;
+	background:#fff;
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+}
+.es-carousel ul li a{
+	display:block;
+	border-style:solid;
+	border-color:#444;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top:50%;
+	left:12px;
+	background:transparent url(../images/nav.png) no-repeat top left;
+	width:14px;
+	height:26px;
+	margin-top:-13px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.es-nav span.es-nav-next{
+	right:12px;
+	left:auto;
+	background-position:top right;
+}
+.es-nav span:hover{
+	opacity:1.0;
+}
+.carousel_caption {text-align: center; margin-top: -21px; background: rgba(0, 0, 0, .6); color: white; width: 100%; position: relative; }
+/*============================*/
+/*======= Twitter Bar ========*/
+/*============================*/
+
+#twitterbar {
+	background: #f8f8f8;
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;
+	overflow: hidden;
+	margin: auto;
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+
+#twittertext {
+	padding: 10px 15px 10px 15px;
+	font-size: 14px;
+}
+
+/*============================*/
+/*===== Callout Section ======*/
+/*============================*/
+
+#calloutwrap {
+	min-height: 80px;
+	overflow: hidden;
+	position:relative;
+	display: block;
+	margin: auto;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;}
+
+#callout_text {
+	font-size: 14px;
+	margin-left: 0;
+	padding: 10px 15px 10px 15px;
+}
+
+.callout_title {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#calloutbutton {
+	padding: 10px 5px 10px 5px;
+	margin-top: 28px;
+	background: #333;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	
+}
+
+#calloutimg{
+	padding-top: 10px;
+	
+	float:right;
+}
+
+.callout_link {text-align: center; margin-bottom: 0px;}
+
+#calloutbutton:hover{
+	background: #222;
+}
+
+#calloutbutton a{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+/*============================*/
+/*====== Widgitized Boxes =====*/
+/*============================*/
+
+#box_container {
+	min-height: 240px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+#box_container ul {
+	list-style: none;
+}
+
+.box-widget-title {
+	color: #444;
+	height: 25px;
+	padding: 0 5px 0 0px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#box1 {
+	float: left;
+	width: 290px;
+	min-height: 200px;
+	padding: 10px;
+	margin-left: 0px;
+	margin-right: 22px;
+	color: #222;
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;
+}
+
+#box2 {
+	float: left;
+	width: 290px;
+	min-height: 200px;
+	padding: 10px;
+	margin-left: 0px;
+	margin-right: 22px;
+	color: #222;
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;
+}
+
+#box3 {
+	float: left;
+	width: 290px;
+	min-height: 200px;
+	padding: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	color: #222;
+	background: #fff;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow:inset 0 0 2px #ccc;
+}
+
+.boxes ul { padding-left: 15px; }
+
+/*============================*/
+/*====== Tabbed Widgit =====*/
+/*============================*/
+
+/* Tabs */
+
+.ifeature-tabbed-header li {
+	float: left;
+}
+
+.ifeature-tabbed-popular-posts li, .ifeature-tabbed-recent-posts li {
+	padding: 10px;
+	border-bottom: 1px solid #E2E2E2;
+	padding-bottom: 20px;
+}
+
+.ifeature-tabbed-comments li {
+	padding: 10px 10px 25px 10px;
+	border-bottom: 1px solid #E2E2E2; 
+	padding-bottom: 35px;
+}
+
+.ifeature-tabbed-tab {
+	clear: both;
+}
+
+.ui-tabs-hide {
+	display: none;
+}
+
+.ifeature-tabbed-widget {
+	margin: -10px 0 0 0;
+}
+
+.ifeature-tabbed-header {
+
+}
+
+.tab-image {float: left; margin-right: 10px; border: 2px solid #444; }
+
+.ui-state-default {
+	background: #f4f4f4;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+
+}
+
+li.ui-state-default  {
+	margin-left: 0px !important; padding-left: 5px; padding-right: 5px;
+}
+
+.ui-state-active {
+	background: #fff;
+	border-bottom: none;
+}
+
+#tab-4 {padding: 10px;}
+
+#tab-4 a {
+	padding: 3px 8px; background: #f4f4f4; font-size: 12px; margin: 0 4px 4px 0; border-radius: 3px;
+}
+.tabbed-title {font-size: 14px; margin-top: 4px;}
+
+.tabbed-date {font-size: 12px; font-style: italic;}
+
+div.timer {display: none !important;}
