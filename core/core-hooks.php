@@ -485,6 +485,24 @@ function ifeature_custom_header_element() {
 }
 
 /**
+* Logo/Register header element. 
+*
+* @since 1.0
+*/
+function response_logo_register() {
+	do_action('response_logo_register');
+}
+
+/**
+* Logo/Icons header element
+*
+* @since 1.0
+*/
+function response_logo_icons() {
+	do_action('response_logo_icons');
+}
+
+/**
 * End
 */
 

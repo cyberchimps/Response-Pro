@@ -16,14 +16,7 @@
 */
 
 
-/**
-* Hook for header content area
-*
-* @since 3.0
-*/
-function response_header_content() {
-	do_action('response_header_content');
-}
+
 
 
 function response_sitename_contact() {

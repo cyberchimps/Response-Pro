@@ -19,7 +19,6 @@
 * response Actions
 */
 
-add_action( 'response_header_content', 'response_header_standard_content');
 
 
 add_action( 'response_sitename_contact', 'response_sitename_contact_content');
@@ -222,36 +221,5 @@ function response_logo_menu_content() {
 <?php
 }
 
-/**
-* Header content standard
-*
-* @since 3.0
-*/
-function response_header_standard_content() {
-?>
-	<div class="container">
-		<div class="row">
-		
-			<div class="seven columns">
-				
-				<!-- Begin @Core header sitename hook -->
-					<?php response_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
-			
-				
-			</div>	
-			
-			<div id ="register" class="five columns">
-				
-			<!-- Begin @Core header social icon hook -->
-				<?php response_header_social_icons(); ?> 
-			<!-- End @Core header contact social icon hook -->	
-				
-			</div>	
-		</div><!--end row-->
-	</div>
-
-<?php
-}
 
 ?>

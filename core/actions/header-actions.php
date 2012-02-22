@@ -31,8 +31,9 @@ add_action( 'response_header_social_icons', 'response_header_social_icons_conten
 add_action( 'response_navigation', 'response_nav' );
 add_action( 'response_404_content', 'response_404_content_handler' );
 
+add_action( 'response_logo_icons', 'response_logo_icons_content');
 add_action( 'response_custom_header_element', 'response_custom_header_element_content');
-add_action( 'response_sitename_register', 'response_sitename_register_content');
+add_action( 'response_logo_register', 'response_logo_register_content');
 
 /**
 * Establishes the theme font family.
@@ -395,9 +396,9 @@ function response_custom_header_element_content() {
 /**
 * Sitename/Register
 *
-* @since 3.0
+* @since 1.0
 */
-function response_sitename_register_content() {
+function response_logo_register_content() {
 global $current_user;
 ?>
 
@@ -431,6 +432,37 @@ global $current_user;
 <?php
 }
 
+/**
+* Logo/Icons header element.
+*
+* @since 1.0
+*/
+function response_logo_icons_content() {
+?>
+	<div class="container">
+		<div class="row">
+		
+			<div class="seven columns">
+				
+				<!-- Begin @Core header sitename hook -->
+					<?php response_header_sitename(); ?> 
+				<!-- End @Core header sitename hook -->
+			
+				
+			</div>	
+			
+			<div id ="register" class="five columns">
+				
+			<!-- Begin @Core header social icon hook -->
+				<?php response_header_social_icons(); ?> 
+			<!-- End @Core header contact social icon hook -->	
+				
+			</div>	
+		</div><!--end row-->
+	</div>
+
+<?php
+}
 
 /**
 * End
