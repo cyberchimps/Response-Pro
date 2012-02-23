@@ -172,25 +172,13 @@ header {margin-top: 15px;}
 
 .postformats {
 	float:right;
-	margin: -10px -10px 0 0px;
-	background: #dedede;
+	background: #fff;
+	margin: -8px 0 0 0;
 	height: 46px;
 	width: 50px;
-	border-radius: 0px 4px 0px;
-	-moz-border-radius: 0px 4px 0px;	
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
 }
 
-#postbar {
-	margin: -33px 0px 0px 0px;
-	width: 99.7%;
-	position: absolute;
-	height: 22px;
-	margin-left: 0px;
-	background: #fff;}
-
-#comments {text-align:right;float:right;padding-top: 3px;font-size: 12px;}
+#comments {text-align:left;padding-top: 3px;font-size: 12px;}
 
 #share {text-align:left;float:left;padding-top: 3px;}
 
