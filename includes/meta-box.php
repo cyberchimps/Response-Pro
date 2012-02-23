@@ -90,9 +90,10 @@ function initialize_the_meta_boxes() {
 					'twitterbar_section' => 'Twitter Bar',
 					'page_section' => 'Page',
 					'box_section' => 'Boxes',
+					'breadcrumbs' => 'Breadcrumbs',
 					'carousel_section' => 'Carousel'
 					),
-					'std' => 'page_section'
+					'std' => 'breadcrumbs,page_section'
 				))
 
 			->pagehelp('', 'Need Help?', '')

@@ -23,7 +23,7 @@
 
 <div class="container">
 	<div class="row">
-		<?php if (function_exists('response_breadcrumbs')) { response_breadcrumbs(); }?>
+		<?php response_breadcrumbs();?>
 	</div>
 	<div class="row">
 	<!--Begin @Core post area-->
