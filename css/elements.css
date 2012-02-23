@@ -255,7 +255,7 @@ a.nivo-prevNav {
 	width: 100%;
 	margin-top: -45px !important;
 	*margin-top: -25px !important;
-	border-bottom: 2px solid #E8E8E8;
+	border: 1px solid #DDD;
 	margin: auto;
 	margin-bottom: 7px;
 	background: #fff;
@@ -268,7 +268,7 @@ a.nivo-prevNav {
 /* Elastislide Style */
 .es-carousel-wrapper{
 	background: #fff;
-	border-bottom: 2px solid #E8E8E8;
+	border: 1px solid #DDD;
 	padding:10px 37px;
 	position:relative;
 	margin-bottom: 7px;
@@ -324,7 +324,7 @@ a.nivo-prevNav {
 
 #twitterbar {
 	background: #fff;
-	border-bottom: 2px solid #E8E8E8;
+	border: 1px solid #DDD;
 	overflow: hidden;
 	margin: auto;
 	margin-bottom: 7px;
@@ -349,7 +349,7 @@ a.nivo-prevNav {
 	margin-top: 7px;
 	margin-bottom: 7px;
 	background: #fff;
-	border-bottom: 2px solid #E8E8E8;
+	border: 1px solid #DDD;
 }
 
 #callout_text {
