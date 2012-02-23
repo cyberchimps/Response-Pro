@@ -33,7 +33,7 @@ function response_box_section_content() {
 	
 <div class="row">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
-			<div id="box1" class="three columns">
+			<div id="box1" class="four columns">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Left</h2>
 				<p>This is the box left widgetized area.</p>
@@ -41,7 +41,7 @@ function response_box_section_content() {
 			</div><!--end box1-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
-			<div id="box2" class="three columns">
+			<div id="box2" class="four columns">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Middle</h2>
 				<p>This is the box middle widgetized area.</p>
@@ -49,7 +49,7 @@ function response_box_section_content() {
 			</div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
-			<div id="box3" class="three columns">
+			<div id="box3" class="four columns">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Right</h2>
 				<p>This is the box right widgetized area.</p>
