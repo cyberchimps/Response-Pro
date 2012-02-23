@@ -22,7 +22,7 @@ function standard_web_layout() {
 	
 	if ($options->get($themeslug.'_standard_web_layout') == '1' ) {
 		echo '<style type="text/css">';
-		echo ".row {max-width: 1000px;}";
+		echo ".row {max-width: 1020px;}";
 		echo "#sidebar.four.columns {margin-left: 1.9%; width: 32.2%;}";
 		echo "#sidebar_left.four.columns {margin-right: 1.9%; width: 32.2%;}";
 		echo "#content.eight.columns {width: 65.9%; margin-left: 0%;}";
@@ -39,7 +39,7 @@ function custom_row_width() {
 	global $options, $themeslug;
 	$maxwidth = $options->get($themeslug.'_row_max_width');
 	
-	if ($maxwidth != '0' OR $maxwidth =='1000px' ) {
+	if ($maxwidth != '0' OR $maxwidth =='1020px' ) {
 		echo '<style type="text/css">';
 		echo ".row {max-width: $maxwidth;}";
 		echo '</style>';
