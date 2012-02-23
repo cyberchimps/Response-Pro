@@ -23,7 +23,7 @@
 
 <div class="container">
 	<div class="row">
-		<?php if (function_exists('response_breadcrumbs')) { response_breadcrumbs(); }?>
+		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
 	</div>
 	<div class="row">
 	<!--Begin @response before content sidebar hook-->
