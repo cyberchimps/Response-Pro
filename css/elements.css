@@ -425,7 +425,10 @@ a.nivo-prevNav {
 	min-height: 200px;
 	background: #fff;
 	border: 1px solid #ddd;
+	right: -1px;
 }
+
+#box2.four.columns{margin-left: 4.3%;}
 
 .boxes ul { padding-left: 15px; }
 
