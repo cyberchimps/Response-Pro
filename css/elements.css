@@ -413,12 +413,16 @@ a.nivo-prevNav {
 	min-height: 200px;
 	background: #fff;
 	border: 1px solid #ddd;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 #box2 {
 	min-height: 200px;
 	background: #fff;
 	border: 1px solid #ddd;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 #box3 {
@@ -426,6 +430,8 @@ a.nivo-prevNav {
 	background: #fff;
 	border: 1px solid #ddd;
 	right: -1px;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 #box2.four.columns{margin-left: 4.3%;}
