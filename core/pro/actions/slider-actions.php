@@ -72,16 +72,10 @@ function response_slider_content() {
 	}
 
 	
-/* Row div variable. */	
-if ($size == 'key2' OR $size == '0' ) {
 	$openrow = '<div class="row">';
 	$closerow = '</div>';
-}
 
-else {
-	$openrow = '';
-	$closerow = '';
-}?>	
+?>	
 
 <?php echo $openrow; 
 	
