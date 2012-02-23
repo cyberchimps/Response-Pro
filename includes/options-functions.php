@@ -39,7 +39,7 @@ function custom_row_width() {
 	global $options, $themeslug;
 	$maxwidth = $options->get($themeslug.'_row_max_width');
 	
-	if ($maxwidth != '0' OR $maxwidth =='980px' ) {
+	if ($maxwidth != '0' OR $maxwidth =='1000px' ) {
 		echo '<style type="text/css">';
 		echo ".row {max-width: $maxwidth;}";
 		echo '</style>';

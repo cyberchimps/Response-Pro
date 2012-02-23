@@ -140,7 +140,7 @@ jQuery(function($) {
 		var map = {
 			response_sitename_contact: "section-re_header_contact",
 			response_custom_header_element: "section-re_custom_header_element",
-			response_banner: "section-if_banner"
+			response_banner: "section-re_banner"
 			// , response_box_section: ""
 		};
 
