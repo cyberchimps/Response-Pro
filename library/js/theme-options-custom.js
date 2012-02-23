@@ -44,6 +44,14 @@ jQuery(document).ready(function($) {
       toShow.fadeOut();
     }
   }).change();
+    $("#re_blog_custom_callout_options").change(function() {
+    var toShow = $("#section-re_blog_callout_text_color");
+    if($(this).is(':checked')) {
+      toShow.fadeIn();
+    } else {
+      toShow.fadeOut();
+    }
+  }).change();
   $("#re_slider_type").change(function(){
     var val = $(this).val(),
       post = $("#section-re_slider_category"),
@@ -54,6 +62,7 @@ jQuery(document).ready(function($) {
       post.show(); custom.hide();
     }
   }).change();
+  
   
   $.each(['twitter', 'facebook', 'gplus', 'flickr', 'linkedin', 'youtube', 'googlemaps', 'email', 'rsslink'], function(i, val) {
 	  $("#section-re_" + val).each(function(){
