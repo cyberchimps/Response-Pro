@@ -40,8 +40,6 @@ function response_slider_content() {
 	$root = get_template_directory_uri(); 
 	
 	if (is_page()) {
-		$size = get_post_meta($post->ID, 'page_slider_size' , true);
-		$size2 = get_post_meta($post->ID, 'page_sidebar' , true);
 		$type = get_post_meta($post->ID, 'page_slider_type' , true);
 		$category = get_post_meta($post->ID, 'slider_blog_category' , true);
 		$customcategory = get_post_meta($post->ID, 'slider_category' , true);
@@ -56,8 +54,6 @@ function response_slider_content() {
 	}
 	
 	else {
-		$size = $options->get($themeslug.'_slider_size');
-		$size2 = $options->get($themeslug.'_blog_sidebar');
 		$type = $options->get($themeslug.'_slider_type'); 
 		$category = $options->get($themeslug.'_slider_category'); 
 		$customcategory = $options->get($themeslug.'_customslider_category');
@@ -72,16 +68,10 @@ function response_slider_content() {
 	}
 
 	
-/* Row div variable. */	
-if ($size == 'key2' OR $size == '0' ) {
 	$openrow = '<div class="row">';
 	$closerow = '</div>';
-}
 
-else {
-	$openrow = '';
-	$closerow = '';
-}?>	
+?>	
 
 <?php echo $openrow; 
 	
@@ -159,38 +149,13 @@ else {
 		</style><?php
 	}    
 
-/* Define wordthumb default height and widths. */		
-
-	if ($size == "key2" OR $size == '0') {
-		$wordthumb = "h=$height&w=980";
-	}
-	elseif ($size2 == "two-right" OR $size2 == "right-left" OR $size2 == "1" OR $size2 == "2") {
-		$wordthumb = "h=$height&w=480";
-	}
-	else {
-		$wordthumb = "h=$height&w=640";
-	}
-
-/* End define wordthumb. */
-
 /* Define slider width variable */ 
 
-	if ($size == 'key2' OR $size == '0' ) {
-	  	$csWidth = '980';
-	  	$imgwidth = '980';
-	  	$defaultimage = "$root/images/pro/slider-980.jpg";
-	}		
-	elseif ($size2 == 'right-left' && $size != 'key2' OR $size2 == 'two-right' && $size != 'key2' OR $size2 == '1' && $size != '0' OR $size2 == '2' && $size != '0') {
-		$csWidth = '470';
-		$imgwidth = '470';
-		$defaultimage = "$root/images/pro/slider-470.jpg";
-	}  	
-	else {
-		$csWidth = '640';
-		$imgwidth = '640';
-		$defaultimage = "$root/images/pro/slider-640.jpg";
-	}
-
+	$wordthumb = "h=$height&w=1000";
+	$csWidth = '1000';
+	$imgwidth = '1000';
+	$defaultimage = "$root/images/pro/slider-980.jpg";
+		
 /* End slider width variable */ 
 
 /* Query posts based on theme/meta options */

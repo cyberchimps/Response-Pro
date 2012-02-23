@@ -16,25 +16,7 @@
 */
 
 	global $options, $themeslug, $post; // call globals
-	
-	$reorder = $options->get($themeslug.'_blog_section_order');
-	$slidersize = $options->get($themeslug.'_slider_size');
-	$nivoslidersize = $options->get($themeslug.'_nivo_slider_size');
-			
-/* Set slider hook based on page option */
-
-	if (preg_match("/response_blog_slider/", $reorder ) && $slidersize != "key2" ) {
-		remove_action ( 'response_blog_slider', 'response_slider_content' );
-		add_action ( 'response_blog_content_slider', 'response_slider_content');
-	}
-	
-	if (preg_match("/response_blog_nivoslider/", $reorder ) && $nivoslidersize == "key1" ) {
-		remove_action ( 'response_blog_nivoslider', 'response_nivoslider_content' );
-		add_action ( 'response_blog_content_slider', 'response_nivoslider_content');
-	}
-	
-/* End set slider hook*/
-
+	$reorder = $options->get($themeslug.'_blog_section_order');		
 ?>
 
 <?php get_header(); ?>
