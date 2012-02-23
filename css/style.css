@@ -17,7 +17,7 @@ a img{border:none}
 a{outline:none}
 
 body {
-	background: url(../images/backgrounds/noise.png);
+	background: #FFF;
 }
 
 /* Misc  */
@@ -28,11 +28,11 @@ body {
 
 .pagination {
 clear:both;
-padding:20px 0;
+padding:2px 0;
 position:relative;
 font-size:11px;
 line-height:13px;
-margin-bottom: 15px;
+margin-bottom: 38px;
 }
 
 .pagination span, .pagination a {
@@ -146,7 +146,7 @@ header {margin-top: 15px;}
 #nav ul li:hover ul, #nav ul ul li:hover ul, #nav ul ul ul li:hover ul{display:block}
 #nav ul li:hover ul li a, #nav ul ul li:hover ul li a, #nav ul ul ul li:hover ul li a{border:#ddd 1px solid;margin:-1px 0 0 -8px}
 #nav ul li:hover ul li a{width:150px;padding:0 14px}
-#nav ul ul li:hover ul li a{width:150px;padding:0 14px;background-color:#f8f8f8}
+#nav ul ul li:hover ul li a{width:150px;padding:0 14px}
 #nav ul ul ul li:hover ul li a{width:150px;padding:0 14px;background-color:#eee}
 
 
@@ -202,6 +202,7 @@ header {margin-top: 15px;}
 	background: #fff;
 	margin-bottom: 10px;
 	margin-left: 0px;
+	border: 1px solid #DDD;
 	border-bottom: 2px solid #E8E8E8;
 }
 
@@ -272,6 +273,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	margin-bottom: 10px;
 	padding: 15px;
 	background: #fff;
+	border: 1px solid #DDD;
 	border-bottom: 2px solid #E8E8E8;
 }
 
