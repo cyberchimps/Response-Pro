@@ -140,7 +140,7 @@ function response_comment($comment, $args, $depth) {
 function response_breadcrumbs() {
   global $root;
   
-  $delimiter = "<img src='$root/images/arrow-right.png'>";
+  $delimiter = "<img src='$root/images/breadcrumb-arrow.png'>";
   $home = 'Home'; // text for the 'Home' link
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
