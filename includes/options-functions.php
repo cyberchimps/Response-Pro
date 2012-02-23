@@ -1,6 +1,6 @@
 <?php
 /**
-* Functions related to the iFeature Theme Options.
+* Functions related to the Response Theme Options.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package iFeature
-* @since 3.1
+* @package Response
+* @since 1.0
 */
 
 /* Standard Web Layout*/
