@@ -62,6 +62,18 @@ color:#fff;
 
 #sidebar {*margin-top: 15px;}
 
+#sidebar.four.columns {margin-left: 1.6%; width: 32.6%; right: -.3em;}
+#sidebar_left.four.columns {margin-right: 1.6%; width: 32.6%;}
+#content.eight.columns {width: 65.9%; margin-left: 0%;}
+#content.six.columns {width: 52.8%; margin-left: 2%; margin-right: 2%}
+#sidebar-right.three.columns {margin-left: 0%; width: 21.68%;}
+
+@-moz-document url-prefix() {
+
+#sidebar {right: -2px;}
+
+}
+
 #container {
 	margin-left: auto;
 	margin-right: auto;
@@ -271,13 +283,9 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 /* Sidebar  */
 
-#sidebar {right: -.3em;}
 
-@-moz-document url-prefix() {
 
-#sidebar {right: -2px;}
 
-}
 
 
 .widget-container {

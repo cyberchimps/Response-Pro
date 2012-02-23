@@ -89,7 +89,6 @@ $options
 						->textarea($themeslug."_typekit", "TypeKit Code")
 		->subsection_end()
 		->subsection("Layout")
-			->checkbox($themeslug."_standard_web_layout", "Standard Web Layout")
 			->text($themeslug."_row_max_width", "Row Max Width", array('default' => '1020px'))
 		->subsection_end()
 		->subsection("Custom Colors")

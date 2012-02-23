@@ -71,7 +71,7 @@ function response_before_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 				
 	<?php if ($sidebar == 'right-left' OR $sidebar == "2"): ?>
-	<div id="sidebar" class="three columns">
+	<div id="sidebar-left" class="three columns">
 		<?php get_sidebar('left'); ?>
 	</div>
 	<?php endif; ?>
@@ -98,13 +98,13 @@ function response_after_content_sidebar_markup() {
 	<?php endif;?>
 	
 	<?php if ($sidebar == 'two-right' OR  $sidebar == '1' ): ?>
-	<div id="sidebar" class="three columns">
+	<div id="sidebar-left" class="three columns">
 		<?php get_sidebar('left'); ?>
 	</div>
 	<?php endif;?> 
 	
 	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '1' OR $sidebar == '2'): ?>
-	<div id="sidebar" class="three columns">
+	<div id="sidebar-right" class="three columns">
 		<?php get_sidebar('right'); ?>
 	</div>
 	<?php endif;?> <?php 

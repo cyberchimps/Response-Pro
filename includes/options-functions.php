@@ -15,24 +15,6 @@
 * @since 1.0
 */
 
-/* Standard Web Layout*/
-
-function standard_web_layout() {
-	global $options, $themeslug;
-	
-	if ($options->get($themeslug.'_standard_web_layout') == '1' ) {
-		echo '<style type="text/css">';
-		echo ".row {max-width: 1020px;}";
-		echo "#sidebar.four.columns {margin-left: 1.9%; width: 32.2%;}";
-		echo "#sidebar_left.four.columns {margin-right: 1.9%; width: 32.2%;}";
-		echo "#content.eight.columns {width: 65.9%; margin-left: 0%;}";
-		echo ".ifeature-tabbed-header li a {padding-right: 13px;";
-		echo '</style>';
-	}
-
-}
-add_action( 'wp_head', 'standard_web_layout' );
-
 /* Widget Title Background*/
 
 function custom_row_width() {
