@@ -171,7 +171,7 @@ function response_post_tags_content() {
 
 	<?php if (has_tag() AND ($hidden[$themeslug.'_hide_tags']) != '0'):?>
 	<div class="tags">
-			<?php the_tags('Tags: ', ', ', '<br />'); ?>
+			<?php the_tags( __('Tags: ', 'response'), ', ', '<br />'); ?>
 		
 	</div><!--end tags--> 
 	<?php endif;
