@@ -23,7 +23,7 @@
 
 <div class="container">
 	<div class="row">
-		<?php if (function_exists('response_breadcrumbs') && ($options->get($themeslug.'_disable_breadcrumbs') == "1")) { response_breadcrumbs(); }?>
+		<?php if (function_exists('response_breadcrumbs')) { response_breadcrumbs(); }?>
 	</div>
 	<div class="row">
 	<!--Begin @response before content sidebar hook-->
@@ -33,10 +33,7 @@
 	
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
-			<!--Begin @response archive hook-->
-			<?php response_archive_title(); ?>
-			<!--End @response archive hook-->
-		
+					
 		<!--Begin @response before_archive hook-->
 			<?php response_before_archive(); ?>
 		<!--End @response before_archive hook-->
