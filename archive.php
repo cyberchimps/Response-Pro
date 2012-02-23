@@ -47,11 +47,14 @@
 				<?php response_loop(); ?>
 			<!--End @response archive hook-->
 			
-			</div><!--end post_class-->	
-		</div><!--end post container--> 
-		<!--Begin @iFeature post bar hook-->
+			</div><!--end post_class-->
+			
+			<!--Begin @iFeature post bar hook-->
 				<?php response_post_bar(); ?>
 			<!--End @iFeature post bar hook-->
+			
+		</div><!--end post container--> 
+	
 
 		 <?php endwhile; ?>
 	 
