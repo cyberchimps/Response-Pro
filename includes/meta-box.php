@@ -128,11 +128,6 @@ function initialize_the_meta_boxes() {
 			->text('carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))
 		->tab("Twitter Options")
 			->text('twitter_handle', 'Twitter Handle', 'Enter your Twitter handle if using the Twitter bar - Requires <a href="http://wordpress.org/extend/plugins/twitter-for-wordpress/" target="_blank">Twitter for WordPress Plugin')
-		->tab("SEO Options")
-			->text('seo_title', 'SEO Title', '')
-			->textarea('seo_description', 'SEO Description', '')
-			->textarea('seo_keywords', 'SEO Keywords', '')
-			->pagehelp('', 'Need help?', '')
 		->end();
 
 	foreach ($meta_boxes as $meta_box) {
