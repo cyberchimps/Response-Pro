@@ -66,8 +66,7 @@ function response_callout_section_content() {
 /* End define Callout title. */	
 
 ?>
-	
-		<div class="row">
+	<div class="row">
 		<div id="calloutwrap">
 			<div id="callout_text" class="twelve columns">
 				<h2 class="callout_title" ><?php echo $callouttext ?></h2>

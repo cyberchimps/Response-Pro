@@ -18,68 +18,68 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: core/actions/archive-actions.php:36
-#@ core
+#@ response
 msgid "Archive for the &#8216;"
 msgstr ""
 
 #: core/actions/archive-actions.php:36
-#@ core
+#@ response
 msgid "&#8217; Category:"
 msgstr ""
 
 #: core/actions/archive-actions.php:39
-#@ core
+#@ response
 msgid "Posts Tagged &#8216;"
 msgstr ""
 
 #: core/actions/archive-actions.php:39
-#@ core
+#@ response
 msgid "&#8217;:"
 msgstr ""
 
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
-#@ core
+#@ response
 msgid "Archive for"
 msgstr ""
 
 #: core/actions/archive-actions.php:48
-#@ core
+#@ response
 msgid "Archive for:"
 msgstr ""
 
 #: core/actions/archive-actions.php:51
-#@ core
+#@ response
 msgid "Author Archive:"
 msgstr ""
 
 #: core/actions/archive-actions.php:54
-#@ core
+#@ response
 msgid "Blog Archives:"
 msgstr ""
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "No Responses"
 msgstr ""
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "One Response"
 msgstr ""
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "% Responses"
 msgstr ""
 
 #: core/actions/comments-actions.php:88
-#@ core
+#@ response
 msgid "You must be"
 msgstr ""
 
 #: core/actions/comments-actions.php:88
-#@ core
+#@ response
 msgid "logged in"
 msgstr ""
 
@@ -89,19 +89,19 @@ msgid "to post a comment."
 msgstr ""
 
 #: core/actions/footer-actions.php:39
-#@ core
+#@ response
 msgid "Recent Posts"
 msgstr ""
 
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
-#@ core
-#@ ifeature
+#@ response
+#@ response
 msgid "Archives"
 msgstr ""
 
 #: core/actions/footer-actions.php:53
-#@ core
+#@ response
 msgid "Links"
 msgstr ""
 
@@ -109,52 +109,52 @@ msgstr ""
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
-#@ core
-#@ ifeature
+#@ response
+#@ response
 msgid "WordPress"
 msgstr ""
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ core
-#@ ifeature
+#@ response
+#@ response
 msgid "http://wordpress.org/"
 msgstr ""
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ core
-#@ ifeature
+#@ response
+#@ response
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr ""
 
 #: core/actions/global-actions.php:43
-#@ core
+#@ response
 msgid "Published on"
 msgstr ""
 
 #: core/actions/global-actions.php:44
-#@ core
+#@ response
 msgid "by"
 msgstr ""
 
 #: core/actions/global-actions.php:45
-#@ core
+#@ response
 msgid "in"
 msgstr ""
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "No Comments &#187;"
 msgstr ""
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "1 Comment &#187;"
 msgstr ""
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "% Comments &#187;"
 msgstr ""
 
@@ -169,37 +169,37 @@ msgid "Save Options"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:86
-#@ ifeature
+#@ response
 msgid "Support"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:87
-#@ ifeature
+#@ response
 msgid "Documentation"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:88
-#@ ifeature
+#@ response
 msgid "Forum"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:89
-#@ ifeature
+#@ response
 msgid "Twitter"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:90
-#@ ifeature
+#@ response
 msgid "Facebook"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:91
-#@ ifeature
+#@ response
 msgid "CyberChimps Store"
 msgstr ""
 
 #: core/classy-options/classy-options-framework/classy-options.php:92
-#@ ifeature
+#@ response
 msgid "CyberChimps Pro"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgstr ""
 
 #: functions.php:221
 #@ default
-msgid "iFeature Slides"
+msgid "response Slides"
 msgstr ""
 
 #: functions.php:222
@@ -321,27 +321,27 @@ msgid "Footer Menu"
 msgstr ""
 
 #: sidebar.php:19
-#@ ifeature
+#@ response
 msgid "Pages"
 msgstr ""
 
 #: sidebar.php:33
-#@ ifeature
+#@ response
 msgid "Categories"
 msgstr ""
 
 #: sidebar.php:50
-#@ ifeature
+#@ response
 msgid "Subscribe"
 msgstr ""
 
 #: sidebar.php:52
-#@ ifeature
+#@ response
 msgid "Entries (RSS)"
 msgstr ""
 
 #: sidebar.php:53
-#@ ifeature
+#@ response
 msgid "Comments (RSS)"
 msgstr ""
 

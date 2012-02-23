@@ -1,7 +1,7 @@
 #Copyright (C) 2011 
 msgid ""
 msgstr ""
-"Project-Id-Version: Core 1.0\n"
+"Project-Id-Version: Response 1.0\n"
 "Report-Msgid-Bugs-To: http://cyberchimps.com/forum\n"
 "POT-Creation-Date: 10-17-11\n"
 "MIME-Version: 1.0\n"
@@ -19,68 +19,68 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:36
 msgid "Archive for the &#8216;"
 msgstr "Archief voor de &#8216;"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:36
 msgid "&#8217; Category:"
 msgstr "&#8217; Categorie:"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:39
 msgid "Posts Tagged &#8216;"
 msgstr "Getagde posts &#8216;"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:39
 msgid "&#8217;:"
 msgstr ""
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
 msgid "Archive for"
 msgstr "Archief voor "
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:48
 msgid "Archive for:"
 msgstr "Archief voor:"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:51
 msgid "Author Archive:"
 msgstr "Archief van auteur:"
 
-# @ core
+# @ response
 #: core/actions/archive-actions.php:54
 msgid "Blog Archives:"
 msgstr "Blog archief:"
 
-# @ core
+# @ response
 #: core/actions/comments-actions.php:49
-msgid "No Responses"
+msgid "No cores"
 msgstr "Geen reacties"
 
-# @ core
+# @ response
 #: core/actions/comments-actions.php:49
-msgid "One Response"
+msgid "One core"
 msgstr "Een reactie"
 
-# @ core
+# @ response
 #: core/actions/comments-actions.php:49
-msgid "% Responses"
+msgid "% cores"
 msgstr "% reacties"
 
-# @ core
+# @ response
 #: core/actions/comments-actions.php:88
 msgid "You must be"
 msgstr "U moet"
 
-# @ core
+# @ response
 #: core/actions/comments-actions.php:88
 msgid "logged in"
 msgstr "ingelogd zijn"
@@ -90,25 +90,25 @@ msgstr "ingelogd zijn"
 msgid "to post a comment."
 msgstr "om een reactie te plaatsen."
 
-# @ core
+# @ response
 #: core/actions/footer-actions.php:39
 msgid "Recent Posts"
 msgstr "Recente berichten"
 
-# @ core
-# @ ifeature
+# @ response
+# @ response
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 msgid "Archives"
 msgstr "Archieven"
 
-# @ core
+# @ response
 #: core/actions/footer-actions.php:53
 msgid "Links"
 msgstr "Links"
 
-# @ core
-# @ ifeature
+# @ response
+# @ response
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
@@ -116,46 +116,46 @@ msgstr "Links"
 msgid "WordPress"
 msgstr ""
 
-# @ core
-# @ ifeature
+# @ response
+# @ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "http://wordpress.org/"
 msgstr ""
 
-# @ core
-# @ ifeature
+# @ response
+# @ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Draait op WordPress, een modern semantisch en persoonlijk publicatie-platform."
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:43
 msgid "Published on"
 msgstr "Gepubliceerd op"
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:44
 msgid "by"
 msgstr "door"
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:45
 msgid "in"
 msgstr "in"
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:70
 msgid "No Comments &#187;"
 msgstr "Geen reacties &#187;"
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:70
 msgid "1 Comment &#187;"
 msgstr "1 reactie &#187;"
 
-# @ core
+# @ response
 #: core/actions/global-actions.php:70
 msgid "% Comments &#187;"
 msgstr "% reacties &#187;"
@@ -170,37 +170,37 @@ msgstr "Pagina"
 msgid "Save Options"
 msgstr "Bewaar instellingen"
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:86
 msgid "Support"
 msgstr ""
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:87
 msgid "Documentation"
 msgstr "Documentatie"
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:88
 msgid "Forum"
 msgstr ""
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:89
 msgid "Twitter"
 msgstr ""
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:90
 msgid "Facebook"
 msgstr ""
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:91
 msgid "CyberChimps Store"
 msgstr "CyberChimps Winkel"
 
-# @ ifeature
+# @ response
 #: core/classy-options/classy-options-framework/classy-options.php:92
 msgid "CyberChimps Pro"
 msgstr ""
@@ -294,8 +294,8 @@ msgstr "(Wijzig)"
 
 # @ default
 #: functions.php:221
-msgid "iFeature Slides"
-msgstr "iFeature dia's"
+msgid "response Slides"
+msgstr "response dia's"
 
 # @ default
 #: functions.php:222
@@ -322,27 +322,27 @@ msgstr "Kopmenu"
 msgid "Footer Menu"
 msgstr "Voetmenu"
 
-# @ ifeature
+# @ response
 #: sidebar.php:19
 msgid "Pages"
 msgstr "Pagina's"
 
-# @ ifeature
+# @ response
 #: sidebar.php:33
 msgid "Categories"
 msgstr "Categorieën "
 
-# @ ifeature
+# @ response
 #: sidebar.php:50
 msgid "Subscribe"
 msgstr "Abonneer"
 
-# @ ifeature
+# @ response
 #: sidebar.php:52
 msgid "Entries (RSS)"
 msgstr "Aantal (RSS)"
 
-# @ ifeature
+# @ response
 #: sidebar.php:53
 msgid "Comments (RSS)"
 msgstr "Reacties (RSS)"

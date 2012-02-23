@@ -16,68 +16,68 @@ msgstr ""
 "Language-Team: \n"
 "X-Poedit-SearchPath-0: .\n"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:36
 msgid "Archive for the &#8216;"
 msgstr "Arquivar para &#8216;"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:36
 msgid "&#8217; Category:"
 msgstr "&#8217; Categoria:"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:39
 msgid "Posts Tagged &#8216;"
 msgstr "Posts Marcados &#8216;"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:39
 msgid "&#8217;:"
 msgstr "&#8217;:"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
 msgid "Archive for"
 msgstr "Arquivar para"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:48
 msgid "Archive for:"
 msgstr "Arquivar para:"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:51
 msgid "Author Archive:"
 msgstr "Arquivo de Autor:"
 
-#@ core
+#@ response
 #: core/actions/archive-actions.php:54
 msgid "Blog Archives:"
 msgstr "Arquivo de Blog:"
 
-#@ core
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "No Responses"
 msgstr "Nenhuma resposta"
 
-#@ core
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "One Response"
 msgstr "Uma resposta"
 
-#@ core
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "% Responses"
 msgstr "% Respostas"
 
-#@ core
+#@ response
 #: core/actions/comments-actions.php:88
 msgid "You must be"
 msgstr "Você deve estar"
 
-#@ core
+#@ response
 #: core/actions/comments-actions.php:88
 msgid "logged in"
 msgstr "logado"
@@ -87,25 +87,25 @@ msgstr "logado"
 msgid "to post a comment."
 msgstr "para postar um comentário."
 
-#@ core
+#@ response
 #: core/actions/footer-actions.php:39
 msgid "Recent Posts"
 msgstr "Posts Recentes"
 
-#@ core
-#@ ifeature
+#@ response
+#@ response
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 msgid "Archives"
 msgstr "Arquivados"
 
-#@ core
+#@ response
 #: core/actions/footer-actions.php:53
 msgid "Links"
 msgstr "Links"
 
-#@ core
-#@ ifeature
+#@ response
+#@ response
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
@@ -113,46 +113,46 @@ msgstr "Links"
 msgid "WordPress"
 msgstr "WordPress"
 
-#@ core
-#@ ifeature
+#@ response
+#@ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#@ core
-#@ ifeature
+#@ response
+#@ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Produzido com WordPress, o estado-da-arte de plataformas pessoais de publicação."
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:43
 msgid "Published on"
 msgstr "Publicado em"
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:44
 msgid "by"
 msgstr "por"
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:45
 msgid "in"
 msgstr "em"
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:70
 msgid "No Comments &#187;"
 msgstr "Nenhum comentário &#187;"
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:70
 msgid "1 Comment &#187;"
 msgstr "1 Comentário &#187;"
 
-#@ core
+#@ response
 #: core/actions/global-actions.php:70
 msgid "% Comments &#187;"
 msgstr "% Comentários &#187;"
@@ -167,37 +167,37 @@ msgstr "Página"
 msgid "Save Options"
 msgstr "Salvar Opções"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:86
 msgid "Support"
 msgstr "Suporte"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:87
 msgid "Documentation"
 msgstr "Documentação"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:88
 msgid "Forum"
 msgstr "Fórum"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:89
 msgid "Twitter"
 msgstr "Twitter"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:90
 msgid "Facebook"
 msgstr "Facebook"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:91
 msgid "CyberChimps Store"
 msgstr "Loja CyberChimps"
 
-#@ ifeature
+#@ response
 #: core/classy-options/classy-options-framework/classy-options.php:92
 msgid "CyberChimps Pro"
 msgstr "CyberChimps Pro"
@@ -291,8 +291,8 @@ msgstr "(Editar)"
 
 #@ default
 #: functions.php:221
-msgid "iFeature Slides"
-msgstr "iFeature Slides"
+msgid "response Slides"
+msgstr "response Slides"
 
 #@ default
 #: functions.php:222
@@ -319,27 +319,27 @@ msgstr "Menu do Cabeçalho"
 msgid "Footer Menu"
 msgstr "Menu do Rodapé"
 
-#@ ifeature
+#@ response
 #: sidebar.php:19
 msgid "Pages"
 msgstr "Páginas"
 
-#@ ifeature
+#@ response
 #: sidebar.php:33
 msgid "Categories"
 msgstr "Categorias"
 
-#@ ifeature
+#@ response
 #: sidebar.php:50
 msgid "Subscribe"
 msgstr "Assinar"
 
-#@ ifeature
+#@ response
 #: sidebar.php:52
 msgid "Entries (RSS)"
 msgstr "Entradas (RSS)"
 
-#@ ifeature
+#@ response
 #: sidebar.php:53
 msgid "Comments (RSS)"
 msgstr "Comentários (RSS)"
