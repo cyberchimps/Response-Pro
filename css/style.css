@@ -360,37 +360,11 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 }
 
 #afterfootercopyright {
-	float: right;
-	position: relative;
 	margin-top: 5px;
 	text-align: right;
 }
 
-#afterfootermenu {
-	float:left;
-	
-	height: 40px;
-	overflow: hidden;
-	margin-top: 5px;
-}
-
-#afterfootermenu a {
-	color: #F5F5F5;
-}
-
-#afterfootermenu ul {
-	margin: 0; 
-	padding: 0; 
-	list-style-type: none; 
-	list-style-image: none; 
-}
-
-#afterfootermenu li {
-	display: inline; 
-	margin-right: 5px;
-}
-
-#credit { height: 22px; z-index: 99; margin-top: 5px; text-align: center; *margin-top: -20px;}
+#credit {margin-top: 5px; text-align: left;}
 
 /* WordPress Styles  */
 
