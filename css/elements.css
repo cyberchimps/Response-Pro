@@ -410,7 +410,6 @@ a.nivo-prevNav {
 .box-widget-title {
 	color: #444;
 	height: 25px;
-	padding: 0 5px 0 0px;
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
@@ -425,13 +424,7 @@ a.nivo-prevNav {
 	margin-right: 22px;
 	color: #222;
 	background: #fff;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #BBB;
-	border-bottom: 1px solid #BBB;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow:inset 0 0 2px #ccc;
+	border: 1px solid #ddd;
 }
 
 #box2 {
@@ -443,13 +436,7 @@ a.nivo-prevNav {
 	margin-right: 22px;
 	color: #222;
 	background: #fff;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #BBB;
-	border-bottom: 1px solid #BBB;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow:inset 0 0 2px #ccc;
+	border: 1px solid #ddd;
 }
 
 #box3 {
@@ -461,13 +448,7 @@ a.nivo-prevNav {
 	margin-right: 0px;
 	color: #222;
 	background: #fff;
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #BBB;
-	border-bottom: 1px solid #BBB;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow:inset 0 0 2px #ccc;
+	border: 1px solid #ddd;
 }
 
 .boxes ul { padding-left: 15px; }
