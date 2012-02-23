@@ -380,8 +380,8 @@ function response_widgets_init() {
 		'name' => 'Box Left',
 		'id' => 'box-left',
 		'description' => 'This is the left widget of the three-box section',
-		'before_widget' => '<div id="box1" class="four columns">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div id="box1" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="box-widget-title">',
 		'after_title' => '</h3>',
 	));
@@ -389,8 +389,8 @@ function response_widgets_init() {
 		'name' => 'Box Middle',
 		'id' => 'box-middle',
 		'description' => 'This is the middle widget of the three-box section',
-		'before_widget' => '<div id="box2" class="four columns">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div id="box2" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="box-widget-title">',
 		'after_title' => '</h3>',
 	));
@@ -398,8 +398,8 @@ function response_widgets_init() {
 		'name' => 'Box Right',
 		'id' => 'box-right',
 		'description' => 'This is the right widget of the three-box section',
-		'before_widget' => '<div id="box3" class="four columns">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div id="box3" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="box-widget-title">',
 		'after_title' => '</h3>',
 	));
