@@ -17,7 +17,7 @@ a img{border:none}
 a{outline:none}
 
 body {
-	background: #FFF;
+	background-image: url(../images/backgrounds/pinstripe.png); background-repeat: repeat;
 }
 
 /* Misc  */
