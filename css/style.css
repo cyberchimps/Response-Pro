@@ -134,7 +134,6 @@ header {margin-top: 15px;}
 #nav ul li a{display:inline-block;font-family:'Lucida Grande',Helvetica,Arial,Verdana,sans-serif;font-size:14px;color:#0085CF;line-height:36px;text-decoration:none;padding:0 15px;}
 #nav ul li a:hover{background:#5ca9d6;color: #fff;}
 #nav .current-menu-item a{color:#555;}
-#nav .current-menu-item .sub-menu a{color:#555;}
 #nav .menu > li:first-child a:hover{border-radius:0}
 #nav .menu .sub-menu li a:hover{border-radius:0}
 #nav ul li{position:relative}
@@ -147,7 +146,7 @@ header {margin-top: 15px;}
 #nav ul li:hover ul li a, #nav ul ul li:hover ul li a, #nav ul ul ul li:hover ul li a{border:#ddd 1px solid;margin:-1px 0 0 -8px}
 #nav ul li:hover ul li a{width:150px;padding:0 14px}
 #nav ul ul li:hover ul li a{width:150px;padding:0 14px}
-#nav ul ul ul li:hover ul li a{width:150px;padding:0 14px;background-color:#eee}
+#nav ul ul ul li:hover ul li a{width:150px;padding:0 14px;}
 
 
 /* Home Button */
