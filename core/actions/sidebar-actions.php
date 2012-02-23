@@ -51,10 +51,10 @@ function response_sidebar_init_content() {
 	$sidebar = $options->get($themeslug.'_blog_sidebar');
 	}
 	
-	if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == "1" OR $sidebar == "2") {
+	if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == "2" OR $sidebar == "3") {
 		$content_grid = 'six columns';
 	}
-	elseif ($sidebar == 'none' OR $sidebar == "3") {
+	elseif ($sidebar == 'none' OR $sidebar == "4") {
 		$content_grid = 'twelve columns';
 	}
 	else {
@@ -76,7 +76,7 @@ function response_before_content_sidebar_markup() {
 	</div>
 	<?php endif; ?>
 	
-	<?php if ($sidebar == 'left' OR $sidebar == "4"): ?>
+	<?php if ($sidebar == 'left' OR $sidebar == "1"): ?>
 	<div id="sidebar_left" class="four columns">
 		<?php get_sidebar(); ?>
 	</div>
@@ -97,13 +97,13 @@ function response_after_content_sidebar_markup() {
 	</div>
 	<?php endif;?>
 	
-	<?php if ($sidebar == 'two-right' OR  $sidebar == '1' ): ?>
+	<?php if ($sidebar == 'two-right' OR  $sidebar == '3' ): ?>
 	<div id="sidebar-left" class="three columns">
 		<?php get_sidebar('left'); ?>
 	</div>
 	<?php endif;?> 
 	
-	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '1' OR $sidebar == '2'): ?>
+	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '2' OR $sidebar == '3'): ?>
 	<div id="sidebar-right" class="three columns">
 		<?php get_sidebar('right'); ?>
 	</div>

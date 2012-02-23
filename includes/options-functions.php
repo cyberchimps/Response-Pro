@@ -15,6 +15,48 @@
 * @since 1.0
 */
 
+/* Standard Web Layout*/
+
+function response_content_layout() {
+	global $options, $themeslug, $post;
+	
+	if (is_single()) {
+	$sidebar = $options->get($themeslug.'_single_sidebar');
+	}
+	elseif (is_archive()) {
+	$sidebar = $options->get($themeslug.'_archive_sidebar');
+	}
+	elseif (is_404()) {
+	$sidebar = $options->get($themeslug.'_404_sidebar');
+	}
+	elseif (is_search()) {
+	$sidebar = $options->get($themeslug.'_search_sidebar');
+	}
+	elseif (is_page()) {
+	$sidebar = get_post_meta($post->ID, 'page_sidebar' , true);
+	}
+	else {
+	$sidebar = $options->get($themeslug.'_blog_sidebar');
+	}
+	
+	if ($sidebar == 'two-right' OR $sidebar == '3' ) {
+		echo '<style type="text/css">';
+		echo "#content.six.columns {width: 52.8%;  margin-right: 2%}";
+		echo "#sidebar-right.three.columns {margin-left: 0%; width: 21.68%;}";
+		echo "#sidebar-left.three.columns {margin-left: 0%; width: 21.68%; margin-right:2%}";
+		echo '</style>';
+	}
+	if ($sidebar == 'right-left' OR $sidebar == '2' ) {
+		echo '<style type="text/css">';
+		echo "#content.six.columns {width: 52.8%; margin-left: 2%; margin-right: 2%}";
+		echo "#sidebar-right.three.columns {margin-left: 0%; width: 21.68%;}";
+		echo "#sidebar-left.three.columns {margin-left: 0%; width: 21.68%;}";
+		echo '</style>';
+	}
+
+}
+add_action( 'wp_head', 'response_content_Layout' );
+
 /* Widget Title Background*/
 
 function custom_row_width() {
