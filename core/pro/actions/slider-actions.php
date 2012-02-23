@@ -151,9 +151,9 @@ function response_slider_content() {
 
 /* Define slider width variable */ 
 
-	$wordthumb = "h=$height&w=1000";
-	$csWidth = '1000';
-	$imgwidth = '1000';
+	$wordthumb = "h=$height&w=1020";
+	$csWidth = '1020';
+	$imgwidth = '1020';
 	$defaultimage = "$root/images/pro/slider-980.jpg";
 		
 /* End slider width variable */ 
