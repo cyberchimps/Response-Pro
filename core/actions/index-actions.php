@@ -59,8 +59,7 @@ function response_index_content() {
 			
 				<!--Begin @response post edit link hook-->
 					<?php response_edit_link(); ?>
-				<!--End @response post edit link hook-->
-			
+				<!--End @response post edit link hook-->		
 							
 				<!--Begin @response post tags hook-->
 					<?php response_post_tags(); ?>
@@ -73,10 +72,10 @@ function response_index_content() {
 				<?php endif;?>
 			
 				</div><!--end post_class-->
-			</div><!--end post container-->
 			<!--Begin @iFeature post bar hook-->
 				<?php response_post_bar(); ?>
 			<!--End @iFeature post bar hook-->
+			</div><!--end post container-->
 			
 			<?php if (is_single()):?>
 			<?php comments_template(); ?>
