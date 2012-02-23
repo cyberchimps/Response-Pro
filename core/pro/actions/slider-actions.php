@@ -122,7 +122,7 @@ function response_slider_content() {
 /* Define slider height */      
 
 	if ($sliderheight == '') {
-	    $height = '330';
+	    $height = '340';
 	}    
 
 	else {
