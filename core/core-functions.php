@@ -137,7 +137,6 @@ function response_comment($comment, $args, $depth) {
 <?php
 }
 
-
 /**
 * Breadcrumbs function
 *
