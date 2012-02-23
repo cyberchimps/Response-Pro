@@ -23,33 +23,30 @@
 
 </div><!--end container wrap-->
 
-	<div id="footer">
-     	<div class="container">
-     		<div class="row">
-    	
+    <div id="footer" class="container">
+     		<div class="row" id="footer_container">
+    			<div id="footer_wrap">	
 	<!-- Begin @response footer hook content-->
 		<?php response_footer(); ?>
 	<!-- End @response footer hook content-->
-	
+				</div>
 	<?php endif;?>
 	
 
-		</div><!--end footer_wrap-->
+			</div><!--end footer_wrap-->
 	</div><!--end footer-->
 </div> 
 
 <?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
 
-	<div id="afterfooter">
-		<div id="afterfooterwrap">
-		<div class="row">	
+	<div id="afterfooter" class="container">
+		<div class="row" id="afterfooterwrap">	
 		<!-- Begin @response afterfooter hook content-->
 			<?php response_secondary_footer(); ?>
 		<!-- End @response afterfooter hook content-->
 				
-		</div>  <!--end afterfooterwrap-->	
-	</div> <!--end afterfooter-->	
-		</div> 	
+		</div> <!--end afterfooter-->	
+	</div> 	
 	<?php endif;?>
 	
 	<?php wp_footer(); ?>	
