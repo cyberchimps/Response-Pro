@@ -74,37 +74,12 @@ function response_html_attributes() { ?>
 function response_meta_tags() { ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <?php
 	global $themeslug, $options, $post; //Call global variables
-	if(!$post) return; // in case of 404 page or something
-	$title = get_post_meta($post->ID, 'seo_title' , true);
-	$pagedescription = get_post_meta($post->ID, 'seo_description' , true);
-	$keywords = get_post_meta($post->ID, 'seo_keywords' , true);  ?>
+	if(!$post) return; // in case of 404 page or something?>
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
-
 <meta name="language" content="en" /> 
-<!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="initial-scale=1.6; maximum-scale=1.0; width=device-width; "/><?php
-
-	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
-<meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php
-	}
-	if ($options->get($themeslug.'_home_description') != '' AND is_front_page()) { ?>
-<meta name='description' content='<?php echo ($options->get($themeslug.'_home_description')) ;?>' /> <?php
-	}
-	if ($options->get($themeslug.'_home_keywords') != '' AND is_front_page()) { ?>
-<meta name='keywords' content=' <?php echo ($options->get($themeslug.'_home_keywords')) ; ?>' /> <?php
-	}
-	
-	if ($title != '' AND !is_front_page()) {
-		echo "<meta name='title' content='$title' />";
-	}
-	if ($pagedescription != '' AND !is_front_page()) {
-		echo "<meta name='description' content='echo $pagedescription'/>";
-	}
-	if ($keywords != '' AND !is_front_page()) {
-		echo "<meta name='keywords' content='$keywords'/>";
-	} 
 }
 
 /**
