@@ -103,7 +103,7 @@ $options
 			->textarea($themeslug."_custom_header_element", "Custom HTML")
 		->close_outersection()
 			->subsection("Header Options")
-			->upload($themeslug."_logo", "Custom Logo")
+			->upload($themeslug."_logo", "Custom Logo", array('default' => array('url' => TEMPLATE_URL . '/images/responselogo.png')))
 			->upload($themeslug."_favicon", "Custom Favicon")
 		->subsection_end()
 		->subsection("Social")
