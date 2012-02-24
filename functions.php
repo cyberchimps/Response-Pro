@@ -13,6 +13,8 @@
 	$themename = 'response';
 	$themenamefull = 'Response Pro';
 	$themeslug = 're';
+	$pagedocs = 'http://cyberchimps.com/question/using-the-response-pro-page-options/';
+	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-response-pro-slider/';
 	$root = get_template_directory_uri(); 
 	
 /**
