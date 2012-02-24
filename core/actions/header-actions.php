@@ -330,7 +330,7 @@ function response_nav() {
 	<div class="container">
 		<div class="row">
 
-			<div class="twelve columns" id="imenu">
+			<div class="twelve columns" id="menu">
 
 			<div id="nav" class="twelve columns">
 		    <?php wp_nav_menu( array(
