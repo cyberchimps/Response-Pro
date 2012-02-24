@@ -6,7 +6,7 @@
 //set_site_transient('update_themes', null);
 
 
-add_filter('pre_set_site_transient_update_themes', 'check_for_update');
+add_filter('pre_set_site_transient_update_themes', 'response_check_for_update');
 
 $theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
 $theme_version = $theme_data['Version'];
@@ -16,7 +16,7 @@ $theme_base = get_option('stylesheet');
 $api_url = 'http://cyberchimps.com/api/';
 /************************************************/
 	
-function check_for_update($checked_data) 
+function response_check_for_update($checked_data) 
 {
 	global $wp_version, $theme_version, $theme_base, $api_url;
 	
