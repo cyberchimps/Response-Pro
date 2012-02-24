@@ -410,16 +410,20 @@ input.button-primary {font-size:14px !important;}
   margin-bottom: 10px;
 }
 
+
+
 #of_container .subsection .plus {
   float: right;
   margin-right: 20px;
+  margin-top: 0px !important;
 }
 
-#of_container .subsection .plus, #of_container .group .plus {
+.group span.plus {
   float: right;
   margin-right: 20px;
   margin-top: 10px;
 }
+
 
 #of-nav li img {
   position: absolute;
@@ -502,7 +506,7 @@ span.minus {
 
 
 #of_container #content .outersection .section { 
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
   -moz-border-radius: 4px;
 }
