@@ -3,11 +3,11 @@
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
     
 		<div class="widget-container">    
-		<h2 class="widget-title">Welcome to Response Pro 4</h2>
+		<h2 class="widget-title">Welcome to Response Pro</h2>
     	<ul>
-						<li>Thank you for purchasing Response Pro 4.</li>
+						<li>Thank you for purchasing Response Pro.</li>
 						<li>&nbsp;</li>
-						<li>We designed Response Pro 4 to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/response-pro/docs/">precise documentation</a>.</li>
+						<li>We designed Response Pro to be as user friendly as possible, but if you do run into trouble we provide a <a href="http://cyberchimps.com/forum">support forum</a>, and <a href="http://www.cyberchimps.com/response-pro/docs/">precise documentation</a>.</li>
 						<li>&nbsp;</li>
 						<li>If we were all designers then every WordPress theme would look this good.</li>
 						<li>&nbsp;</li>
