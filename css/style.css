@@ -32,7 +32,7 @@ padding:2px 0;
 position:relative;
 font-size:11px;
 line-height:13px;
-margin-bottom: 38px;
+margin-bottom: 35px;
 }
 
 .pagination span, .pagination a {
@@ -214,7 +214,7 @@ header {margin-top: 15px;}
 .post_container {
 	padding: 15px;
 	background: #fff;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-left: 0px;
 	border: 1px solid #DDD;
 }
@@ -259,7 +259,7 @@ header {margin-top: 15px;}
 
 .crumbs_text {padding: 5px 0 5px 15px;}
 
-#post_pagination {border: 1px solid #DDD; margin-bottom: 10px; background: #FFF;}
+#post_pagination {border: 1px solid #DDD; margin-bottom: 15px; background: #FFF;}
 
 .pagination_text {padding: 10px 15px 10px 15px;}
 
@@ -294,7 +294,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 .widget-container {
 	color: #222;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	padding: 15px;
 	background: #fff;
 	border: 1px solid #DDD;
