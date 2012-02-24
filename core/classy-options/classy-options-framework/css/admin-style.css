@@ -36,9 +36,10 @@ textarea, input[type="text"], input[type="password"], input[type="file"], input[
 }
 
 .wrap div.updated, .wrap div.error {
-	margin: 60px 0 -40px 159px;
+	margin: -34px 0 -10px 316px;
 	position: absolute;
 	z-index: 2000;
+	width: 504px;
 }
 
 div.updated, .login .message {
