@@ -99,12 +99,13 @@ class ClassyOptions {
 					
 				<div class="menu">
 					<ul class="buttons">
-						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/" target="_blank"><?php printf( __( 'CyberChimps', 'response' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'Store', 'response' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
-						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
-						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
+						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'response' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'response' )); ?></a></li>
+						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'response' ));?></a></li>
+						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'response' ));?></a></li>
 					</ul>
 				</div>
 
