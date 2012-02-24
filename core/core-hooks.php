@@ -431,15 +431,6 @@ function response_blog_slider_lite() {
 }
 
 /**
-* Generates the Twitter Bar page element. 
-*
-* @since 1.0
-*/
-function response_twitterbar_section() {
-	do_action ('response_twitterbar_section');
-}
-
-/**
 * Generates the before content sidebar. 
 *
 * @since 1.0
