@@ -76,8 +76,8 @@
 /* -------------------------------------------------- 
 	:: Misc
 ---------------------------------------------------*/
-	.left       { float: left; }
-	.right      { float: right; }
+	.left       { float: left; left: 1px !important; }
+	.right      { float: right; right: -1px !important;}
 	.hide     	{ display: none; }
 	.highlight 	{ background: #ff0; }
 	
