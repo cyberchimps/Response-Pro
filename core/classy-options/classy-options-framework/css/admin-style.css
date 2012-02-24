@@ -7,7 +7,7 @@
 .jetpack-message .squeezer {display: none;}
 #message.updated.jetpack-message.jp-connect {display: none;}
 
-.menu {padding-left: 15px; padding-right: 15px;}
+.menu {padding: 0px 15px 0px 15px}
 
 .section-info{
   background: #fff;
@@ -60,7 +60,7 @@ div.updated, .login .message {
 	z-index: 0;
 }
 #of_container #header {
-	height: 85px;
+	height: 75px;
 	background: #fff;
 }
 #of_container #header .logo {
@@ -96,9 +96,9 @@ div.updated, .login .message {
     background-color:#444;
     border: 1px solid #777; }
     
-.chimps {text-align: center;padding: 5px;}
+.chimps {float:right;padding: 5px;}
     
-.submit{clear:left;float: right;}
+.submit{clear:left;float: right;padding: 0;}
 
 input.button-primary, button.button-primary, a.button-primary {
 	font-weight: bold;
@@ -114,7 +114,7 @@ input.button-primary, button.button-primary, a.button-primary {
 
 input.button-primary:active,button.button-primary:active,a.button-primary:active{background:#555;color:#f8f8f8;}
 
-.submit input{text-decoration:none;font-size:12px!important;line-height:16px;padding: 2px 6px 2px 6px;cursor:pointer;border-width:1px;border-style:solid;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-khtml-box-sizing:content-box;box-sizing:content-box;margin-top: -16px;}
+.submit input{text-decoration:none;font-size:12px!important;line-height:16px;padding: 2px 6px 2px 6px;cursor:pointer;border-width:1px;border-style:solid;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-khtml-box-sizing:content-box;box-sizing:content-box;margin-top: 4px;margin-right: 11px;}
 
 input.button-primary {font-size:14px !important;}
 
@@ -151,8 +151,7 @@ input.button-primary {font-size:14px !important;}
 	float: left;
 	min-height: 520px;
 	width: 825px;
-	margin-left: -1px;
-	padding: 0 14px;
+	padding: 0 15px;
 	background: #fff;
 	margin-bottom: 15px;
 }
@@ -193,7 +192,6 @@ input.button-primary {font-size:14px !important;}
 	border-width:1px;
 }
 #of_container .controls input, #of_container .controls select, #of_container .controls textarea {
-
 	background-color: #f1f1f1;
 	border: 1px solid;
 	border-color: #ccc #e6e6e6 #e6e6e6 #ccc;
@@ -454,7 +452,7 @@ input.button-primary {font-size:14px !important;}
 #of_container #content div.group {
   margin-top: 10px;
   border: 1px solid #DDD;
-  padding: 15px;
+  padding: 10px;
   border-radius: 4px;
   background: #f8f8f8
 }
