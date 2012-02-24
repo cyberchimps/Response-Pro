@@ -4,7 +4,7 @@ add_action('widgets_init', 'response_tabbed_widget');
 add_image_size('response-tabbed', 45, 45, true);
 
 function response_tabbed_widget() {
-	register_widget('response_Tabbed_Widget');
+	register_widget('Response_Tabbed_Widget');
 }
 
 class response_Tabbed_Widget extends WP_Widget {
@@ -22,7 +22,7 @@ class response_Tabbed_Widget extends WP_Widget {
 
 		parent::__construct(
 			'response_tabbed_widget',
-			__('response Tabbed Widget', 'response'),
+			__('Response Tabbed Widget', 'response'),
 			$widget_options,
 			$control_options
 		);

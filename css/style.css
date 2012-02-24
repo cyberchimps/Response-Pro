@@ -696,9 +696,10 @@ figure {
 
 .response-tabbed-header li a {
 	float: left;
-	padding: 6px;
+	padding: 7px 13px 7px 13px;
 	margin-left: 0px;
-	padding-right:7px;
+	font-size:13px;
+	
 }
 
 
