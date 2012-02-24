@@ -183,23 +183,23 @@
 
 /* Tabs */
 
-.ifeature-tabbed-header li {
+.response-tabbed-header li {
 	float: left;
 }
 
-.ifeature-tabbed-popular-posts li, .ifeature-tabbed-recent-posts li {
+.response-tabbed-popular-posts li, .response-tabbed-recent-posts li {
 	padding: 10px;
 	border-bottom: 1px solid #E2E2E2;
 	padding-bottom: 20px;
 }
 
-.ifeature-tabbed-comments li {
+.response-tabbed-comments li {
 	padding: 10px 10px 25px 10px;
 	border-bottom: 1px solid #E2E2E2; 
 	padding-bottom: 35px;
 }
 
-.ifeature-tabbed-tab {
+.response-tabbed-tab {
 	clear: both;
 }
 
@@ -207,11 +207,11 @@
 	display: none;
 }
 
-.ifeature-tabbed-widget {
+.response-tabbed-widget {
 	margin: -10px 0 0 0;
 }
 
-.ifeature-tabbed-header {
+.response-tabbed-header {
 
 }
 
