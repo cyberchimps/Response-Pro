@@ -239,7 +239,7 @@ header {margin-top: 15px;}
 
 .next-posts-single {text-align:right;padding:5px; margin-top:-35px;margin-bottom: 5px;}
 
-.prev-posts-single {text-align:left;padding:5px; margin-top: -10px;margin-bottom: 5px; margin-left: -5px; max-width:300px;}
+.prev-posts-single {text-align:left; max-width:300px;}
 
 .tags {margin-bottom: 10px;font-size: 12px;}
 
@@ -258,6 +258,10 @@ header {margin-top: 15px;}
 #crumbs {border: 1px solid #DDD; margin-bottom: 15px; background: #FFF;}
 
 .crumbs_text {padding: 5px 0 5px 15px;}
+
+#post_pagination {border: 1px solid #DDD; margin-bottom: 15px; background: #FFF;}
+
+.pagination_text {padding: 10px 5px 10px 5px;}
 
 .pagnext-posts {float: left;padding: 5px;margin-bottom: 10px;}
 

@@ -64,15 +64,18 @@ function response_index_content() {
 				<!--Begin @response post tags hook-->
 					<?php response_post_tags(); ?>
 				<!--End @response post tags hook-->
-				
-				<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
-				<!--Begin @response post pagination hook-->
-					<?php response_post_pagination(); ?>
-				<!--End @response post pagination hook-->			
-				<?php endif;?>
-			
+							
 				</div><!--end post_class-->
 			</div><!--end post container-->
+			
+			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
+			<div id="post_pagination"><div class="pagination_text">
+				<!--Begin @response post pagination hook-->
+					<?php response_post_pagination(); ?>
+				<!--End @response post pagination hook-->	
+			</div></div>		
+				<?php endif;?>
+
 			
 			<?php if (is_single()):?>
 			<?php comments_template(); ?>
