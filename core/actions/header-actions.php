@@ -193,10 +193,9 @@ global $themeslug, $options; //Call global variables
 */
 function response_header_sitename_content() {
 	global $themeslug, $options; //Call global variables
-	$uselogo = $options->get($themeslug.'_custom_logo');
 	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
 	
-	if ($uselogo == '1') { ?>
+	if ($options->get($themeslug.'_custom_logo') == '1') { ?>
 	<div id="logo">
 		<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($logo['url']); ?>" alt="logo"></a>
 	</div> <?php
