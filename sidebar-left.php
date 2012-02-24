@@ -8,7 +8,7 @@
 		<div class="widget-container">      
 		<h2 class="widget-title">Sidebar Left</h2>
     	<ul>
-						<li>Thank you for purchasing iFeature Pro.</li>
+						<li>Thank you for purchasing Response Pro.</li>
 						<li>&nbsp;</li>
 						<li>To remove this Widget login to your admin account, go to Appearance, then Widgets and drag new widgets into Sidebar Left.</li>
 						<li>&nbsp;</li>

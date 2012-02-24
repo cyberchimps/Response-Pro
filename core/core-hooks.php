@@ -422,7 +422,7 @@ function response_after_search() {
 }
 
 /**
-* Generates the lite version of the iFeature slider. 
+* Generates the lite version of the Feature slider. 
 *
 * @since 1.0
 */
@@ -473,15 +473,6 @@ function response_index() {
 */
 function response_post_bar() {
 	do_action ('response_post_bar');
-}
-
-/**
-* Custom HTML header element. 
-*
-* @since 1.0
-*/
-function ifeature_custom_header_element() {
-	do_action('ifeature_custom_header_element');
 }
 
 /**

@@ -49,9 +49,9 @@
 			
 			</div><!--end post_class-->
 			
-			<!--Begin @iFeature post bar hook-->
+			<!--Begin @response post bar hook-->
 				<?php response_post_bar(); ?>
-			<!--End @iFeature post bar hook-->
+			<!--End @response post bar hook-->
 			
 		</div><!--end post container--> 
 	
