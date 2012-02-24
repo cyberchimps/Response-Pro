@@ -23,12 +23,10 @@
 
 /* Define global variables. */
 	global $options, $post, $themeslug;
-	$size = get_post_meta($post->ID, 'page_slider_size' , true);
 	$page_section_order = get_post_meta($post->ID, 'page_section_order' , true);
 	if(!$page_section_order) {
 		$page_section_order = 'breadcrumbs,page_section';
 	}
-	
 /* End define global variables. */
 
 ?>
