@@ -72,9 +72,6 @@ function response_index_content() {
 				<?php endif;?>
 			
 				</div><!--end post_class-->
-			<!--Begin @iFeature post bar hook-->
-				<?php response_post_bar(); ?>
-			<!--End @iFeature post bar hook-->
 			</div><!--end post container-->
 			
 			<?php if (is_single()):?>

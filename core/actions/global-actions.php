@@ -111,11 +111,6 @@ function response_post_bar_content() {
 	else {
 		$hidden = $options->get($themeslug.'_hide_byline'); 
 	}?>
-				<div id="comments">
-					<?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?>
-					<?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?>
-					<?php endif;?>
-				</div><!--end comments-->
 	<?php
 }
 
@@ -140,6 +135,7 @@ function response_post_byline_content() {
 		<?php if (($hidden[$themeslug.'_hide_date']) != '0'):?> <?php printf( __( 'Published on', 'response' )); ?> <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a>,<?php endif;?>
 		<?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( 'by', 'response' )); ?> <?php the_author_posts_link(); ?> <?php endif;?> 
 		<?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( 'in', 'response' )); ?> <?php the_category(', ') ?>.<?php endif;?>
+		<?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?>.<?php endif;?>
 	</div> <?php
 }
 

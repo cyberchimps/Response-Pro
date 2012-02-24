@@ -237,11 +237,11 @@ header {margin-top: 15px;}
 
 .share a:hover img {opacity:1;}
 
-.next-posts-single {text-align:right;padding:5px; margin-top:-35px;}
+.next-posts-single {text-align:right;padding:5px; margin-top:-35px;margin-bottom: 5px;}
 
-.prev-posts-single {text-align:left;padding:5px; margin-top: -10px; margin-bottom: 5px; margin-left: -5px; max-width:300px;}
+.prev-posts-single {text-align:left;padding:5px; margin-top: -10px;margin-bottom: 5px; margin-left: -5px; max-width:300px;}
 
-.tags {margin-bottom: 15px;font-size: 12px;}
+.tags {margin-bottom: 10px;font-size: 12px;}
 
 #fb {width: 440px; margin-bottom: 5px;}
 
