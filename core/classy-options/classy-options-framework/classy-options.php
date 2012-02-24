@@ -94,9 +94,9 @@ class ClassyOptions {
 				<h2><?php echo $themenamefull; ?> Options</h2>
 				</div>
 				<div class="clear"></div>
-					
-						<input type="submit" id="save_button" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options' ); ?>" />
-					
+					<p class="submit">
+						<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options' ); ?>" />
+					</p>
 				<div class="menu">
 					<ul class="buttons">
 						<li><a href="http://cyberchimps.com/" target="_blank"><?php printf( __( 'CyberChimps', 'response' )); ?></a></li>

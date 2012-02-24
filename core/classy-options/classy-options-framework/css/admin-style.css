@@ -384,7 +384,7 @@ input.button-primary {font-size:14px !important;}
 
 /* Bottom Section */
 
-#of_container .button-primary {float:right;margin-top:21px; margin-right:12px;padding:4px}
+#of_container .button-primary {float:right;}
 #of_container .of_admin_bar {
 	background: #fff; 
 	padding: 10px 20px 0px 20px;
