@@ -44,6 +44,14 @@ jQuery(document).ready(function($) {
       toShow.fadeOut();
     }
   }).change();
+    $("#re_custom_logo").change(function() {
+    var toShow = $("#section-re_logo");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();
     $("#re_blog_custom_callout_options").change(function() {
     var toShow = $("#section-re_blog_callout_text_color");
     if($(this).is(':checked')) {
