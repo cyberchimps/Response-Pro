@@ -78,7 +78,8 @@ padding:2px 0;
 position:relative;
 font-size:11px;
 line-height:13px;
-margin-bottom: 35px;
+margin-bottom: 38px;
+margin-top: -5px;
 }
 
 .pagination span, .pagination a {
@@ -260,7 +261,7 @@ header {margin-top: 15px;}
 .post_container {
 	padding: 15px;
 	background: #fff;
-	margin-bottom: 15px;
+	margin-bottom:15px;
 	margin-left: 0px;
 	border: 1px solid #DDD;
 }
@@ -378,7 +379,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #footer {}
 
-#footer_container {margin-top:10px;background: #fff;border: 1px solid #ddd;}
+#footer_container {background: #fff;border: 1px solid #ddd;}
 
 #footer_wrap {padding:15px;}
 
