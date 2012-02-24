@@ -7,7 +7,7 @@
 .jetpack-message .squeezer {display: none;}
 #message.updated.jetpack-message.jp-connect {display: none;}
 
-.menu {padding-top: 0em;}
+.menu {padding-left: 15px; padding-right: 15px;}
 
 .section-info{
   background: #fff;
@@ -66,6 +66,7 @@ div.updated, .login .message {
 	float: left;
 }
 #of_container #header .logo h2 {
+	margin-left: 15px;
 	font-family: Helvetica, Arial, Serif;
 	font-style:normal;
 	font-size: 26px;
@@ -119,7 +120,7 @@ input.button-primary {font-size:14px !important;}
 #top {float: right;text-decoration: none;padding: 5px;}
 
 #of_container #main {
-	background: #212121;
+	background: #FFF;
 }
 #of_container #of-nav {
 	float: left;
@@ -152,6 +153,7 @@ input.button-primary {font-size:14px !important;}
 	margin-left: -1px;
 	padding: 0 14px;
 	background: #fff;
+	margin-bottom: 15px;
 }
 #of_container #content .section {
 	margin-bottom: 10px;
@@ -383,6 +385,7 @@ input.button-primary {font-size:14px !important;}
 
 #of_container .button-primary {
 	float:right;
+	margin-top:18px; margin-right:12px;padding:5px;
 }
 #of_container .of_admin_bar {
 	background: #fff; 
@@ -450,6 +453,7 @@ input.button-primary {font-size:14px !important;}
   margin-top: 10px;
   border: 1px solid #DDD;
   padding: 15px;
+  border-radius: 4px;
 }
 
 h3 {
