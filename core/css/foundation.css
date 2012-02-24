@@ -1157,12 +1157,12 @@ div.slider-nav span.left {
 	#credit {float:right !important; margin-right:15px !important; margin-top:4px !important;}
 	#afterfootercopyright {float: left !important;margin-left:15px !important;margin-bottom:2px !important;}
 	#mobileMenu_nav_menu {float: right !important; margin-top: 10px !important; margin-right: 10px !important;}
-	#imenu {height: 35px !important;}
+	#menu {height: 35px !important;}
 	.orbit-bullets li.has-thumb {
     background: none;
     width: 25px;
     height: 15px;
     margin-bottom: -1px; }
     #slider-wrapper, .nivoslider_nav{display: none;}
-
+   
 }
