@@ -96,7 +96,7 @@ div.updated, .login .message {
     background-color:#444;
     border: 1px solid #777; }
     
-.chimps {float:right;padding: 5px;}
+.chimps {text-align: center;padding: 5px;}
     
 .submit{clear:left;float: right;padding: 0;}
 
