@@ -148,7 +148,7 @@ input.button-primary {font-size:14px !important;}
 #of_container #content {
 	float: left;
 	min-height: 520px;
-	width: 660px;
+	width: 825px;
 	margin-left: -1px;
 	padding: 0 14px;
 	background: #fff;
@@ -295,7 +295,7 @@ input.button-primary {font-size:14px !important;}
 #of_container .group {
 	padding-bottom:20px
 }
-#of_container .group h2 {padding: 0px 0px 10px 0px;}
+#of_container .group h2 {padding: 10px; cursor: pointer;}
 #of_container .controls input:focus, #of_container select:focus, #of_container textarea:focus {
 	background:#fff;
 }
@@ -412,6 +412,12 @@ input.button-primary {font-size:14px !important;}
   margin-right: 20px;
 }
 
+#of_container .subsection .plus, #of_container .group .plus {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
 #of-nav li img {
   position: absolute;
   padding-right: 8px;
@@ -442,6 +448,8 @@ input.button-primary {font-size:14px !important;}
 
 #of_container #content div.group {
   margin-top: 10px;
+  border: 1px solid #DDD;
+  padding: 15px;
 }
 
 h3 {

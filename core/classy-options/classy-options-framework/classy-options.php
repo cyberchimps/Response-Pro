@@ -111,11 +111,7 @@ class ClassyOptions {
 			</div>
 			<div id="main">
 				<?php $return = $this->fields(); ?>
-				<div id="of-nav">
-					<ul class="nav">
-						<?php echo $return[1]; ?>
-					</ul>
-				</div>
+				
 				<div id="content">
 					<?php echo $return[0]; /* Settings */ ?>
 				</div>
@@ -514,7 +510,7 @@ class ClassyOptions {
 			// Heading for Navigation
 			case "heading":
 				if($counter >= 2){
-				   $output .= '</div>'."\n";
+				   $output .= '</div></div>'."\n";
 				}
 				
 				$jquery_click_hook = preg_replace('/\W/', '', strtolower($value['name']) );
@@ -522,7 +518,9 @@ class ClassyOptions {
 				$menu .= '<li>';
 				$icon = isset($value['icon']) ? " style=\"background-image: url({$value['icon']}); background-position: 8px center; background-repeat: no-repeat; \"" : "";
 				$menu .= '<a id="'.  esc_attr( $jquery_click_hook ) . '-tab" title="' . esc_attr( $value['name'] ) . '" href="' . esc_attr( '#'.  $jquery_click_hook ) . '"' . $icon . '>' . esc_html( $value['name'] ) . ' <span></span></a></li>';
-				$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '"><h2>' . esc_html( $value['name'] ) . '</h2>' . "\n";
+				$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '">' . "<h2>{$value['name']}<span class='plus'>"
+					// . "<img src='" . CLASSY_OPTIONS_FRAMEWORK_URL . "/images/downarrow.png'>"
+					. "</span></h3><div class='group-items'>\n";
 				break;
 
 			case "subsection":
