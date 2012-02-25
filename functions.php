@@ -205,7 +205,7 @@ function response_create_post_type() {
 			'supports' => array('custom-fields', 'title'),
 			'taxonomies' => array( 'slide_categories'),
 			'has_archive' => true,
-			'menu_icon' => "$root/images/pro/favicon.ico",
+			'menu_icon' => "$root/images/pro/slider.png",
 			'rewrite' => array('slug' => 'slides')
 		)
 	);
@@ -221,7 +221,7 @@ function response_create_post_type() {
 			'supports' => array('custom-fields'),
 			'taxonomies' => array( 'carousel_categories'),
 			'has_archive' => true,
-			'menu_icon' => "$root/images/pro/favicon.ico",
+			'menu_icon' => "$root/images/pro/carousel.png",
 			'rewrite' => array('slug' => 'slides')
 		)
 	);
