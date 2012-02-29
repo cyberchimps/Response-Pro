@@ -6,6 +6,7 @@ Version 1.0.1 (02-29-12)
 -Margin fix for HTML tables.
 -Updated Foundation CSS.
 -Adjusted doctype. 
+-CSS tweak.
 
 Version 1.0 (02-24-12)
 -Initial release.
