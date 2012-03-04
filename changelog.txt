@@ -9,6 +9,7 @@ Version 1.0.1 (03-03-12)
 -CSS tweak.
 -Fixed typo in theme options.
 -Fixed IE quirks mode bug. 
+-Fixed page titles not showing up by default.
 
 Version 1.0 (02-24-12)
 -Initial release.
