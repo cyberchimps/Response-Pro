@@ -2,6 +2,9 @@ Response Changelog
 
 ****************************
 
+Version 1.0.2 (03-06-12)
+-Responsive design tweak.
+
 Version 1.0.1 (03-03-12)
 -Margin fix for HTML tables.
 -Updated Foundation CSS.
