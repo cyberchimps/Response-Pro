@@ -51,7 +51,6 @@ function response_scripts() {
 	wp_register_script( 'tooltips' ,$path.'/js/foundation/jquery.tooltips.js');
 	wp_register_script( 'modernizr' ,$path.'/js/foundation/modernizr.foundation.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
-	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
 	
 	wp_enqueue_script ('orbit');
@@ -61,7 +60,6 @@ function response_scripts() {
 	wp_enqueue_script ('tooltips');
 	wp_enqueue_script ('modernizr');
 	wp_enqueue_script ('menu');
-	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
 }
 add_action('wp_enqueue_scripts', 'response_scripts');	
@@ -145,7 +143,7 @@ function response_breadcrumbs() {
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
  
-  if ( !is_home() && !is_front_page() || is_paged() ) {
+  if ( !is_home() && !is_front_page() && is_attachment() || is_paged() ) {
  
     echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
  
