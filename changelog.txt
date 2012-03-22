@@ -2,6 +2,8 @@ Response Changelog
 
 ****************************
 
+Version 1.0.3 (03-21-12)
+
 Version 1.0.2 (03-08-12)
 -Responsive design tweak.
 -Fixed Google Font library call for SSL support.
