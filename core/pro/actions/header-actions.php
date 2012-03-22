@@ -31,7 +31,7 @@ add_action( 'response_logo_description', 'response_logo_description_content');
 */
 function response_pro_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
+	$family = apply_filters( 'response_default_font_family', 'Helvetica, sans-serif' );
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
 		$font = apply_filters( 'response_default_font', 'Arial' );
