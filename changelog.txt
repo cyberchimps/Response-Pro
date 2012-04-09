@@ -2,7 +2,7 @@ Response Changelog
 
 ****************************
 
-Version 1.0.4 (03-26-12)
+Version 1.0.4 (04-10-12)
 -Adding back old IE meta tag.
 
 Version 1.0.3 (03-22-12)
