@@ -8,6 +8,7 @@ Version 1.0.4 (04-10-12)
 -Removed unecessary translations from several po files, updated necessary mo files.
 -CSS tweak for Box Element for iPad display. 
 -Twitter Bar no longer requires Twitter for WordPress plugin.
+-Removed ereg_replace from Google Font code for PHP 5.3 compatibility. 
 
 Version 1.0.3 (03-22-12)
 -Adjustment to post pagination container.
