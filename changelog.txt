@@ -6,6 +6,7 @@ Version 1.0.4 (04-10-12)
 -IE quirks issue should be fixed now.
 -Added French, Hebrew and Romanian language files.
 -Removed unecessary translations from several po files, updated necessary mo files.
+-CSS tweak for Box Element for iPad display. 
 
 Version 1.0.3 (03-22-12)
 -Adjustment to post pagination container.

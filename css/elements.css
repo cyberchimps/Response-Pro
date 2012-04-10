@@ -136,6 +136,11 @@
 	list-style: none;
 }
 
+#box2.four.columns { margin-left:2.3%;}
+#box3.four.columns { margin-left:2.1%;}
+
+#box1.four.columns, #box2.four.columns, #box3.four.columns {width: 31.7%;}
+
 .box-widget-title {
 	color: #222;
 	height: 25px;
@@ -166,10 +171,10 @@
 	margin-bottom: 15px;
 }
 
-#box2.four.columns{margin-left: 4.3%;}
+
 
 @-moz-document url-prefix() {
-#box2.four.columns, #box3.four.columns {margin-left: 4.1%;}
+#box2.four.columns, #box3.four.columns {margin-left: 2.1%;}
 #box3 {right: -2px;}
 }
 
