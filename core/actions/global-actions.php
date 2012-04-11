@@ -86,6 +86,8 @@ function response_loop_content($content) {
 						}
 					 ?>
 				</div><!--end entry-->
+				
+		<div class='clear'>&nbsp;</div>
 		<?php	
 		
 		$content = ob_get_clean();
