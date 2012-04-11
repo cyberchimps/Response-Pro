@@ -2,6 +2,9 @@ Response Changelog
 
 ****************************
 
+Version 1.0.5 (04-11-12)
+-Fixed error in breadcrumbs function. 
+
 Version 1.0.4 (04-10-12)
 -IE quirks issue should be fixed now.
 -Added French, Hebrew and Romanian language files.
