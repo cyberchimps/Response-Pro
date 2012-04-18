@@ -2,6 +2,9 @@ Response Changelog
 
 ****************************
 
+Version 1.0.6 (04-17-12)
+-Fix for third box in mobile view.
+
 Version 1.0.5 (04-11-12)
 -Fixed error in breadcrumbs function. 
 -Clear fix.
