@@ -2,6 +2,13 @@ Response Changelog
 
 ****************************
 
+Version 1.0.7 (04-26-12)
+-Added Pinterest social icon. 
+-Added missing tags hook to archive template.
+-Added missing $content_width global to theme setup function.
+-Updated pagination function with missing translation functions.
+-Updated response.pot.
+
 Version 1.0.6 (04-17-12)
 -Fix for third box in mobile view.
 
