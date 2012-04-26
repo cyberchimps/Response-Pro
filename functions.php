@@ -21,6 +21,8 @@
 * Basic theme setup.
 */ 
 function response_theme_setup() {
+	global $content_width;
+	
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
 	add_theme_support(
