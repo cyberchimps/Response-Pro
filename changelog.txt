@@ -6,6 +6,7 @@ Version 1.0.8 (05-03-12)
 -JS fix for banner url not hiding when option not enabled, added banner URL option. 
 -Mobile Menu now works in phone landscape mode. 
 -Fixed bug with broken "next" link in pagination.
+-Added media attachment pagination.
 -Option to crop featured images.
 -Added missing translation wrapper to post pagination links.
 -Added Swedish and Russian language files.
