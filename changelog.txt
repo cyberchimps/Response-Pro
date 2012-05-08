@@ -2,6 +2,12 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.0.9 (05-10-12)
+-Added Spanish, Italian, Turkish and Persian language files. 
+-Updated Croatian and Swedish translation files. 
+-Updated response.pot
+-Fixed/added missing translation wrappers to post pagination function.
+
 Version 1.0.8 (05-03-12)
 -JS fix for banner url not hiding when option not enabled, added banner URL option. 
 -Mobile Menu now works in phone landscape mode. 

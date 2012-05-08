@@ -1,4 +1,4 @@
-#Copyright (C) 2012
+#Copyright (C) 2011 
 msgid ""
 msgstr ""
 "Project-Id-Version: Core 1.0 \n"
@@ -20,96 +20,94 @@ msgstr ""
 #: core/actions/archive-actions.php:36
 #@ response
 msgid "Archive for the &#8216;"
-msgstr ""
+msgstr "&#8216 arşivi"
 
 #: core/actions/archive-actions.php:36
 #@ response
 msgid "&#8217; Category:"
-msgstr ""
+msgstr "&#8217; Kategorisi"
 
 #: core/actions/archive-actions.php:39
 #@ response
 msgid "Posts Tagged &#8216;"
-msgstr ""
+msgstr "&#8216 Etiketli Mesajlar"
 
 #: core/actions/archive-actions.php:39
 #@ response
 msgid "&#8217;:"
-msgstr ""
+msgstr "&#8217;:"
 
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
 #@ response
 msgid "Archive for"
-msgstr ""
+msgstr "Arşivi"
 
 #: core/actions/archive-actions.php:48
 #@ response
 msgid "Archive for:"
-msgstr ""
+msgstr "Arşivi"
 
 #: core/actions/archive-actions.php:51
 #@ response
 msgid "Author Archive:"
-msgstr ""
+msgstr "Yazar Arşivi"
 
 #: core/actions/archive-actions.php:54
 #@ response
 msgid "Blog Archives:"
-msgstr ""
+msgstr "Blog Arşivi"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "No Responses"
-msgstr ""
+msgstr "Cevap Yok"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "One Response"
-msgstr ""
+msgstr "Bir Cevap"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "% Responses"
-msgstr ""
+msgstr "% Cevap"
 
 #: core/actions/comments-actions.php:88
 #@ response
 msgid "You must be"
-msgstr ""
+msgstr "Adınız"
 
 #: core/actions/comments-actions.php:88
 #@ response
 msgid "logged in"
-msgstr ""
+msgstr "giriş yapıldı"
 
 #: core/actions/comments-actions.php:88
 #@ ifeture
 msgid "to post a comment."
-msgstr ""
+msgstr "yorum yazmak için"
 
 #: core/actions/footer-actions.php:39
 #@ response
 msgid "Recent Posts"
-msgstr ""
+msgstr "Son Mesajlar"
 
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 #@ response
-#@ response
 msgid "Archives"
-msgstr ""
+msgstr "Arşiv"
 
 #: core/actions/footer-actions.php:53
 #@ response
 msgid "Links"
-msgstr ""
+msgstr "Bağlantılar"
 
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
-#@ response
 #@ response
 msgid "WordPress"
 msgstr ""
@@ -117,142 +115,81 @@ msgstr ""
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 #@ response
-#@ response
 msgid "http://wordpress.org/"
-msgstr ""
+msgstr "http://wordpress.org/"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 #@ response
-#@ response
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr ""
+msgstr "Son teknoloji semantik yayıncılık platformu WordPress ile güçlendirilmiştir."
 
 #: core/actions/global-actions.php:43
 #@ response
 msgid "Published on"
-msgstr ""
+msgstr "Tarih"
 
 #: core/actions/global-actions.php:44
 #@ response
 msgid "by"
-msgstr ""
+msgstr "yazar"
 
 #: core/actions/global-actions.php:45
 #@ response
 msgid "in"
-msgstr ""
+msgstr "içinde"
 
 #: core/actions/global-actions.php:70
 #@ response
 msgid "No Comments &#187;"
-msgstr ""
+msgstr "Yorum yok"
 
 #: core/actions/global-actions.php:70
 #@ response
 msgid "1 Comment &#187;"
-msgstr ""
+msgstr "1 Yorum &#187"
 
 #: core/actions/global-actions.php:70
 #@ response
 msgid "% Comments &#187;"
 msgstr ""
 
+#: core/actions/global-actions.php:86
+#@ response
+msgid "Read more…"
+msgstr "Devamını oku..."
+
 #: core/actions/global-actions.php:187
 #@ response
 msgid "Tags: "
-msgstr ""
+msgstr "Etiketler: "
 
 #: searchform.php:15
 #@ response
 msgid "Search"
-msgstr ""
-
-#: core/actions/index-actions.php:276
-#@ default
-msgid "Page"
-msgstr ""
-
-#: functions.php:82
-#, php-format
-#@ default
-msgid "<cite class=\"fn\">%s</cite> <span class=\"says\"></span>"
-msgstr ""
-
-#: functions.php:85
-#@ default
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: functions.php:89
-#, php-format
-#@ default
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: functions.php:89
-#@ default
-msgid "(Edit)"
-msgstr ""
-
-#: core/actions/pagination-actions.php:49
-#@ response
-msgid "of"
-msgstr ""
-
-#: core/actions/pagination-actions.php:49
-#: core/core-functions.php:230
-#@ response
-#@ default
-msgid "Page"
-msgstr ""
-
-#: core/actions/pagination-actions.php:50
-#@ response
-msgid "&laquo; First"
-msgstr ""
-
-#: core/actions/pagination-actions.php:51
-#@ response
-msgid "&lsaquo; Previous"
-msgstr ""
-
-#: core/actions/pagination-actions.php:61
-#@ response
-msgid "Next &rsaquo;"
-msgstr ""
-
-#: core/actions/pagination-actions.php:62
-#@ response
-msgid "Last &raquo;"
-msgstr ""
-
-#: core/actions/pagination-actions.php:99
-#@ response
-msgid "Pages:"
-msgstr ""
+msgstr "Arama"
 
 #: sidebar.php:19
 #@ response
 msgid "Pages"
-msgstr ""
+msgstr "Sayfalar"
 
 #: sidebar.php:33
 #@ response
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriler"
 
 #: sidebar.php:50
 #@ response
 msgid "Subscribe"
-msgstr ""
+msgstr "Kayıt Ol"
 
 #: sidebar.php:52
 #@ response
 msgid "Entries (RSS)"
-msgstr ""
+msgstr "Kayıtlar (RSS)"
 
 #: sidebar.php:53
 #@ response
 msgid "Comments (RSS)"
-msgstr ""
+msgstr "Yorumlar (RSS)"
