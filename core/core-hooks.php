@@ -503,6 +503,16 @@ function response_banner() {
 }
 
 /**
+* Custom HTML header element
+*
+* @since 1.0
+*/
+function response_custom_header_element() {
+	do_action('response_custom_header_element');
+}
+
+
+/**
 * End
 */
 

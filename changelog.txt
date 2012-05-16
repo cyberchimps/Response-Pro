@@ -2,6 +2,9 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1 (05-17-12)
+-Fixed Custom Header Element.
+
 Version 1.0.9 (05-10-12)
 -Added Spanish, Italian, Turkish and Persian language files. 
 -Updated Croatian and Swedish translation files. 
