@@ -5,6 +5,7 @@ Response Pro Changelog
 Version 1.1 (05-17-12)
 -Fixed Custom Header Element.
 -Added Polish language files.
+-Added option for responsive embeded videos (Youtube/Vimeo).
 
 Version 1.0.9 (05-10-12)
 -Added Spanish, Italian, Turkish and Persian language files. 
