@@ -21,7 +21,6 @@ class ClassyOptionsSanitize {
 		
 		add_filter( 'cof_sanitize_textarea', array( __CLASS__, 'no_filter' ) );
 		add_filter( 'cof_sanitize_text', array( __CLASS__, 'no_filter' ) );
-		add_filter( 'cof_sanitize_fontsize', array( __CLASS__, 'no_filter' ) );
 	}
 
 	static function no_filter($input) {
