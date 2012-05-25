@@ -31,6 +31,9 @@ class ClassyOptions {
 		wp_enqueue_style('admin-style', CLASSY_OPTIONS_FRAMEWORK_URL.'css/admin-style.css');
 		wp_enqueue_style('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'css/colorpicker.css');
 		wp_enqueue_style('thickbox');
+		wp_enqueue_style('jquery-ui-theme', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui-theme.css');
+		wp_enqueue_style('jquery.ui.slider', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery.ui.slider.css');
+		wp_enqueue_style('demo', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui.css');
 	}
 
 	function load_scripts() {
@@ -45,6 +48,14 @@ class ClassyOptions {
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
 		wp_enqueue_script('theme-options-custom', get_template_directory_uri().'/library/js/theme-options-custom.js', array('jquery'));
 		wp_enqueue_script('media-uploader', CLASSY_OPTIONS_FRAMEWORK_URL.'js/of-medialibrary-uploader.js', array('jquery'));
+		
+		/*	JS for google font */
+		wp_enqueue_script('inline-google-font', CLASSY_OPTIONS_FRAMEWORK_URL.'js/google_font_inline_plugin.js', array('jquery'));
+
+		/* JS for JQuery UI slider */
+		wp_enqueue_script('jquery_ui_widget', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_widget.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_mouse', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_mouse.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_slider', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_slider.js', array('jquery'));
 	}
 
 	function add_admin_bar() {
@@ -291,6 +302,11 @@ class ClassyOptions {
 			// Basic text input
 			case 'text':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
+			break;
+			
+			// font size
+			case 'fontsize':
+				$output .= '<div id="slider"></div><input type="text" id="slider_value" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" value="' . esc_attr( $val ) . '" />';
 			break;
 			
 			// Textarea
@@ -717,6 +733,11 @@ class ClassyOptions {
 		}
 
 		array_splice($this->options, $start_index, $end_index - $start_index );
+		return $this;
+	}
+	
+	function fontsize($key, $label = "", $options = array()) {
+		$this->add( $options + array('id' => $key, 'type' => 'fontsize', 'name' => $label, 'options' => $options['options'] ));
 		return $this;
 	}
 }
