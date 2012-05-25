@@ -40,9 +40,7 @@ function response_index_content() {
 
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
-		<!--Begin @response index entry hook-->
-		<?php response_blog_content_slider(); ?>
-		<!--End @response index entry hook-->
+		
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
