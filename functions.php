@@ -288,15 +288,15 @@ add_action ('widgets_init', 'response_widgets_init');
 /**
 * Initialize Response Core Framework.
 */ 
-require_once ( get_template_directory() . '/core/core-init.php' );
+
 
 /**
 * Call additional files required by theme.
 */ 
 require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
-require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/presstrends.php' ); // Meta options markup.
+//require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
+
 
 /*	gets post views */
 function getPostViews($postID){ // TODO: add namespace to prevent conflict
