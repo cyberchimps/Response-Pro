@@ -462,20 +462,20 @@ h3 {
 }
 
 span.plus {
-	background: url(../images/downarrow.png);
+	background: url(../library/images/downarrow.png);
 	height: 16px;
 	width: 16px;
 	display: block;
 }
 
 span.minus {
-	background: url(../images/uparrow.png);
+	background: url(../library/images/uparrow.png);
 	height: 16px;
 	width: 16px;
 	display: block;
 }
 #of-nav li.current a span {
-	background: url(../images/sidearrow.png);
+	background: url(../library/images/sidearrow.png);
 	float: right;
 	height: 16px;
 	width: 16px;
@@ -642,14 +642,14 @@ tr {border-top: 1px solid #E7E7E7;}
 .form-table {margin-top: 0em;}
 
 .subsection h4 span {
-	background: url(../images/downarrow.png);
+	background: url(../library/images/downarrow.png);
 	display: block;
 	height: 16px;
 	width: 16px;
 	float: right;
 }
 .subsection h4 span.minus {
-	background: url(../images/uparrow.png);
+	background: url(../library/images/uparrow.png);
 }
 
 .subsection select {float: right; }
