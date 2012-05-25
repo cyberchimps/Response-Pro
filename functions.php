@@ -200,6 +200,110 @@ function response_featured_image() {
 add_action( 'init', 'response_featured_image', 11);	
 
 /**
+* Custom post types for Slider, Carousel.
+*/ 
+function response_create_post_type() {
+
+	global $themename, $themeslug, $options, $root;
+	
+	register_post_type( $themeslug.'_custom_slides',
+		array(
+			'labels' => array(
+				'name' => __( 'Feature Slides' ),
+				'singular_name' => __( 'Slides' )
+			),
+			'public' => true,
+			'show_ui' => true, 
+			'supports' => array('custom-fields', 'title'),
+			'taxonomies' => array( 'slide_categories'),
+			'has_archive' => true,
+			'menu_icon' => "$root/images/pro/slider.png",
+			'rewrite' => array('slug' => 'slides')
+		)
+	);
+	
+	register_post_type( $themeslug.'_featured_posts',
+		array(
+			'labels' => array(
+				'name' => __( 'Carousel' ),
+				'singular_name' => __( 'Posts' )
+			),
+			'public' => true,
+			'show_ui' => true, 
+			'supports' => array('custom-fields'),
+			'taxonomies' => array( 'carousel_categories'),
+			'has_archive' => true,
+			'menu_icon' => "$root/images/pro/carousel.png",
+			'rewrite' => array('slug' => 'slides')
+		)
+	);
+}
+add_action( 'init', 'response_create_post_type' );
+
+/**
+* Custom taxonomies for Slider, Carousel.
+*/ 
+function response_custom_taxonomies() {
+
+	global $themename, $themeslug, $options;
+	
+	register_taxonomy(
+		'slide_categories',		
+		$themeslug.'_custom_slides',		
+		array(
+			'hierarchical' => true,
+			'label' => 'Slide Categories',	
+			'query_var' => true,	
+			'rewrite' => array( 'slug' => 'slide_categories' ),	
+		)
+	);
+	register_taxonomy(
+		'carousel_categories',		
+		$themeslug.'_carousel_categories',		
+		array(
+			'hierarchical' => true,
+			'label' => 'Carousel Categories',	
+			'query_var' => true,	
+			'rewrite' => array( 'slug' => 'carousel_categories' ),	
+		)
+	);
+}
+add_action('init', 'response_custom_taxonomies', 0);
+
+/**
+* Assign default category for Slider, Carousel posts.
+*/ 
+function response_custom_taxonomy_default( $post_id, $post ) {
+
+	global $themename, $themeslug, $options;	
+
+	if( 'publish' === $post->post_status ) {
+
+		$defaults = array(
+
+			'slide_categories' => array( 'default' ), 'carousel_categories' => array( 'default' ),
+
+			);
+
+		$taxonomies = get_object_taxonomies( $post->post_type );
+
+		foreach( (array) $taxonomies as $taxonomy ) {
+
+			$terms = wp_get_post_terms( $post_id, $taxonomy );
+
+			if( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
+
+				wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
+
+			}
+		}
+	}
+}
+
+add_action( 'save_post', 'response_custom_taxonomy_default', 100, 2 );
+
+
+/**
 * Add Google Analytics support based on theme option.
 */ 
 function response_google_analytics() { // TODO: move to core and consider converting to element option

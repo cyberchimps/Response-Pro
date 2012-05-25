@@ -16,6 +16,7 @@
 */
 
 //Define custom core functions
+require_once ( get_template_directory() . '/core/hooks.php' );
 require_once ( get_template_directory() . '/core/functions.php' );
 require_once ( get_template_directory() . '/core/metabox/meta-box-class.php' );
 
