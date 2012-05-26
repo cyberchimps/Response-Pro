@@ -32,29 +32,30 @@ add_action ( 'response_secondary_footer', 'response_secondary_footer_copyright' 
 function response_footer_widgets() { 
 
    	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") ) { ?>
-		
-		<div class="three columns footer-widgets">
+
+		<div class="row-fluid">
+		<div class="span3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Footer Widgets', 'response' )); ?></h3>
 			<ul>
 				<li>To customize this widget area login to your admin account, go to Appearance, then Widgets and drag new widgets into Footer Widgets</li>
 			</ul>
 		</div>
 
-		<div class="three columns footer-widgets">
+		<div class="span3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Recent Posts', 'response' )); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=4'); ?>
 			</ul>
 		</div>
 		
-		<div class="three columns footer-widgets">
+		<div class="span3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Archives', 'response' )); ?></h3>
 			<ul>
 				<?php wp_get_archives('type=monthly&limit=16'); ?>
 			</ul>
 		</div>
 
-		<div class="three columns footer-widgets">
+		<div class="span3 footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'WordPress', 'response' )); ?></h3>
 			<ul>
     		<?php wp_register(); ?>
@@ -62,6 +63,7 @@ function response_footer_widgets() {
     		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'response' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'response'); ?>"> <?php printf( __('WordPress', 'response' )); ?></a></li>
     		<?php wp_meta(); ?>
     		</ul>
+		</div>
 		</div>
 		
 			<?php }
@@ -84,7 +86,7 @@ function response_secondary_footer_copyright() {
 		$copyright = $options->get($themeslug.'_footer_text');
 	}
 	
-	echo "<div id='afterfootercopyright' class='six columns'>";
+	echo "<div id='afterfootercopyright' class='span6'>";
 		echo "&copy; $copyright";
 	echo "</div>";
 }
@@ -96,16 +98,15 @@ function response_secondary_footer_copyright() {
 */
 function response_secondary_footer_credit() { 
 		
-	global $options, $themeslug; //call globals
-	
-	if ($options->get($themeslug.'_hide_link') == "1") {?>
+	global $options, $themeslug; //call globals?>
 		
-		<div id="credit" class="six columns">
-			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
+		<div id="credit" class="span6">
+			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/achimps.png" alt="credit" /></a>
 		</div> 
 	
-	<?php }
+<?php 
 }
+
 /**
 * End
 */
