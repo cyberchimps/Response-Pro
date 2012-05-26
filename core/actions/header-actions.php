@@ -175,6 +175,7 @@ global $themeslug, $options; //Call global variables
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/library/bootstrap/css/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/library/bootstrap/css/bootstrap-responsive.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/library/css/elements.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/library/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 
