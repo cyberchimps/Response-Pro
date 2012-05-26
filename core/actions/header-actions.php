@@ -335,23 +335,24 @@ function response_nav() {
 		
 	?>
 		
-	<div class="container">
-		<div class="row">
 
-			<div class="twelve columns" id="menu">
-
-			<div id="nav" class="twelve columns">
+		<div class="container-fluid">
+			<div id="menu">
+			<div class="row-fluid">
+				<div id="nav" class="span12">
+			
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
-		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
+		    'items_wrap' => '<ul id="nav_menu">%3$s</ul>',
 			    )
 			);
 	    	?>
-   			</div>
+   				</div>
+			</div>
 		</div>
-	</div>
-</div>
+		</div>
+		
  <?php
 }
 
@@ -419,27 +420,27 @@ global $current_user;
 /**
 * Logo/Icons header element.
 *
-* @since 1.0
+* @since 1.0.5
 */
 function response_logo_icons_content() {
 ?>
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 		
-			<div class="seven columns">
+			<div class="span7">
 				
-				<!-- Begin @Core header sitename hook -->
+				<!--Begin response_header_sitename hook -->
 					<?php response_header_sitename(); ?> 
-				<!-- End @Core header sitename hook -->
+				<!--End response_header_sitename hook -->
 			
 				
 			</div>	
 			
-			<div id ="register" class="five columns">
+			<div id ="register" class="span5">
 				
-			<!-- Begin @Core header social icon hook -->
+			<!--Begin response_header_social_icons hook -->
 				<?php response_header_social_icons(); ?> 
-			<!-- End @Core header contact social icon hook -->	
+			<!-- End response_header_social_icons hook -->	
 				
 			</div>	
 		</div><!--end row-->
