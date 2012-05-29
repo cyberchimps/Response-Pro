@@ -58,7 +58,6 @@ class ClassyOptions {
 		wp_enqueue_script('jquery_ui_slider', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_slider.js', array('jquery'));
 
 	}
-	}
 
 	function add_admin_bar() {
 		global $wp_admin_bar;
