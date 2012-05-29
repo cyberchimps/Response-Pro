@@ -31,6 +31,9 @@ class ClassyOptions {
 		wp_enqueue_style('admin-style', CLASSY_OPTIONS_FRAMEWORK_URL.'css/admin-style.css');
 		wp_enqueue_style('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'css/colorpicker.css');
 		wp_enqueue_style('thickbox');
+		wp_enqueue_style('jquery-ui-theme', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui-theme.css');
+		wp_enqueue_style('jquery.ui.slider', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery.ui.slider.css');
+		wp_enqueue_style('demo', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui.css');
 	}
 
 	function load_scripts() {
@@ -45,6 +48,16 @@ class ClassyOptions {
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
 		wp_enqueue_script('theme-options-custom', get_template_directory_uri().'/library/js/theme-options-custom.js', array('jquery'));
 		wp_enqueue_script('media-uploader', CLASSY_OPTIONS_FRAMEWORK_URL.'js/of-medialibrary-uploader.js', array('jquery'));
+		
+		/*	JS for google font */
+		wp_enqueue_script('inline-google-font', CLASSY_OPTIONS_FRAMEWORK_URL.'js/google_font_inline_plugin.js', array('jquery'));
+
+		/* JS for JQuery UI slider */
+		wp_enqueue_script('jquery_ui_widget', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_widget.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_mouse', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_mouse.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_slider', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_slider.js', array('jquery'));
+
+	}
 	}
 
 	function add_admin_bar() {
@@ -292,9 +305,22 @@ class ClassyOptions {
 									  
 			switch ( $value['type'] ) {
 			
+			// Preview
+			case 'preview':
+				$output .= "<p class='typopreview'>A Free Responsive Starter WordPress Theme Framework. Thank you for using Response.</p>";
+
+			break;
+			
 			// Basic text input
 			case 'text':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
+			break;
+			
+			// font size
+			case 'fontsize':
+				if($val == "")
+					$val =  $value['size'];
+				$output .= '<div id="slider"></div><input type="text" id="slider_value" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" value="' . esc_attr( $val ) . '" />';
 			break;
 			
 			// Textarea
@@ -688,6 +714,26 @@ class ClassyOptions {
 
 	function import( $label ) {
 		$this->add( array( 'type' => 'import', 'name' => $label ) );
+		return $this;
+	}
+	
+	function font($key, $label = "", $font_face = array()) {
+
+		if(isset($font_face['options']))
+		{
+			$this->add( $font_face + array('id' => $key, 'type' => 'select', 'name' => $label));
+		}	
+
+		if(isset($font_face['size']))
+		{
+			$this->add( $font_face + array('id' => "re_font_size", 'type' => 'fontsize', 'name' => "Font size"));
+		}	
+
+		if(isset($font_face['preview']) && $font_face['preview'] == 'true')
+		{
+			$this->add( $font_face + array('id' => "preview", 'type' => 'preview', 'name' => "Preview"));
+		}
+
 		return $this;
 	}
 
