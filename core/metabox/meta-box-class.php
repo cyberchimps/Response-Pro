@@ -323,7 +323,7 @@ class RW_Meta_Box {
 
 	function show_field_checkbox($field, $meta) {
 		$this->show_field_begin($field, $meta);
-		echo "<input type='checkbox' class='checkbox' name='{$field['id']}' id='checkbox-{$field['id']}' " . ($meta === 'on' ? 'checked="checked"' : '' ) . " value='1'/> {$field['desc']}</td>";
+		echo "<input type='checkbox' class='checkbox' name='{$field['id']}' id='checkbox-{$field['id']}' " . ($meta === '1' ? 'checked="checked"' : '' ) . " value='1'/> {$field['desc']}</td>";
 	}
 
 	function show_field_wysiwyg($field, $meta) {
@@ -606,8 +606,8 @@ class RW_Meta_Box {
 			foreach ($tab['fields'] as $field) {
 				$name = $field['id'];
 				$type = $field['type'];
-				$old = get_post_meta($post_id, $name, !$field['multiple']);
-				$new = isset($_POST[$name]) ? $_POST[$name] : ($field['multiple'] ? array() : '');
+				$old = get_post_meta($post_id, $name, !(isset($field['multiple']) && $field['multiple']));
+				$new = isset($_POST[$name]) ? $_POST[$name] : ((isset($field['multiple']) && $field['multiple']) ? array() : '');
 
 				// validate meta value
 				if (class_exists('RW_Meta_Box_Validate') && method_exists('RW_Meta_Box_Validate', $field['validate_func'])) {
@@ -630,7 +630,7 @@ class RW_Meta_Box {
 		$name = $field['id'];
 
 		// single value
-		if (!$field['multiple']) {
+		if (!(isset($field['multiple']) && $field['multiple'])) {
 			if ('' != $new && $new != $old) {
 				update_post_meta($post_id, $name, $new);
 			} elseif ('' == $new) {
@@ -702,7 +702,7 @@ class RW_Meta_Box {
 	}
 
 	function save_field_checkbox($post_id, $field, $old, $new) {
-		$new = $new ? "on" : "off";
+		$new = $new ? "1" : "0";
 		update_post_meta($post_id, $field['id'], $new);
 	}
 
