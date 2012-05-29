@@ -1,8 +1,3 @@
-
-
-
-
-
 /**
  * Prints out the inline javascript needed for the colorpicker and choosing
  * the tabs in the panel.
@@ -78,7 +73,66 @@ jQuery(document).ready(function($) {
 	}
 	});
 	}); //end color picker
-		
+	
+	// Switches option sections
+	$('.group').hide();
+	var activetab = '';
+	if (typeof(localStorage) != 'undefined' ) {
+		activetab = localStorage.getItem("activetab");
+	}
+	if (activetab != '' && $(activetab).length ) {
+		$(activetab).fadeIn();
+	} else {
+		$('.group:first').fadeIn();
+	}
+	$('.group .collapsed').each(function(){
+		$(this).find('input:checked').parent().parent().parent().nextAll().each( 
+			function(){
+				if ($(this).hasClass('last')) {
+					$(this).removeClass('hidden');
+						return false;
+					}
+				$(this).filter('.hidden').removeClass('hidden');
+			});
+	});
+	
+	if (activetab != '' && $(activetab + '-tab').length ) {
+		$(activetab + '-tab').parent('li').addClass('current');
+	}
+	else {
+		$('#of-nav li:first').addClass('current');
+	}
+	$('#of-nav li a').click(function(evt) {
+		$('#of-nav li').removeClass('current');
+		$(this).parent().addClass('current');
+		var clicked_group = $(this).attr('href');
+		if (typeof(localStorage) != 'undefined' ) {
+			localStorage.setItem("activetab", $(this).attr('href'));
+		}
+		$('.group').hide();
+		$(clicked_group).fadeIn();
+		evt.preventDefault();
+	});
+           					
+	$('.group .collapsed input:checkbox').click(unhideHidden);
+				
+	function unhideHidden(){
+		if ($(this).attr('checked')) {
+			$(this).parent().parent().parent().nextAll().removeClass('hidden');
+		}
+		else {
+			$(this).parent().parent().parent().nextAll().each( 
+			function(){
+				if ($(this).filter('.last').length) {
+					$(this).addClass('hidden');
+					return false;		
+					}
+				$(this).addClass('hidden');
+			});
+           					
+		}
+	}
+	
 	// Image Options
 	$('.of-radio-img-img').click(function(){
 		$(this).parent().parent().find('.of-radio-img-img').removeClass('of-radio-img-selected');
@@ -99,46 +153,6 @@ jQuery(document).ready(function($) {
 			$(this).find("span").addClass('minus');
 		}
 	});
-	
-	$('.group-items').hide();
-	$('.group > h2').click(function() {
-		$('span.minus').removeClass('minus');
-		if($(this).siblings('div').is(':visible')) {
-			$(this).siblings('div').fadeOut();
-		} else {
-			$(this).siblings('div').fadeIn();
-			$(this).find("span").addClass('minus');
-		}
-	});
-    
-    
-	/* jQuery UI slider */
-	
-	    var slidevalue = $( "#slider_value" ).val();
-		$( "#slider" ).slider({ min: 10 },{ max:40 },{ step: 1 }, { value: slidevalue });
-		$( "#slider_value" ).val($( "#slider" ).slider( "option", "value" ));
-		$("p.typopreview").css("font-size", $( "#slider" ).slider( "option", "value" )); 
-			
-		$( "#slider" ).bind( "slidechange", function(event, ui) {
-			event.change($("p.typopreview").css("font-size", ui.value));
-			event.change($( "#slider_value" ).val(ui.value));
-		}); 
-		
-		$( "#slider" ).bind( "slide", function(event, ui) {
-			$( "#slider_value" ).val($( "#slider" ).slider( "option", "value" ));
-		});
-		
-		$( "#slider_value" ).blur(function() {
-			$( "#slider" ).slider( "option", "value", $( "#slider_value" ).val() );
-		});
-		
-	/* for the font face preview */	
-	   
-		  
-	$('#re_font').change(function(){
-       var font = $(this).val();
-       if (font !== "null")
-          $("p.typopreview").google_fonts({fontname: font});          
-    });	
 
  });	
+
