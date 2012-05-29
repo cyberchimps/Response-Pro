@@ -31,6 +31,9 @@ class ClassyOptions {
 		wp_enqueue_style('admin-style', CLASSY_OPTIONS_FRAMEWORK_URL.'css/admin-style.css');
 		wp_enqueue_style('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'css/colorpicker.css');
 		wp_enqueue_style('thickbox');
+		wp_enqueue_style('jquery-ui-theme', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui-theme.css');
+		wp_enqueue_style('jquery.ui.slider', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery.ui.slider.css');
+		wp_enqueue_style('demo', CLASSY_OPTIONS_FRAMEWORK_URL.'css/jquery-ui.css');
 	}
 
 	function load_scripts() {
@@ -45,6 +48,15 @@ class ClassyOptions {
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
 		wp_enqueue_script('theme-options-custom', get_template_directory_uri().'/library/js/theme-options-custom.js', array('jquery'));
 		wp_enqueue_script('media-uploader', CLASSY_OPTIONS_FRAMEWORK_URL.'js/of-medialibrary-uploader.js', array('jquery'));
+        
+		/*	JS for google font */
+		wp_enqueue_script('inline-google-font', CLASSY_OPTIONS_FRAMEWORK_URL.'js/google_font_inline_plugin.js', array('jquery'));
+
+		/* JS for JQuery UI slider */
+		wp_enqueue_script('jquery_ui_widget', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_widget.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_mouse', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_mouse.js', array('jquery'));
+		wp_enqueue_script('jquery_ui_slider', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_slider.js', array('jquery'));
+		
 	}
 
 	function add_admin_bar() {
@@ -93,19 +105,22 @@ class ClassyOptions {
 				<div class="logo">
 				<h2><?php echo $themenamefull; ?> Options</h2>
 				</div>
+				<div class="upgradepro">
+				<a href="http://cyberchimps.com/responsepro/" target="_blank">Upgrade to Response Pro for just $25</a>
+				</div>
 				<div class="clear"></div>
 					<p class="submit">
 						<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options' ); ?>" />
 					</p>
 				<div class="menu">
 					<ul class="buttons">
-						<li><a href="http://cyberchimps.com/" target="_blank"><?php printf( __( 'CyberChimps', 'response' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'Store', 'response' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'response' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'response' )); ?></a></li>
-						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'response' ));?></a></li>
-						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'response' ));?></a></li>
+						<li><a href="http://cyberchimps.com/" target="_blank">CyberChimps</a></li>
+						<li><a href="http://cyberchimps.com/store/" target="_blank">Store</a></li>
+						<li><a href="http://cyberchimps.com/support" target="_blank">Support</a></li>
+						<li><a href="http://cyberchimps.com/response/docs/" target="_blank">Documentation</a></li>
+						<li><a href="http://cyberchimps.com/forum/" target="_blank">Forum</a></li>
+						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
+						<li><a href="http://facebook.com/cyberchimps/" target="_blank">Facebook</a></li>
 					</ul>
 				</div>
 
@@ -119,9 +134,9 @@ class ClassyOptions {
 				<div class="clear"></div>
 			</div>
 			<div class="of_admin_bar">
-			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/library/images/options/top.png" /></a></div>
+			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/images/options/top.png" /></a></div>
 				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!' ) ); ?>' );" />
-				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/library/images/options/cyberchimpsmini.png" /></a></div>
+				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/cyberchimpsmini.png" /></a></div>
 			</div>
 			<div class="clear"></div>
 		</form>
@@ -288,9 +303,22 @@ class ClassyOptions {
 									  
 			switch ( $value['type'] ) {
 			
+			// Preview
+			case 'preview':
+				$output .= "<p class='typopreview'>A Free Responsive Starter WordPress Theme Framework. Thank you for using Response.</p>";
+			
+			break;
+			
 			// Basic text input
 			case 'text':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
+			break;
+			
+			// font size
+			case 'fontsize':
+				if($val == "")
+					$val =  $value['size'];
+				$output .= '<div id="slider"></div><input type="text" id="slider_value" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" value="' . esc_attr( $val ) . '" />';
 			break;
 			
 			// Textarea
@@ -553,13 +581,13 @@ class ClassyOptions {
 				foreach($value['options'] as $k => $v) {
 					if(in_array($k, $values)) continue;
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$v}</span>";
 					$output .=  "</div>";
 				}
 				$output .=  "</div>";
 				$output .=  "</div>";
-				$output .=  "<div class='arrow'><img src='$root/library/images/arrowdrag.png' /></div>";
+				$output .=  "<div class='arrow'><img src='$root/images/arrowdrag.png' /></div>";
 				$output .=  "<div class='right_list'>";
 				$output .=  "<div class='active'>Active Elements</div>";
 				$output .=  "<div class='drag'>Drag & Drop Elements</div>";
@@ -568,7 +596,7 @@ class ClassyOptions {
 					if(!$k) continue;
 					$val = $value['options'][$k];
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$val}</span>";
 					$output .=  "</div>";
 				}
@@ -609,6 +637,27 @@ class ClassyOptions {
 		return $this;
 	}
 
+	function remove_section( $name ) {
+		$started = false;
+		foreach($this->options as $k => $option) {
+			if( $started && $option['type'] == 'heading' ) {
+				$end_index = $k;
+				break;
+			}
+			if($option['type'] == 'heading' && $option['name'] == $name) {
+				$started = true;
+				$start_index = $k;
+			}
+
+		}
+		if(!isset($end_index) ) {
+			$end_index = count($this->options) - 1;
+		}
+
+		array_splice($this->options, $start_index, $end_index - $start_index );
+		return $this;
+	}
+	
 	function subsection($text) {
 		$this->add( array( 'type' => 'subsection', 'name' => $text) );
 		return $this;
@@ -616,6 +665,16 @@ class ClassyOptions {
 
 	function subsection_end() {
 		$this->add( array( 'type' => 'subsection_end' ) );
+		return $this;
+	}
+	
+	function open_outersection() {
+		$this->add( array( 'type' => 'open_outersection' ) );
+		return $this;
+	}
+
+	function close_outersection() {
+		$this->add( array( 'type' => 'close_outersection' ) );
 		return $this;
 	}
 
@@ -688,35 +747,24 @@ class ClassyOptions {
 		$this->add( array( 'type' => 'import', 'name' => $label ) );
 		return $this;
 	}
-
-	function open_outersection() {
-		$this->add( array( 'type' => 'open_outersection' ) );
-		return $this;
-	}
-
-	function close_outersection() {
-		$this->add( array( 'type' => 'close_outersection' ) );
-		return $this;
-	}
-
-	function remove_section( $name ) {
-		$started = false;
-		foreach($this->options as $k => $option) {
-			if( $started && $option['type'] == 'heading' ) {
-				$end_index = $k;
-				break;
-			}
-			if($option['type'] == 'heading' && $option['name'] == $name) {
-				$started = true;
-				$start_index = $k;
-			}
-
+	
+	function font($key, $label = "", $font_face = array()) {
+	
+		if(isset($font_face['options']))
+		{
+			$this->add( $font_face + array('id' => $key, 'type' => 'select', 'name' => $label));
+		}	
+		
+		if(isset($font_face['size']))
+		{
+			$this->add( $font_face + array('id' => "re_font_size", 'type' => 'fontsize', 'name' => "Font size"));
+		}	
+		
+		if(isset($font_face['preview']) && $font_face['preview'] == 'true')
+		{
+			$this->add( $font_face + array('id' => "preview", 'type' => 'preview', 'name' => "Preview"));
 		}
-		if(!isset($end_index) ) {
-			$end_index = count($this->options) - 1;
-		}
-
-		array_splice($this->options, $start_index, $end_index - $start_index );
+		
 		return $this;
 	}
 }
