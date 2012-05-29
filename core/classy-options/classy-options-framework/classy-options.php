@@ -135,9 +135,9 @@ class ClassyOptions {
 				<div class="clear"></div>
 			</div>
 			<div class="of_admin_bar">
-			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/images/options/top.png" /></a></div>
+			    <div id="top"><a href='#TOP'><img src="<?php echo get_template_directory_uri() ;?>/library/images/options/top.png" /></a></div>
 				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!' ) ); ?>' );" />
-				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/images/options/cyberchimpsmini.png" /></a></div>
+				<div class="chimps"><a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ;?>/library/images/options/cyberchimpsmini.png" /></a></div>
 			</div>
 			<div class="clear"></div>
 		</form>
@@ -580,13 +580,13 @@ class ClassyOptions {
 				foreach($value['options'] as $k => $v) {
 					if(in_array($k, $values)) continue;
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$v}</span>";
 					$output .=  "</div>";
 				}
 				$output .=  "</div>";
 				$output .=  "</div>";
-				$output .=  "<div class='arrow'><img src='$root/images/arrowdrag.png' /></div>";
+				$output .=  "<div class='arrow'><img src='$root/library/images/arrowdrag.png' /></div>";
 				$output .=  "<div class='right_list'>";
 				$output .=  "<div class='active'>Active Elements</div>";
 				$output .=  "<div class='drag'>Drag & Drop Elements</div>";
@@ -595,7 +595,7 @@ class ClassyOptions {
 					if(!$k) continue;
 					$val = $value['options'][$k];
 					$output .=  "<div class='list_item'>";
-					$output .=  "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					$output .=  "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
 					$output .=  "<span data-key='{$k}'>{$val}</span>";
 					$output .=  "</div>";
 				}
