@@ -319,7 +319,7 @@ class ClassyOptions {
 			case 'fontsize':
 				if($val == "")
 					$val =  $value['size'];
-				$output .= '<div id="slider"></div><input type="text" id="slider_value" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" value="' . esc_attr( $val ) . '" />';
+				$output .= '<div id="slider"></div>Enter font size:<input type="text" id="slider_value" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" value="' . esc_attr( $val ) . '" />';
 			break;
 			
 			// Textarea

@@ -169,21 +169,22 @@ jQuery(document).ready(function($) {
     
     
 	/* jQuery UI slider */
-	
+
 	    var slidevalue = $( "#slider_value" ).val();
 		$( "#slider" ).slider({ min: 10 },{ max:40 },{ step: 1 }, { value: slidevalue });
 		$( "#slider_value" ).val($( "#slider" ).slider( "option", "value" ));
-		$("p.typopreview").css("font-size", $( "#slider" ).slider( "option", "value" )); 
-			
+		$("p.typopreview").css("font-size", slidevalue + 'px'); 
+
 		$( "#slider" ).bind( "slidechange", function(event, ui) {
 			event.change($("p.typopreview").css("font-size", ui.value));
 			event.change($( "#slider_value" ).val(ui.value));
 		}); 
-		
+
 		$( "#slider" ).bind( "slide", function(event, ui) {
 			$( "#slider_value" ).val($( "#slider" ).slider( "option", "value" ));
+			$("p.typopreview").css("font-size", $( "#slider" ).slider( "option", "value" ));
 		});
-		
+
 		$( "#slider_value" ).blur(function() {
 			$( "#slider" ).slider( "option", "value", $( "#slider_value" ).val() );
 		});
