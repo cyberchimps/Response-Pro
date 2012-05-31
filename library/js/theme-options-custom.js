@@ -14,8 +14,8 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
-   $("#re_header_banner").change(function() {
-    var toShow = $("#section-re_header_banner_url");
+   $("#re_sidebar_banner").change(function() {
+    var toShow = $("#section-re_sidebar_banner_url");
     if($(this).is(':checked')) {
       toShow.show();
     } else {
