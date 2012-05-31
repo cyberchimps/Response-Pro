@@ -2,7 +2,7 @@ Response Pro Changelog
 
 ****************************
 
-Version 1.1 (05-31-12)
+Version 1.1 (06-01-12)
 -Fixed Custom Header Element.
 -Added Polish and Hindi language files.
 -Fix for slider custom captions.
