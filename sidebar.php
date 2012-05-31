@@ -1,8 +1,19 @@
+<?php
+
+	global $options, $themename, $themeslug;
+
+?>
+
 <?php if (dynamic_sidebar('Sidebar Widgets')) : else : ?>
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
-    
+        
+        <div class="widget-container">   
+			<?php if($options->get($themeslug.'_header_banner') == '1'){echo '<img src="http://placehold.it/300x250">'; } ?>
+        </div>
+		
 		<div class="widget-container">    
+				
 		<h2 class="widget-title">Welcome to Response</h2>
     		<ul>
 				<li>Thank you for using Response!.</li>
