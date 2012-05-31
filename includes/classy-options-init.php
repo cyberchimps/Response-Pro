@@ -219,7 +219,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->close_outersection()
 	->section("Banners")
 		->checkbox($themeslug."_header_banner", "Header Banner")
-		->text($themeslug."_header_banner_text", "Header Banner URL")
+		->text($themeslug."_header_banner_url", "Header Banner URL")
 	->section("Import / Export")
 		->open_outersection()
 			->export("Export Settings")

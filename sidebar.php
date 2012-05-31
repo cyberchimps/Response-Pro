@@ -8,9 +8,13 @@
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
         
+        <?php if($options->get($themeslug.'_header_banner') == '1') :?>
+        
         <div class="widget-container">   
-			<?php if($options->get($themeslug.'_header_banner') == '1'){echo '<img src="http://placehold.it/300x250">'; } ?>
+			<a href="<?php echo ($options->get($themeslug.'_header_banner_url')); ?>" target="_blank"><img src="http://placehold.it/300x250"></img></a>
         </div>
+        
+		<?php endif; ?>
 		
 		<div class="widget-container">    
 				
