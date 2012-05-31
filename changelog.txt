@@ -5,6 +5,7 @@ Response Pro Changelog
 Version 1.1 (05-31-12)
 -Fixed Custom Header Element.
 -Added Polish and Hindi language files.
+-Fix for slider custom captions.
 -Added option for responsive embeded videos (Youtube/Vimeo).
 
 Version 1.0.9 (05-10-12)

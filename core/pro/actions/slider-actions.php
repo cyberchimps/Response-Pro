@@ -204,7 +204,7 @@ function response_slider_content() {
 	    	/* Post-specific variables */	
 
 	    	$customimage 		= get_post_meta($post->ID, 'slider_image' , true);  /* Gets slide custom image from page/post meta option */
-	    	$customtext 		=  $post->post_content; /* Gets slide caption from custom slide meta option */
+	    	$customtext 		= get_post_meta($post->ID, 'slider_caption' , true); /* Gets slide caption from custom slide meta option */
 	    	$customlink 		= get_post_meta($post->ID, 'slider_url' , true); /* Gets link from custom slide meta option */
 	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
 	   		$blogtext 			= get_post_meta($post->ID, 'slider_text' , true); /* Gets slide caption from post meta option */  		
