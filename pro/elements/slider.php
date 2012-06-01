@@ -211,7 +211,7 @@ function response_slider_content() {
 	   		$title				= get_the_title() ; /* Gets slide title from post/custom slide title */
 	   		$hidetitlebar       = get_post_meta($post->ID, 'slider_hidetitle' , true); /* Gets page/post meta option for disabling slide title bar */
 	   		$customsized        = "$root/pro/library/wt/wordthumb.php?src=$customimage&a=c&$wordthumb"; /* Gets custom image from page/post meta option, applies wordthumb code  */
-	   		$resized            = wp_resize( '', $customimage, 720, 130, true );
+	   		$resized            = wp_resize( '', $customimage, 1020, 330, true );
 	   		$customthumb 		= get_post_meta($post->ID, 'slider_custom_thumb' , true); /* Gets custom thumbnail from page/post meta option */
 
 			/* End variables */	

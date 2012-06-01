@@ -89,6 +89,7 @@ function initialize_the_meta_boxes() {
 					'callout_section' => 'Callout',
 					'twitterbar_section' => 'Twitter Bar',
 					'page_section' => 'Page',
+					'events_element' =>'Events',
 					'box_section' => 'Boxes',
 					'breadcrumbs' => 'Breadcrumbs',
 					'carousel_section' => 'Carousel'

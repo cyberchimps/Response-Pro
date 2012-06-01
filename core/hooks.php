@@ -512,6 +512,12 @@ function response_custom_header_element() {
 }
 
 
+
+function response_events_element() {
+	do_action('response_events_element');
+}
+
+
 /**
 * End
 */
