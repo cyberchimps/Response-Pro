@@ -7,8 +7,8 @@
 
 	global $options, $themeslug, $post, $sidebar, $content_grid, $root; // call globals	
 
-	$source = "$root/library/images/fish.jpg";
-	$image = wp_resize( '', $source , 400, 100, true );
+	$source = "http://farm3.static.flickr.com/2156/2364129390_4fe946df4a.jpg";
+	$image = wp_resize( '', $source , 1000, 1000, true );
 
 get_header();  //Display Header
 
