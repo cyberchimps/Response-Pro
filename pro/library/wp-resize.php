@@ -20,7 +20,7 @@
 
  * $thumb = get_post_thumbnail_id(); 
 
- * $image = vt_resize( $thumb,'' , 140, 110, true );
+ * $image = wp_resize( $thumb,'' , 140, 110, true );
 
  * ?>
 
@@ -42,7 +42,7 @@
 
  */
 
-function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
+function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
 
 
 
@@ -120,7 +120,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 			
 
-			$vt_image = array (
+			$wp_resize = array (
 
 				'url' => $cropped_img_url,
 
@@ -132,7 +132,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 			
 
-			return $vt_image;
+			return $wp_resize;
 
 		}
 
@@ -162,7 +162,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 
 
-				$vt_image = array (
+				$wp_resize = array (
 
 					'url' => $resized_img_url,
 
@@ -174,7 +174,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 				
 
-				return $vt_image;
+				return $wp_resize;
 
 			}
 
@@ -194,7 +194,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 		// resized output
 
-		$vt_image = array (
+		$wp_resize = array (
 
 			'url' => $new_img,
 
@@ -206,7 +206,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 		
 
-		return $vt_image;
+		return $wp_resize;
 
 	}
 
@@ -214,7 +214,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	// default output - without resizing
 
-	$vt_image = array (
+	$wp_resize = array (
 
 		'url' => $image_src[0],
 
@@ -226,7 +226,7 @@ function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	
 
-	return $vt_image;
+	return $wp_resize;
 
 }
 ?>

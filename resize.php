@@ -8,12 +8,12 @@
 	global $options, $themeslug, $post, $sidebar, $content_grid, $root; // call globals	
 
 	$source = "$root/library/images/fish.jpg";
-	$image = vt_resize( '', $source , 400, 100, true );
+	$image = wp_resize( '', $source , 400, 100, true );
 
 get_header();  //Display Header
 
 var_dump($image['url']);
-var_dump($image[height]);
+var_dump($image['height']);
 var_dump($image['width']);
 
 ?>
