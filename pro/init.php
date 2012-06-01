@@ -17,6 +17,7 @@
 
 require_once ( get_template_directory() . '/pro/hooks.php' );
 require_once ( get_template_directory() . '/pro/functions.php' );
+require_once ( get_template_directory() . '/pro/library/wp-resize.php' );
 
 // Load element files
 require_once ( get_template_directory() . '/pro/elements/slider.php' );
