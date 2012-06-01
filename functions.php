@@ -399,6 +399,7 @@ add_action ('widgets_init', 'response_widgets_init');
 */ 
 
 require_once ( get_template_directory() . '/core/init.php' ); // Initialize core
+require_once ( get_template_directory() . '/pro/init.php' ); // Initialize pro
 
 require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
