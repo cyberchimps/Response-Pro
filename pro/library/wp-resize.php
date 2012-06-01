@@ -209,6 +209,57 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		return $wp_resize;
 
 	}
+    else {
+        
+        /* Existing Image */
+    	$orig_image = imagecreatefromjpeg($file_path);
+        $orig_width = imagesx($orig_image);
+        $orig_height = imagesy($orig_image);
+        
+        /* Create a image with the new height and width */
+        $large_image = imagecreate($width,$height);						
+        $ok = imagecopyresized($large_image,$orig_image,0,0,0,0,$width,$height,$orig_width,$orig_height); 
+        
+        if($ok) {
+        
+            $file_info = pathinfo( $file_path );
+            $extension = '.'. $file_info['extension'];
+            
+            // the image path without the extension
+            $no_ext_path = $file_info['dirname'].'/'.$file_info['filename'];            
+            
+            //Store newly created image in the directory with new name        
+            $image_stored = false;
+            if($file_info['extension'] == "jpg" OR $file_info['extension'] == 'jpeg'){
+                $image_stored = imagejpeg($large_image, $no_ext_path.'-'.$width.'x'.$height.$extension);
+            }elseif ($file_info['extension'] == "gif"){
+                $image_stored = imagegif($large_image, $no_ext_path.'-'.$width.'x'.$height.$extension);
+            }elseif ($file_info['extension'] == 'png'){
+                $image_stored = imagepng($large_image, $no_ext_path.'-'.$width.'x'.$height.$extension);
+            }  
+            
+            //New file url with file name
+            $file_url = rtrim( $image_src[0], basename($image_src[0])) . $file_info['filename'].'-'.$width.'x'.$height.$extension;        
+                
+                
+            $wp_resize = array (
+                'url' => $file_url,
+                'width' => $width,
+                'height' => $height
+            );
+            return $wp_resize;        
+        
+        }
+        else {
+            // default output - without image resizing but chnaged width and width
+            $wp_resize = array (
+                'url' => $image_src[0],
+                'width' => $width,
+                'height' => $height
+            );
+            return $wp_resize;        
+        }            
+    }
 
 
 
