@@ -1,19 +1,28 @@
-<?php 
+<?php
 
-/* WP-Resize: a TimThumb alternative using native WP functions. Original credit goes to Victor Teixeira (http://wpquestions.com/user/discourseShow/id/1981/discourse_id/20)
+/*
 
-/* Example use:
+ * Resize images dynamically using wp built in functions
 
-  <?php 
+ * Victor Teixeira
 
-  $thumb = get_post_thumbnail_id(); 
+ *
 
-  $image = wp_resize( $thumb,'' , 140, 110, true );
+ * php 5.2+
 
-  ?>
+ *
 
+ * Exemple use:
 
+ * 
 
+ * <?php 
+
+ * $thumb = get_post_thumbnail_id(); 
+
+ * $image = vt_resize( $thumb,'' , 140, 110, true );
+
+ * ?>
 
  * <img src="<?php echo $image[url]; ?>" width="<?php echo $image[width]; ?>" height="<?php echo $image[height]; ?>" />
 
@@ -33,7 +42,7 @@
 
  */
 
-function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
+function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
 
 
 
@@ -57,7 +66,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 		$file_path = parse_url( $img_url );
 
-		$file_path = ltrim( $file_path, home_url() );
+		$file_path = ltrim( $file_path['path'], '/' );
 
 		//$file_path = rtrim( ABSPATH, '/' ).$file_path['path'];
 
@@ -75,24 +84,17 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	}
 
-	else {
 	
-		$file_path = '';
-		$image_src[0] = '';
-		$image_src[1] = '';
-		$image_src[2] = '';
-		
-	}
 
 	$file_info = pathinfo( $file_path );
 
-	$extension = '.'. (!isset($file_info['extension']));
+	$extension = '.'. $file_info['extension'];
 
 
 
 	// the image path without the extension
 
-	$no_ext_path = (!isset($file_info['dirname'])).'/'.$file_info['filename'];
+	$no_ext_path = $file_info['dirname'].'/'.$file_info['filename'];
 
 
 
@@ -118,7 +120,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 			
 
-			$wp_image = array (
+			$vt_image = array (
 
 				'url' => $cropped_img_url,
 
@@ -130,7 +132,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 			
 
-			return $wp_image;
+			return $vt_image;
 
 		}
 
@@ -160,7 +162,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 
 
-				$wp_image = array (
+				$vt_image = array (
 
 					'url' => $resized_img_url,
 
@@ -172,7 +174,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 				
 
-				return $wp_image;
+				return $vt_image;
 
 			}
 
@@ -192,7 +194,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 		// resized output
 
-		$wp_image = array (
+		$vt_image = array (
 
 			'url' => $new_img,
 
@@ -204,7 +206,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 		
 
-		return $wp_image;
+		return $vt_image;
 
 	}
 
@@ -212,7 +214,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	// default output - without resizing
 
-	$wp_image = array (
+	$vt_image = array (
 
 		'url' => $image_src[0],
 
@@ -224,7 +226,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	
 
-	return $wp_image;
+	return $vt_image;
 
 }
 ?>
