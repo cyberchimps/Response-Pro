@@ -473,13 +473,13 @@ class RW_Meta_Box {
 			foreach($field['options'] as $key => $value) {
 				if(in_array($key, $meta)) continue;
 				echo "<div class='list_item'>";
-					echo "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					echo "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
 					echo "<span data-key='{$key}'>{$value}</span>";
 				echo "</div>";
 			}
 		echo "</div>";
 		echo "</div>";
-		echo "<div id='arrow'><img src='$root/images/arrowdrag.png' /></div>";
+		echo "<div id='arrow'><img src='$root/library/images/arrowdrag.png' /></div>";
 		echo "<div class='right_list'>";
 		echo "<div id='active'>Active Elements</div>";
 		echo "<div id='drag'>Drag & Drop Elements</div>";
@@ -488,7 +488,7 @@ class RW_Meta_Box {
 				if(!$key) continue;
 				$value = $field['options'][$key];
 				echo "<div class='list_item'>";
-					echo "<img src='$root/images/minus.png' class='action' title='Remove'/>";
+					echo "<img src='$root/library/images/minus.png' class='action' title='Remove'/>";
 					echo "<span data-key='{$key}'>{$value}</span>";
 				echo "</div>";
 			}
@@ -835,7 +835,7 @@ add_action( 'admin_print_styles-post.php', 'metabox_enqueue' );
 
 function metabox_enqueue() {
 	$path =  get_template_directory_uri()."/core/library/js/";
-	$path2 = get_template_directory_uri()."/css/";
+	$path2 = get_template_directory_uri()."/library/css/";
 	$color = get_user_meta( get_current_user_id(), 'admin_color', true );
 
 	wp_register_style(  'metabox-tabs-css', $path2. 'metabox-tabs.css');
