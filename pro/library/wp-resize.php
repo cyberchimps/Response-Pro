@@ -209,20 +209,30 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		return $wp_resize;
 
 	}
-    else {
+    else if($image_src[1] < $width || $image_src[2] < $height){
         
         /* Existing Image */
-    	$orig_image = imagecreatefromjpeg($file_path);
+		$file_info = pathinfo( $file_path );
+		if($file_info['extension'] == "jpg" OR $file_info['extension'] == 'jpeg') {
+			$orig_image = imagecreatefromjpeg($file_path);
+		}elseif ($file_info['extension'] == "gif") {
+			$orig_image = imagecreatefromgif($file_path);
+		}elseif ($file_info['extension'] == 'png'){
+			$orig_image = imagecreatefrompng($file_path);
+		}
         $orig_width = imagesx($orig_image);
         $orig_height = imagesy($orig_image);
         
         /* Create a image with the new height and width */
-        $large_image = imagecreate($width,$height);						
+        $large_image = imagecreatetruecolor ($width,$height);						
         $ok = imagecopyresized($large_image,$orig_image,0,0,0,0,$width,$height,$orig_width,$orig_height); 
+		
         
+		
         if($ok) {
-        
-            $file_info = pathinfo( $file_path );
+			$key = $file_info['filename'] . '-' . $width . 'x' . $height;
+			wp_cache_set( $key, $large_image);
+						
             $extension = '.'. $file_info['extension'];
             
             // the image path without the extension
