@@ -256,11 +256,11 @@ function response_slider_content() {
 	    		$thumbnail = "$root/pro/library/wt/wordthumb.php?src=$customimage&a=c&h=30&w=50";
 	    	}
 	    	elseif ($customimage != '' && $customthumb != '' && $wordenable == '1' OR $customimage != '' && $customthumb != '' && $wordenable == 'on'){ // No Custom image, custom thumb, WordThumb enabled. 
-	    		$image = $customsized;
+	    		$image = "<img src='$resized[url]' width='$resized[width]' height='$resized[height]'  alt='Slider' />";
 	    		$thumbnail = "$root/pro/library/wt/wordthumb.php?src=$customthumb&a=c&h=30&w=50";
 	    	}
 	    	elseif ($customimage != '' && $customthumb != '' && $wordenable != '1' OR $customimage != '' && $customthumb != '' && $wordenable != 'on'){ // Custom image, custom thumb, WordThumb disabled. 
-	    		$image = $customimage;
+	    		$image = "<img src='$customimage' alt='Slider' />";
 	    		$thumbnail = $customthumb;
 	    	}
 	 	    elseif ($customimage != '' && $customthumb == '' && $wordenable != '1' OR $customimage != '' && $customthumb == '' && $wordenable != 'on'){ // Custom image, no custom thumb, WordThumb disabled. 
@@ -268,7 +268,7 @@ function response_slider_content() {
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}
 	    	elseif ($customimage != '' && $customthumb == '' && $wordenable == '1' OR $customimage != '' && $customthumb == '' && $wordenable == 'on'){ // Custom image, no custom thumb, WordThumb enabled. 
-	    		$image = $customsized;
+	    		$image = "<img src='$resized[url]' width='$resized[width]' height='$resized[height]'  alt='Slider' />";
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}  	
 	    	elseif ($customimage == '' && $wordenable != '1' OR $customimage == '' && $wordenable != 'on'){ // No custom image, no custom thumb, full-width slider, WordThumb enabled. 
