@@ -252,7 +252,7 @@ function response_slider_content() {
 	    	/* Controls slide image and thumbnails */
 
 	    	if ($customimage != '' && $customthumb == '' && $wordenable == '1' OR $customimage != '' && $customthumb == '' && $wordenable == 'on'){ // Custom image, no custom thumb, WordThumb enabled. 
-	    		$image = $resized;
+	    		$image = "<img src='$resized[url]' width='$resized[width]' height='$resized[height]'  alt='Slider' />";
 	    		$thumbnail = "$root/pro/library/wt/wordthumb.php?src=$customimage&a=c&h=30&w=50";
 	    	}
 	    	elseif ($customimage != '' && $customthumb != '' && $wordenable == '1' OR $customimage != '' && $customthumb != '' && $wordenable == 'on'){ // No Custom image, custom thumb, WordThumb enabled. 
@@ -264,7 +264,7 @@ function response_slider_content() {
 	    		$thumbnail = $customthumb;
 	    	}
 	 	    elseif ($customimage != '' && $customthumb == '' && $wordenable != '1' OR $customimage != '' && $customthumb == '' && $wordenable != 'on'){ // Custom image, no custom thumb, WordThumb disabled. 
-	    		$image = $customimage;
+	    		$image = "<img src='$customimage' alt='Slider' />";
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}
 	    	elseif ($customimage != '' && $customthumb == '' && $wordenable == '1' OR $customimage != '' && $customthumb == '' && $wordenable == 'on'){ // Custom image, no custom thumb, WordThumb enabled. 
@@ -291,7 +291,7 @@ function response_slider_content() {
 	    	
 	    $out .= "
 	    	<a href='$link' $caption data-thumb='$thumbnail' bullet-text='test'>
-	    				<img src='$image[url]' width='$image[width]' height='$image[height]'  alt='Slider' />
+	    				$image
 	    						<span class='orbit-caption' id='htmlCaption$i'><span class='caption_title'>$title</span> <br /> <span class='caption_text'>$text</span></span>
 	    				</a>
 	  	    	";
