@@ -33,6 +33,7 @@
       bullets: false,						// true or false to activate the bullet navigation
       bulletThumbs: false,				// thumbnails for the bullets
       bulletThumbLocation: '',			// location from this file where thumbs will be
+      bulletTexts: false,
       afterSlideChange: $.noop,		// empty function 
       fluid: true,
       centerBullets: true    // center bullet nav with js, turn this off if you want to position the bullet nav manually
@@ -383,6 +384,15 @@
           $li = $('<li>' + (position) + '</li>'),
           thumbName,
           self = this;
+          
+      /* Check if bulletTexts is true in options */  
+  		if (this.options.bulletTexts) {        
+            this.$bullets.removeClass().addClass('orbit-buttons');        
+  			buttonText = $(slide).attr('bullet-text');
+  			if (buttonText) {
+                $li.html('<button class="btn">' + buttonText + '</button>');
+  			}
+  		}   
 
   		if (this.options.bulletThumbs) {
   			thumbName = $(slide).attr('data-thumb');

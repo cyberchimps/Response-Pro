@@ -1,3 +1,25 @@
+/* ========== Changes for Slider Buttons =========== */
+.orbit-buttons {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    bottom: -50px;
+    left: 50%;
+	margin-left: -50px;
+    padding: 0; }
+
+.orbit-buttons li {
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #999;
+    width: 55px;
+    height: 30px; }
+
+.orbit-buttons li.active {
+    color: #222;
+    background-position: -8px 0; }
+
  
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
