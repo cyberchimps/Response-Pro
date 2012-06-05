@@ -499,7 +499,7 @@ class RW_Meta_Box {
 ?>
 
 <script type="text/javascript">
-		jQuery(function($) {
+		jQuery(function($) {		
 			function update(base) {
 				var hidden = base.find("input[type='hidden']");
 				var val = [];
@@ -846,6 +846,9 @@ function metabox_enqueue() {
 	
 	wp_enqueue_script('jf-metabox-tabs');
 	wp_enqueue_script('jquerycustom', get_template_directory_uri().'/core/library/js/jquery-custom.js', array('jquery') );
+	
+	wp_enqueue_script('jquery-touch-punch', get_template_directory_uri().'/core/library/js/jquery.ui.touch-punch.min.js', array('jquery') );
+	wp_enqueue_script('jquery-touch-sense', get_template_directory_uri().'/core/library/js/touch-sensitive.js', array('jquery') );
 	
 	wp_enqueue_style('metabox-tabs-css');
 }

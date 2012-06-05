@@ -39,10 +39,12 @@ class ClassyOptions {
 	function load_scripts() {
 		// Inline scripts from options-interface.php
 		add_action('admin_head', array($this, 'admin_head'));
+			
+		wp_enqueue_script('jquery-touch-sense-theme', get_template_directory_uri().'/core/library/js/touch-sensitive.js', array('jquery') );
 		
 		// Enqueued scripts
 		wp_enqueue_script('jquery-ui-core');
-		wp_enqueue_script('jquery-ui-sortable');
+		wp_enqueue_script('jquery-ui-sortable');		
 		wp_enqueue_script('thickbox');
 		wp_enqueue_script('color-picker', CLASSY_OPTIONS_FRAMEWORK_URL.'js/colorpicker.js', array('jquery'));
 		wp_enqueue_script('options-custom', CLASSY_OPTIONS_FRAMEWORK_URL.'js/options-custom.js', array('jquery'));
@@ -56,7 +58,7 @@ class ClassyOptions {
 		wp_enqueue_script('jquery_ui_widget', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_widget.js', array('jquery'));
 		wp_enqueue_script('jquery_ui_mouse', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_mouse.js', array('jquery'));
 		wp_enqueue_script('jquery_ui_slider', CLASSY_OPTIONS_FRAMEWORK_URL.'js/jquery_ui_slider.js', array('jquery'));
-
+		wp_enqueue_script('jquery-touch-punch-theme', get_template_directory_uri().'/core/library/js/jquery.ui.touch-punch.min.js', array('jquery') );
 	}
 
 	function add_admin_bar() {
