@@ -93,6 +93,7 @@ $options
 			->color($themeslug."_posttitle_color", "Post Title Color")
 		->subsection_end()
 			->open_outersection()
+				->checkbox($themeslug."_lazy_load", "LazyLoad")
 				->checkbox($themeslug."_responsive_video", "Responsive Videos")
 			->close_outersection()
 			->open_outersection()
