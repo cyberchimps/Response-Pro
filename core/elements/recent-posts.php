@@ -1,4 +1,19 @@
 <?php
+/**
+* Recent Posts Element used by the CyberChimps Response Core Framework
+*
+* Authors: Benjamin Mueller, Tyler Cunningham
+* Copyright: © 2012
+* {@link http://cyberchimps.com/ CyberChimps LLC}
+*
+* Released under the terms of the GNU General Public License.
+* You should have received a copy of the GNU General Public License,
+* along with this software. In the main directory, see: /licensing/
+* If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* @package Response
+* @since 2.0
+*/
 
 add_action( 'response_recent_posts_element', 'response_recent_posts_element_content' );
 
@@ -31,7 +46,7 @@ function response_recent_posts_element_content() {
 	
 ?>
 <div class="container">
-<div id="recent_posts" class="row">
+<div id="recent_posts" class="row-fluid">
 	<?php if ($toggle == '1' OR $toggle == 'on'): ?>
 		<h4 class="recent_posts_element_title"><?php echo $title; ?></h4>
 	<?php endif; ?>

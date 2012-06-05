@@ -1,6 +1,6 @@
 <?php
 /**
-* Portfolio element actions used by Response Pro.
+* Portfolio Element used by Response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -12,7 +12,7 @@
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
 * @package Response Pro
-* @since 1.0
+* @since 2.0
 */
 
 /**

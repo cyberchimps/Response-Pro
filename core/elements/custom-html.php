@@ -24,15 +24,15 @@ function response_custom_html_element_content() {
 	global $options, $themeslug, $post;
 	
 	if (is_page()) {
-		$custom = stripslashes(get_post_meta($post->ID, 'custom_html', true));
+		$custom = stripslashes(get_post_meta($post->ID, $themeslug.'_custom_html', true));
 	} else {
 		$custom = stripslashes($options->get($themeslug.'_blog_custom_html'));
 	}
 	?>
 		
 	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
+		<div class="row-fluid">
+			<div class="span 12">
 				<?php echo $custom; ?>
 			</div>
 		</div>

@@ -18,20 +18,20 @@
 /**
 * Pro callout actions
 */
-add_action ( 'response_callout_section', 'response_callout_section_content' );
+add_action ( 'response_callout_element', 'response_callout_element_content' );
 
 /**
 * Retrieves the Callout Section options and sets up the HTML
 *
 * @since 1.0
 */
-function response_callout_section_content() {
+function response_callout_element_content() {
 	global $options, $themeslug, $post;
 	
 	/* Define variables. */
 	if (is_page()) {
-		$tcolor = get_post_meta($post->ID, 'custom_callout_text_color', true);
-		$text = get_post_meta($post->ID, 'callout_text', true);
+		$tcolor = get_post_meta($post->ID, $themeslug.'_custom_callout_text_color', true);
+		$text = get_post_meta($post->ID, $themeslug.'_callout_text', true);
 	} else {
 		$tcolor = $options->get($themeslug.'_blog_callout_text_color');
 		$text = $options->get($themeslug.'_blog_callout_text');
