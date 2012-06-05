@@ -1,6 +1,6 @@
 <?php
 /**
-* Hook wrappers used by the CyberChimps Response Core Framework
+* Hooks used by the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -16,7 +16,7 @@
 */
 
 /**
-* Facebook like and plus one. 
+* Initialize the sidebars.
 *
 * @since 1.0
 */
@@ -517,6 +517,10 @@ function response_events_element() {
 	do_action('response_events_element');
 }
 
+
+function response_callout_element() {
+	do_action('response_callout_element');
+}
 
 /**
 * End

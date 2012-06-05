@@ -1,9 +1,9 @@
 <?php
 /**
-* Slider section actions used by the CyberChimps Response Core Framework Pro Extension
+* Feature Slider Element used by the CyberChimps Response Core Framework Pro Extension
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
