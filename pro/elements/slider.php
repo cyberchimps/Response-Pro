@@ -154,7 +154,7 @@ function response_slider_content() {
 	$wordthumb = "h=$height&w=1020";
 	$csWidth = '1020';
 	$imgwidth = '1020';
-	$defaultimage = "$root/images/pro/responseproslider.jpg";
+	$defaultimage = "$root/library/images/pro/responseproslider.jpg";
 		
 /* End slider width variable */ 
 
@@ -273,13 +273,13 @@ function response_slider_content() {
 	    	}  	
 	    	elseif ($customimage == '' && $wordenable != '1' OR $customimage == '' && $wordenable != 'on'){ // No custom image, no custom thumb, full-width slider, WordThumb enabled. 
 
-	    		$image = $defaultimage;
+	    		$image = "<img src='$defaultimage'>";
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}
 	    	
 	    	elseif ($customimage == '' && $wordenable == '1' OR $customimage == '' && $wordenable == 'on'){ // No custom image, no custom thumb, full-width slider, WordThumb enabled. 
 
-	    		$image = $defaultimage;
+	    		$image = "<img src='$defaultimage'>";
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}
 
