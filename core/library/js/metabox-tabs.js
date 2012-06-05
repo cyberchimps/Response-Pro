@@ -39,7 +39,9 @@ jQuery(document).ready(function($) {
 	});
 
 	// show by default
-	
+	$("#subsection-Custom-Slide-Options > h4").click();
+	$("#subsection-Featured-Post-Carousel-Options > h4").click();
+	$("#subsection-Slider-Options > h4").click();
 	$("#subsection-Page-Options > h4").click();
 	var page_subsection_map = {
 		page_slider: "subsection-Response-Slider-Options",
