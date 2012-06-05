@@ -290,7 +290,7 @@ function response_slider_content() {
 
 	    	
 	    $out .= "
-	    	<a href='$link' $caption data-thumb='$thumbnail'>
+	    	<a href='$link' $caption data-thumb='$thumbnail' bullet-text='test'>
 	    				<img src='$image[url]' width='$image[width]' height='$image[height]'  alt='Slider' />
 	    						<span class='orbit-caption' id='htmlCaption$i'><span class='caption_title'>$title</span> <br /> <span class='caption_text'>$text</span></span>
 	    				</a>
@@ -386,7 +386,8 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
          bullets: $dots,
-         bulletThumbs: $thumbs
+         bulletThumbs: $thumbs,
+         bulletTexts: true
      });
      });
      });
