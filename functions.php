@@ -1,6 +1,6 @@
 <?php
 /**
-* Theme functions used by the CyberChimps Response Core Framework
+* Theme functions used by the Response Starter Theme.
 *
 * Authors: Tyler Cunningham
 * Copyright: © 2012
@@ -157,8 +157,6 @@ function response_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'response_excerpt_length');
 
-
-
 /* Prepares a 'Read the full story' link for post excerpts */
 function response_read_full_story_link() {
 	return '</p><p><a href="'. get_permalink() . '">' . 'Read the full story &raquo;' . '</a></p>';
@@ -171,8 +169,6 @@ if(!function_exists('response_excerpt_more')){
     }
 }
 /* add_filter('excerpt_more', 'response_excerpt_more'); */
-
-
 
 /**
 * Custom featured image size based on theme options.
@@ -377,6 +373,33 @@ function response_widgets_init() {
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
    	));
+   	 register_sidebar(array(
+		'name' => 'Box Left',
+		'id' => 'box-left',
+		'description' => 'This is the left widget of the three-box section',
+		'before_widget' => '<div id="box1" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+		'name' => 'Box Middle',
+		'id' => 'box-middle',
+		'description' => 'This is the middle widget of the three-box section',
+		'before_widget' => '<div id="box2" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+		'name' => 'Box Right',
+		'id' => 'box-right',
+		'description' => 'This is the right widget of the three-box section',
+		'before_widget' => '<div id="box3" class="four columns"><div style="padding:15px;">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="box-widget-title">',
+		'after_title' => '</h3>',
+	));
    	register_sidebar(array(
 		'name' => 'Footer',
 		'id' => 'footer-widgets',
