@@ -57,30 +57,15 @@ function response_carousel_element_content() {
 				</ul>
 			<?php else : ?>
 				<ul>
-	      			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 1"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 2"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 3"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 4"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 5"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 6"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 7"/>
-	    			</li>
-	    			<li>
-	      				<img src="<?php echo $default; ?>" alt="Post 8"/>
-	    			</li>
+					<?php	
+					$i = 1;
+					while ($i<9) :?>	
+					<li>
+						<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
+						<div class='carousel_caption'>Title <?php echo $i; ?></div>
+					</li><?php
+					$i++;
+					endwhile;?>
     			</ul>
 			<?php endif; ?>
 			
