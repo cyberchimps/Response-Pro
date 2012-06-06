@@ -48,7 +48,6 @@ function response_carousel_element_content() {
 						$image = (get_post_meta($post->ID, 'post_image' , true)) ? get_post_meta($post->ID, 'post_image' , true) : $default;
 						$link = get_post_meta($post->ID, 'post_url' , true);
 						?>
-						
 						<li>
 							<a href="<?php echo $link; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
 							<div class="carousel_caption"><?php echo $title; ?></div>
@@ -58,10 +57,11 @@ function response_carousel_element_content() {
 			<?php else : ?>
 				<ul>
 					<?php	
-					$i = 1;
-					while ($i<9) :?>	
+						$i = 1;
+						while ($i<9) : 
+					?>	
 						<li>
-							<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
+							<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i; ?>'/></a>
 							<div class='carousel_caption'>Title <?php echo $i; ?></div>
 						</li><?php
 					$i++;
