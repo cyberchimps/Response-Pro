@@ -60,10 +60,10 @@ function response_carousel_element_content() {
 					<?php	
 					$i = 1;
 					while ($i<9) :?>	
-					<li>
-						<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
-						<div class='carousel_caption'>Title <?php echo $i; ?></div>
-					</li><?php
+						<li>
+							<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
+							<div class='carousel_caption'>Title <?php echo $i; ?></div>
+						</li><?php
 					$i++;
 					endwhile;?>
     			</ul>
