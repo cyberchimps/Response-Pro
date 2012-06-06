@@ -61,12 +61,18 @@ function response_scripts() {
 	
 	$path =  get_template_directory_uri() ."/core/library";
 	
+	wp_register_script( 'event-swipe-move' ,$path.'/js/jquery.event.move.js');
+	wp_register_script( 'event-swipe' ,$path.'/js/jquery.event.swipe.js');
+	wp_register_script( 'swipe' ,$path.'/js/swipe.js');
 	wp_register_script( 'bootstrap' ,$path.'/js/bootstrap/bootstrap.js');
 	wp_register_script( 'orbit' ,$path.'/js/jquery.orbit.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
 	wp_register_script( 'jcarousel' ,$path.'/js/jcarousel/jquery.jcarousel.min.js');    
 	
+	wp_enqueue_script ('event-swipe-move');
+	wp_enqueue_script ('event-swipe');
+	wp_enqueue_script ('swipe');
 	wp_enqueue_script ('bootstrap');
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('menu');

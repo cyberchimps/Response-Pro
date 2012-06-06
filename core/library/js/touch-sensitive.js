@@ -1,3 +1,8 @@
+/*
+** touch-sensitive.js
+** Simulates mouse event for corresponding toach events.
+*/
+
 jQuery(function($) {
 
 /* checking for existance of touch device  */
