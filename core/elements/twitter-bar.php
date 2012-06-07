@@ -28,7 +28,7 @@ function response_twitterbar_element_content() {
 
 	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, $themeslug.'_twitter_handle' , true); 
-		$replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
+		$show_replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
 		
 	} else {
 		$handle = $options->get($themeslug.'_blog_twitter');
