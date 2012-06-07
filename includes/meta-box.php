@@ -86,13 +86,13 @@ function initialize_the_meta_boxes() {
 			->checkbox($themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
 			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
 					'page_slider' => 'Feature Slider',
-					'callout_section' => 'Callout',
+					'callout_element' => 'Callout',
 					'twitterbar_section' => 'Twitter Bar',
 					'page_section' => 'Page',
 					'events_element' =>'Events',
-					'box_section' => 'Boxes',
+					'box_element' => 'Boxes',
 					'breadcrumbs' => 'Breadcrumbs',
-					'carousel_section' => 'Carousel'
+					'carousel_element' => 'Carousel'
 					),
 					'std' => 'breadcrumbs,page_section'
 				))
