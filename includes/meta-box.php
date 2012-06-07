@@ -87,7 +87,7 @@ function initialize_the_meta_boxes() {
 			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
 					'page_slider' => 'Feature Slider',
 					'callout_element' => 'Callout',
-					'twitterbar_section' => 'Twitter Bar',
+					'twitterbar_element' => 'Twitter Bar',
 					'page_section' => 'Page',
 					'events_element' =>'Events',
 					'box_element' => 'Boxes',
