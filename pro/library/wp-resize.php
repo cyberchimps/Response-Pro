@@ -45,7 +45,6 @@
 function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
 
 
-
 	// this is an attachment, so we have the ID
 
 	if ( $attach_id ) {
@@ -62,7 +61,6 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 
 	} else if ( $img_url ) {
 
-		
 
 		$file_path = parse_url( $img_url );
 
@@ -71,7 +69,10 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		//$file_path = rtrim( ABSPATH, '/' ).$file_path['path'];
 
 		
-
+		$file_path =  $file_path;
+		
+		$dir_path = $_SERVER[DOCUMENT_ROOT]."/";
+		$file_path =  $dir_path.$file_path;
 		$orig_size = getimagesize( $file_path );
 
 		
@@ -83,8 +84,6 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		$image_src[2] = $orig_size[1];
 
 	}
-
-	
 
 	$file_info = pathinfo( $file_path );
 
@@ -113,8 +112,6 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		// the file is larger, check if the resized version already exists (for crop = true but will also work for crop = false if the sizes match)
 
 		if ( file_exists( $cropped_img_path ) ) {
-
-
 
 			$cropped_img_url = str_replace( basename( $image_src[0] ), basename( $cropped_img_path ), $image_src[0] );
 
@@ -237,7 +234,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
             
             // the image path without the extension
             $no_ext_path = $file_info['dirname'].'/'.$file_info['filename'];            
-            
+            echo  $no_ext_path;
             //Store newly created image in the directory with new name        
             $image_stored = false;
             if($file_info['extension'] == "jpg" OR $file_info['extension'] == 'jpeg'){
