@@ -16,7 +16,7 @@
 */
 
 /**
-* response Portfolio Section actions
+* Response Portfolio Element
 */
 add_action( 'response_portfolio_element', 'response_portfolio_element_content' );
 
@@ -75,7 +75,7 @@ function response_portfolio_element_content() {
 
 	     	/* Markup for portfolio */
 	     	?>
-	    		<li id='portfolio_wrap' class='$number columns $class'>
+	    		<li id='portfolio_wrap' class='span<?php echo $number;?> <?php echo $class ;?>'>
 	    			<a href='$image' rel="lightbox-portfolio" title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
 	    		</li>
 	    	<?php
