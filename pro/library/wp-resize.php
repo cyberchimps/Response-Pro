@@ -71,7 +71,7 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
 		
 		$file_path =  $file_path;
 		
-		$dir_path = $_SERVER[DOCUMENT_ROOT]."/";
+		$dir_path = $_SERVER['DOCUMENT_ROOT']."/";
 		$file_path =  $dir_path.$file_path;
 		$orig_size = getimagesize( $file_path );
 
@@ -227,9 +227,6 @@ function wp_resize( $attach_id = null, $img_url = null, $width, $height, $crop =
         
 		
         if($ok) {
-			$key = $file_info['filename'] . '-' . $width . 'x' . $height;
-			wp_cache_set( $key, $large_image);
-						
             $extension = '.'. $file_info['extension'];
             
             // the image path without the extension
