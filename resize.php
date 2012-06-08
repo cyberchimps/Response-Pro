@@ -29,4 +29,7 @@ var_dump($image['width']);
 		</div>
 	</div><!--end container-->
 </div>	<!--end main_wrap-->
+
+<div class="push"></div>
+</div> <!-- End of wrapper -->
 <?php get_footer(); //Dsiplay footer  ?>  

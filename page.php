@@ -20,9 +20,11 @@
 	if(!$page_section_order) {
 		$page_section_order = 'page_section,breadcrumbs';
 	}
-	
-	get_header(); 
+
+get_header(); 
+
 ?>
+
 <div id="main_wrap">
 <div class="container-fluid">
 	<div class="row-fluid"> 
@@ -37,4 +39,7 @@
 	</div><!--end row-->
 </div><!--end container-->
 </div>
+<div class="push"></div>
+</div> <!-- End of wrapper -->
+
 <?php get_footer(); ?>

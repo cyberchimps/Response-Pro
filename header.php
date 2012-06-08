@@ -30,7 +30,8 @@
 <!--Begin response_before_header hook-->
 	<?php response_before_header(); ?> 
 <!--End response_before_header hook-->
-			
+
+<div class="wrapper">			
 <header>	
 <div id="main_wrap">
 	<div class="container-fluid">

@@ -29,4 +29,6 @@
 		?>
 </div><!--end container-->
 	</div>	
+<div class="push"></div>
+</div> <!-- End of wrapper -->
 <?php get_footer(); ?>
