@@ -60,7 +60,7 @@ function response_portfolio_element_content() {
 	$portfolio_posts = get_posts( $args );
 	
 	if ( !empty($portfolio_posts) ) : ?>
-		<div id='gallery' class='twelve columns'><?php echo $title_output; ?><ul>
+		<div id='gallery' class='span12'><?php echo $title_output; ?><ul>
 		<?php
 
 		$counter = 1;
@@ -76,7 +76,7 @@ function response_portfolio_element_content() {
 	     	/* Markup for portfolio */
 	     	?>
 	    		<li id='portfolio_wrap' class='span<?php echo $number;?> <?php echo $class ;?>'>
-	    			<a href='<?php echo $image;?>' rel="lightbox-portfolio" title='<?php echo $title ;?>'><img src='<?php echo $image ;?>'  alt='<?php echo $title ;?>'/><div class='portfolio_caption'>$title</div></a>
+	    			<a href='<?php echo $image;?>' rel="lightbox-portfolio" title='<?php echo $title ;?>'><img src='<?php echo $image ;?>'  alt='<?php echo $title ;?>'/><div class='portfolio_caption'><?php echo $title ;?></div></a>
 	    		</li>
 	    	<?php
 	    	/* End slide markup */	
