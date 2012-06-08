@@ -52,8 +52,8 @@ function response_portfolio_element_content() {
 	$title_output = ($title_enable == 'on' || $title_enable == '1') ? "<h1 class='portfolio_title'>$title</h1>" : '';
 	?>
 
-<div id="portfolio" class="container">
-	<div class="row">
+<div id="portfolio" class="container-fluid">
+	<div class="row-fluid">
 		
 	<?php 
 	$args = array( 'numberposts' => -1, 'post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category );
@@ -93,10 +93,10 @@ function response_portfolio_element_content() {
 	    			
 	    			<?php 
 	    				$i = 1;
-	    				while($i<4):
+	    				while($i<5):
 	    			?>
 	      				<li id='portfolio_wrap' class='span3'>
-	    					<a href='$root/images/pro/portfolio.jpg' rel="lightbox-portfolio" title='Image <?php echo $i; ?>'><img src='<?php echo $root; ?>/library/images/portfolio/default.jpg'  alt='Image <?php echo $i; ?>'/>
+	    					<a href='<?php echo $root;?>/library/images/portfolio/default.jpg' rel="lightbox-portfolio" title='Image <?php echo $i; ?>'><img src='<?php echo $root; ?>/library/images/portfolio/default.jpg'  alt='Image <?php echo $i; ?>'/>
 	    					<div class='portfolio_caption'>Image <?php echo $i; ?></div>
 	    					</a>
 	    				</li>
