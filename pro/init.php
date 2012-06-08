@@ -21,5 +21,6 @@ require_once ( get_template_directory() . '/pro/library/wp-resize.php' );
 
 // Load element files
 require_once ( get_template_directory() . '/pro/elements/slider.php' );
+require_once ( get_template_directory() . '/pro/elements/portfolio.php' );
 
 ?>

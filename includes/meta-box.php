@@ -88,6 +88,7 @@ function initialize_the_meta_boxes() {
 					'page_slider' => 'Feature Slider',
 					'callout_element' => 'Callout',
 					'twitterbar_element' => 'Twitter Bar',
+					'portfolio_element' => 'Portfolio',
 					'page_section' => 'Page',
 					'events_element' =>'Events',
 					'box_element' => 'Boxes',
@@ -119,6 +120,11 @@ function initialize_the_meta_boxes() {
 		->tab("Carousel Options")
 			->select($themeslug.'_carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
 			->text($themeslug.'_carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))
+		->tab("Portfolio Options")
+			->select($themeslug.'_portfolio_row_number', 'Images per row', '', array('options' => array('Four (default)', 'Three', 'Two')) )
+			->select($themeslug.'_portfolio_category', 'Portfolio Category', '', array('options' => $portfoliooptions) )
+			->checkbox($themeslug.'_portfolio_title_toggle', 'Portfolio Title', '')
+			->text($themeslug.'_portfolio_title', 'Title', '', array('std' => 'Portfolio'))
 		->tab("Twitter Options")
 			->text($themeslug.'_twitter_handle', 'Twitter Handle', '')
 			->checkbox($themeslug.'_twitter_reply', 'Show @ Replies', '')

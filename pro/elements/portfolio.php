@@ -59,8 +59,9 @@ function response_portfolio_element_content() {
 	$args = array( 'numberposts' => -1, 'post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category );
 	$portfolio_posts = get_posts( $args );
 	
-	if ( !empty($portfolio_posts) ) :
-		$out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
+	if ( !empty($portfolio_posts) ) : ?>
+		<div id='gallery' class='twelve columns'>$title_output<ul>
+		<?php
 
 		$counter = 1;
 		
@@ -73,70 +74,40 @@ function response_portfolio_element_content() {
 	    	$title = get_the_title() ;	    	
 
 	     	/* Markup for portfolio */
-	    	$out .= "
+	     	?>
 	    		<li id='portfolio_wrap' class='$number columns $class'>
-	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
-	    		</li>";
+	    			<a href='$image' rel="lightbox-portfolio" title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
+	    		</li>
+	    	<?php
 	    	/* End slide markup */	
 	    	
 	    	$counter++;
-	    endforeach; wp_reset_postdata();
+	    endforeach; wp_reset_postdata(); ?>
 	    
-	    $out .= "</ul></div>";
+	    	</ul></div>
 	    	
-	else:
-		$out .= "	
-	    		<div id='gallery' class='twelve columns'><ul>
-	      			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 1'><img src='$root/images/pro/portfolio.jpg'  alt='Image 1'/>
-	    					<div class='portfolio_caption'>Image 1</div>
-	    				</a>
-	    			</li>
+	    	<?php else: ?>
+		
+	    		<div id='gallery' class='span12'>
+	    			<ul>
+	    			
+	    			<?php 
+	    				$i = 1;
+	    				while($i<4):
+	    			?>
+	      				<li id='portfolio_wrap' class='span3'>
+	    					<a href='$root/images/pro/portfolio.jpg' rel="lightbox-portfolio" title='Image <?php echo $i; ?>'><img src='<?php echo $root; ?>/library/images/portfolio/default.jpg'  alt='Image <?php echo $i; ?>'/>
+	    					<div class='portfolio_caption'>Image <?php echo $i; ?></div>
+	    					</a>
+	    				</li>
+	    			<?php
+	    				$i++;
+	    				endwhile;
+	    			?>	
+	    			</ul>
+	    		</div>
 	    		
-	  	    		<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 2'><img src='$root/images/pro/portfolio.jpg'  alt='Image 2'/>
-	    					<div class='portfolio_caption'>Image 2</div>
-	    				</a>
-	    			</li>
-	    		
-					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
-	    					<div class='portfolio_caption'>Image 3</div>
-	    				</a>
-	    			</li>
-	    			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
-	    					<div class='portfolio_caption'>Image 3</div>
-	    				</a>
-	    			</li>
-	    	 	</ul></div>";
-	endif;
-/* End slide creation */
-
-/* Begin Portfolio javascript */
-
-$out .= <<<OUT
-<script type="text/javascript">
- 	jQuery(document).ready(function ($) {
- 		$(function() {
- 			$('#gallery a').lightBox({
- 				imageLoading:	'$root/images/portfolio/lightbox-ico-loading.gif',
- 				imageBtnPrev:	'$root/images/portfolio/lightbox-btn-prev.gif',
- 				imageBtnNext:	'$root/images/portfolio/lightbox-btn-next.gif',
- 				imageBtnClose:	'$root/images/portfolio/lightbox-btn-close.gif',
- 				imageBlank:		'$root/images/portfolio/lightbox-blank.gif',
- 			});
- 		});
- 	});
-</script>
-OUT;
-
-/* End Portfolio javascript */ 
-
-echo $out;
-
-/* END */ 
-?>
+	<?php endif;?>
 
 	</div>
 </div>

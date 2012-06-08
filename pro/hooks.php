@@ -13,4 +13,7 @@ function response_page_content_slider() {
 	do_action ('response_page_content_slider');
 }
 
+function response_portfolio_element() {
+	do_action ('response_portfolio_element');
+}
 ?>
