@@ -22,6 +22,14 @@ function initialize_the_meta_boxes() {
 	
 	// Call taxonomies for select options
 	
+	$portfolioterms = get_terms('portfolio_categories', 'hide_empty=0');
+	$portfoliooptions = array();
+
+		foreach($portfolioterms as $term) {
+			$portfoliooptions[$term->slug] = $term->name;
+		}
+
+	
 	$carouselterms = get_terms('carousel_categories', 'hide_empty=0');
 	$carouseloptions = array();
 
@@ -65,6 +73,12 @@ function initialize_the_meta_boxes() {
 			->single_image($themeslug.'_post_image', 'Featured Post Image', '')
 			->text($themeslug.'_post_url', 'Featured Post URL', '')
 			->reorder($themeslug.'_reorder_id', 'Reorder Name', 'Reorder Desc' )
+		->end();
+		
+	$mb = new Chimps_Metabox('Portfolio', 'Portfolio Element', array('pages' => array($themeslug.'_portfolio_images')));
+	$mb
+		->tab("Portfolio Element")
+			->single_image($themeslug.'_portfolio_image', 'Portfolio Image', '')
 		->end();
 
 	$mb = new Chimps_Metabox('slides', 'Custom Feature Slides', array('pages' => array($themeslug.'_custom_slides')));

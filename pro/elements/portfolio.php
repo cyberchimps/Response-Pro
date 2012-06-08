@@ -38,13 +38,13 @@ function response_portfolio_element_content() {
 	}
 
 	if ($num == '1' || $num == 'key2') {
-		$number = 'four';
+		$number = '4';
 		$numb = '3';
 	} else if ($num == '2' || $num == 'key3') {
-		$number = 'six';
+		$number = '6';
 		$numb = '2';
 	} else {
-		$number = 'three';
+		$number = '3';
 		$numb = '4';
 	}
 
@@ -76,7 +76,7 @@ function response_portfolio_element_content() {
 	     	/* Markup for portfolio */
 	     	?>
 	    		<li id='portfolio_wrap' class='span<?php echo $number;?> <?php echo $class ;?>'>
-	    			<a href='$image' rel="lightbox-portfolio" title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
+	    			<a href='<?php echo $image;?>' rel="lightbox-portfolio" title='<?php echo $title ;?>'><img src='<?php echo $image ;?>'  alt='<?php echo $title ;?>'/><div class='portfolio_caption'>$title</div></a>
 	    		</li>
 	    	<?php
 	    	/* End slide markup */	
