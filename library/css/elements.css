@@ -314,7 +314,7 @@ border: 2px solid #3D3D3D;
 }
 
 .lbLoading {
-	background: #fff url(../library/images/portfolio/loading.gif) no-repeat center;
+	background: #fff url(../images/portfolio/loading.gif) no-repeat center;
 }
 
 #lbImage {
@@ -338,7 +338,7 @@ border: 2px solid #3D3D3D;
 }
 
 #lbPrevLink:hover {
-	background: transparent url(../library/images/portfolio/prevlabel.gif) no-repeat 0 15%;
+	background: transparent url(../images/portfolio/prevlabel.gif) no-repeat 0 15%;
 }
 
 #lbNextLink {
@@ -346,7 +346,7 @@ border: 2px solid #3D3D3D;
 }
 
 #lbNextLink:hover {
-	background: transparent url(../library/images/portfolio/nextlabel.gif) no-repeat 100% 15%;
+	background: transparent url(../images/portfolio/nextlabel.gif) no-repeat 100% 15%;
 }
 
 #lbBottom {
@@ -364,7 +364,7 @@ border: 2px solid #3D3D3D;
 	float: right;
 	width: 66px;
 	height: 22px;
-	background: transparent url(../library/images/portfolio/closelabel.gif) no-repeat center;
+	background: transparent url(../images/portfolio/closelabel.gif) no-repeat center;
 	margin: 5px 0;
 	outline: none;
 }
