@@ -435,8 +435,8 @@ function response_blog_slider_lite() {
 *
 * @since 1.0
 */
-function response_twitterbar_section() {
-	do_action ('response_twitterbar_section');
+function response_twitterbar_element() {
+	do_action ('response_twitterbar_element');
 }
 
 /**
@@ -520,6 +520,10 @@ function response_events_element() {
 
 function response_callout_element() {
 	do_action('response_callout_element');
+}
+
+function response_box_element() {
+	do_action('response_box_element');
 }
 
 /**

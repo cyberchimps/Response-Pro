@@ -23,18 +23,13 @@ add_action( 'response_twitterbar_element', 'response_twitterbar_element_content'
 /*
  * Retrieves the Twitterbar options
  */
-function response_twitterbar_section_content() {
+function response_twitterbar_element_content() {
 	global $options, $themeslug, $post; //call globals
 
 	if ( is_page() ) {
 		$handle = get_post_meta($post->ID, $themeslug.'_twitter_handle' , true); 
-		$replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
+		$show_replies = get_post_meta($post->ID, $themeslug.'_twitter_reply' , true); 
 		
-		if ($replies == "off") {
-			$show_replies = '0'; 
-		} else {
-			$show_replies = '1'; 
-		}	
 	} else {
 		$handle = $options->get($themeslug.'_blog_twitter');
 		$show_replies = $options->get($themeslug.'_blog_twitter_reply');

@@ -18,48 +18,42 @@
 /**
 * Response Box Section actions
 */
-add_action( 'response_box_section', 'response_box_section_content' );
+add_action( 'response_box_element', 'response_box_element_content' );
 
 /**
 * Sets up the Box Section wigetized area
 *
 * @since 1.0
 */
-function response_box_section_content() { 
+function response_box_element_content() { 
 	global $post;
 ?>
 
-	<div class="row">
-		<?php if ( !function_exists('dynamic_sidebar') ) : ?>
-			<?php if ( !dynamic_sidebar("Box Left") ) : ?>
-			<div id="box1" class="four columns">
+	<div class="row-fluid">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
+			<div id="box1" class="span4">
 				<div style="padding:15px;">
-					<h2 class="box-widget-title">Box Left</h2>
-					<p>This is the box left widgetized area.</p>
+				<h2 class="box-widget-title">Box Left</h2>
+				<p>This is the box left widgetized area.</p>
 				</div>
 			</div><!--end box1-->
 			<?php endif; ?>
-			
-			<?php if ( !dynamic_sidebar("Box Middle") ) : ?>
-			<div id="box2" class="four columns">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
+			<div id="box2" class="span4">
 				<div style="padding:15px;">
-					<h2 class="box-widget-title">Box Middle</h2>
-					<p>This is the box middle widgetized area.</p>
+				<h2 class="box-widget-title">Box Middle</h2>
+				<p>This is the box middle widgetized area.</p>
 				</div>
 			</div><!--end box2-->
 			<?php endif; ?>
-			
-			<?php if ( !dynamic_sidebar("Box Right") ) : ?>
-			<div id="box3" class="four columns">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
+			<div id="box3" class="span4">
 				<div style="padding:15px;">
-					<h2 class="box-widget-title">Box Right</h2>
-					<p>This is the box right widgetized area.</p>
+				<h2 class="box-widget-title">Box Right</h2>
+				<p>This is the box right widgetized area.</p>
 				</div>
 			</div><!--end box3-->
-			<?php endif; ?>
-			
-		<?php endif; ?>
-	</div>
+		<?php endif; ?>	</div>
 
 <?php
 }

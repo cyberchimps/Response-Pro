@@ -55,7 +55,7 @@ function response_callout_element_content() {
 	/* End define Callout title. */
 	?>
 	
-	<div class="row">
+	<div class="row-fluid">
 		<div id="calloutwrap" class="twelve columns">
 			<div id="callout_text">
 				<h2 class="callout_title" ><?php echo $callouttext; ?></h2>

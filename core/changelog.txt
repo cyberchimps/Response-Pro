@@ -3,3 +3,4 @@ Response Core Framework Changlog
 Version 2.0 (06-20-12)
 -Revised file hierarchy, moved all Element code into own folder. 
 -Added $themeslug prefix to all custom post meta values. 
+-Introduced WP Resize image resizing solution to replace WordThumb. 
