@@ -60,7 +60,7 @@ function response_portfolio_element_content() {
 	$portfolio_posts = get_posts( $args );
 	
 	if ( !empty($portfolio_posts) ) : ?>
-		<div id='gallery' class='twelve columns'>$title_output<ul>
+		<div id='gallery' class='twelve columns'><?php echo $title_output; ?><ul>
 		<?php
 
 		$counter = 1;

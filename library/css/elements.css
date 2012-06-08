@@ -258,11 +258,11 @@ div.timer {display: none !important;}
 
 }
 
-#gallery {border-bottom: 2px solid #3d3d3d;}
+#gallery {}
 
 #portfolio_wrap { margin-bottom: 45px;}
 
-#portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
+#portfolio_wrap.span3:last-child, #portfolio_wrap.span4:last-child, #portfolio_wrap.span6:last-child {float:left;}
 
 .portfolio_title {color: white; padding-left: 20px;}
 
@@ -272,9 +272,9 @@ div.timer {display: none !important;}
 #gallery li.four.columns {margin-right:0px; margin-left: 4.4%;}
 #gallery li.six.columns {margin-right:0px; margin-left: 4.4%;}
 
-#portfolio_wrap.three.columns:first-child, #portfolio_wrap.four.columns:first-child, #portfolio_wrap.six.columns:first-child {margin-left: 0%;}
+#portfolio_wrap.span3:first-child, #portfolio_wrap.span4:first-child, #portfolio_wrap.span6:first-child {margin-left: 0%;}
 
-#portfolio_wrap.three.columns.first-row, #portfolio_wrap.four.columns.first-row, #portfolio_wrap.six.columns.first-row {margin-left: 0%;}
+#portfolio_wrap.span3.first-row, #portfolio_wrap.span4.first-row, #portfolio_wrap.span6.first-row {margin-left: 0%;}
 
 #gallery ul { list-style: none; margin: 0px; }
 
