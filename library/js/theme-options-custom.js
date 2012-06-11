@@ -155,7 +155,7 @@ jQuery(function($) {
 	$("input[name='response[header_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_sitename_contact: "section-re_header_contact",
+			response_logo_contact: "section-re_header_contact",
 			response_custom_header_element: "section-re_custom_header_element",
 			response_banner: "subsection-banneroptions"
 			// , response_box_section: ""

@@ -60,14 +60,12 @@ function response_header_contact_area_content() {
 			printf( __( $contactdefault, 'response' )); 
 		echo "</div>";
 	}
-	if ($options->get($themeslug.'_header_contact') != 'hide' ) {
-		echo "<div id='header_contact1'>";
+	else {
+		echo "<div id='header_contact'>";
 		echo stripslashes ($options->get($themeslug.'_header_contact')); 
 		echo "</div>";
 	}	
-	if ($options->get($themeslug.'_header_contact') == 'hide' ) {
-		echo "<div style ='height: 10%;'>&nbsp;</div> ";
-	}
+	
 }
 
 /**
@@ -75,7 +73,7 @@ function response_header_contact_area_content() {
 *
 * @since 1.0
 */
-function response_sitename_contact_content() {
+function response_logo_contact_content() {
 ?>
 	<div class="container">
 		<div class="row">

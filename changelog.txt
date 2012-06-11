@@ -6,6 +6,7 @@ Version 1.1.1 (06-11-12)
 -3.4 support for Custom Background (backwards compatible with 3.3 and below).
 -Tweak for Twitterbar to correct random "no tweets to display" message.
 -Added Czech language files.
+-Fixed broken Logo + Contact header element.
 
 Version 1.1 (06-01-12)
 -Fixed Custom Header Element.
