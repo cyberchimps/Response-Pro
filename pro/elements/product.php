@@ -52,7 +52,7 @@ function response_product_element_content(){
 	
 	
 	if ($link_enable == "on" or $link_enable == "1" OR $link_enable == '') {
-		$button = "<a href='$link' class='nice medium radius white button'>$link_text</a>";
+		$button = "<a href='$link'><button class='btn'>$link_text</button></a>";
 	}
 	else {
 		$button = '';
