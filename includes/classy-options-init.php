@@ -231,6 +231,8 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug."_disable_afterfooter", "Afterfooter", array('default' => true))
 		->close_outersection()
 	->section("Banners")
+		->checkbox($themeslug."_header_banner", "Header Banner")
+		->text($themeslug."_header_banner_url", "Header Banner URL")
 		->checkbox($themeslug."_sidebar_banner", "Sidebar Banner")
 		->text($themeslug."_sidebar_banner_url", "Sidebar Banner URL")
 	->section("Import / Export")
