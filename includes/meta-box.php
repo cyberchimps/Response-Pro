@@ -5,6 +5,8 @@
 */ 
 if ( !defined('ABSPATH')) exit;
 
+require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 /********************* BEGIN DEFINITION OF META BOXES ***********************/
 
 add_action('init', 'initialize_the_meta_boxes');
@@ -87,21 +89,27 @@ function initialize_the_meta_boxes() {
 		->end();
 
 	$mb = new Chimps_Metabox('pages', $themenamefull.' Page Options', array('pages' => array('page')));
-	$mb
-		->tab("Page Options")
-			->image_select($themeslug.'_page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/library/images/options/right.png' , TEMPLATE_URL . '/library/images/options/left.png', TEMPLATE_URL . '/library/images/options/rightleft.png', TEMPLATE_URL . '/library/images/options/tworight.png', TEMPLATE_URL . '/library/images/options/none.png')))
-			->checkbox($themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
-			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => array(
+	$elements = array(
 					'page_slider' => 'Feature Slider',
 					'callout_element' => 'Callout',
 					'twitterbar_element' => 'Twitter Bar',
 					'portfolio_element' => 'Portfolio',
 					'page_section' => 'Page',
-					'events_element' =>'Events',
 					'box_element' => 'Boxes',
 					'breadcrumbs' => 'Breadcrumbs',
 					'carousel_element' => 'Carousel'
-					),
+					);
+					
+	/* checking whether event plugin is active or not */				
+    if(is_plugin_active('eventstrunk1228/the-events-calendar.php')) {
+		$elements['events_element'] = 'Events'; 
+	}	
+	
+	$mb
+		->tab("Page Options")
+			->image_select($themeslug.'_page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/library/images/options/right.png' , TEMPLATE_URL . '/library/images/options/left.png', TEMPLATE_URL . '/library/images/options/rightleft.png', TEMPLATE_URL . '/library/images/options/tworight.png', TEMPLATE_URL . '/library/images/options/none.png')))
+			->checkbox($themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
+			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => $elements, 
 					'std' => 'breadcrumbs,page_section'
 				))
 
