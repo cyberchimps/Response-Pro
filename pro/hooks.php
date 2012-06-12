@@ -22,4 +22,8 @@ function response_page_content_slider() {
 function response_portfolio_element() {
 	do_action ('response_portfolio_element');
 }
+
+function response_product_element() {
+	do_action ('response_product_element');
+}
 ?>

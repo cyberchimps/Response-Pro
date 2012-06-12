@@ -95,6 +95,7 @@ function initialize_the_meta_boxes() {
 					'callout_element' => 'Callout',
 					'twitterbar_element' => 'Twitter Bar',
 					'portfolio_element' => 'Portfolio',
+					'product_element' => 'Product',
 					'page_section' => 'Page',
 					'box_element' => 'Boxes',
 					'breadcrumbs' => 'Breadcrumbs',
@@ -133,6 +134,16 @@ function initialize_the_meta_boxes() {
 			->checkbox($themeslug.'_extra_callout_options', 'Custom Callout Options', '', array('std' => 'off'))
 			->color($themeslug.'_custom_callout_text_color', 'Custom Text Color', '')
 			->pagehelp('', 'Need help?', '')
+		->tab("Product Options")
+			->select($themeslug.'_product_text_align', 'Text Align', '', array('options' => array('Left', 'Right')) )
+			->text($themeslug.'_product_title', 'Product Title', '', array('std' => 'Product'))
+			->textarea($themeslug.'_product_text', 'Proudct Text', '', array('std' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '))
+			->select($themeslug.'_product_type', 'Media Type', '', array('options' => array('Image', 'Video')) )
+			->single_image($themeslug.'_product_image', 'Product Image', '', array('std' =>  TEMPLATE_URL . '/library/images/pro/product.jpg'))
+			->textarea($themeslug.'_product_video', 'Video Embed', '')
+			->checkbox($themeslug.'_product_link_toggle', 'Product Link', '', array('std' => 'on'))
+			->text($themeslug.'_product_link_url', 'Link URL', '', array('std' => home_url()))
+			->text($themeslug.'_product_link_text', 'Link URL', '', array('std' => 'Buy Now'))
 		->tab("Carousel Options")
 			->select($themeslug.'_carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
 			->text($themeslug.'_carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))

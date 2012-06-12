@@ -1,5 +1,10 @@
 <?php
 /**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+/**
 * Product element actions used by Response Pro
 *
 * Author: Tyler Cunningham
@@ -12,7 +17,7 @@
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
 * @package Response Pro
-* @since 1.0
+* @since 2.0
 */
 
 add_action( 'response_product_element', 'response_product_element_content' );
