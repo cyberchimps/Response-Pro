@@ -297,7 +297,7 @@ class RW_Meta_Box {
 
 	function show_field_text($field, $meta) {
 		$this->show_field_begin($field, $meta);
-		echo "<input type='text' name='{$field['id']}' id='{$field['id']}' value='$meta' size='30' style='width:60%' />";
+		echo "<input type='text' name='{$field['id']}' id='{$field['id']}' value='$meta' size='40'/>";
 		$this->show_field_end($field, $meta);
 	}
 
@@ -579,7 +579,7 @@ class RW_Meta_Box {
 
 		echo "<input type='file' name='{$field['id']}' />";
 		echo "<br/>or enter URL<br/>";
-		echo "<input type='text' size='50' name='{$field['id']}_url' value='{$meta}'/>";
+		echo "<input type='text' size='40' name='{$field['id']}_url' value='{$meta}'/>";
 		$this->show_field_end($field, $meta);
 	}
 
