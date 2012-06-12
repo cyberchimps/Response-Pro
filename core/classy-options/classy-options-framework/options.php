@@ -1,6 +1,12 @@
 <?php
 
 /**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+
+/**
 * This file should only load if options.php isn't present in the theme.
 *
 */

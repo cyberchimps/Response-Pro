@@ -1,6 +1,11 @@
 <?php
 
 /**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+/**
  * WooThemes Media Library-driven AJAX File Uploader Module (2010-11-05)
  *
  * Slightly modified for use in the Options Framework.

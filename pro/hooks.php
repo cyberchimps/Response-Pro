@@ -1,5 +1,11 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
+
 function response_blog_slider() {
 	do_action ('response_blog_slider');
 }

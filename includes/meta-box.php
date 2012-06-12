@@ -1,16 +1,9 @@
 <?php
+
 /**
- * Create meta box for editing pages in WordPress
- *
- * Compatible with custom post types since WordPress 3.0
- * Support input types: text, textarea, checkbox, checkbox list, radio box, select, wysiwyg, file, image, date, time, color
- *
- * @author: Rilwis
- * @url: http://www.deluxeblogtips.com/2010/04/how-to-create-meta-box-wordpress-post.html
- * @usage: please read document at project homepage and meta-box-usage.php file
- * @version: 3.0.1
- */
- 
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
 
 /********************* BEGIN DEFINITION OF META BOXES ***********************/
 

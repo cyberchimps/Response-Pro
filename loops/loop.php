@@ -1,5 +1,10 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 global $options, $themeslug, $post; //call globals
 	
 	if (is_single()) {

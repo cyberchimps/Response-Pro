@@ -1,4 +1,10 @@
 <?php 
+
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
+
 /**
 * Single template used by the CyberChimps Response Core Framework
 *

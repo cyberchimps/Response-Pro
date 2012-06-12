@@ -1,5 +1,9 @@
 <?php
 
+/**
+* Exit if file is directly accessed. 
+*/ 
+if ( !defined('ABSPATH')) exit;
 
 /**/
 // TEMP: Enable update check on every request. Normally you don't need this! This is for testing only!
