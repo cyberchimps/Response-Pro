@@ -31,35 +31,28 @@ global $options, $themeslug, $themename, $themenamefull;
 $options = new ClassyOptions($themename, $themenamefull." Options");
 
 $carouselterms2 = get_terms('carousel_categories', 'hide_empty=0');
-
-	$customcarousel = array();
-                                    
+	$customcarousel = array();                          
     	foreach($carouselterms2 as $carouselterm) {
-
         	$customcarousel[$carouselterm->slug] = $carouselterm->name;
-
+        }
+        
+$portfolioterms2 = get_terms('portfolio_categories', 'hide_empty=0');
+	$customportfolio = array();                                   
+    	foreach($portfolioterms2 as $portfolioterm) {
+        	$customportfolio[$portfolioterm->slug] = $portfolioterm->name;
         }
 
 $customterms2 = get_terms('slide_categories', 'hide_empty=0');
-
-	$customslider = array();
-                                    
+	$customslider = array();                                    
     	foreach($customterms2 as $customterm) {
-
         	$customslider[$customterm->slug] = $customterm->name;
-
         }
 
 $terms2 = get_terms('category', 'hide_empty=0');
-
-	$blogoptions = array();
-                                    
+	$blogoptions = array();                                  
 	$blogoptions['all'] = "All";
-
     	foreach($terms2 as $term) {
-
         	$blogoptions[$term->slug] = $term->name;
-
         }
 
 
@@ -175,7 +168,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->select($themeslug."_slider_animation", "Sidebar Animation", array( 'options' => array("key1" => "Horizontal-Push", "key2" => "Fade", "key3" => "Horizontal-Slide", "key4" => "Vertical-Slide")))
 			->select($themeslug."_caption_style", "Caption Style", array( 'options' => array("key1" => "Bottom", "key2" => "Right", "key3" => "Left", "key4" => "None")))	
 			->select($themeslug."_caption_animation", "Caption Animation", array( 'options' => array("key1" => "Fade", "key2" => "Slide Open", "key3" => "None")))
-			->select($themeslug."_slider_nav", "Slider Navigation", array( 'options' => array("key1" => "Dots", "key2" => "Thumbnails", "key3" => "none")))
+			->select($themeslug."_slider_nav", "Slider Navigation", array( 'options' => array("key1" => "Dots", "key2" => "Image Thumbnails", "key3" => "Text Thumbnails", "key4" => "None")))
 			->checkbox($themeslug."_hide_slider_arrows", "Slider Arrows", array('default' => true))
 			->checkbox($themeslug."_enable_wordthumb", "WordThumb Image Resizing")
 		->subsection_end()

@@ -30,17 +30,10 @@ add_action ('response_page_slider', 'response_slider_content' );
 
 
 /**
-* Pro slider functions
+* Slider markup.
 */
 function response_slider_content() {
-
-/* Call globals. */	
-
 	global $themename, $themeslug, $options, $wp_query, $post;
-
-/* End globals. */
-
-/* Define variables. */	
 
     $tmp_query = $wp_query; 
 	$root = get_template_directory_uri(); 
@@ -55,17 +48,16 @@ function response_slider_content() {
 		$slideranimation = get_post_meta($post->ID, $themeslug.'_page_slider_animation' , true);
 		$captionstyle = get_post_meta($post->ID, $themeslug.'_page_slider_caption_style' , true);
 		$navigationstyle = get_post_meta($post->ID, $themeslug.'_page_slider_navigation_style' , true);
-		$hidenav = get_post_meta($post->ID, $themeslug.'_slider_arrows' , true);
+		$arrows = get_post_meta($post->ID, $themeslug.'_slider_arrows' , true);
 		$wordenable = get_post_meta($post->ID, $themeslug.'_wp_resize' , true);	
 	}
-	
 	else {
 		$type = $options->get($themeslug.'_slider_type'); 
 		$category = $options->get($themeslug.'_slider_category'); 
 		$customcategory = $options->get($themeslug.'_customslider_category');
 		$captionstyle = $options->get($themeslug.'_caption_style');
 		$sliderheight = $options->get($themeslug.'_slider_height');
-		$hidenav = $options->get($themeslug.'_hide_slider_arrows');
+		$arrows = $options->get($themeslug.'_hide_slider_arrows');
 		$wordenable = $options->get($themeslug.'_enable_wordthumb');
 		$slideranimation = $options->get($themeslug.'_slider_animation');
 		$postnumber = $options->get($themeslug.'_slider_posts_number');
@@ -73,78 +65,61 @@ function response_slider_content() {
 		$navigationstyle = $options->get($themeslug.'_slider_nav');
 	}
 
-	
-	$openrow = '<div class="row-fluid">';
 	$closerow = '</div>';
+	$csWidth = '1020';
+	$imgwidth = '1020';
+	$defaultimage = "$root/library/images/pro/responseproslider.jpg";
 
 ?>	
 
-<?php echo $openrow; 
-	
-/* End row riv variables. */	
-	
-/* End define variables. */	
+<div class="row-fluid">
 
-/* Define animation styles. */	
+<?php
 
-	if ($slideranimation == 'key2' OR $slideranimation == '1') {
+/**
+* Get the animaiton options.
+*/
+	if ($slideranimation == 'key2') {
 		$animation = 'fade';
 	}
-	elseif ($slideranimation == 'key3' OR $slideranimation == '2') {
+	elseif ($slideranimation == 'key3') {
 		$animation = 'horizontal-slide' ;
 	}
-	elseif ($slideranimation == 'key4' OR $slideranimation == '3') {
+	elseif ($slideranimation == 'key4') {
 		$animation = 'vertical-slide' ;
 	}
 	else {
 		$animation = 'horizontal-push';
 	}
 
-/* End animation styles. */		
-
-/* Slider navigation options */
-
-	if ($hidenav == '0' OR $hidenav == "off") { ?>
+/**
+* Enable/Disable nav arrows based on option.
+*/
+	if ($arrows == '0') { ?>
 		<style type="text/css">
 		div.slider-nav {display: none;}
 		</style> <?php
 	}
-	
-	
-/* End navigation options */
 
-
-/* Define blog category */
-
-	if ($category != 'all') {
-		$blogcategory = $category;
-	}
-	else {
-		$blogcategory = "";
-	}
-	
-/* End blog category */
-
-/* Define slider height */      
-
+/**
+* Define slider height.
+*/  
 	if ($sliderheight == '') {
 	    $height = '340';
 	}    
-
 	else {
 		$height = $sliderheight;
 	}
 
-/* End slider height */ 
-
-/* Define slider caption style */      
-
-	if ($captionstyle == 'key2' OR $captionstyle == '3') { ?>
+/**
+* Define caption style.
+*/
+	if ($captionstyle == 'key2') { ?>
 		<style type="text/css">
 		.orbit-caption {height: <?php echo $height ?>px; width: 30% !important;}
 		</style> <?php
 	}
-	elseif ($captionstyle == 'key3' OR $captionstyle == '2') { ?>
+	elseif ($captionstyle == 'key3') { ?>
 		<style type="text/css">
 		.orbit-caption {position: relative !important; float: left; height: <?php echo $height ?>px; width: 30% !important; top: -375px;}
 		</style><?php
@@ -154,18 +129,10 @@ function response_slider_content() {
 		.orbit-caption {display: none !important;}
 		</style><?php
 	}    
-
-/* Define slider width variable */ 
-
-	$wordthumb = "h=$height&w=1020";
-	$csWidth = '1020';
-	$imgwidth = '1020';
-	$defaultimage = "$root/library/images/pro/responseproslider.jpg";
-		
-/* End slider width variable */ 
-
-/* Query posts based on theme/meta options */
-
+	
+/**
+* Define whether slider pulls from blog posts or custom slides.
+*/
 	if ($type == 'custom' OR $type == '0' OR $type= "") {
 		$usecustomslides = 'custom';
 	}	
@@ -173,19 +140,29 @@ function response_slider_content() {
 		$usecustomslides = 'posts';
 	}
 
-/* Query posts based on theme/meta options */
-
+/**
+* Get post category.
+*/
+	if ($category != 'all') {
+		$blogcategory = $category;
+	}
+	else {
+		$blogcategory = "";
+	}
+	
+/**
+* Query posts.
+*/
 	if ( $type == 'custom' OR $type == '0') {
     	query_posts( array ('post_type' => $themeslug.'_custom_slides', 'showposts' => 20,  'slide_categories' => $customcategory  ) );
     }
     else {
     	query_posts('category_name='.$blogcategory.'&showposts=50');
 	}
-
-/* End query posts based on theme/meta options */
     	
-/* Establish post counter */  
-  	
+/**
+* Start the counter.
+*/
 	if (have_posts()) :
 	    $out = "<div id='orbitDemo'>"; 
 	    $i = 0;
@@ -199,29 +176,22 @@ function response_slider_content() {
 		$no = $postnumber;
 	}
 	
-/* End post counter */	    	
-
-/* Initialize slide creation */	
-
+/**
+* Create the slides.
+*/
 	while (have_posts() && $i<$no) : 
 
 		the_post(); 
-
-	    	/* Post-specific variables */	
-
+		
+			$title			 = get_the_title();
+			$permalink 		 = get_permalink(); 
 	    	$customimage	 = get_post_meta($post->ID, $themeslug.'_slider_image' , true);  
 	    	$customtext 	 = get_post_meta($post->ID, $themeslug.'_slider_caption' , true); 
 	   	    $customlink 	 = get_post_meta($post->ID, $themeslug.'_slider_url' , true); 
-	    	$permalink 		 = get_permalink(); 
 	   		$blogtext 		 = get_post_meta($post->ID, $themeslug.'_slider_text' , true); 
-	   		$title			 = get_the_title();
 	   		$hidetitlebar    = get_post_meta($post->ID, $themeslug.'_slider_hidetitle' , true); 	   		
 	   		$customthumb 	 = get_post_meta($post->ID, $themeslug.'_slider_custom_thumb' , true); 
 	   		$thumbtext       = get_post_meta($post->ID, $themeslug.'_slider_thumb_text' , true); 
-
-			/* End variables */	
-
-			/* Controls slide title based on page meta setting */	
 
 			if ($hidetitlebar == 'on' AND $captionstyle != 'key4') {
 	   			$caption = "data-caption='#htmlCaption$i'";
@@ -230,10 +200,6 @@ function response_slider_content() {
 	   			$caption = '';
 	   		}
 
-	    	/* End slide title */
-
-	    	/* Controls slide link */
-
 	    	if ( $type == 'custom' OR $type == '0') {
 	    		$link = get_post_meta($post->ID, 'slider_url' , true);
 	    	}
@@ -241,21 +207,13 @@ function response_slider_content() {
 	    		$link = get_permalink();
 	    	}
 
-	    	/* End slide link */
-	    	
-	    	/* Establish slider text */
-	    	
-	    	if ($type == 'custom' OR $type == '0') {
+	 	    if ($type == 'custom' OR $type == '0') {
 	    		$text = $customtext;
 	    	}
 	    	else {
 	    		$text = $blogtext;
 	    	}
 	    	
-	    	/* End slider text */	
-
-	    	/* Controls slide image and thumbnails */
-
 	    	if ($customimage != '' && $customthumb == '' && $wordenable == '1' OR $customimage != '' && $customthumb == '' && $wordenable == 'on'){ // Custom image, no custom thumb, WordThumb enabled. 
 	    		$resized            = wp_resize( '', $customimage, 1020, 330, true );
 	    		$image = "<img src='$resized[url]' width='$resized[width]'  alt='Slider' />";
@@ -290,12 +248,6 @@ function response_slider_content() {
 	    		$image = "<img src='$defaultimage'>";
 	    		$thumbnail = "$root/images/pro/sliderthumb.jpg";
 	    	}
-
-
-		    /* End image/thumb */	
-
-	     	/* Markup for slides */
-
 	    	
 	    $out .= "
 	    	<a href='$link' $caption data-thumb='$thumbnail' bullet-text='$thumbtext'>
@@ -339,21 +291,28 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
 
 /* Define slider navigation variable */ 
   	
-	if ($navigationstyle == 'key1' OR $navigationstyle == 'key2' OR $navigationstyle == '0'  OR $navigationstyle == '1' OR $navigationstyle == '') {
+	if ($navigationstyle == 'key1' OR $navigationstyle == 'key2' OR $navigationstyle == 'key3' OR $navigationstyle == '') {
 	    $dots = 'true';
 	}
 	else {
 		$dots = 'false';
 	}
-	if ($navigationstyle == 'key2' OR $navigationstyle == '1') {
-	    $thumbs = 'true'; ?>
+	if ($navigationstyle == 'key2') {
+	    $imagethumbs = 'true'; ?>
 	    
 	    <style type="text/css">
 		.orbit-bullets {bottom: -50px !important;}
 		</style> <?php
 	}
 	else {
-		$thumbs = 'false';
+		$imagethumbs = 'false';
+	}
+	
+	if ($navigationstyle == 'key3') {
+		$textthumbs = 'true';
+	}
+	else {
+		$textthumbs = 'false';
 	}
 
 /* End slider navigation variable */ 
@@ -369,7 +328,7 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
 
 <!-- End style -->
 
-<?php if ($navigationstyle == 'key3' OR $navigationstyle == '2') :?>
+<?php if ($navigationstyle == 'key4') :?>
 	<style type="text/css" media="screen">
 		.slider_nav {display: none;}
 		#orbitDemo {margin-bottom: 0px;}
@@ -394,8 +353,8 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
          bullets: $dots,
-         bulletThumbs: $thumbs,
-         bulletTexts: true
+         bulletThumbs: $imagethumbs,
+         bulletTexts: $textthumbs
      });
      });
      });
