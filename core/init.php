@@ -50,7 +50,6 @@ require_once ( get_template_directory() . '/core/classy-options/options-themes.p
 
 // Load element files
 require_once ( get_template_directory() . '/core/elements/twitter-bar.php' );
-require_once ( get_template_directory() . '/core/elements/product.php' );
 require_once ( get_template_directory() . '/core/elements/callout.php' );
 require_once ( get_template_directory() . '/core/elements/events.php' );
 require_once ( get_template_directory() . '/core/elements/portfolio-lite.php' );
