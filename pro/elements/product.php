@@ -67,27 +67,27 @@ function response_product_element_content(){
 	
 	if ($align == "0" or $align == "key1"){
 		echo '<style type="text/css">';
-		echo "#product_media.six.columns img {float: right;} ";
+		echo "#product_media.span6 {float: right;} ";
 		echo '</style>';
 	}
 	
 	if ($align == "0" OR $align =="key1") {
 		$output =   "
-					<div id='product_text' class='six columns'>
+					<div id='product_text' class='span6'>
 						<div class='product_text_title'>$title</div> <br /> <span class='product_text_text'>$text </span><br /><br />
 							$button
 					</div>
-					<div id='product_media' class='six columns'>
+					<div id='product_media' class='span6'>
 						$media
 					</div>
 				    "; 
 	}
 	if ($align == "1" OR $align =="key2"){
 		$output =   "
-					<div id='product_media' class='six columns'>
+					<div id='product_media' class='span6'>
 						$media
 					</div>
-					<div id='product_text' class='six columns'>
+					<div id='product_text' class='span6'>
 						<span class='product_text_title'>$title</span> <br /> <span class='product_text_text'>$text </span><br /><br />
 							$button
 
@@ -97,8 +97,8 @@ function response_product_element_content(){
 ?>
 
 <div id="productbg">
-	<div class="container">
-		<div id="product" class="row">
+	<div class="container-fluid">
+		<div id="product" class="row-fluid">
 			<?php echo $output; ?>
 		</div>
 	</div>

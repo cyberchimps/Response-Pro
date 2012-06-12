@@ -77,17 +77,17 @@
 /*============================*/
 /*===== Product Styles ======*/
 /*============================*/
-#product {margin-top: 45px; padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
-#product_text {color: white; padding: 0px 0 0px 0;}
+#product {margin-top: 45px; padding-bottom: 45px;}
+#product_text {color: black; padding: 0px 0 0px 0;}
 .product_text_wrap {}
-#product_text.six.columns {width:48%;}
-#product_media.six.columns {width: 48%; margin-left: 0%;}
+#product_text.span6 {width:48%;}
+#product_media.span6 {width: 48%; margin-left: 0%;}
 .product_text_title {font-size: 24px;}
-.product_text_text {font-size: 14px;color:#fff; line-height: 1.5;}
+.product_text_text {font-size: 14px;color:#000; line-height: 1.5;}
 
 #product_media {padding: 0px 0 0px 0;}
 
-#image_container.six.columns {margin-left: 2%;}
+#image_container.span6 {margin-left: 2%;}
 
 
 .elementsbg {
