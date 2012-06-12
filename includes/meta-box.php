@@ -84,7 +84,7 @@ function initialize_the_meta_boxes() {
 			->text($themeslug.'_slider_caption', 'Caption', '')
 			->checkbox($themeslug.'_slider_hidetitle', 'Title', '', array('std' => 'on'))
 			->single_image($themeslug.'_slider_custom_thumb', 'Custom Thumbnail', '')
-			->text($themeslug.'_slider_thumb_text', 'Thumbnail Text', '')
+			->text($themeslug.'_slider_thumb_text', 'Thumbnail Text', '' , array('std' => 'Thumb'))
 			->sliderhelp('', 'Need Help?', '')
 			->reorder('reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
@@ -123,7 +123,7 @@ function initialize_the_meta_boxes() {
 			->text($themeslug.'_slider_height', 'Slider Height', '', array('std' => '340'))
 			->text($themeslug.'_slider_delay', 'Slider Delay Time (MS)', '', array('std' => '3500'))
 			->select($themeslug.'_page_slider_animation', 'Slider Animation Type', '', array('options' => array('Horizontal-Push (default)', 'Fade', 'Horizontal-Slide', 'Vertical-Slide')) )
-			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array('Dots (default)', 'Thumbnails', 'None')) )
+			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array('Dots (default)', 'Thumbnails', 'Text Thumbnails', 'None')) )
 			->select($themeslug.'_page_slider_caption_style', 'Slider Caption Style', '', array('options' => array('None (default)', 'Bottom', 'Left', 'Right')) )
 			->checkbox($themeslug.'_slider_arrows', 'Navigation Arrows', '', array('std' => 'on'))
 			->checkbox($themeslug.'_wp_resize', 'Image Resizing', '', array('std' => 'off'))

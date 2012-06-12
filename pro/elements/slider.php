@@ -209,14 +209,15 @@ function response_slider_content() {
 
 	    	/* Post-specific variables */	
 
-	    	$customimage 		= get_post_meta($post->ID, $themeslug.'_slider_image' , true);  /* Gets slide custom image from page/post meta option */
-	    	$customtext 		= get_post_meta($post->ID, $themeslug.'_slider_caption' , true); /* Gets slide caption from custom slide meta option */
-	    	$customlink 		= get_post_meta($post->ID, $themeslug.'_slider_url' , true); /* Gets link from custom slide meta option */
-	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
-	   		$blogtext 			= get_post_meta($post->ID, $themeslug.'_slider_text' , true); /* Gets slide caption from post meta option */  		
-	   		$title				= get_the_title() ; /* Gets slide title from post/custom slide title */
-	   		$hidetitlebar       = get_post_meta($post->ID, $themeslug.'_slider_hidetitle' , true); /* Gets page/post meta option for disabling slide title bar */
-	   		$customthumb 		= get_post_meta($post->ID, $themeslug.'_slider_custom_thumb' , true); /* Gets custom thumbnail from page/post meta option */
+	    	$customimage	 = get_post_meta($post->ID, $themeslug.'_slider_image' , true);  
+	    	$customtext 	 = get_post_meta($post->ID, $themeslug.'_slider_caption' , true); 
+	   	    $customlink 	 = get_post_meta($post->ID, $themeslug.'_slider_url' , true); 
+	    	$permalink 		 = get_permalink(); 
+	   		$blogtext 		 = get_post_meta($post->ID, $themeslug.'_slider_text' , true); 
+	   		$title			 = get_the_title();
+	   		$hidetitlebar    = get_post_meta($post->ID, $themeslug.'_slider_hidetitle' , true); 	   		
+	   		$customthumb 	 = get_post_meta($post->ID, $themeslug.'_slider_custom_thumb' , true); 
+	   		$thumbtext       = get_post_meta($post->ID, $themeslug.'_slider_thumb_text' , true); 
 
 			/* End variables */	
 
@@ -297,7 +298,7 @@ function response_slider_content() {
 
 	    	
 	    $out .= "
-	    	<a href='$link' $caption data-thumb='$thumbnail' bullet-text='test'>
+	    	<a href='$link' $caption data-thumb='$thumbnail' bullet-text='$thumbtext'>
 	    				$image
 	    						<span class='orbit-caption' id='htmlCaption$i'><span class='caption_title'>$title</span> <br /> <span class='caption_text'>$text</span></span>
 	    				</a>
