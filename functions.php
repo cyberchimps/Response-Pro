@@ -481,7 +481,7 @@ function response_lazy_load() {
 </script>
 EOF;
 }
-add_action('wp_head', 'response_lazy_load');
+//add_action('wp_head', 'response_lazy_load');
 
 /**
 * Add Google Analytics support based on theme option.
