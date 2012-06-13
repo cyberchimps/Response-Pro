@@ -53,53 +53,53 @@ function initialize_the_meta_boxes() {
 
 	$mb = new Chimps_Metabox('post_slide_options', $themenamefull.' Slider Options', array('pages' => array('post')));
 	$mb
-		->tab("Slider Options")
-			->single_image($themeslug.'_slider_image', 'Slider Image', '')
-			->text($themeslug.'_slider_text', 'Slider Text', 'Enter your slider text here')
-			->checkbox($themeslug.'_slider_hidetitle', 'Title Bar', '', array('std' => 'on'))
-			->single_image($themeslug.'_slider_custom_thumb', 'Custom Thumbnail', 'Use the image uploader to upload a custom navigation thumbnail')
+		->tab(__('Slider Options', 'response-admin'))
+			->single_image($themeslug.'_slider_image', __('Slider Image', 'response-admin'), '')
+			->text($themeslug.'_slider_text', __('Slider Text', 'response-admin'), __('Enter your slider text here', 'response-admin'))
+			->checkbox($themeslug.'_slider_hidetitle', __('Title Bar', 'response-admin'), '', array('std' => 'on'))
+			->single_image($themeslug.'_slider_custom_thumb', __('Custom Thumbnail', 'response-admin'), __('Use the image uploader to upload a custom navigation thumbnail', 'response-admin'))
 			->sliderhelp('', 'Need Help?', '')
 		->end();
 		
-	$mb = new Chimps_Metabox('Carousel', 'Featured Post Carousel', array('pages' => array($themeslug.'_featured_posts')));
+	$mb = new Chimps_Metabox(__('Carousel', 'response-admin'), __('Featured Post Carousel', 'response-admin'), array('pages' => array($themeslug.'_featured_posts')));
 	$mb
-		->tab("Featured Post Carousel Options")
-			->text($themeslug.'_post_title', 'Featured Post Title', '')
-			->single_image($themeslug.'_post_image', 'Featured Post Image', '')
-			->text($themeslug.'_post_url', 'Featured Post URL', '')
+		->tab(__('Featured Post Carousel Options', 'response-admin'))
+			->text($themeslug.'_post_title', __('Featured Post Title', 'response-admin'), '')
+			->single_image($themeslug.'_post_image', __('Featured Post Image', 'response-admin'), '')
+			->text($themeslug.'_post_url', __('Featured Post URL', 'response-admin'), '')
 			->reorder($themeslug.'_reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
 		
-	$mb = new Chimps_Metabox('Portfolio', 'Portfolio Element', array('pages' => array($themeslug.'_portfolio_images')));
+	$mb = new Chimps_Metabox(__('Portfolio', 'response-admin'), __('Portfolio Element', 'response-admin'), array('pages' => array($themeslug.'_portfolio_images')));
 	$mb
-		->tab("Portfolio Element")
-			->single_image($themeslug.'_portfolio_image', 'Portfolio Image', '')
+		->tab(__('Portfolio Element', 'response-admin'))
+			->single_image($themeslug.'_portfolio_image', __('Portfolio Image', 'response-admin'), '')
 		->end();
 
-	$mb = new Chimps_Metabox('slides', 'Custom Feature Slides', array('pages' => array($themeslug.'_custom_slides')));
+	$mb = new Chimps_Metabox('slides', __('Custom Feature Slides', 'response-admin'), array('pages' => array($themeslug.'_custom_slides')));
 	$mb
-		->tab("Custom Slide Options")
-			->single_image($themeslug.'_slider_image', 'Image', '')
-			->text($themeslug.'_slider_url', 'Link', '')
-			->text($themeslug.'_slider_caption', 'Caption', '')
-			->checkbox($themeslug.'_slider_hidetitle', 'Title', '', array('std' => 'on'))
-			->single_image($themeslug.'_slider_custom_thumb', 'Custom Thumbnail', '')
-			->text($themeslug.'_slider_thumb_text', 'Thumbnail Text', '' , array('std' => 'Thumb'))
+		->tab(__('Custom Slide Options', 'response-admin'))
+			->single_image($themeslug.'_slider_image', __('Image', 'response-admin'), '')
+			->text($themeslug.'_slider_url', __('Link', 'response-admin'), '')
+			->text($themeslug.'_slider_caption', __('Caption', 'response-admin'), '')
+			->checkbox($themeslug.'_slider_hidetitle', __('Title', 'response-admin'), '', array('std' => 'on'))
+			->single_image($themeslug.'_slider_custom_thumb', __('Custom Thumbnail', 'response-admin'), '')
+			->text($themeslug.'_slider_thumb_text', __('Thumbnail Text', 'response-admin'), '' , array('std' => 'Thumb'))
 			->sliderhelp('', 'Need Help?', '')
 			->reorder('reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
 
-	$mb = new Chimps_Metabox('pages', $themenamefull.' Page Options', array('pages' => array('page')));
+	$mb = new Chimps_Metabox('pages', $themenamefull. __('Page Options', 'response-admin'), array('pages' => array('page')));
 	$elements = array(
-					'page_slider' => 'Feature Slider',
-					'callout_element' => 'Callout',
-					'twitterbar_element' => 'Twitter Bar',
-					'portfolio_element' => 'Portfolio',
-					'product_element' => 'Product',
-					'page_element' => 'Page',
-					'box_element' => 'Boxes',
-					'breadcrumbs' => 'Breadcrumbs',
-					'carousel_element' => 'Carousel'
+					'page_slider' => __('Feature Slider', 'response-admin'),
+					'callout_element' => __('Callout', 'response-admin'),
+					'twitterbar_element' => __('Twitter Bar', 'response-admin'),
+					'portfolio_element' => __('Portfolio', 'response-admin'),
+					'product_element' => __('Product', 'response-admin'),
+					'page_element' => __('Page', 'response-admin'),
+					'box_element' => __('Boxes', 'response-admin'),
+					'breadcrumbs' => __('Breadcrumbs', 'response-admin'),
+					'carousel_element' => __('Carousel', 'response-admin')
 					);
 					
 	/* checking whether event plugin is active or not */				
@@ -109,52 +109,52 @@ function initialize_the_meta_boxes() {
 	
 	$mb
 		->tab("Page Options")
-			->image_select($themeslug.'_page_sidebar', 'Select Page Layout', '',  array('options' => array(TEMPLATE_URL . '/library/images/options/right.png' , TEMPLATE_URL . '/library/images/options/left.png', TEMPLATE_URL . '/library/images/options/rightleft.png', TEMPLATE_URL . '/library/images/options/tworight.png', TEMPLATE_URL . '/library/images/options/none.png')))
-			->checkbox($themeslug.'_hide_page_title', 'Page Title', '', array('std' => 'on'))
-			->section_order($themeslug.'_page_section_order', 'Page Elements', '', array('options' => $elements, 
+			->image_select($themeslug.'_page_sidebar', __('Select Page Layout', 'response-admin'), '',  array('options' => array(TEMPLATE_URL . '/library/images/options/right.png' , TEMPLATE_URL . '/library/images/options/left.png', TEMPLATE_URL . '/library/images/options/rightleft.png', TEMPLATE_URL . '/library/images/options/tworight.png', TEMPLATE_URL . '/library/images/options/none.png')))
+			->checkbox($themeslug.'_hide_page_title', __('Page Title', 'response-admin'), '', array('std' => 'on'))
+			->section_order($themeslug.'_page_section_order', __('Page Elements', 'response-admin'), '', array('options' => $elements, 
 					'std' => 'breadcrumbs,page_section'
 				))
 
 			->pagehelp('', 'Need Help?', '')
-		->tab($themenamefull." Slider Options")
-			->select($themeslug.'_page_slider_type', 'Select Slider Type', '', array('options' => array('Custom Slides', 'Blog Posts')) )
-			->select($themeslug.'_slider_category', 'Custom Slide Category', '', array('options' => $slideroptions) )
-			->select($themeslug.'_slider_blog_category', 'Blog Post Category', '', array('options' => $blogoptions, 'all') )
-			->text($themeslug.'_slider_blog_posts_number', 'Number of Featured Blog Posts', '', array('std' => '5'))
-			->text($themeslug.'_slider_height', 'Slider Height', '', array('std' => '340'))
-			->text($themeslug.'_slider_delay', 'Slider Delay Time (MS)', '', array('std' => '3500'))
-			->select($themeslug.'_page_slider_animation', 'Slider Animation Type', '', array('options' => array("key1" => "Horizontal-Push", "key2" => "Fade", "key3" => "Horizontal-Slide", "key4" => "Vertical-Slide")) )
-			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array("key1" => "Dots", "key2" => "Image Thumbnails", "key3" => "Text Thumbnails", "key4" => "None")) )
-			->select($themeslug.'_page_slider_caption_style', 'Slider Caption Style', '', array('options' => array("key1" => "Bottom", "key2" => "Right", "key3" => "Left", "key4" => "None")) )
-			->checkbox($themeslug.'_slider_arrows', 'Navigation Arrows', '', array('std' => 'on'))
-			->checkbox($themeslug.'_wp_resize', 'Image Resizing', '', array('std' => 'off'))
+		->tab($themenamefull.__('Slider Options', 'response-admin'))
+			->select($themeslug.'_page_slider_type', __('Select Slider Type', 'response-admin'), '', array('options' => array('Custom Slides', 'Blog Posts')) )
+			->select($themeslug.'_slider_category', __('Custom Slide Category', 'response-admin'), '', array('options' => $slideroptions) )
+			->select($themeslug.'_slider_blog_category', __('Blog Post Category', 'response-admin'), '', array('options' => $blogoptions, 'all') )
+			->text($themeslug.'_slider_blog_posts_number', __('Number of Featured Blog Posts', 'response-admin'), '', array('std' => '5'))
+			->text($themeslug.'_slider_height', __('Slider Height', 'response-admin'), '', array('std' => '340'))
+			->text($themeslug.'_slider_delay', __('Slider Delay Time (MS)', 'response-admin'), '', array('std' => '3500'))
+			->select($themeslug.'_page_slider_animation', __('Slider Animation Type', 'response-admin'), '', array('options' => array('key1' => __('Horizontal-Push', 'response-admin'), 'key2' => __('Fade', 'response-admin'), 'key3' => __('Horizontal-Slide', 'response-admin'), 'key4' => __('Vertical-Slide', 'response-admin'))))
+			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array('key1' => __('Dots', 'response-admin'), 'key2' => __('Image Thumbnails', 'response-admin'), 'key3' => __('Text Thumbnails', 'response-admin'), 'key4' => __('None', 'response-admin'))))
+			->select($themeslug.'_page_slider_caption_style', __('Slider Caption Style', 'response-admin'), '', array('options' => array('key1' => __('Bottom', 'response-admin'), 'key2' => __('Right', 'response-admin'), 'key3' => __('Left', 'response-admin'), 'key4' => __('None', 'response-admin'))))
+			->checkbox($themeslug.'_slider_arrows', __('Navigation Arrows', 'response-admin'), '', array('std' => 'on'))
+			->checkbox($themeslug.'_wp_resize', __('Image Resizing', 'response-admin'), '', array('std' => 'off'))
 			->sliderhelp('', 'Need Help?', '')
-		->tab("Callout Options")
-			->textarea($themeslug.'_callout_text', 'Callout Text', '')
-			->checkbox($themeslug.'_extra_callout_options', 'Custom Callout Options', '', array('std' => 'off'))
-			->color($themeslug.'_custom_callout_text_color', 'Custom Text Color', '')
+		->tab(__('Callout Options', 'response-admin'))
+			->textarea($themeslug.'_callout_text', __('Callout Text', 'response-admin'), '')
+			->checkbox($themeslug.'_extra_callout_options', __('Custom Callout Options', 'response-admin'), '', array('std' => 'off'))
+			->color($themeslug.'_custom_callout_text_color', __('Custom Text Color', 'response-admin'), '')
 			->pagehelp('', 'Need help?', '')
-		->tab("Product Options")
-			->select($themeslug.'_product_text_align', 'Text Align', '', array('options' => array('Left', 'Right')) )
-			->text($themeslug.'_product_title', 'Product Title', '', array('std' => 'Product'))
+		->tab(__('Product Options', 'response-admin'))
+			->select($themeslug.'_product_text_align', __('Text Align', 'response-admin'), '', array('options' => array('Left', 'Right')) )
+			->text($themeslug.'_product_title', __('Product Title', 'response-admin'), '', array('std' => 'Product'))
 			->textarea($themeslug.'_product_text', 'Proudct Text', '', array('std' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '))
-			->select($themeslug.'_product_type', 'Media Type', '', array('options' => array('Image', 'Video')) )
-			->single_image($themeslug.'_product_image', 'Product Image', '', array('std' =>  TEMPLATE_URL . '/library/images/pro/product.jpg'))
-			->textarea($themeslug.'_product_video', 'Video Embed', '')
-			->checkbox($themeslug.'_product_link_toggle', 'Product Link', '', array('std' => 'on'))
-			->text($themeslug.'_product_link_url', 'Link URL', '', array('std' => home_url()))
-			->text($themeslug.'_product_link_text', 'Link URL', '', array('std' => 'Buy Now'))
-		->tab("Carousel Options")
-			->select($themeslug.'_carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
-			->text($themeslug.'_carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))
-		->tab("Portfolio Options")
-			->select($themeslug.'_portfolio_row_number', 'Images per row', '', array('options' => array('Four (default)', 'Three', 'Two')) )
-			->select($themeslug.'_portfolio_category', 'Portfolio Category', '', array('options' => $portfoliooptions) )
-			->checkbox($themeslug.'_portfolio_title_toggle', 'Portfolio Title', '')
-			->text($themeslug.'_portfolio_title', 'Title', '', array('std' => 'Portfolio'))
-		->tab("Twitter Options")
-			->text($themeslug.'_twitter_handle', 'Twitter Handle', '')
-			->checkbox($themeslug.'_twitter_reply', 'Show @ Replies', '')
+			->select($themeslug.'_product_type', __('Media Type', 'response-admin'), '', array('options' => array('Image', 'Video')) )
+			->single_image($themeslug.'_product_image', __('Product Image', 'response-admin'), '', array('std' =>  TEMPLATE_URL . '/library/images/pro/product.jpg'))
+			->textarea($themeslug.'_product_video', __('Video Embed', 'response-admin'), '')
+			->checkbox($themeslug.'_product_link_toggle', __('Product Link', 'response-admin'), '', array('std' => 'on'))
+			->text($themeslug.'_product_link_url', __('Link URL', 'response-admin'), '', array('std' => home_url()))
+			->text($themeslug.'_product_link_text', __('Link URL', 'response-admin'), '', array('std' => 'Buy Now'))
+		->tab(__('Carousel Options', 'response-admin'))
+			->select($themeslug.'_carousel_category', __('Carousel Category', 'response-admin'), '', array('options' => $carouseloptions) )
+			->text($themeslug.'_carousel_speed', __('Carousel Animation Speed (ms)', 'response-admin') , '', array('std' => '750'))
+		->tab(__('Portfolio Options', 'response-admin'))
+			->select($themeslug.'_portfolio_row_number', __('Images per row', 'response-admin'), '', array('options' => array('Four (default)', 'Three', 'Two')) )
+			->select($themeslug.'_portfolio_category', __('Portfolio Category', 'response-admin'), '', array('options' => $portfoliooptions) )
+			->checkbox($themeslug.'_portfolio_title_toggle', __('Portfolio Title', 'response-admin'), '')
+			->text($themeslug.'_portfolio_title', __('Title', 'response-admin'), '', array('std' => 'Portfolio'))
+		->tab('Twitter Options')
+			->text($themeslug.'_twitter_handle', __('Twitter Handle', 'response-admin'), '')
+			->checkbox($themeslug.'_twitter_reply', __('Show @ Replies', 'response-admin'), '')
 		->end();
 
 	foreach ($meta_boxes as $meta_box) {
