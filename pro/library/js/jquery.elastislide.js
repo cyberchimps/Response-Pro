@@ -12,7 +12,7 @@
 			wipeDown: function() { },
 			preventDefaultEvents: true
 		};
-     
+      
 		if (settings) $.extend(config, settings);
  
 		this.each(function() {
@@ -79,7 +79,9 @@
 	};
 	
 	$.elastislide.defaults 		= {
+		autoplay	: true,
 		speed		: 450,	// animation speed
+		autoplay_speed : 900, // Autoplay speed
 		easing		: '',	// animation easing effect
 		imageW		: 190,	// the images width
 		margin		: 3,	// image margin right
@@ -132,6 +134,8 @@
 		
 			if( this.options.speed < 0 )
 				this.options.speed = 450;
+			if( this.options.autoplay_speed  <  this.options.speed)
+				this.options.autoplay_speed = this.options.speed;
 			if( this.options.margin < 0 )
 				this.options.margin = 4;
 			if( this.options.border < 0 )
@@ -220,8 +224,9 @@
 					this.$navNext.hide();
 			
 		},
+		
 		_initEvents			: function() {
-			
+	
 			var instance	= this;
 			
 			// window resize
@@ -253,6 +258,19 @@
 				
 			});
 			
+			/* For Auto Play  */
+			
+			if(this.options.autoplay)
+			{
+				setInterval(function autoplay() {
+					var display = $('.es-nav-next').css("display");
+					if(display == "none")
+						instance._slideToCurrent();
+					else if(display == "block")
+						instance._slide('right');
+				},this.options.autoplay_speed);
+			}
+			
 			// navigation buttons events
 			this.$navNext.bind('click.elastislide', function( event ) {
 				instance._slide('right');
@@ -278,6 +296,7 @@
 			});
 			
 		},
+		
 		_slide				: function( dir, val, anim, callback ) {
 			
 			// if animating return

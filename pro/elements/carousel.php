@@ -78,8 +78,10 @@ function response_carousel_element_content() {
 			<script type="text/javascript">
 				jQuery(document).ready(function ($) {
 					$('#carousel').elastislide({
+						autoplay	: true,
 						imageW 		: 145,
 						speed 		: <?php echo $speed; ?>,
+						autoplay_speed : <?php echo 2*$speed; ?>,
 						margin		: 9,
 						minItems 	: 5
 					});
