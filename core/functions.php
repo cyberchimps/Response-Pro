@@ -56,6 +56,26 @@ function response_text_domain() {
 add_action('after_setup_theme', 'response_text_domain');
 
 /**
+* WooCommerce hooks.
+*/ 
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+function response_woocommerce_content_wrapper_begin() {
+	echo "<div class='span8'>";
+	
+}
+add_action( 'woocommerce_before_main_content', 'response_woocommerce_content_wrapper_begin', 10);
+
+function response_woocommerce_content_wrapper_end() {
+	echo "</div>";
+	
+}
+add_action( 'woocommerce_after_main_content', 'response_woocommerce_content_wrapper_end', 10);
+
+/**
 * Load jQuery and register additional scripts.
 */ 
 function response_scripts() {
