@@ -25,6 +25,7 @@ body {background: #fff;}
 #main_wrap {margin-left: 20px; margin-right: 20px;}
 
 #woo-sidebar.span4 {width:28%;}
+#woo_container {border: 1px solid #DDD; padding: 15px;}
 
 .container-fluid {max-width: 1020px; margin-left: auto; margin-right: auto; padding-left: 0px; padding-right: 0px;}
 
