@@ -225,6 +225,8 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->text($themeslug.'_header_banner_url', __('Header Banner URL', 'response-admin'))
 		->checkbox($themeslug.'_sidebar_banner', __('Sidebar Banner', 'response-admin'))
 		->text($themeslug.'_sidebar_banner_url', __('Sidebar Banner URL', 'response-admin'))
+	->section(__('Events',  'response-admin'))
+		->info("Info about events calendar will go here")
 	->section(__('Import / Export',  'response-admin'))
 		->open_outersection()
 			->export(__('Export Settings', 'response-admin'))
