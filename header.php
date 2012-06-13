@@ -38,7 +38,8 @@ if ( !defined('ABSPATH')) exit;
 <!--End response_before_header hook-->
 
 <div class="wrapper">	
-<div class="container-fluid">		
+<div class="container-fluid">	
+<div class="row-fluid">	
 <header>	
 <div id="main_wrap">
 	

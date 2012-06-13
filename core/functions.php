@@ -75,6 +75,15 @@ function response_woocommerce_content_wrapper_end() {
 }
 add_action( 'woocommerce_after_main_content', 'response_woocommerce_content_wrapper_end', 10);
 
+function response_woocommerce_sidebar() { ?>
+<div id="woo-sidebar" class="span4">
+		<?php get_sidebar(); ?>
+	</div><?php
+	
+	
+}
+add_action( 'woocommerce_sidebar', 'response_woocommerce_sidebar', 10);
+
 /**
 * Load jQuery and register additional scripts.
 */ 
