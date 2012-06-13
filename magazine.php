@@ -20,9 +20,6 @@ global $options, $themeslug, $post, $sidebar, $content_grid; // call globals
 
 get_header();  //Display Header
 ?>
-
-<div id="main_wrap">
-	<div class="container-fluid">
 	
 		<!-- Script for featured post slider-->
 		<script type="text/javascript">   
@@ -290,6 +287,9 @@ get_header();  //Display Header
 					<!--End response_pagination hook-->
 					
 				</div><!--end content-->
+				<!--Begin @response pagination hook-->
+					<?php response_pagination(); ?>
+				<!--End @response pagination loop hook-->
 			</div>
 
 			<!--Begin response_after_content_sidebar hook-->
@@ -298,6 +298,8 @@ get_header();  //Display Header
 
 		</div>
 
-	</div><!--end container-->
-</div>	<!--end main_wrap-->
+<div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
+</div> <!-- End of wrapper -->
 <?php get_footer(); //Dsiplay footer  ?>  
