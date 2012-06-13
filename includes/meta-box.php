@@ -96,7 +96,7 @@ function initialize_the_meta_boxes() {
 					'twitterbar_element' => 'Twitter Bar',
 					'portfolio_element' => 'Portfolio',
 					'product_element' => 'Product',
-					'page_section' => 'Page',
+					'page_element' => 'Page',
 					'box_element' => 'Boxes',
 					'breadcrumbs' => 'Breadcrumbs',
 					'carousel_element' => 'Carousel'

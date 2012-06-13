@@ -25,14 +25,14 @@ if ( !defined('ABSPATH')) exit;
 * Response page actions
 */
 
-add_action('response_page_section', 'response_page_section_content' );
+add_action('response_page_element', 'response_page_element_content' );
 
 /**
 * Sets up the page content. 
 *
 * @since 1.0
 */
-function response_page_section_content() { 
+function response_page_element_content() { 
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 	
 	response_sidebar_init();

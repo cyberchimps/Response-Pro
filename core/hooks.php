@@ -396,8 +396,8 @@ function response_post_pagination() {
 *
 * @since 1.0
 */
-function response_page_section() {
-	do_action('response_page_section');
+function response_page_element() {
+	do_action('response_page_element');
 }
 
 /**
