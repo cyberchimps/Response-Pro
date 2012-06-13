@@ -25,12 +25,13 @@ if ( !defined('ABSPATH')) exit;
 	get_header(); // call header
 ?>
 
-	<!--Begin response_index hook (to be renamed response_post in 2.0)-->
-		<?php response_index(); ?>
-	<!--End response_index hook (to be renamed response_post in 2.0)-->
-	</div>
-	
-	<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
+	<?php
+			foreach(explode(",", $options->get($themeslug.'_single_section_order')) as $fn) {
+				if(function_exists($fn)) {
+					call_user_func_array($fn, array());
+				}
+			}
+		?>
 	
 
 <div class="push"></div>
