@@ -27,8 +27,6 @@ if ( !defined('ABSPATH')) exit;
 
 ?>
 
-<div class="container-fluid">
-	<div class="row-fluid">
 		<!--Begin response_before_content_sidebar hook-->
 			<?php response_before_content_sidebar(); ?>
 		<!--End response_before_content_sidebar hook-->
@@ -48,7 +46,10 @@ if ( !defined('ABSPATH')) exit;
 		<!--Begin response_after_content_sidebar hook-->
 			<?php response_after_content_sidebar(); ?>
 		<!--End response_after_content_sidebar hook-->
-	</div><!--end row-->
-</div><!--end container-->
+
+<div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
+</div> <!-- End of wrapper -->
 
 <?php get_footer(); ?>

@@ -41,7 +41,7 @@ if ( !defined('ABSPATH')) exit;
 <div class="container-fluid">	
 <div class="row-fluid">	
 <header>	
-<div id="main_wrap">
+
 	
 	<?php
 		foreach(explode(",", $options->get('header_section_order')) as $fn) {
@@ -51,7 +51,7 @@ if ( !defined('ABSPATH')) exit;
 		}
 	?>
 	
-</div>	
+
 </header>
 
 <!--Begin response_after_header-->

@@ -31,9 +31,8 @@ get_header();
 
 ?>
 
-<div id="main_wrap">
-<div class="container-fluid">
-	<div class="row-fluid"> 
+
+
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
 				$fn = 'response_' . $key;
@@ -42,10 +41,10 @@ get_header();
 				}
 			}
 		?>	
-	</div><!--end row-->
-</div><!--end container-->
-</div>
+
 <div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
 </div> <!-- End of wrapper -->
 
 <?php get_footer(); ?>
