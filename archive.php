@@ -25,61 +25,13 @@ if ( !defined('ABSPATH')) exit;
 	get_header(); // call header
 ?>
 
-		<!--Begin response_before_content_sidebar hook-->
-			<?php response_before_content_sidebar(); ?>
-		<!--End response_before_content_sidebar hook-->
-		
-		<div id="content" class="<?php echo $content_grid; ?>">
-		
-		<?php if (have_posts()) : ?>
-		
-		<!--Begin response_before_archive hook-->
-			<?php response_before_archive(); ?>
-		<!--End response_before_archive hook-->
-		
-		<?php while (have_posts()) : the_post(); ?>
-		
-		<div class="post_container">
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-		
-			<!--Begin response_loop hook-->
-				<?php response_loop(); ?>
-			<!--End response_loop hook-->
-			
-			</div><!--end post_class-->
-			
-			<!--Begin response_post_bar hook-->
-				<?php response_post_bar(); ?>
-			<!--End response_post_bar hook-->
-			
-		</div><!--end post container--> 
-
-		 <?php endwhile; ?>
-	 
-	 <?php else : ?>
-
-		<h2>Nothing found</h2>
-
-	<?php endif; ?>
-
-		<!--Begin response_pagination hook-->
-			<?php response_pagination(); ?>
-		<!--End response_pagination hook-->
-		
-		<!--Begin response_after_archive hook-->
-			<?php response_after_archive(); ?>
-		<!--End response_after_archive hook-->
-	
-		</div><!--end content_padding-->
-
-		<!--Begin response_after_content_sidebar hook-->
-			<?php response_after_content_sidebar(); ?>
-		<!--End response_after_content_sidebar hook-->
-	
-		</div><!--end content-->
-
-	
-	<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
+	<?php
+		foreach(explode(",", $options->get($themeslug.'_archive_section_order')) as $fn) {
+			if(function_exists($fn)) {
+				call_user_func_array($fn, array());
+			}
+		}
+	?>
 	
 <div class="push"></div>
 </div> <!-- End of row -->
