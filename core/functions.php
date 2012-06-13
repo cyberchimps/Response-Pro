@@ -56,6 +56,37 @@ function response_text_domain() {
 add_action('after_setup_theme', 'response_text_domain');
 
 /**
+* WooCommerce hooks.
+*/ 
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+function response_woocommerce_content_wrapper_begin() {
+	echo "<div id='woo_container' class='span8'>";
+}
+add_action( 'woocommerce_before_main_content', 'response_woocommerce_content_wrapper_begin', 10);
+
+function response_woocommerce_content_wrapper_end() {
+	echo "</div>";
+}
+add_action( 'woocommerce_after_main_content', 'response_woocommerce_content_wrapper_end', 10);
+
+function response_woocommerce_sidebar() { ?>
+			<div id="woo-sidebar" class="span4">
+				<?php get_sidebar(); ?>
+			</div>
+		<div class="push"></div>
+		
+		</div> <!-- End of row -->
+	</div> <!-- End of container -->
+</div> <!-- End of wrapper -->
+	<?php
+}
+add_action( 'woocommerce_sidebar', 'response_woocommerce_sidebar', 10);
+
+/**
 * Load jQuery and register additional scripts.
 */ 
 function response_scripts() {
@@ -175,7 +206,7 @@ function response_comment($comment, $args, $depth) {
 function response_breadcrumbs() { // TODO: consider converting to element
   global $root;
   
-  $delimiter = "<img src='$root/images/breadcrumb-arrow.png'>";
+  $delimiter = "<img src='$root/library/images/breadcrumb-arrow.png'>";
   $home = 'Home'; // text for the 'Home' link
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb

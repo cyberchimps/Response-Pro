@@ -24,16 +24,15 @@ if ( !defined('ABSPATH')) exit;
 	$page_section_order = get_post_meta($post->ID, $themeslug.'_page_section_order' , true);
 	
 	if(!$page_section_order) {
-		$page_section_order = 'page_section,breadcrumbs';
+		$page_section_order = 'page_element,breadcrumbs';
 	}
 
 get_header(); 
 
 ?>
 
-<div id="main_wrap">
-<div class="container-fluid">
-	<div class="row-fluid"> 
+
+
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
 				$fn = 'response_' . $key;
@@ -42,10 +41,10 @@ get_header();
 				}
 			}
 		?>	
-	</div><!--end row-->
-</div><!--end container-->
-</div>
+
 <div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
 </div> <!-- End of wrapper -->
 
 <?php get_footer(); ?>

@@ -37,10 +37,12 @@ if ( !defined('ABSPATH')) exit;
 	<?php response_before_header(); ?> 
 <!--End response_before_header hook-->
 
-<div class="wrapper">			
+<div class="wrapper">	
+<div class="container-fluid">	
+<div class="row-fluid">	
 <header>	
-<div id="main_wrap">
-	<div class="container-fluid">
+
+	
 	<?php
 		foreach(explode(",", $options->get('header_section_order')) as $fn) {
 			if(function_exists($fn)) {
@@ -48,8 +50,8 @@ if ( !defined('ABSPATH')) exit;
 			}
 		}
 	?>
-	</div>
-</div>	
+	
+
 </header>
 
 <!--Begin response_after_header-->

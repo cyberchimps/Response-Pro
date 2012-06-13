@@ -24,8 +24,7 @@ if ( !defined('ABSPATH')) exit;
 ?>
 
 <?php get_header(); ?>
-<div id="main_wrap">
-<div class="container-fluid">
+
 		<?php
 			foreach(explode(",", $options->get($themeslug.'_blog_section_order')) as $fn) {
 				if(function_exists($fn)) {
@@ -33,8 +32,8 @@ if ( !defined('ABSPATH')) exit;
 				}
 			}
 		?>
-</div><!--end container-->
-	</div>	
 <div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
 </div> <!-- End of wrapper -->
 <?php get_footer(); ?>

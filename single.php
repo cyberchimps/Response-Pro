@@ -25,16 +25,17 @@ if ( !defined('ABSPATH')) exit;
 	get_header(); // call header
 ?>
 
-<div class="container-fluid">
-	<div class="row-fluid">
-	<!--Begin response_index hook (to be renamed response_post in 2.0)-->
-		<?php response_index(); ?>
-	<!--End response_index hook (to be renamed response_post in 2.0)-->
-	</div>
+	<?php
+		foreach(explode(",", $options->get($themeslug.'_single_section_order')) as $fn) {
+			if(function_exists($fn)) {
+				call_user_func_array($fn, array());
+			}
+		}
+	?>
 	
-	<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
-	
-</div><!--end container-->
+
 <div class="push"></div>
+</div> <!-- End of row -->
+</div> <!-- End of container -->
 </div> <!-- End of wrapper -->
 <?php get_footer(); ?>
