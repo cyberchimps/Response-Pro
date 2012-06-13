@@ -49,7 +49,7 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 ?>	
 
 <div class="container-fluid">
-<<div id="tribe-events-content" class="grid">
+<div id="tribe-events-content" class="grid">
       <!-- This title is here for ajax loading - do not remove if you wish to use ajax switching between month views -->
       <title><?php wp_title() ?></title>
 		<div id='tribe-events-calendar-header' class="clearfix">

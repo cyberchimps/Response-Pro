@@ -107,6 +107,7 @@ function response_scripts() {
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
 	wp_register_script( 'slimbox' ,$path.'/js/jquery.slimbox.js');
 	wp_register_script( 'jcarousel' ,$path.'/js/jcarousel/jquery.jcarousel.min.js');    
+	wp_register_script( 'eventajax' ,$path.'/js/eventajax.js');
 	
 	wp_enqueue_script ('event-swipe-move');
 	wp_enqueue_script ('event-swipe');
@@ -116,7 +117,8 @@ function response_scripts() {
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('mobilemenu');
 	wp_enqueue_script ('slimbox');
-	wp_enqueue_script ('jcarousel');    
+	wp_enqueue_script ('jcarousel');
+	wp_enqueue_script ('eventajax');    
 	
 	if ($options->get($themeslug.'_responsive_video') == '1' ) {
 	
