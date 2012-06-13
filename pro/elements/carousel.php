@@ -27,7 +27,7 @@ function response_carousel_element_content() {
 	global $themeslug, $post, $options;
 	
 	/* Define variables. */
-	$default = get_template_directory_uri() . '/images/pro/carousel.jpg';
+	$default = get_template_directory_uri() . '/library/images/pro/carousel.jpg';
 	
 	if (is_page()) {
 		$customcategory = get_post_meta($post->ID, $themeslug.'_carousel_category' , true);
@@ -43,7 +43,7 @@ function response_carousel_element_content() {
 	<div id="carousel" class="es-carousel-wrapper">
 		<div class="es-carousel">
 			<?php
-			$args = array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 50, true, 'carousel_categories' => $customcategory )
+			$args = array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 50, true, 'carousel_categories' => $customcategory );
 			$carousel_posts = get_posts( $args );
 			
 			if ( $carousel_posts ) : ?>

@@ -26,4 +26,8 @@ function response_portfolio_element() {
 function response_product_element() {
 	do_action ('response_product_element');
 }
+
+function response_carousel_element() {
+	do_action ('response_carousel_element');
+}
 ?>
