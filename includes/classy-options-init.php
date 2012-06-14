@@ -226,7 +226,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->checkbox($themeslug.'_sidebar_banner', __('Sidebar Banner', 'response-admin'))
 		->text($themeslug.'_sidebar_banner_url', __('Sidebar Banner URL', 'response-admin'))
 	->section(__('Events',  'response-admin'))
-		->info("Info about events calendar will go here")
+		->info("Info about events calendar will go here<br/><a href='themes.php?page=install-required-plugins'>Click here to install</a>")
 	->section(__('Import / Export',  'response-admin'))
 		->open_outersection()
 			->export(__('Export Settings', 'response-admin'))

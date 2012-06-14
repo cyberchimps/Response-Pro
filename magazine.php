@@ -57,7 +57,7 @@ get_header();  //Display Header
 		<div class="row-fluid homefeature">
 		
 			<!-- Start of Headline post-->
-			<div class="span7" id="content-row">
+			<div class="span8 headline_post" id="content-row">
 				<div id="headline">        
 					<?php
                     /* To keep the post ids for those are already displayed */
