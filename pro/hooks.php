@@ -30,4 +30,9 @@ function response_product_element() {
 function response_carousel_element() {
 	do_action ('response_carousel_element');
 }
+
+function response_magazine_element() {
+	do_action ('response_magazine_element');
+}
+
 ?>
