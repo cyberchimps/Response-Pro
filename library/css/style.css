@@ -16,7 +16,7 @@ input[type=reset]{font-size: 12px;padding: 2px;margin-top: 5px;border: 1px solid
 a img{border:none}
 a{outline:none}
 
-body {background: #fff;}
+body {background: #ccc;}
 
 /* Misc  */
 
@@ -27,7 +27,7 @@ body {background: #fff;}
 #woo_container {border: 1px solid #DDD; padding: 15px; margin-bottom: 15px;}
 #woo_container.span8 {margin-left: 0;}
 
-.container-fluid {max-width: 1020px; margin-left: auto; margin-right: auto; padding-left: 0px; padding-right: 0px;}
+.container-fluid {max-width: 980px; margin-left: auto; margin-right: auto; padding-left: 0px; padding-right: 0px;}
 
 a {color: #0082D5;}
 
@@ -897,9 +897,16 @@ div.featured-info {
 }
 
 /* ============ Headline Post ============ */
+
+.headline_post {
+	background: #333;
+	min-height: 330px !important;
+}
+
 #headline {
     display: inline;
     float: left;
+	width: 95%;
 }
 #headline  h1.title{
     font-size:30px;
@@ -929,10 +936,13 @@ div.featured-info {
 #headline .headline-left {
     display: inline;
     float: left;
+	width: 35%;
 }
 #headline img {
     border: 3px solid #FFFFFF;
     margin: 5px 15px 10px 0;
+	width: 92% !important;
+	height: auto !important;
 }
 #headline .title {
     letter-spacing: -0.05em;
@@ -952,7 +962,7 @@ div.featured-info {
 .homefeature
 {
 
- background:#333;
+
  clear:both;
  margin-bottom:20px;
 }

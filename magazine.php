@@ -57,7 +57,7 @@ get_header();  //Display Header
 		<div class="row-fluid homefeature">
 		
 			<!-- Start of Headline post-->
-			<div class="span7" id="content-row">
+			<div class="span8 headline_post" id="content-row">
 				<div id="headline">        
 					<?php
 					$the_query = new WP_Query(array('showposts' => 1, 'orderby' => 'post_date', 'order' => 'desc', 'post__not_in' => get_option( 'sticky_posts' ) )); 					

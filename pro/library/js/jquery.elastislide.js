@@ -265,9 +265,13 @@
 				setInterval(function autoplay() {
 					var display = $('.es-nav-next').css("display");
 					if(display == "none")
+					{
 						instance._slideToCurrent();
-					else if(display == "block")
+					}
+					else if(display == "block" || "inline")
+					{
 						instance._slide('right');
+					}	
 				},this.options.autoplay_speed);
 			}
 			
