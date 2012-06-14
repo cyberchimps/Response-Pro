@@ -618,8 +618,8 @@ function my_theme_register_required_plugin() {
 	
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
 		array(
-			'name' 		=> 'calendar',
-			'slug' 		=> 'calendar',
+			'name' 		=> 'the-events-calendar',
+			'slug' 		=> 'the-events-calendar',
 			'required' 	=> false,
 		),
 	);
@@ -636,7 +636,7 @@ function my_theme_register_required_plugin() {
 	 */
 	$config = array(
 		'domain'       		=> $theme_text_domain,         	// Text domain - likely want to be the same as your theme.
-		'default_path' 		=> 'wordpress.org/extend/plugins/calendar/',                         	// Default absolute path to pre-packaged plugins
+		'default_path' 		=> 'http://wordpress.org/extend/plugins/the-events-calendar/',                         	// Default absolute path to pre-packaged plugins
 		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
