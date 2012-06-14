@@ -17,7 +17,7 @@
 
 global $options, $themeslug, $post, $sidebar, $content_grid; // call globals	
 
-
+ $featured_images = $options->get($themeslug.'_show_featured_images');
 get_header();  //Display Header
 ?>
 	

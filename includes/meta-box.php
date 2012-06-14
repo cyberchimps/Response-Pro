@@ -103,7 +103,7 @@ function initialize_the_meta_boxes() {
 					);
 					
 	/* checking whether event plugin is active or not */				
-    if(is_plugin_active('eventstrunk1228/the-events-calendar.php')) {
+    if(is_plugin_active('the-events-calendar/the-events-calendar.php')) {
 		$elements['events_element'] = 'Events'; 
 	}	
 	
