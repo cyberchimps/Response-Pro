@@ -60,8 +60,12 @@ get_header();  //Display Header
 			<div class="span7" id="content-row">
 				<div id="headline">        
 					<?php
+                    /* To keep the post ids for those are already displayed */
+                    $exclude_posts = array();
+                    
 					$the_query = new WP_Query(array('showposts' => 1, 'orderby' => 'post_date', 'order' => 'desc', 'post__not_in' => get_option( 'sticky_posts' ) )); 					
 					if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post();
+                    $exclude_posts[] = get_the_ID();
 					?>
 						<!-- Headline Section -->
 						
@@ -101,6 +105,7 @@ get_header();  //Display Header
 						$featured_query = new WP_Query('category_name=featured-post &orderby=post_date&order=desc');  
 						if ($featured_query -> have_posts()) : 
 							while ($featured_query -> have_posts()) : $featured_query -> the_post();
+                            $exclude_posts[] = get_the_ID();
 						?>
 						<li>
 							<div class="clearfloat featured">
@@ -141,7 +146,9 @@ get_header();  //Display Header
 					<?php   
 					$counter = 0;
 					$the_query = new WP_Query('showposts=4&orderby=post_date&order=desc&offset=1');  ?>    
-					<?php if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+					<?php if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post(); 
+                            $exclude_posts[] = get_the_ID();
+                    ?>
 					
 					<div class="post_container span6 box_post">            
 						<div <?php post_class() ?> id="post-<?php the_ID(); ?>">                
@@ -218,9 +225,26 @@ get_header();  //Display Header
 					<?php else : ?>
 						<h2>Not Found</h2>
 					<?php endif; ?> 
-				
-					<?php $the_query = new WP_Query('orderby=post_date&order=desc&offset=5&posts_per_page=5');  ?>    
-					<?php if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post(); ?> 
+                    
+                
+					<?php 
+                    /* Modify the default loop to display certain posts with pagination 
+                       Display these posts in wide box format 
+                    */
+                    global $wp_query;
+                    $page_number = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    $wp_query = new WP_Query(
+                                        array(
+                                            'paged'         => $page_number,
+                                            'post_type'     => 'post',
+                                            'orderby'       => 'post_date',
+                                            'order'         => 'desc',
+                                            'posts_per_page'=> 5,
+                                            'post__not_in'  => $exclude_posts
+                                        )
+                                    );
+                    ?>    
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 				
 						<div class="post_container wide_post">
 							<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -282,11 +306,8 @@ get_header();  //Display Header
 
 					<?php endif; ?>
 					
-					<!--Begin response_pagination hook-->
-					<?php response_pagination(); ?>
-					<!--End response_pagination hook-->
-					
 				</div><!--end content-->
+                
 				<!--Begin @response pagination hook-->
 					<?php response_pagination(); ?>
 				<!--End @response pagination loop hook-->
