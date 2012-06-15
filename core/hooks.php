@@ -193,12 +193,21 @@ function response_before_footer() {
 }
 
 /**
-* Footer content. 
+* Footer Element. 
 *
 * @since 1.0
 */
-function response_footer() {
-	do_action('response_footer');
+function response_footer_element() {
+	do_action('response_footer_element');
+}
+
+/**
+* Afterfooter Element. 
+*
+* @since 1.0
+*/
+function response_afterfooter_element() {
+	do_action('response_afterfooter_element');
 }
 
 /**

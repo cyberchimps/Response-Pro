@@ -23,39 +23,15 @@ if ( !defined('ABSPATH')) exit;
 	global $options, $themeslug // call globals
 ?>
 	
-<?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
 
-</div><!--end container wrap-->
 
-<div class="footer">
-	<div id="main_wrap">
-   		<div id="footer" class="container-fluid">
-     		<div id="footer_container" class="row-fluid">
-    			<div id="footer_wrap" class="span12">	
-					<!--Begin response_footer hook-->
-						<?php response_footer(); ?>
-					<!--End response_footer hook-->
-				</div>
-	<?php endif;?>
-	
-			</div><!--end footer_wrap-->
-	</div><!--end footer-->
-</div> 
-
-<?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
-
-	<div id="afterfooter" class="container-fluid">
-		<div class="row-fluid" id="afterfooterwrap">	
-			
-		<!--Begin response_secondary_footer hook-->
-			<?php response_secondary_footer(); ?>
-		<!--End response_secondary_footer hook-->
-				
-		</div> <!--end afterfooter-->	
-	</div> 
-</div>	
-	
-	<?php endif;?>
+	<?php
+		foreach(explode(",", $options->get($themeslug.'_footer_section_order')) as $fn) {
+			if(function_exists($fn)) {
+				call_user_func_array($fn, array());
+			}
+		}
+	?>
 	
 	<?php wp_footer(); ?>	
 </div>  <!--End of footer-->

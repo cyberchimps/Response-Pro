@@ -93,7 +93,7 @@ function response_footer_element_content() {
 *
 * @since 1.0
 */
-function response_afterfooter_content_element() {
+function response_afterfooter_element_content() {
 	global $options, $themeslug; //call globals
 		
 	if ($options->get($themeslug.'_footer_text') == "") {
@@ -108,7 +108,7 @@ function response_afterfooter_content_element() {
 	
 		<div id='afterfootercopyright' class='span6'>
 			<?php echo "&copy; $copyright"; ?>
-			</div>
+		</div>
 	
 		<div id="credit" class="span6">
 			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/achimps.png" alt="credit" /></a>
