@@ -69,7 +69,7 @@ function response_carousel_element_content() {
 						?>
 						<?php if ($lightbox == '1' OR $lightbox == ''): ?>
 						<li>
-							<a href="<?php echo $image; ?>" rel="lightbox-carousel"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
+							<a href="<?php echo $image; ?>" rel="lightbox-carousel" title="<?php echo $title; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
 							<div class="carousel_caption"><?php echo $title; ?></div>
 						</li>
 						<?php endif; ?>
