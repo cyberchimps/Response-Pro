@@ -55,7 +55,7 @@ function response_carousel_element_content() {
 	<div id="carousel" class="es-carousel-wrapper">
 		<div class="es-carousel">
 			<?php
-			$args = array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 50, true, 'carousel_categories' => $customcategory );
+			$args = array ('post_type' => $themeslug.'_carousel_images', 'showposts' => 50, true, 'carousel_categories' => $customcategory );
 			$carousel_posts = get_posts( $args );
 			
 			if ( $carousel_posts ) : ?>
@@ -63,13 +63,22 @@ function response_carousel_element_content() {
 					<?php foreach($carousel_posts as $post) : setup_postdata($post);
 						/* Post-specific variables */
 				    	$title = (get_the_title() != "Untitled") ? get_the_title() : '';
-						$image = (get_post_meta($post->ID, 'post_image' , true)) ? get_post_meta($post->ID, 'post_image' , true) : $default;
-						$link = get_post_meta($post->ID, 'post_url' , true);
+						$image = (get_post_meta($post->ID, $themeslug.'_post_image' , true)) ? get_post_meta($post->ID, 'post_image' , true) : $default;
+						$link = get_post_meta($post->ID, $themeslug.'_post_url' , true);
+						$lightbox = get_post_meta($post->ID, $themeslug.'_carousel_image_lightbox' , true);
 						?>
+						<?php if ($lightbox == '1' OR $lightbox == '0'): ?>
+						<li>
+							<a href="<?php echo $image; ?>" rel="lightbox-carousel"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
+							<div class="carousel_caption"><?php echo $title; ?></div>
+						</li>
+						<?php endif; ?>
+						<?php if ($lightbox == '0'): ?>
 						<li>
 							<a href="<?php echo $link; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
 							<div class="carousel_caption"><?php echo $title; ?></div>
 						</li>
+						<?php endif; ?>
 					<?php endforeach; wp_reset_postdata(); ?>
 				</ul>
 			<?php else : ?>

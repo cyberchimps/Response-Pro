@@ -61,12 +61,12 @@ function initialize_the_meta_boxes() {
 			->sliderhelp('', 'Need Help?', '')
 		->end();
 		
-	$mb = new Chimps_Metabox(__('Carousel', 'response-admin'), __('Featured Post Carousel', 'response-admin'), array('pages' => array($themeslug.'_featured_posts')));
+	$mb = new Chimps_Metabox(__('Carousel', 'response-admin'), __('Featured Post Carousel', 'response-admin'), array('pages' => array($themeslug.'_carousel_images')));
 	$mb
 		->tab(__('Featured Post Carousel Options', 'response-admin'))
-			->text($themeslug.'_post_title', __('Featured Post Title', 'response-admin'), '')
-			->single_image($themeslug.'_post_image', __('Featured Post Image', 'response-admin'), '')
-			->text($themeslug.'_post_url', __('Featured Post URL', 'response-admin'), '')
+			->single_image($themeslug.'_carousel_image', __('Featured Post Image', 'response-admin'), '')
+			->checkbox($themeslug.'_carousel_image_lightbox', __('Lightbox', 'response-admin'), '', array('std' => 'on'))
+			->text($themeslug.'_carousel_url', __('Featured Post URL', 'response-admin'), '')
 			->reorder($themeslug.'_reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
 		
