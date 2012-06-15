@@ -32,9 +32,21 @@ function response_carousel_element_content() {
 	if (is_page()) {
 		$customcategory = get_post_meta($post->ID, $themeslug.'_carousel_category' , true);
 		$speed = get_post_meta($post->ID, $themeslug.'_carousel_speed' , true);
+		$autoplay = get_post_meta($post->ID, $themeslug.'_carousel_autoplay' , true);
+		$autoplay_speed = get_post_meta($post->ID, $themeslug.'_carousel_autoplay_speed' , true);
+		
 	} else {
 		$customcategory = $options->get($themeslug.'_carousel_category');
 		$speed = $options->get($themeslug.'_carousel_speed');
+		$autoplay = $options->get($themeslug.'_carousel_autoplay');
+		$autoplay_speed = $options->get($themeslug.'_carousel_autoplay_speed');
+	}
+	
+	if ($autoplay == 1) {
+		$play = 'true';
+	}
+	else {
+		$play = 'false';
 	}
 	/* End define variables. */	 
 ?>
@@ -78,10 +90,10 @@ function response_carousel_element_content() {
 			<script type="text/javascript">
 				jQuery(document).ready(function ($) {
 					$('#carousel').elastislide({
-						autoplay	: true,
+						autoplay	: <?php echo $play; ?>,
 						imageW 		: 145,
 						speed 		: <?php echo $speed; ?>,
-						autoplay_speed : <?php echo 2*$speed; ?>,
+						autoplay_speed : <?php echo $autoplay_speed; ?>,
 						margin		: 9,
 						minItems 	: 5
 					});

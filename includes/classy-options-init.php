@@ -191,6 +191,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 		->subsection(__('Carousel Options', 'response-admin'))
 			->select($themeslug.'_carousel_category', __('Select the carousel category', 'response-admin'), array( 'options' => $customcarousel ))
 			->text($themeslug.'_carousel_speed', __('Carousel Animation Speed (ms)', 'response-admin'), array('default' => '750'))
+			->checkbox($themeslug.'_carousel_autoplay', __('Carousel Autoplay', 'response-admin'))
 		->subsection_end()
 	->section(__('Templates', 'response-admin'))
 		->subsection(__('Single Post', 'response-admin'))

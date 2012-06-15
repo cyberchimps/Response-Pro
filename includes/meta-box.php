@@ -147,6 +147,8 @@ function initialize_the_meta_boxes() {
 		->tab(__('Carousel Options', 'response-admin'))
 			->select($themeslug.'_carousel_category', __('Carousel Category', 'response-admin'), '', array('options' => $carouseloptions) )
 			->text($themeslug.'_carousel_speed', __('Carousel Animation Speed (ms)', 'response-admin') , '', array('std' => '750'))
+			->checkbox($themeslug.'_carousel_autoplay', __('Carousel Autoplay', 'response-admin'), '')
+			->text($themeslug.'_carousel_autoplay_speed', __('Carousel Autoplay Speed (ms)', 'response-admin') , '', array('std' => '750'))
 		->tab(__('Portfolio Options', 'response-admin'))
 			->select($themeslug.'_portfolio_row_number', __('Images per row', 'response-admin'), '', array('options' => array('Four (default)', 'Three', 'Two')) )
 			->select($themeslug.'_portfolio_category', __('Portfolio Category', 'response-admin'), '', array('options' => $portfoliooptions) )
