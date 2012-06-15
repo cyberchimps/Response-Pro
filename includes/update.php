@@ -8,7 +8,7 @@
 
 add_filter('pre_set_site_transient_update_themes', 'response_check_for_update');
 
-$theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
+$theme_data = wp_get_theme();
 $theme_version = $theme_data['Version'];
 $theme_base = get_option('stylesheet');
 

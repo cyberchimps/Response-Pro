@@ -2,6 +2,10 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.2 (06-15-12)
+-Replaced wp_theme_data() (deprecated) with wp_get_theme().
+-Fixed bug with breadcrumbs.
+
 Version 1.1.1 (06-11-12)
 -3.4 support for Custom Background (backwards compatible with 3.3 and below).
 -Tweak for Twitterbar to correct random "no tweets to display" message.
