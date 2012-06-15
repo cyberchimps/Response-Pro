@@ -63,11 +63,11 @@ function response_carousel_element_content() {
 					<?php foreach($carousel_posts as $post) : setup_postdata($post);
 						/* Post-specific variables */
 				    	$title = (get_the_title() != "Untitled") ? get_the_title() : '';
-						$image = (get_post_meta($post->ID, $themeslug.'_post_image' , true)) ? get_post_meta($post->ID, 'post_image' , true) : $default;
-						$link = get_post_meta($post->ID, $themeslug.'_post_url' , true);
+						$image = (get_post_meta($post->ID, $themeslug.'_carousel_image' , true)) ? get_post_meta($post->ID, $themeslug.'_carousel_image' , true) : $default;
+						$link = get_post_meta($post->ID, $themeslug.'_carousel_url' , true);
 						$lightbox = get_post_meta($post->ID, $themeslug.'_carousel_image_lightbox' , true);
 						?>
-						<?php if ($lightbox == '1' OR $lightbox == '0'): ?>
+						<?php if ($lightbox == '1' OR $lightbox == ''): ?>
 						<li>
 							<a href="<?php echo $image; ?>" rel="lightbox-carousel"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/></a>
 							<div class="carousel_caption"><?php echo $title; ?></div>
