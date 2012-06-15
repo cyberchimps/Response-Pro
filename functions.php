@@ -641,7 +641,7 @@ function my_theme_register_required_plugin() {
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
-		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
+		'is_automatic'    	=> true,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
 			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
