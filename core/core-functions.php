@@ -149,7 +149,7 @@ function response_breadcrumbs() {
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
  
-  if ( !is_home() && !is_front_page() && !is_attachment() || is_paged() ) {
+  if ( !is_home() && !is_front_page() || is_paged() ) {
  
     echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
  
@@ -186,7 +186,7 @@ function response_breadcrumbs() {
         echo $before . get_the_title() . $after;
       } else {
         $cat = get_the_category(); $cat = $cat[0];
-        echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+        echo is_wp_error( $cat_parents = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ') ) ? '' : $cat_parents;
         echo $before . get_the_title() . $after;
       }
  
@@ -197,7 +197,7 @@ function response_breadcrumbs() {
     } elseif ( is_attachment() ) {
       $parent = get_post($post->post_parent);
       $cat = get_the_category($parent->ID); $cat = $cat[0];
-      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+      echo is_wp_error( $cat_parents = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ') ) ? '' : $cat_parents;
       echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a> ' . $delimiter . ' ';
       echo $before . get_the_title() . $after;
  
