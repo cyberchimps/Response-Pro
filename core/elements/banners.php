@@ -59,7 +59,8 @@ global $themeslug, $options, $root; //Call global variables
 	$embed = $options->get($themeslug.'_footer_banner_code_embed'); //Embed code for external ad.
 
 ?>
-
+<div class="container-fluid">
+	<div class="row-fluid">
 		<div id="banner">
 			
 			<?php if ($banner_type == "key1"):?>
@@ -72,8 +73,9 @@ global $themeslug, $options, $root; //Call global variables
 			<?php if ($banner_type == "key3") { echo stripslashes($embed); } ?>
 			
 			
-	</div>	
-
+		</div>	
+	</div>
+</div>
 <?php
 }
 
