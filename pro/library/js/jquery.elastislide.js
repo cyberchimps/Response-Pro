@@ -81,7 +81,7 @@
 	$.elastislide.defaults 		= {
 		autoplay	: true,
 		speed		: 450,	// animation speed
-		autoplay_speed : 900, // Autoplay speed
+		autoplay_speed : "medium", // Autoplay speed
 		easing		: '',	// animation easing effect
 		imageW		: 190,	// the images width
 		margin		: 3,	// image margin right
@@ -134,8 +134,15 @@
 		
 			if( this.options.speed < 0 )
 				this.options.speed = 450;
-			if( this.options.autoplay_speed  <  this.options.speed)
-				this.options.autoplay_speed = this.options.speed;
+				
+			if( this.options.autoplay_speed == "slow" )
+				this.options.autoplay_speed = 3000;
+			else if( this.options.autoplay_speed == "fast" )
+				this.options.autoplay_speed = 1000;
+			else
+				this.options.autoplay_speed = 2000;
+			
+				
 			if( this.options.margin < 0 )
 				this.options.margin = 4;
 			if( this.options.border < 0 )
@@ -270,18 +277,18 @@
 					}
 					else if(display == "block" || "inline")
 					{
-						instance._slide('right');
+						instance._slide('auto','right');
 					}	
 				},this.options.autoplay_speed);
 			}
 			
 			// navigation buttons events
 			this.$navNext.bind('click.elastislide', function( event ) {
-				instance._slide('right');
+				instance._slide( 'manual', 'right');
 			});
 			
 			this.$navPrev.bind('click.elastislide', function( event ) {
-				instance._slide('left');
+				instance._slide( 'manual', 'left');
 			});
 			
 			// item click event
@@ -292,16 +299,16 @@
 			// touch events
 			instance.$slider.touchwipe({
 				wipeLeft			: function() {
-					instance._slide('right');
+					instance._slide( 'manual', 'right');
 				},
 				wipeRight			: function() {
-					instance._slide('left');
+					instance._slide( 'manual', 'left');
 				}
 			});
 			
 		},
 		
-		_slide				: function( dir, val, anim, callback ) {
+		_slide				: function( slide_type, dir, val, anim, callback ) {
 			
 			// if animating return
 			if( this.$slider.is(':animated') )
@@ -385,7 +392,16 @@
 			
 			var instance	= this;
 			
-			this.$slider.applyStyle( sliderCSS, $.extend( true, [], { duration : this.options.speed, easing : this.options.easing, complete : function() {
+			if( slide_type == "manual" )
+			{
+				var slide_speed = this.options.speed
+			}
+			else if( slide_type == "auto" )
+			{
+				var slide_speed = this.options.autoplay_speed
+			}
+			
+			this.$slider.applyStyle( sliderCSS, $.extend( true, [], { duration : slide_speed, easing : this.options.easing, complete : function() {
 				if( callback ) callback.call();
 			} } ) );
 			
@@ -394,7 +410,7 @@
 			
 			// how much to slide?
 			var amount	= this.current * this.itemW;
-			this._slide('', -amount, anim );
+			this._slide( 'manual', '', -amount, anim );
 			
 		},
 		add					: function( $newelems, callback ) {

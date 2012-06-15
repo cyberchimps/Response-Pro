@@ -102,7 +102,7 @@ function response_carousel_element_content() {
 						autoplay	: <?php echo $play; ?>,
 						imageW 		: 145,
 						speed 		: <?php echo $speed; ?>,
-						autoplay_speed : <?php echo $autoplay_speed; ?>,
+						autoplay_speed : "medium",
 						margin		: 9,
 						minItems 	: 5
 					});
