@@ -430,11 +430,11 @@ function slides_columns_display($portfolio_columns, $post_id){
 /**
 * Edit columns for slider post type.
 */ 
-add_filter('manage_edit-re_carousel_columns', 'carousel_edit_columns');
-add_action('manage_re_carousel_posts_custom_column',  'carousel_columns_display', 10, 2);
+add_filter('manage_edit-re_carousel_images_columns', 'carousel_edit_columns');
+add_action('manage_re_carousel_images_posts_custom_column',  'carousel_columns_display', 10, 2);
 
-function carousel_edit_columns($portfolio_columns){
-    $portfolio_columns = array(
+function carousel_edit_columns($carousel_columns){
+    $carousel_columns = array(
         "cb" => "<input type=\"checkbox\" />",
         "title" => _x('Title', 'column name'),
         "image" => __('Image'),
@@ -443,14 +443,14 @@ function carousel_edit_columns($portfolio_columns){
         "date" => __('Date'),
     );
    
-    return $portfolio_columns;
+    return $carousel_columns;
 }
-function carousel_columns_display($portfolio_columns, $post_id){
+function carousel_columns_display($carousel_columns, $post_id){
 	global $themeslug, $post;
 	$cat = get_the_terms($post->ID, 'carousel_categories');
-	$images = get_post_meta($post->ID, $themeslug.'_post_image' , true);
+	$images = get_post_meta($post->ID, $themeslug.'_carousel_image' , true);
 	
-    switch ($portfolio_columns)
+    switch ($carousel_columns)
     {
         case "image":
         	if ( !empty( $images ) ) {
