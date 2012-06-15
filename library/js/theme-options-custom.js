@@ -5,7 +5,6 @@
 
 jQuery(document).ready(function($) {
 
-	
    $("#re_show_excerpts").change(function() {
     var toShow = $("#section-re_excerpt_link_text, #section-re_excerpt_length");
     if($(this).is(':checked')) {

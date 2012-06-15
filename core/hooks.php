@@ -504,8 +504,8 @@ function response_logo_icons() {
 *
 * @since 1.0
 */
-function response_banner() {
-	do_action('response_banner');
+function response_header_banner_element() {
+	do_action('response_header_banner_element');
 }
 
 /**
