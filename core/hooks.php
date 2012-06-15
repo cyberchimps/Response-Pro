@@ -500,15 +500,6 @@ function response_logo_icons() {
 }
 
 /**
-* Banner header element
-*
-* @since 1.0
-*/
-function response_header_banner_element() {
-	do_action('response_header_banner_element');
-}
-
-/**
 * Custom HTML header element
 *
 * @since 1.0
@@ -531,6 +522,37 @@ function response_callout_element() {
 function response_box_element() {
 	do_action('response_box_element');
 }
+
+
+/**
+* Header Banner Element
+*
+* @since 2.0
+*/
+function response_header_banner_element() {
+	do_action('response_header_banner_element');
+}
+
+
+/**
+* Header Banner Element
+*
+* @since 2.0
+*/
+function response_footer_banner_element() {
+	do_action('response_footer_banner_element');
+}
+
+
+/**
+* Header Banner Element
+*
+* @since 2.0
+*/
+function response_single_banner_element() {
+	do_action('response_single_banner_element');
+}
+
 
 /**
 * End
