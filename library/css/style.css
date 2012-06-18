@@ -184,39 +184,6 @@ body {
 #sidebar {
   *margin-top: 15px;
 }
-#sidebar.four.columns {
-  margin-left: 1.6%;
-  width: 32.6%;
-  right: -.2em;
-}
-#sidebar.four.columns {
-  margin-left: 1.5%\9;
-  width: 32.6%;
-  right: -.2em;
-}
-#sidebar_left.four.columns {
-  margin-right: 1.6%;
-  width: 32.6%;
-}
-#sidebar_left.four.columns {
-  margin-right: 1.5%\9;
-  width: 32.6%;
-}
-#content.eight.columns {
-  width: 65.9%;
-  margin-left: 0%;
-}
-@-moz-document url-prefix() {
-	#sidebar.four.columns {
-    margin-left: 1.5%;
-    width: 32.6%;
-    right: -2px;
-	}
-	#sidebar_left.four.columns {
-    margin-right: 1.5%;
-    width: 32.6%;
- 	}
-}
 
 /********************************************************************************************************************/
 /******************************************** HEADER ****************************************************************/
@@ -441,25 +408,6 @@ h1.description, h1.sitename {
 }
 .children {
   z-index: 3000;
-}
-
-/* ======================================== Home Button ============================================ */
-
-#home {
-  float: left;
-  border-right:#aaa 1px solid;
-  margin-right:4px;
-  margin-left:15px;
-  height: 36px;
-}
-#home a:hover {
-  opacity: .5;
-}
-#nohome {
-  float: left;
-  margin-right:4px;
-  margin-left:5px;
-  height: 35px;
 }
 
 /********************************************************************************************************************/
@@ -691,44 +639,6 @@ ol.commentlist li.odd {
 	margin:5px 0px 0px 5px;
 	float:left;
 	text-indent:-99999em;
-}
-#share {
-  text-align:left;
-  float:left;
-  padding-top: 3px;
-}
-.share a img {
-  opacity:.8;
-}
-.share a:hover img {
-  opacity:1;
-}
-.share-fb { 
-  height: 13px; 
-  width: 13px; 
-  background-position: -0px -0px; 
- } 
-.share-twt { 
-  height: 13px; 
-  width: 13px; 
-  background-position: -13px -0px; 
-} 
-.share-ln { 
-  height: 13px; 
-  width: 13px; 
-  background-position: -26px -0px; 
-} 
-.share-rdt { 
-  height: 13px; 
-  width: 13px; 
-  background-position: -52px -0px; 
-} 
-#fb {
-  width: 440px;
-  margin-bottom: 5px;
-}
-.gplusone {
-  margin-bottom: 10px;
 }
 .post-edit-link {
   background-color: #757575;

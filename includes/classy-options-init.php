@@ -178,7 +178,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug.'_blog_custom_callout_options', __('Custom Callout Options', 'response-admin'))
 			->color($themeslug.'_blog_callout_text_color', __('Custom Callout Text Color', 'response-admin'))
 		->subsection_end()
-		->subsection(__('Twtterbar Options', 'response-admin'))
+		->subsection(__('Twitterbar Options', 'response-admin'))
 			->text($themeslug.'_blog_twitter', __('Enter your Twitter handle', 'response-admin'))
 			->checkbox($themeslug.'_blog_twitter_reply', __('Show @ Replies', 'response-admin'))
 		->subsection_end()
