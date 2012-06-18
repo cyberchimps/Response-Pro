@@ -105,7 +105,6 @@ get_header();  //Display Header
 						$featured_query = new WP_Query('category_name=featured-post &orderby=post_date&order=desc');  
 						if ($featured_query -> have_posts()) : 
 							while ($featured_query -> have_posts()) : $featured_query -> the_post();
-                            $exclude_posts[] = get_the_ID();
 						?>
 						<li>
 							<div class="clearfloat featured">
@@ -141,97 +140,8 @@ get_header();  //Display Header
 				<?php response_before_content_sidebar(); ?>
 			<!--End response_before_content_sidebar hook-->
 
-			<div id="content" class="<?php echo $content_grid; ?>">
-				<div class="row-fluid">
-					<?php   
-					$counter = 0;
-					$the_query = new WP_Query('showposts=4&orderby=post_date&order=desc&offset=1');  ?>    
-					<?php if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post(); 
-                            $exclude_posts[] = get_the_ID();
-                    ?>
-					
-					<div class="post_container span6 box_post">            
-						<div <?php post_class() ?> id="post-<?php the_ID(); ?>">                
-							<?php                
-							if (get_post_format() == '') {
-								$format = "default";
-							}
-							else {
-								$format = get_post_format();
-							} ?>
-						
-							<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-							
-							<!--begin response_post_byline hook-->
-								<?php response_post_byline(); ?>
-							<!--end response_post_byline hook-->
-								
-							<?php
-							if ( has_post_thumbnail() ) {
-								echo '<div class="featured-image">';
-								echo '<a href="' . get_permalink($post->ID) . '" >';
-									the_post_thumbnail();
-								echo '</a>';
-								echo '</div>';
-							}
-							?>	
-							
-							<div class="entry" <?php if ( has_post_thumbnail() ) { echo 'style="min-height: 115px;" '; }?>>
-								<?php the_excerpt();    ?>
-							</div><!--end entry-->  
-						
-							<!--Begin response_link_pages hook-->
-								<?php response_link_pages(); ?>
-							<!--End response_link_pages hook-->
-						
-							<!--Begin response_post_edit_link hook-->
-								<?php response_edit_link(); ?>
-							<!--End response_post_edit_link hook-->		
-										
-							<!--Begin response_post_bar hook-->
-								<?php response_post_bar(); ?>
-							<!--End response_post_bar hook-->
-							
-							<!-- ************Links to share in social networks***********-->	
-							<!-- Share in Facebook -->
-							<div class="socialbar">
-							<a class="share-fb social" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook" target="blank">Facebook</a>
-							
-							<!-- Twitt in Twitter -->
-							<a class="share-twt social" href="http://twitter.com/home?status=Currently reading <?php the_permalink(); ?>" title="Share on Twitter" target="_blank">Twitter</a>
-							
-							<!-- Share in LikedIn -->
-							<a class="share-ln social" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=<?php the_title(); ?>&summary=&source=<?php bloginfo('name'); ?>" target="_new">LinkedIn</a>
-							
-							<!-- Share in Reddit -->
-							<a class="share-rdt social" href="http://www.reddit.com/submit?url=<?php the_permalink();?>&title=<?php the_title(); ?>" target="blank">Reddit</a>
-							</div>
-						
-						</div><!--end post_class-->
-					</div><!--end post container-->
-					
-					<?php 
-						$counter++; 
-						if(2 == $counter) {
-							echo '</div><div class="row-fluid">';
-							$counter = 0;
-						}
-					?>
-				
-					<?php 
-					endwhile; 
-					wp_reset_query();      
-					?>
-					<?php else : ?>
-						<h2>Not Found</h2>
-					<?php endif; ?> 
-                    
-                
-					<?php 
-                    /* Modify the default loop to display certain posts with pagination 
-                       Display these posts in wide box format 
-                    */
-                    global $wp_query;
+			<?php
+			global $wp_query;
                     $page_number = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $wp_query = new WP_Query(
                                         array(
@@ -239,70 +149,150 @@ get_header();  //Display Header
                                             'post_type'     => 'post',
                                             'orderby'       => 'post_date',
                                             'order'         => 'desc',
-                                            'posts_per_page'=> 5,
+                                            'posts_per_page'=> 9,
                                             'post__not_in'  => $exclude_posts
                                         )
                                     );
-                    ?>    
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-				
-						<div class="post_container wide_post">
-							<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-								<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			?>
+			
+			<div id="content" class="<?php echo $content_grid; ?>">
+				<div class="row-fluid">
+					
+					<?php
+						$counter_post = 0; 
+						$counter_box = 0;
+					?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
+						
+						<?php if( $counter_post <4 )
+						{ ?>
+							<div class="post_container span6 box_post">            
+								<div <?php post_class() ?> id="post-<?php the_ID(); ?>">                
+									<?php                
+									if (get_post_format() == '') {
+										$format = "default";
+									}
+									else {
+										$format = get_post_format();
+									} ?>
+								
+									<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+									
 									<!--begin response_post_byline hook-->
 										<?php response_post_byline(); ?>
 									<!--end response_post_byline hook-->
-								<?php
-								if ( has_post_thumbnail() && $featured_images == '1') {
-									echo '<div class="featured-image">';
-									echo '<a href="' . get_permalink($post->ID) . '" >';
-										the_post_thumbnail();
-									echo '</a>';
-									echo '</div>';
-								}
-								?>	
-								<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
-									<?php 
-										the_excerpt();
-									 ?>
-								</div><!--end entry-->    
-							
-								<!--Begin response_link_pages hook-->
-									<?php response_link_pages(); ?>
-								<!--End response_link_pages hook-->
-							
-								<!--Begin response_post_edit_link hook-->
-									<?php response_edit_link(); ?>
-								<!--End response_post_edit_link hook-->		
-											
-								<!--Begin response_post_tags hook-->
-									<?php response_post_tags(); ?>
-								<!--End response_post_tags hook-->
-											
-								<!--Begin response_post_bar hook-->
-									<?php response_post_bar(); ?>
-								<!--End response_post_bar hook-->
-							
-								<!-- ************Links to share in social networks***********-->	
-								<!-- Share in Facebook -->	
-								<div class="socialbar">
-								<a class="share-fb social" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook" target="blank">Facebook</a>
-							
-								<!-- Twitt in Twitter -->
-								<a class="share-twt social" href="http://twitter.com/home?status=Currently reading <?php the_permalink(); ?>" title="Share on Twitter" target="_blank">Twitter</a>
+										
+									<?php
+									if ( has_post_thumbnail() ) {
+										echo '<div class="featured-image">';
+										echo '<a href="' . get_permalink($post->ID) . '" >';
+											the_post_thumbnail();
+										echo '</a>';
+										echo '</div>';
+									}
+									?>	
+									
+									<div class="entry" <?php if ( has_post_thumbnail() ) { echo 'style="min-height: 115px;" '; }?>>
+										<?php the_excerpt();    ?>
+									</div><!--end entry-->  
 								
-								<!-- Share in LikedIn -->
-								<a class="share-ln social" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=<?php the_title(); ?>&summary=&source=<?php bloginfo('name'); ?>" target="_new">LinkedIn</a>
+									<!--Begin response_link_pages hook-->
+										<?php response_link_pages(); ?>
+									<!--End response_link_pages hook-->
 								
-								<!-- Share in Reddit -->
-								<a class="share-rdt social" href="http://www.reddit.com/submit?url=<?php the_permalink();?>&title=<?php the_title(); ?>" target="blank">Reddit</a>
-							</div>
-							</div><!--end post_class-->
-						</div><!--end post container-->
+									<!--Begin response_post_edit_link hook-->
+										<?php response_edit_link(); ?>
+									<!--End response_post_edit_link hook-->		
+												
+									<!--Begin response_post_bar hook-->
+										<?php response_post_bar(); ?>
+									<!--End response_post_bar hook-->
+									
+									<!-- ************Links to share in social networks***********-->	
+									<!-- Share in Facebook -->
+									<div class="socialbar">
+									<a class="share-fb social" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook" target="blank">Facebook</a>
+									
+									<!-- Twitt in Twitter -->
+									<a class="share-twt social" href="http://twitter.com/home?status=Currently reading <?php the_permalink(); ?>" title="Share on Twitter" target="_blank">Twitter</a>
+									
+									<!-- Share in LikedIn -->
+									<a class="share-ln social" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=<?php the_title(); ?>&summary=&source=<?php bloginfo('name'); ?>" target="_new">LinkedIn</a>
+									
+									<!-- Share in Reddit -->
+									<a class="share-rdt social" href="http://www.reddit.com/submit?url=<?php the_permalink();?>&title=<?php the_title(); ?>" target="blank">Reddit</a>
+									</div>
+								
+								</div><!--end post_class-->
+							</div><!--end post container-->
+							<?php 
+							$counter_box++;
+							$counter_post++;
+							if(2 == $counter_box) {
+								echo '</div><div class="row-fluid">';
+								$counter_box = 0;
+							}
+						}
+						else
+						{ ?>
+							<div class="post_container wide_post">
+								<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+									<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+										<!--begin response_post_byline hook-->
+											<?php response_post_byline(); ?>
+										<!--end response_post_byline hook-->
+									<?php
+									if ( has_post_thumbnail() && $featured_images == '1') {
+										echo '<div class="featured-image">';
+										echo '<a href="' . get_permalink($post->ID) . '" >';
+											the_post_thumbnail();
+										echo '</a>';
+										echo '</div>';
+									}
+									?>	
+									<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
+										<?php 
+											the_excerpt();
+										 ?>
+									</div><!--end entry-->    
+								
+									<!--Begin response_link_pages hook-->
+										<?php response_link_pages(); ?>
+									<!--End response_link_pages hook-->
+								
+									<!--Begin response_post_edit_link hook-->
+										<?php response_edit_link(); ?>
+									<!--End response_post_edit_link hook-->		
+												
+									<!--Begin response_post_tags hook-->
+										<?php response_post_tags(); ?>
+									<!--End response_post_tags hook-->
+												
+									<!--Begin response_post_bar hook-->
+										<?php response_post_bar(); ?>
+									<!--End response_post_bar hook-->
+								
+									<!-- ************Links to share in social networks***********-->	
+									<!-- Share in Facebook -->	
+									<div class="socialbar">
+									<a class="share-fb social" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook" target="blank">Facebook</a>
+								
+									<!-- Twitt in Twitter -->
+									<a class="share-twt social" href="http://twitter.com/home?status=Currently reading <?php the_permalink(); ?>" title="Share on Twitter" target="_blank">Twitter</a>
+									
+									<!-- Share in LikedIn -->
+									<a class="share-ln social" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=<?php the_title(); ?>&summary=&source=<?php bloginfo('name'); ?>" target="_new">LinkedIn</a>
+									
+									<!-- Share in Reddit -->
+									<a class="share-rdt social" href="http://www.reddit.com/submit?url=<?php the_permalink();?>&title=<?php the_title(); ?>" target="blank">Reddit</a>
+								</div>
+								</div><!--end post_class-->
+							</div><!--end post container-->
+						<?php }	?>
 						
 						<?php endwhile;
-					else : ?>
-						<h2>Not Found</h2>
+						else : ?>
+							<h2>Not Found</h2>
 
 					<?php endif; ?>
 					
