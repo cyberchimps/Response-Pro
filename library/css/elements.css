@@ -1,65 +1,79 @@
 /* Page Elements */
 
+/********************************************************************************************************************/
+/******************************************** SLIDER ****************************************************************/
+/********************************************************************************************************************/
+
 #orbitDemo {border: 1px solid #ccc;}
 
-/*============================*/
-/*===== Carousel Styles ======*/
-/*============================*/
+/********************************************************************************************************************/
+/******************************************** CAROUSEL **************************************************************/
+/********************************************************************************************************************/
+
 /* Elastislide Style */
+
 .es-carousel-wrapper{
 	background: #fff;
 	border: 1px solid #DDD;
-	padding:10px 37px;
-	position:relative;
+	padding: 10px 37px;
+	position: relative;
 	margin-bottom: 15px;
 }
 .es-carousel{
-	overflow:hidden;
-	background:#fff;
+	overflow: hidden;
+	background: #fff;
 }
 .es-carousel ul{
-	display:none;
+	display: none;
 }
 .es-carousel ul li{
-	height:100%;
-	float:left;
-	display:block;
+	height: 100%;
+	float: left;
+	display: block;
 }
 .es-carousel ul li a{
-	display:block;
-	border-style:solid;
-	border-color:#444;
+	display: block;
+	border-style: solid;
+	border-color: #444;
 }
 .es-carousel ul li a img{
-	display:block;
-	border:none;
-	max-height:100%;
-	max-width:100%;
+	display: block;
+	border: none;
+	max-height: 100%;
+	max-width: 100%;
 }
 .es-nav span{
-	position:absolute;
-	top:50%;
-	left:12px;
-	background:transparent url(../images/nav.png) no-repeat top left;
-	width:14px;
-	height:26px;
-	margin-top:-13px;
-	text-indent:-9000px;
-	cursor:pointer;
-	opacity:0.8;
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	background: transparent url(../images/nav.png) no-repeat top left;
+	width: 14px;
+	height: 26px;
+	margin-top: -13px;
+	text-indent: -9000px;
+	cursor: pointer;
+	opacity: 0.8;
 }
 .es-nav span.es-nav-next{
-	right:12px;
-	left:auto;
-	background-position:top right;
+	right: 12px;
+	left: auto;
+	background-position: top right;
 }
 .es-nav span:hover{
-	opacity:1.0;
+	opacity: 1.0;
 }
-.carousel_caption {text-align: center; margin-top: -21px; background: rgba(0, 0, 0, .6); color: white; width: 100%; position: relative; }
-/*============================*/
-/*======= Twitter Bar ========*/
-/*============================*/
+.carousel_caption {
+  text-align: center;
+  margin-top: -21px;
+  background: rgba(0, 0, 0, .6);
+  color: white;
+  width: 100%;
+  position: relative;
+}
+
+/********************************************************************************************************************/
+/******************************************** TWITTER BAR ***********************************************************/
+/********************************************************************************************************************/
 
 #twitterbar {
 	background: #fff;
@@ -74,51 +88,65 @@
 	font-size: 14px;
 }
 
-/*============================*/
-/*===== Product Styles ======*/
-/*============================*/
-#product {margin-top: 45px; padding-bottom: 45px;}
-#product_text {color: black; padding: 0px 0 0px 0;}
+/********************************************************************************************************************/
+/******************************************** PRODUCT STYLES ********************************************************/
+/********************************************************************************************************************/
+
+#product {
+  margin-top: 45px;
+  padding-bottom: 45px;
+}
+#product_text {
+  color: black;
+  padding: 0px 0 0px 0;
+}
 .product_text_wrap {}
-#product_text.span6 {width:48%;}
-#product_media.span6 {width: 48%; margin-left: 0%;}
-.product_text_title {font-size: 24px;}
-.product_text_text {font-size: 14px;color:#000; line-height: 1.5;}
-
-#product_media {padding: 0px 0 0px 0;}
-
-#image_container.span6 {margin-left: 2%;}
-
-
+#product_text.span6 {
+  width:48%;
+}
+#product_media.span6 {
+  width: 48%;
+  margin-left: 0%;
+}
+.product_text_title {
+  font-size: 24px;
+}
+.product_text_text {
+  font-size: 14px;
+  color:#000;
+  line-height: 1.5;
+}
+#product_media {
+  padding: 0px 0 0px 0;
+}
+#image_container.span6 {
+  margin-left: 2%;
+}
 .elementsbg {
 	background: #fff; 
 }
 
-
-/*============================*/
-/*===== Callout Section ======*/
-/*============================*/
+/********************************************************************************************************************/
+/******************************************** CALLOUT SECTION *******************************************************/
+/********************************************************************************************************************/
 
 #calloutwrap {
 	overflow: hidden;
-	position:relative;
+	position: relative;
 	display: block;
 	margin: auto;
 	margin-bottom: 15px;
 	background: #fff;
 	border: 1px solid #DDD;
 }
-
 #callout_text {
 	font-size: 14px;
 	margin-left: 0;
 	padding: 15px;
 }
-
 .callout_title {
 	font-size: 20px;
 }
-
 #calloutbutton {
 	padding: 10px 5px 10px 5px;
 	margin-top: 28px;
@@ -128,40 +156,40 @@
 	color: #fff;
 	text-align: center;
 	position: relative;
-	
 }
-
 #calloutimg{
-	padding-top: 10px;
-	
+	padding-top: 10px;	
 	float:right;
 }
-
-.callout_link {text-align: center; margin-bottom: 0px;}
-
+.callout_link {
+  text-align: center;
+  margin-bottom: 0px;
+}
 #calloutbutton:hover{
 	background: #222;
 }
-
 #calloutbutton a{
 	color: #fff;
 	font-size: 18px;
 	font-weight: 800;
 }
 
-/*============================*/
-/*====== Widgitized Boxes =====*/
-/*============================*/
+/********************************************************************************************************************/
+/******************************************** WIDGETIZED BOXES ******************************************************/
+/********************************************************************************************************************/
 
 #box_container ul {
 	list-style: none;
 }
-
-#box2.four.columns { margin-left:2.3%;}
-#box3.four.columns { margin-left:2.1%;}
-
-#box1.four.columns, #box2.four.columns, #box3.four.columns {width: 31.7%;}
-
+#box2.four.columns { 
+	margin-left: 2.3%;
+}
+#box3.four.columns {
+  margin-left:2.1%;
+}
+#box1.four.columns, #box2.four.columns, #box3.four.columns {
+  width: 31.7%;
+}
 .box-widget-title {
 	color: #222;
 	height: 25px;
@@ -169,21 +197,18 @@
 	font-weight: bold;
 	text-align: center;
 }
-
 #box1 {
 	min-height: 200px;
 	background: #fff;
 	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
-
 #box2 {
 	min-height: 200px;
 	background: #fff;
 	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
-
 #box3 {
 	min-height: 200px;
 	background: #fff;
@@ -191,130 +216,154 @@
 	right: -1px;
 	margin-bottom: 15px;
 }
-
-
-
 @-moz-document url-prefix() {
-#box2.four.columns, #box3.four.columns {margin-left: 2.1%;}
-#box3 {right: -2px;}
+	#box2.four.columns, #box3.four.columns {
+    margin-left: 2.1%;
+  }
+#box3 {
+  right: -2px;
+}
+}
+.boxes ul {
+  padding-left: 15px;
 }
 
-
-.boxes ul { padding-left: 15px; }
-
-/*============================*/
-/*====== Tabbed Widgit =====*/
-/*============================*/
-
-/* Tabs */
+/********************************************************************************************************************/
+/******************************************** TABBED WIDGET ****************************************************************/
+/********************************************************************************************************************/
 
 .response-tabbed-header li {
 	float: left;
 }
-
 .response-tabbed-popular-posts li, .response-tabbed-recent-posts li {
 	padding: 10px;
 	border-bottom: 1px solid #E2E2E2;
 	padding-bottom: 20px;
 }
-
 .response-tabbed-comments li {
 	padding: 10px 10px 25px 10px;
 	border-bottom: 1px solid #E2E2E2; 
 	padding-bottom: 35px;
 }
-
 .response-tabbed-tab {
 	clear: both;
 }
-
 .ui-tabs-hide {
 	display: none;
 }
-
 .response-tabbed-widget {
 	margin: -10px 0 0 0;
 }
-
 .response-tabbed-header {
-
 }
-
-.tab-image {float: left; margin-right: 10px; border: 2px solid #444; }
-
+.tab-image {
+  float: left;
+  margin-right: 10px;
+  border: 2px solid #444;
+}
 .ui-state-default {
 	background: #f4f4f4;
 	border-bottom: 1px solid #d9d9d9;
 	border-left: 1px solid #d9d9d9;
 	border-right: 1px solid #d9d9d9;
-
 }
-
 li.ui-state-default  {
-	margin-left: 0px !important; padding-left: 5px; padding-right: 5px;
+	margin-left: 0px !important;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-
 .ui-state-active {
 	background: #fff;
 	border-bottom: none;
 }
-
-#tab-4 {padding: 10px;}
-
-#tab-4 a {
-	padding: 3px 8px; background: #f4f4f4; font-size: 12px; margin: 0 4px 4px 0; border-radius: 3px;
+#tab-4 {
+  padding: 10px;
 }
-.tabbed-title {font-size: 14px; margin-top: 4px;}
+#tab-4 a {
+	padding: 3px 8px;
+  background: #f4f4f4;
+  font-size: 12px;
+  margin: 0 4px 4px 0;
+  border-radius: 3px;
+}
+.tabbed-title {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.tabbed-date {
+  font-size: 12px;
+  font-style: italic;
+}
+div.timer {
+  display: none !important;
+}
 
-.tabbed-date {font-size: 12px; font-style: italic;}
-
-div.timer {display: none !important;}
-
-/*============================*/
-/*===== Portfolio =====*/
-/*============================*/
+/********************************************************************************************************************/
+/******************************************** PORTFOLIO *************************************************************/
+/********************************************************************************************************************/
  
 #gallery {
 	margin-top: 45px;
-
 }
-
 #gallery {}
-
-#portfolio_wrap { margin-bottom: 45px;}
-
-#portfolio_wrap.span3:last-child, #portfolio_wrap.span4:last-child, #portfolio_wrap.span6:last-child {float:left;}
-
-.portfolio_title {color: white; padding-left: 20px;}
-
-.portfolio_caption {text-align: center; bottom: 50%; left: 5px; color: white; width: 100%; position: absolute; z-index: 2; font-size: 18px;}
-
-#gallery li.three.columns {margin-right:0px; margin-left: 4.4%;}
-#gallery li.four.columns {margin-right:0px; margin-left: 4.4%;}
-#gallery li.six.columns {margin-right:0px; margin-left: 4.4%;}
-
-#portfolio_wrap.span3:first-child, #portfolio_wrap.span4:first-child, #portfolio_wrap.span6:first-child {margin-left: 0%;}
-
-#portfolio_wrap.span3.first-row, #portfolio_wrap.span4.first-row, #portfolio_wrap.span6.first-row {margin-left: 0%;}
-
-#gallery ul { list-style: none; margin: 0px; }
-
-#gallery ul li { display: inline; }
-
-#gallery ul img {
-border: 2px solid #3D3D3D;
-
+#portfolio_wrap { 
+	margin-bottom: 45px;
 }
-	
+#portfolio_wrap.span3:last-child, #portfolio_wrap.span4:last-child, #portfolio_wrap.span6:last-child {
+  float: left;
+}
+.portfolio_title {
+  color: white;
+  padding-left: 20px;
+}
+.portfolio_caption {
+  text-align: center;
+  bottom: 50%;
+  left: 5px;
+  color: white;
+  width: 100%;
+  position: absolute; 
+  z-index: 2; 
+  font-size: 18px;
+}
+#gallery li.three.columns {
+  margin-right: 0px; 
+  margin-left: 4.4%;}
+#gallery li.four.columns {
+  margin-right: 0px; 
+  margin-left: 4.4%;
+}
+#gallery li.six.columns {
+  margin-right: 0px;
+  margin-left: 4.4%;
+}
+#portfolio_wrap.span3:first-child, #portfolio_wrap.span4:first-child, #portfolio_wrap.span6:first-child {
+  margin-left: 0%;
+}
+#portfolio_wrap.span3.first-row, #portfolio_wrap.span4.first-row, #portfolio_wrap.span6.first-row {
+  margin-left: 0%;
+}
+#gallery ul {
+  list-style: none;
+  margin: 0px;
+}
+#gallery ul li {
+  display: inline;
+}
+#gallery ul img {
+	border: 2px solid #3D3D3D;
+}	
 #gallery ul a:hover img {
-
 	color: #fff;
 	opacity: .5;
 }
-
-#gallery ul a:hover { color: #fff; }
+#gallery ul a:hover { 
+	color: #fff;
+}
 	
-/* SLIMBOX */
+/********************************************************************************************************************/
+/******************************************** SLIM BOX ****************************************************************/
+/********************************************************************************************************************/
 
 #lbOverlay {
 	position: fixed;
@@ -326,18 +375,15 @@ border: 2px solid #3D3D3D;
 	background-color: #000;
 	cursor: pointer;
 }
-
 #lbCenter, #lbBottomContainer {
 	position: absolute;
 	z-index: 9999;
 	overflow: hidden;
 	background-color: #fff;
 }
-
 .lbLoading {
 	background: #fff url(../images/portfolio/loading.gif) no-repeat center;
 }
-
 #lbImage {
 	position: absolute;
 	left: 0;
@@ -345,7 +391,6 @@ border: 2px solid #3D3D3D;
 	border: 10px solid #fff;
 	background-repeat: no-repeat;
 }
-
 #lbPrevLink, #lbNextLink {
 	display: block;
 	position: absolute;
@@ -353,23 +398,18 @@ border: 2px solid #3D3D3D;
 	width: 50%;
 	outline: none;
 }
-
 #lbPrevLink {
 	left: 0;
 }
-
 #lbPrevLink:hover {
 	background: transparent url(../images/portfolio/prevlabel.gif) no-repeat 0 15%;
 }
-
 #lbNextLink {
 	right: 0;
 }
-
 #lbNextLink:hover {
 	background: transparent url(../images/portfolio/nextlabel.gif) no-repeat 100% 15%;
 }
-
 #lbBottom {
 	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
 	font-size: 10px;
@@ -379,7 +419,6 @@ border: 2px solid #3D3D3D;
 	border: 10px solid #fff;
 	border-top-style: none;
 }
-
 #lbCloseLink {
 	display: block;
 	float: right;
@@ -389,11 +428,9 @@ border: 2px solid #3D3D3D;
 	margin: 5px 0;
 	outline: none;
 }
-
 #lbCaption, #lbNumber {
 	margin-right: 71px;
 }
-
 #lbCaption {
 	font-weight: bold;
 }
