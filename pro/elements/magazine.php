@@ -29,6 +29,8 @@ global $options, $themeslug, $post, $sidebar, $content_grid; // call globals
 
  $featured_images = $options->get($themeslug.'_show_featured_images');
 get_header();  //Display Header
+
+$box_no = 3;
 ?>
 	
 		<!-- Script for featured post slider-->
@@ -79,7 +81,7 @@ get_header();  //Display Header
 					?>
 						<!-- Headline Section -->
 						
-							<h2 class="headline-label"><a href="<?php the_permalink() ?>">Headline È</a></h2>
+							<h2 class="headline-label"><a href="<?php the_permalink() ?>">Headline &raquo</a></h2>
 						
 						<div class="clearfloat">
 							<?php if ( has_post_thumbnail() ) { ?>
@@ -150,86 +152,9 @@ get_header();  //Display Header
 			<!--Begin response_before_content_sidebar hook-->
 				<?php response_before_content_sidebar(); ?>
 			<!--End response_before_content_sidebar hook-->
-
-			<div id="content" class="<?php echo $content_grid; ?>">
-				<div class="row-fluid">
-					<?php   
-					$counter = 0;
-					$the_query = new WP_Query('showposts=4&orderby=post_date&order=desc&offset=1');  ?>    
-					<?php if ($the_query -> have_posts()) : while ($the_query -> have_posts()) : $the_query -> the_post(); 
-                            $exclude_posts[] = get_the_ID();
-                    ?>
-					
-					<div class="post_container span6 box_post">            
-						<div <?php post_class() ?> id="post-<?php the_ID(); ?>">                
-							<?php                
-							if (get_post_format() == '') {
-								$format = "default";
-							}
-							else {
-								$format = get_post_format();
-							} ?>
-						
-							<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-							
-							<!--begin response_post_byline hook-->
-								<?php response_post_byline(); ?>
-							<!--end response_post_byline hook-->
-								
-							<?php
-							if ( has_post_thumbnail() ) {
-								echo '<div class="featured-image">';
-								echo '<a href="' . get_permalink($post->ID) . '" >';
-									the_post_thumbnail();
-								echo '</a>';
-								echo '</div>';
-							}
-							?>	
-							
-							<div class="entry" <?php if ( has_post_thumbnail() ) { echo 'style="min-height: 115px;" '; }?>>
-								<?php the_excerpt();    ?>
-							</div><!--end entry-->  
-						
-							<!--Begin response_link_pages hook-->
-								<?php response_link_pages(); ?>
-							<!--End response_link_pages hook-->
-						
-							<!--Begin response_post_edit_link hook-->
-								<?php response_edit_link(); ?>
-							<!--End response_post_edit_link hook-->		
-										
-							<!--Begin response_post_bar hook-->
-								<?php response_post_bar(); ?>
-							<!--End response_post_bar hook-->
-							
-							<!-- ************Links to share in social networks***********-->	
-							<!-- Share in Facebook -->
-													
-						</div><!--end post_class-->
-					</div><!--end post container-->
-					
-					<?php 
-						$counter++; 
-						if(2 == $counter) {
-							echo '</div><div class="row-fluid">';
-							$counter = 0;
-						}
-					?>
-				
-					<?php 
-					endwhile; 
-					wp_reset_query();      
-					?>
-					<?php else : ?>
-						<h2>Not Found</h2>
-					<?php endif; ?> 
-                    
-                
-					<?php 
-                    /* Modify the default loop to display certain posts with pagination 
-                       Display these posts in wide box format 
-                    */
-                    global $wp_query;
+			
+			<?php
+			global $wp_query;
                     $page_number = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $wp_query = new WP_Query(
                                         array(
@@ -237,59 +162,137 @@ get_header();  //Display Header
                                             'post_type'     => 'post',
                                             'orderby'       => 'post_date',
                                             'order'         => 'desc',
-                                            'posts_per_page'=> 5,
+                                            'posts_per_page'=> 9,
                                             'post__not_in'  => $exclude_posts
                                         )
                                     );
-                    ?>    
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-				
-						<div class="post_container wide_post">
-							<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-								<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			?>
+			
+			<div id="content" class="<?php if($box_no == 2) echo $content_grid; else if($box_no == 3) echo "span12" ?>">
+				<div class="row-fluid">
+					
+					<?php
+						$counter_post = 0; 
+						$counter_box = 0;
+						
+					if (have_posts()) : while (have_posts()) : the_post();  
+					
+						if( $counter_post < 2*$box_no )
+						{ ?>
+							<div class="post_container box_post <?php if($box_no == 2) echo "span6" ; else if($box_no == 3) echo "span4" ?> ">            
+								<div <?php post_class() ?> id="post-<?php the_ID(); ?>">                
+									<?php                
+									if (get_post_format() == '') {
+										$format = "default";
+									}
+									else {
+										$format = get_post_format();
+									} ?>
+								
+									<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+									
 									<!--begin response_post_byline hook-->
 										<?php response_post_byline(); ?>
 									<!--end response_post_byline hook-->
-								<?php
-								if ( has_post_thumbnail() && $featured_images == '1') {
-									echo '<div class="featured-image">';
-									echo '<a href="' . get_permalink($post->ID) . '" >';
-										the_post_thumbnail();
-									echo '</a>';
-									echo '</div>';
-								}
-								?>	
-								<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
-									<?php 
-										the_excerpt();
-									 ?>
-								</div><!--end entry-->    
-							
-								<!--Begin response_link_pages hook-->
-									<?php response_link_pages(); ?>
-								<!--End response_link_pages hook-->
-							
-								<!--Begin response_post_edit_link hook-->
-									<?php response_edit_link(); ?>
-								<!--End response_post_edit_link hook-->		
-											
-								<!--Begin response_post_tags hook-->
-									<?php response_post_tags(); ?>
-								<!--End response_post_tags hook-->
-											
-								<!--Begin response_post_bar hook-->
-									<?php response_post_bar(); ?>
-								<!--End response_post_bar hook-->
-							
-								<!-- ************Links to share in social networks***********-->	
-								<!-- Share in Facebook -->	
+										
+									<?php
+									if ( has_post_thumbnail() ) {
+										echo '<div class="featured-image">';
+										echo '<a href="' . get_permalink($post->ID) . '" >';
+											the_post_thumbnail();
+										echo '</a>';
+										echo '</div>';
+									}
+									?>	
+									
+									<div class="entry" <?php if ( has_post_thumbnail() ) { echo 'style="min-height: 115px;" '; }?>>
+										<?php the_excerpt();    ?>
+									</div><!--end entry-->  
+								
+									<!--Begin response_link_pages hook-->
+										<?php response_link_pages(); ?>
+									<!--End response_link_pages hook-->
+								
+									<!--Begin response_post_edit_link hook-->
+										<?php response_edit_link(); ?>
+									<!--End response_post_edit_link hook-->		
+												
+									<!--Begin response_post_bar hook-->
+										<?php response_post_bar(); ?>
+									<!--End response_post_bar hook-->
+									
+									<!-- ************Links to share in social networks***********-->	
+									<!-- Share in Facebook -->
+															
 								</div><!--end post_class-->
-						</div><!--end post container-->
+							</div><!--end post container-->
+							<?php 
+							$counter_box++;
+							$counter_post++;
+							if($box_no == $counter_box) {
+								echo '</div><div class="row-fluid">';
+								$counter_box = 0;
+							}
+							
+							if( $counter_post == 6 && $box_no == 3 )
+							{ ?>
+								</div> </div> </div>	<!-- Ending "row-fluid" and "content" div -->
+								
+								<!-- Starting "content" and "row-fluid" div -->
+								<div class="row-fluid">	
+									<div id="content" class="<?php echo $content_grid ?>">
+										<div class="row-fluid">	
+							<?php
+							}
+						}
+						else
+						{ ?>
+							<div class="post_container wide_post">
+								<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+									<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+										<!--begin response_post_byline hook-->
+											<?php response_post_byline(); ?>
+										<!--end response_post_byline hook-->
+									<?php
+									if ( has_post_thumbnail() && $featured_images == '1') {
+										echo '<div class="featured-image">';
+										echo '<a href="' . get_permalink($post->ID) . '" >';
+											the_post_thumbnail();
+										echo '</a>';
+										echo '</div>';
+									}
+									?>	
+									<div class="entry" <?php if ( has_post_thumbnail() && $featured_images == '1' ) { echo 'style="min-height: 115px;" '; }?>>
+										<?php 
+											the_excerpt();
+										 ?>
+									</div><!--end entry-->    
+								
+									<!--Begin response_link_pages hook-->
+										<?php response_link_pages(); ?>
+									<!--End response_link_pages hook-->
+								
+									<!--Begin response_post_edit_link hook-->
+										<?php response_edit_link(); ?>
+									<!--End response_post_edit_link hook-->		
+												
+									<!--Begin response_post_tags hook-->
+										<?php response_post_tags(); ?>
+									<!--End response_post_tags hook-->
+												
+									<!--Begin response_post_bar hook-->
+										<?php response_post_bar(); ?>
+									<!--End response_post_bar hook-->
+								
+									<!-- ************Links to share in social networks***********-->	
+									<!-- Share in Facebook -->	
+									</div><!--end post_class-->
+							</div><!--end post container-->
+						<?php }	?>
 						
 						<?php endwhile;
-					else : ?>
-						<h2>Not Found</h2>
-
+						else : ?>
+							<h2>Not Found</h2>
 					<?php endif; ?>
 					
 				</div><!--end content-->
