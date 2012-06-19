@@ -245,7 +245,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 	->section(__('Banners',  'response-admin'))
 		->info('Placeholder for Banners/Affilaite info. ')
 	->section(__('Events',  'response-admin'))
-		->info("Info about events calendar will go here<br/><a href='themes.php?page=install-required-plugins&plugin=the-events-calendar&plugin_name=the-events-calendar&plugin_source=repo&tgmpa-install=install-plugin&_wpnonce=61442b34eb'>Click here to install</a>")
+		->info("Info about events calendar will go here<br/><a href='".  wp_nonce_url('themes.php?page=install-required-plugins&plugin=the-events-calendar&plugin_name=the-events-calendar&plugin_source=repo&tgmpa-install=install-plugin', 'tgmpa-install') ."'>Click here to install</a>")
 	->section(__('Import / Export',  'response-admin'))
 		->open_outersection()
 			->export(__('Export Settings', 'response-admin'))
