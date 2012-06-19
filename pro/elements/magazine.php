@@ -166,17 +166,22 @@ $box_no = 3;
                                             'post__not_in'  => $exclude_posts
                                         )
                                     );
+				if($wp_query ->post_count <= 6 && $box_no == 3)
+				{
+					$box_no = 2;
+				}
+			
 			?>
 			
 			<div id="content" class="<?php if($box_no == 2) echo $content_grid; else if($box_no == 3) echo "span12" ?>">
 				<div class="row-fluid">
 					
 					<?php
+						/* Initializing counters. */
 						$counter_post = 0; 
 						$counter_box = 0;
 						
-					if (have_posts()) : while (have_posts()) : the_post();  
-					
+					if (have_posts()) : while (have_posts()) : the_post();
 						if( $counter_post < 2*$box_no )
 						{ ?>
 							<div class="post_container box_post <?php if($box_no == 2) echo "span6" ; else if($box_no == 3) echo "span4" ?> ">            
