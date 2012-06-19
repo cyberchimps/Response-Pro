@@ -55,6 +55,17 @@ $terms2 = get_terms('category', 'hide_empty=0');
         	$blogoptions[$term->slug] = $term->name;
         }
 
+/*  Checking whether "the-events-calendar" plugin is installed or not */
+$plugins = get_plugins() ;
+
+if(isset($plugins["the-events-calendar/the-events-calendar.php"]))  /* plugin is installed */
+{
+	$install_link = "The plugin is allready installed";
+}	
+else
+{		/* plugin is not installed. Display link to install plugin. */
+	$install_link = "<a href='".  wp_nonce_url('themes.php?page=install-required-plugins&plugin=the-events-calendar&plugin_name=the-events-calendar&plugin_source=repo&tgmpa-install=install-plugin', 'tgmpa-install') ."'>Click here to install</a>";
+}	
 
 $options
 	->section(__('Welcome', 'response-admin'))
@@ -245,7 +256,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 	->section(__('Banners',  'response-admin'))
 		->info('Placeholder for Banners/Affilaite info. ')
 	->section(__('Events',  'response-admin'))
-		->info("Info about events calendar will go here<br/><a href='".  wp_nonce_url('themes.php?page=install-required-plugins&plugin=the-events-calendar&plugin_name=the-events-calendar&plugin_source=repo&tgmpa-install=install-plugin', 'tgmpa-install') ."'>Click here to install</a>")
+		->info("Info about events calendar will go here<br/>". $install_link)
 	->section(__('Import / Export',  'response-admin'))
 		->open_outersection()
 			->export(__('Export Settings', 'response-admin'))
