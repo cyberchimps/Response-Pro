@@ -10,7 +10,7 @@
 /******************************************** CAROUSEL **************************************************************/
 /********************************************************************************************************************/
 
-/* Elastislide Style */
+/* =========================== Elastislide Style ======================== */
 
 .es-carousel-wrapper{
 	background: #fff;
@@ -181,13 +181,13 @@
 #box_container ul {
 	list-style: none;
 }
-#box2.four.columns { 
+#box2.span4 { 
 	margin-left: 2.3%;
 }
-#box3.four.columns {
+#box3.span4 {
   margin-left:2.1%;
 }
-#box1.four.columns, #box2.four.columns, #box3.four.columns {
+#box1.span4, #box2.span4, #box3.span4 {
   width: 31.7%;
 }
 .box-widget-title {
@@ -217,7 +217,7 @@
 	margin-bottom: 15px;
 }
 @-moz-document url-prefix() {
-	#box2.four.columns, #box3.four.columns {
+	#box2.span4, #box3.span4 {
     margin-left: 2.1%;
   }
 #box3 {
@@ -326,14 +326,15 @@ div.timer {
   z-index: 2; 
   font-size: 18px;
 }
-#gallery li.three.columns {
-  margin-right: 0px; 
-  margin-left: 4.4%;}
-#gallery li.four.columns {
+#gallery li.span3 {
   margin-right: 0px; 
   margin-left: 4.4%;
 }
-#gallery li.six.columns {
+#gallery li.span3 {
+  margin-right: 0px; 
+  margin-left: 4.4%;
+}
+#gallery li.span3 {
   margin-right: 0px;
   margin-left: 4.4%;
 }
