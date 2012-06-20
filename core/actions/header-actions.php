@@ -193,7 +193,9 @@ global $themeslug, $options; //Call global variables
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<link href='//fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' /> <?php
+<link href='//fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
+<link rel="apple-touch-icon" href="<?php bloginfo( 'template_url' ); ?>/apple-touch-icon.png"/>
+ <?php
 }
 
 
