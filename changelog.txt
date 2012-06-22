@@ -2,6 +2,10 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.3 (06-15-12)
+-API Update fix.
+
+
 Version 1.1.2 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme().
 -Fixed bug with breadcrumbs.
