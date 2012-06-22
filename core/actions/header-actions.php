@@ -350,19 +350,58 @@ function response_nav() {
 		<div class="container-fluid">
 			<div id="menu">
 			<div class="row-fluid">
-				<div id="nav" class="span12">
-			
-		    <?php wp_nav_menu( array(
-		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
-		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
-		    'items_wrap' => '<ul id="nav_menu">%3$s</ul>',
-			    )
-			);
-	    	?>
+				<div class="span12">
+					<!-- Mobile Navigation & Search -->
+          <div class="visible-phone" id="mobile-nav">
+          	<a href="#mobile-search-modal" class="mobile-search-button" data-toggle="modal"></a>
+            <a href="#mobile-nav-modal" class="mobile-nav-button" data-toggle="modal"></a>
+          </div><!-- visible phone -->	
+            <div id="mobile-nav-modal" class="modal hide fade" style="display: none;">
+            	<div class="modal-header">
+            		<button class="close" data-dismiss="modal">×</button>
+            			<h3>Navigation</h3>
+            	</div>
+								 <?php wp_nav_menu( array(
+										'container' => 'nav',
+										'theme_location' => 'mobile-menu', // Setting up the location for the main-menu, Main Navigation.
+										'fallback_cb' => 'wp_page_menu', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+										'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
+											)
+									);
+								 ?>
+                <div class="modal-footer">
+    							<a href="#" class="btn" data-dismiss="modal">Close</a>
+								</div>
+							</div><!-- mobile nav modal -->
+              
+              <!-- Search Modal Window -->
+              <div id="mobile-search-modal" class="modal hide fade" style="display: none;">
+            	<div class="modal-header">
+            		<button class="close" data-dismiss="modal">×</button>
+            			<h3>Search</h3>
+            	</div>
+              	<div class="modal-body">
+                	<?php get_search_form(); ?>
+                </div>
+             <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+              </div>
+            </div><!-- mobile search modal -->
+          <!-- End Mobile Phone Navigation & Search -->
+          <!-- Start Normal Navigation -->
+          <div id="nav"class="hidden-phone">
+          	<?php wp_nav_menu( array(
+                'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
+                'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
+                'items_wrap' => '<ul id="nav_menu">%3$s</ul>',
+                  )
+              );
+                ?>
+          </div>
    				</div>
 			</div>
 		</div>
-		</div>
+    </div>
 		
  <?php
 }

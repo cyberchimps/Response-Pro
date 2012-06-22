@@ -101,10 +101,10 @@ function response_scripts() {
 	wp_register_script( 'event-swipe-move' ,$path.'/js/jquery.event.move.js');
 	wp_register_script( 'event-swipe' ,$path.'/js/jquery.event.swipe.js');
 	wp_register_script( 'swipe' ,$path.'/js/swipe.js');
-	wp_register_script( 'bootstrap' ,$path.'/js/bootstrap/bootstrap.js');
+	wp_register_script( 'bootstrap' ,$path.'/bootstrap/js/bootstrap.min.js');
 	wp_register_script( 'orbit' ,$path.'/js/jquery.orbit.js');
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
-	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+	/*wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');*/
 	wp_register_script( 'slimbox' ,$path.'/js/jquery.slimbox.js');
 	wp_register_script( 'jcarousel' ,$path.'/js/jcarousel/jquery.jcarousel.min.js');    
 	wp_register_script( 'eventajax' ,$path.'/js/eventajax.js');
@@ -115,7 +115,7 @@ function response_scripts() {
 	wp_enqueue_script ('bootstrap');
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('menu');
-	wp_enqueue_script ('mobilemenu');
+	/*wp_enqueue_script ('mobilemenu');*/
 	wp_enqueue_script ('slimbox');
 	wp_enqueue_script ('jcarousel');
 	wp_enqueue_script ('eventajax');    

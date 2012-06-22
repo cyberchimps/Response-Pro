@@ -26,7 +26,7 @@ if ( !defined('ABSPATH')) exit;
 	get_header(); // call header
 
 ?>
-
+<div class="row-fluid">
 		<!--Begin response_before_content_sidebar hook-->
 			<?php response_before_content_sidebar(); ?>
 		<!--End response_before_content_sidebar hook-->
