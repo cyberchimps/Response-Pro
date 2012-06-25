@@ -950,113 +950,104 @@ img.size-full {
 }
 
 /************************** Search ****************************/
-
+    
 .searchform {
   position: relative;
-    width: 190px;
-    padding: 5px;
-    margin: 0 auto;
-    background: #DCDCDC;
-    border-radius: 5px;
-}
- 
-/* Form text input */
- 
+  width: 190px;
+  padding: 5px;
+  margin: 0 auto;
+  background: #DCDCDC;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+} 
 .searchform input {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 135px;
-    height: 40px;
-    margin: 0;
-    padding: 0px 20px 0 5px;
-    border: 0;
-    background: #eee;
-    border-radius: 3px 0 0 3px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);      
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 135px;
+  height: 40px;
+  margin: 0;
+  padding: 0px 20px 0 5px;
+  border: 0;
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);      
 }
- 
 .searchform input:focus {
-    outline: 0;
-    background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  outline: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 }
- 
 .searchform input::-webkit-input-placeholder {
-   color: #999;
-   font-weight: normal;
-   font-style: italic;
-}
- 
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+} 
 .searchform input:-moz-placeholder {
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
-}
- 
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+} 
 .searchform input:-ms-input-placeholder {
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
 }    
- 
-/* Form submit button */
 .searchform button {
-    overflow: visible;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    background: #0085CF;
-    background-image: url('../images/magnify2.png');
-    background-repeat: no-repeat;
-    background-position: 7px 5px;
-    border-radius: 0 3px 3px 0;      
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
-}   
-   
+  overflow: visible;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #0085CF;
+  background-image: url('../images/magnify2.png');
+  background-repeat: no-repeat;
+  background-position: 7px 5px;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  filter: dropshadow(color=#666666, offx=0, offy=-1);      
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2); 
+  box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}     
 .searchform button:hover{     
-    background: #5892B8;
-    background-image: url('../images/magnify2.png');
-    background-repeat: no-repeat;
-    background-position: 7px 5px;
-}   
-   
+  background: #5892B8;
+  background-image: url('../images/magnify2.png');
+  background-repeat: no-repeat;
+  background-position: 7px 5px;
+}    
 .searchform button:active,
 .searchform button:focus{   
-    background: #0085CF;
-    outline: 0;   
-}
- 
+  background: #0085CF;
+  outline: 0;   
+} 
 .searchform button:before { /* left arrow */
-    content: '';
-    position: absolute;
-    border-width: 8px 8px 8px 0;
-    border-style: solid solid solid none;
-    border-color: transparent #0085CF transparent;
-    top: 12px;
-    left: -6px;
-}
- 
+  content: '';
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent #0085CF transparent;
+  top: 12px;
+  left: -6px;
+} 
 .searchform button:hover:before{
-    border-right-color: #5892B8;
+  border-right-color: #5892B8;
 }
- 
 .searchform button:focus:before,
 .searchform button:active:before{
-        border-right-color: #0085CF;
+  border-right-color: #0085CF;
 }      
- 
 .searchform button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }    
 
 /********************************************************************************************************************/
