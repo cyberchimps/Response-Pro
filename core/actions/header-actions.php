@@ -376,16 +376,8 @@ function response_nav() {
               
               <!-- Search Modal Window -->
               <div id="mobile-search-modal" class="modal hide fade" style="display: none;">
-            	<div class="modal-header">
             		<button class="close" data-dismiss="modal">×</button>
-            			<h3>Search</h3>
-            	</div>
-              	<div class="modal-body">
-                	<?php get_search_form(); ?>
-                </div>
-             <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-              </div>
+              	<?php get_search_form(); ?>
             </div><!-- mobile search modal -->
           <!-- End Mobile Phone Navigation & Search -->
           <!-- Start Normal Navigation -->

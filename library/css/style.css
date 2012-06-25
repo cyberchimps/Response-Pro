@@ -347,24 +347,20 @@ h1.description, h1.sitename {
   width: 40px;
   background: url( '../images/mobilemagnify.png' ) no-repeat 0 0;
 }
-#mobile-search-modal .searchform {
-  height: auto;
-  width: 90%;
+#mobile-search-modal.modal {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+#mobile-search-modal button.close {
+  background: #FFFFFF;
   padding: 5px;
+  border-radius: 50%;
+  opacity: 1;
 }
-#mobile-search-modal .searchform input.s {
-  color: #999;
-  font-size: 16px;
-  line-height: 20px;
-  width: 85%;
-  padding: 10px!important;
-  margin: 5px 5px 5px 25px;
+#mobile-search-modal button.close:hover {
+  opacity: 0.75;
 }
-#mobile-search-modal .searchform #magnify {
-  float: left;
-  margin: 8px 0 0 5px;
-}
-
 /* ================================== Menu and Nav =========================================== */
 
 #menu {
@@ -956,46 +952,112 @@ img.size-full {
 /************************** Search ****************************/
 
 .searchform {
-	padding: 0;
-	margin: 7px 5px 5px 10px;
-	height: 30px;
-	border: 1px solid #aaa;
-	background: #fff;
-	margin-right: 20px;
+  position: relative;
+    width: 190px;
+    padding: 5px;
+    margin: 0 auto;
+    background: #DCDCDC;
+    border-radius: 5px;
 }
-#sidebar .searchform {
-  float: none;
+ 
+/* Form text input */
+ 
+.searchform input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 135px;
+    height: 40px;
+    margin: 0;
+    padding: 0px 20px 0 5px;
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);      
 }
-.center .searchform {
-  float:none;
+ 
+.searchform input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 }
-#morefoot .searchform {
-  float:left;
+ 
+.searchform input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
 }
-.searchform .s {
-	margin:0;
-	border: none;
-	margin: 3px 2px 2px 20px;
-	font-size: 12px;
-	height: 14px;
-	width:	130px;
-	color: #333;
-	overflow: hidden;
+ 
+.searchform input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
 }
-#magnify {
-  float:left;
-  position:absolute;
-  margin: 5px 0 0 5px;
+ 
+.searchform input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}    
+ 
+/* Form submit button */
+.searchform button {
+    overflow: visible;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #0085CF;
+    background-image: url('../images/magnify2.png');
+    background-repeat: no-repeat;
+    background-position: 7px 5px;
+    border-radius: 0 3px 3px 0;      
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}   
+   
+.searchform button:hover{     
+    background: #5892B8;
+    background-image: url('../images/magnify2.png');
+    background-repeat: no-repeat;
+    background-position: 7px 5px;
+}   
+   
+.searchform button:active,
+.searchform button:focus{   
+    background: #0085CF;
+    outline: 0;   
 }
-#magnify {
-  margin: 0 0 0 5px\0/IE8+9; /* IE8+9  */
+ 
+.searchform button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #0085CF transparent;
+    top: 12px;
+    left: -6px;
 }
-.searchform .s:focus {
-  outline:0; border:none;
+ 
+.searchform button:hover:before{
+    border-right-color: #5892B8;
 }
-.searchform .searchsubmit {
-  display:none;
-}
+ 
+.searchform button:focus:before,
+.searchform button:active:before{
+        border-right-color: #0085CF;
+}      
+ 
+.searchform button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}    
 
 /********************************************************************************************************************/
 /******************************************** FOOTER ****************************************************************/
