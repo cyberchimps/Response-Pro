@@ -381,7 +381,7 @@ function response_nav() {
             </div><!-- mobile search modal -->
           <!-- End Mobile Phone Navigation & Search -->
           <!-- Start Normal Navigation -->
-          <div id="nav"class="hidden-phone">
+          <div id="nav" class="hidden-phone">
           	<?php wp_nav_menu( array(
                 'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
                 'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
