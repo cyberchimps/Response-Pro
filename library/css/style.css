@@ -354,7 +354,8 @@ h1.description, h1.sitename {
 }
 #mobile-search-modal button.close {
   background: #FFFFFF;
-  padding: 5px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   opacity: 1;
 }
@@ -965,7 +966,7 @@ img.size-full {
   top: 0;
   left: 0;
   width: 135px;
-  height: 40px;
+  height: 30px;
   margin: 0;
   padding: 0px 20px 0 5px;
   border: 0;
@@ -1003,14 +1004,15 @@ img.size-full {
   border: 0;
   padding: 0;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   color: #fff;
   text-transform: uppercase;
   background: #0085CF;
   background-image: url('../images/magnify2.png');
   background-repeat: no-repeat;
-  background-position: 7px 5px;
+  background-position: 5px 5px;
+  background-size: 20px 20px;
   -webkit-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
   filter: dropshadow(color=#666666, offx=0, offy=-1);      
@@ -1022,7 +1024,7 @@ img.size-full {
   background: #5892B8;
   background-image: url('../images/magnify2.png');
   background-repeat: no-repeat;
-  background-position: 7px 5px;
+  background-position: 5px 5px;
 }    
 .searchform button:active,
 .searchform button:focus{   
@@ -1035,7 +1037,7 @@ img.size-full {
   border-width: 8px 8px 8px 0;
   border-style: solid solid solid none;
   border-color: transparent #0085CF transparent;
-  top: 12px;
+  top: 8px;
   left: -6px;
 } 
 .searchform button:hover:before{

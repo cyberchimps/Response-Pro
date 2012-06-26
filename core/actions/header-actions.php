@@ -356,7 +356,7 @@ function response_nav() {
           	<a href="#mobile-search-modal" class="mobile-search-button" data-toggle="modal"></a>
             <a href="#mobile-nav-modal" class="mobile-nav-button" data-toggle="modal"></a>
           </div><!-- visible phone -->	
-            <div id="mobile-nav-modal" class="modal hide fade" style="display: none;">
+            <div id="mobile-nav-modal" class="modal hide fade in" style="display: none;">
             	<div class="modal-header">
             		<button class="close" data-dismiss="modal">×</button>
             			<h3>Navigation</h3>
@@ -375,13 +375,13 @@ function response_nav() {
 							</div><!-- mobile nav modal -->
               
               <!-- Search Modal Window -->
-              <div id="mobile-search-modal" class="modal hide fade" style="display: none;">
+              <div id="mobile-search-modal" class="modal hide fade in" style="display: none;">
             		<button class="close" data-dismiss="modal">×</button>
               	<?php get_search_form(); ?>
             </div><!-- mobile search modal -->
           <!-- End Mobile Phone Navigation & Search -->
           <!-- Start Normal Navigation -->
-          <div id="nav"class="hidden-phone">
+          <div id="nav" class="hidden-phone">
           	<?php wp_nav_menu( array(
                 'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
                 'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
