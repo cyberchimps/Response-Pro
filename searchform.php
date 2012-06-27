@@ -29,5 +29,5 @@ if ( !defined('ABSPATH')) exit;
 
 <form method="get" class="searchform" action="<?php echo home_url(); ?>/">
 	<input type="text" name="s" class="s" value="<?php printf( __( 'Search', 'response' )); ?>" id="searchsubmit" onfocus="if (this.value == 'Search') this.value = '';" />
-	<button type="submit" class="searchsubmit" value="Search" />
+	<button type="submit" class="searchsubmit" value="Search"></button>
 </form>
