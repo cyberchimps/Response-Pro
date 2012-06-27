@@ -378,7 +378,7 @@ function response_nav() {
               
               <!-- Search Modal Window -->
               <div id="mobile-search-modal" class="modal hide fade in" style="display: none;">
-            		<button class="close" data-dismiss="modal">×</button>
+            		<button class="close" data-dismiss="modal"></button>
               	<?php get_search_form(); ?>
             </div><!-- mobile search modal -->
           <!-- End Mobile Phone Navigation & Search -->
