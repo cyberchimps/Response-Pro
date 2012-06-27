@@ -127,6 +127,7 @@ $options
 				->checkbox($themeslug.'_custom_logo', __('Custom Logo', 'response-admin') , array('default' => true))
 			->upload($themeslug.'_logo', __('Logo', 'response-admin'), array('default' => array('url' => TEMPLATE_URL . '/library/images/responseprologo.png')))
 			->upload($themeslug.'_favicon', __('Custom Favicon', 'response-admin'))
+			->upload($themeslug."_apple_touch", "Apple Touch Icon", array('default' => array('url' => TEMPLATE_URL . '/library/images/apple-icon.png')))
 		->subsection_end()
 		->subsection(__('Social', 'response-admin'))
 			->images($themeslug.'_icon_style', __('Icon set', 'response-admin'), array( 'options' => array('legacy' => TEMPLATE_URL . '/library/images/social/thumbs/icons-classic.png', 'default' =>
