@@ -310,6 +310,13 @@ h1.description, h1.sitename {
   height:auto;
   border: none;
 }
+#mobile-nav-modal.modal {
+  position: absolute;
+	top: 25%;
+  left: 10%;
+  margin: 0;
+  width: 80%; 
+}
 .modal-header {
   background-color: #F5F5F5;
   -webkit-border-radius: 5px 5px 0px 0px;
@@ -348,12 +355,19 @@ h1.description, h1.sitename {
   background: url( '../images/mobilemagnify.png' ) no-repeat 0 0;
 }
 #mobile-search-modal.modal {
+  top: 35%;
+  left: 10%;
   background: transparent;
   border: none;
   box-shadow: none;
+  margin: 0;
+  width: 280px;
 }
 #mobile-search-modal button.close {
+  float: right;
   background: #FFFFFF;
+  padding: 0;
+  margin: 0;
   height: 20px;
   width: 20px;
   border-radius: 50%;
