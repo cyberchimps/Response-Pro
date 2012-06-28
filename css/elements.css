@@ -139,7 +139,8 @@
 #box2.four.columns { margin-left:2.3%;}
 #box3.four.columns { margin-left:2.1%;}
 
-#box1.four.columns, #box2.four.columns, #box3.four.columns {width: 31.7%;}
+#box1.four.columns, #box2.four.columns {width: 31.7%;}
+#box3.four.columns {width: 31%;}
 
 .box-widget-title {
 	color: #222;
