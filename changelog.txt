@@ -2,9 +2,14 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.4 (07-06-12)
+-Twitter embed fix.
+-Fixed dropping sidebars
+-Condition for 3.3 and below.
+-3.4 API Update fix.
+
 Version 1.1.3 (06-15-12)
 -API Update fix.
-
 
 Version 1.1.2 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme().
