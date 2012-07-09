@@ -103,7 +103,6 @@ $options
 			->color($themeslug.'_posttitle_color', __('Post Title Color', 'response-admin'))
 		->subsection_end()
 			->open_outersection()
-				->checkbox($themeslug.'_lazy_load', __('LazyLoad', 'response-admin'))
 				->checkbox($themeslug.'_responsive_video', __('Responsive Videos', 'response-admin'))
 			->close_outersection()
 			->open_outersection()

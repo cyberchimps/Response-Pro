@@ -473,22 +473,6 @@ function carousel_columns_display($carousel_columns, $post_id){
 	}
 }
 
-function response_lazy_load() {
-	global $root;
-    $placeholder = "$root/library/images/grey.gif";
-    echo <<<EOF
-<script type="text/javascript">
-	jQuery(document).ready(function($){
-  	jQuery("img").not("#orbitDemo img, .es-carousel img, #credit img").lazyload({
-    	effect:"fadeIn",
-    	placeholder: "$placeholder"
-  	});
-});
-</script>
-EOF;
-}
-//add_action('wp_head', 'response_lazy_load');
-
 /**
 * Add Google Analytics support based on theme option.
 */ 
