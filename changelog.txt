@@ -2,7 +2,7 @@ Response Pro Changelog
 
 ****************************
 
-Version 1.1.4 (07-06-12)
+Version 1.1.4 (07-09-12)
 -Twitter embed fix.
 -Fixed dropping sidebars
 -Condition for 3.3 and below.
