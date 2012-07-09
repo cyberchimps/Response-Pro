@@ -48,15 +48,8 @@ if ( !defined('ABSPATH')) exit;
 	<!--Begin response_after_content_sidebar hook-->
 		<?php response_after_content_sidebar(); ?>
 	<!--End response_after_content_sidebar hook-->
-	
-<div class="push"></div>
 
 </div> <!-- End of row -->
 </div> <!-- End of container -->
-</div> <!-- End of wrapper -->
-
-<!-- For sticky footer -->
-<div class="push"></div>  
-</div>	<!-- End of wrapper -->
 
 <?php get_footer(); ?>

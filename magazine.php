@@ -308,9 +308,7 @@ get_header();  //Display Header
 			<!--End response_after_content_sidebar hook-->
 
 		</div>
-
-<div class="push"></div>
 </div> <!-- End of row -->
 </div> <!-- End of container -->
-</div> <!-- End of wrapper -->
+
 <?php get_footer(); //Dsiplay footer  ?>  

@@ -32,10 +32,8 @@ if ( !defined('ABSPATH')) exit;
 			}
 		}
 	?>
-	
 
-<div class="push"></div>
 </div> <!-- End of row -->
 </div> <!-- End of container -->
-</div> <!-- End of wrapper -->
+
 <?php get_footer(); ?>

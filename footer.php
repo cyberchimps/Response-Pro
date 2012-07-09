@@ -23,7 +23,9 @@ if ( !defined('ABSPATH')) exit;
 	global $options, $themeslug // call globals
 ?>
 	
-
+<!-- For sticky footer -->
+<div class="push"></div>  
+</div>	<!-- End of wrapper -->
 
 	<?php
 		foreach(explode(",", $options->get($themeslug.'_footer_section_order')) as $fn) {
