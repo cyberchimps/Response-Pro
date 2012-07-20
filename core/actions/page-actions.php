@@ -37,9 +37,7 @@ function response_page_element_content() {
 	
 	response_sidebar_init();
 	
-	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
-
-
+	$hidetitle = get_post_meta($post->ID, $themeslug.'_hide_page_title' , true);
 ?>
 <div class="row-fluid">
 	<!--Begin @response before content sidebar hook-->
@@ -55,7 +53,7 @@ function response_page_element_content() {
 			<div class="post_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
-				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
+				<?php if ($hidetitle == "1" OR $hidetitle == ""): ?>
 				
 
 					<h2 class="posts_title"><?php the_title(); ?></h2>
