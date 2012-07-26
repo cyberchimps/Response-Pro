@@ -55,7 +55,7 @@ function response_carousel_element_content() {
 	<div id="carousel" class="es-carousel-wrapper">
 		<div class="es-carousel">
 			<?php
-			$args = array ('post_type' => $themeslug.'_carousel_images', 'showposts' => 50, true, 'carousel_categories' => $customcategory );
+			$args = array ('post_type' => $themeslug.'_carousel_images', 'showposts' => -1, true, 'carousel_categories' => $customcategory );
 			$carousel_posts = get_posts( $args );
 			
 			if ( $carousel_posts ) : ?>
