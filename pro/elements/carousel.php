@@ -88,7 +88,7 @@ function response_carousel_element_content() {
 						while ($i<9) : 
 					?>	
 						<li>
-							<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i; ?>'/></a>
+							<a href='<?php echo $default; ?>' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i; ?>'/></a>
 							<div class='carousel_caption'>Title <?php echo $i; ?></div>
 						</li><?php
 					$i++;
@@ -107,6 +107,18 @@ function response_carousel_element_content() {
 						minItems 	: 5
 					});
 				});
+				
+			jQuery(document).ready(function ($) {
+				$(function() {
+					$('.es-carousel a').lightBox({
+						imageLoading:	'wp-content/themes/response-pro/library/images/lightbox/lightbox-ico-loading.gif',		
+						imageBtnPrev:	'wp-content/themes/response-pro/library/images/lightbox/lightbox-btn-prev.gif',			
+						imageBtnNext:	'wp-content/themes/response-pro/library/images/lightbox/lightbox-btn-next.gif',			
+						imageBtnClose:	'wp-content/themes/response-pro/library/images/lightbox/lightbox-btn-close.gif',		
+						imageBlank:		'wp-content/themes/response-pro/library/images/lightbox/lightbox-blank.gif',			
+					});
+				});
+			});
 			</script>
 		</div>
 	</div>
