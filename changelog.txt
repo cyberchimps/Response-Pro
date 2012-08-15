@@ -2,6 +2,9 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.5 (08-13-12)
+-Chrome sidebar fix.
+
 Version 1.1.4 (07-09-12)
 -Twitter embed fix.
 -Fixed dropping sidebars
