@@ -111,6 +111,7 @@ $options
 				->subsection("Header Options")
 				->checkbox($themeslug."_custom_logo", "Custom Logo" , array('default' => true))
 				->upload($themeslug."_logo", "Logo", array('default' => array('url' => TEMPLATE_URL . '/images/responselogo.png')))
+				->text($themeslug."_logo_url", "Logo Custom URL", array('default' => home_url()))
 				->upload($themeslug."_favicon", "Custom Favicon")
 		->subsection_end()
 		->subsection("Social")

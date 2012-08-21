@@ -447,6 +447,7 @@ require_once ( get_template_directory() . '/includes/update.php' ); // Notify us
 
 // Presstrends
 function presstrends() {
+	$plugin_name = '';
 
 // Add your PressTrends and Theme API Keys
 $api_key = 'zwhgyc1lnt56hki8cpwobb47bblas4er226b';
