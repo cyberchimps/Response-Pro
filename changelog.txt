@@ -2,6 +2,11 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.7 (09-04-12)
+-Fixed comments error.
+-On 2 sidebars left fixed dropping sidebar.
+-Fixed responsive slider in IE and Firefox.
+
 Version 1.1.6 (08-21-12)
 -Added custom url to logo.
 -Updated readme.txt. 
