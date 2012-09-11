@@ -1,4 +1,4 @@
-#Copyright (C) 2012
+# Copyright (C) 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Response 1.0\n"
@@ -9,20 +9,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Textdomain-Support: yes\n"
 "PO-Revision-Date: \n"
-"Last-Translator: CoMPa Technology - T Scholten <info@NOSPAM@compa.nl>\n"
+"Last-Translator: \n"
 "Language-Team: CoMPa Technology <info@compa.nl>\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
 "X-Poedit-Basepath: .\n"
+"Language: de_DE\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ response
 #: core/actions/archive-actions.php:36
 msgid "Archive for the &#8216;"
-msgstr "Archiv von die &#8216;"
+msgstr "Archiv für die &#8216;"
 
 # @ response
 #: core/actions/archive-actions.php:36
@@ -32,7 +32,7 @@ msgstr "&#8217; Kategorie:"
 # @ response
 #: core/actions/archive-actions.php:39
 msgid "Posts Tagged &#8216;"
-msgstr "Getaggte beiträgen &#8216;"
+msgstr "Getaggte Beiträge &#8216;"
 
 # @ response
 #: core/actions/archive-actions.php:39
@@ -40,8 +40,7 @@ msgid "&#8217;:"
 msgstr ""
 
 # @ response
-#: core/actions/archive-actions.php:42
-#: core/actions/archive-actions.php:45
+#: core/actions/archive-actions.php:42 core/actions/archive-actions.php:45
 msgid "Archive for"
 msgstr "Archiv von"
 
@@ -97,10 +96,9 @@ msgstr "Letzte Beiträgen"
 
 # @ response
 # @ response
-#: core/actions/footer-actions.php:46
-#: sidebar.php:26
+#: core/actions/footer-actions.php:46 sidebar.php:26
 msgid "Archives"
-msgstr "Archiv"
+msgstr "Archive"
 
 # @ response
 #: core/actions/footer-actions.php:53
@@ -108,34 +106,33 @@ msgid "Links"
 msgstr ""
 
 # @ response
-#: core/actions/footer-actions.php:60
-#: core/actions/footer-actions.php:64
-#: sidebar.php:40
-#: sidebar.php:44
+#: core/actions/footer-actions.php:60 core/actions/footer-actions.php:64
+#: sidebar.php:40 sidebar.php:44
 msgid "WordPress"
 msgstr ""
 
 # @ response
-#: core/actions/footer-actions.php:64
-#: sidebar.php:44
+#: core/actions/footer-actions.php:64 sidebar.php:44
 msgid "http://wordpress.org/"
 msgstr ""
 
 # @ response
-#: core/actions/footer-actions.php:64
-#: sidebar.php:44
-msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr "Bereitgestellt von WordPress, ein modern semantisches persönliches publikations platform."
+#: core/actions/footer-actions.php:64 sidebar.php:44
+msgid ""
+"Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr ""
+"Bereitgestellt von WordPress, ein modern semantisches persönliches "
+"publikations platform."
 
 # @ response
 #: core/actions/global-actions.php:43
 msgid "Published on"
-msgstr "Ausgestellt am"
+msgstr "Verfasst am"
 
 # @ response
 #: core/actions/global-actions.php:44
 msgid "by"
-msgstr "vom"
+msgstr "von"
 
 # @ response
 #: core/actions/global-actions.php:45
@@ -165,12 +162,7 @@ msgstr "Seite"
 # @ response
 #: functions.php:85
 msgid "Your comment is awaiting moderation."
-msgstr "Ihren Kommentar warted auf Moderation"
-
-# @ response
-#: sidebar.php:19
-msgid "Pages"
-msgstr "Seiten"
+msgstr "Dein Kommentar wartet auf Moderation."
 
 # @ response
 #: sidebar.php:33
@@ -180,7 +172,7 @@ msgstr "Kategorien"
 # @ response
 #: sidebar.php:50
 msgid "Subscribe"
-msgstr "Zeichnen"
+msgstr "Abonnieren"
 
 # @ response
 #: sidebar.php:52
@@ -191,3 +183,48 @@ msgstr "Einträge (RSS)"
 #: sidebar.php:53
 msgid "Comments (RSS)"
 msgstr "Kommentare (RSS)"
+
+# @ response
+#: searchform.php:15
+msgid "Search"
+msgstr "Suche"
+
+# @ default
+#: functions.php:89
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+# @ response
+#: core/actions/pagination-actions.php:49
+msgid "of"
+msgstr "von"
+
+# @ response
+#: core/actions/pagination-actions.php:50
+msgid "« First"
+msgstr "« Erste"
+
+# @ response
+#: core/actions/pagination-actions.php:51
+msgid "‹ Previous"
+msgstr "‹ Vorherige"
+
+# @ response
+#: core/actions/pagination-actions.php:61
+msgid "Next ›"
+msgstr "Nächste ›"
+
+# @ response
+#: core/actions/pagination-actions.php:62
+msgid "Last »"
+msgstr "Letzte »"
+
+# @ response
+#: core/actions/pagination-actions.php:99
+msgid "Pages:"
+msgstr "Seiten:"
+
+# @ response
+#: sidebar.php:19
+msgid "Pages"
+msgstr "Seiten"
