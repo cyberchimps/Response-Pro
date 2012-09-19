@@ -2,6 +2,9 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.8 (09-19-12)
+-Updated German translation.
+
 Version 1.1.7 (09-04-12)
 -Fixed comments error.
 -On 2 sidebars left fixed dropping sidebar.
