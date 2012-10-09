@@ -29,6 +29,7 @@ function response_carousel_section_content() {
 /* Define variables. */	
 
     $tmp_query = $wp_query; 
+		$out = '';
 	$root = get_template_directory_uri(); 
 	$default = "$root/images/pro/carousel.jpg";
 	
@@ -70,22 +71,15 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 /* Initialize slide creation */	
 
-	while (have_posts() && $i<$no) : 
+	while (have_posts()) : 
 
 		the_post(); 
 
 	    	/* Post-specific variables */	
 
 	    	$image 		= get_post_meta($post->ID, 'post_image' , true);  
-	    	$realtitle 		= get_the_title();  
-	    	$link 		= get_post_meta($post->ID, 'post_url' , true);
-	    	
-	    	if ($realtitle != "Untitled") {
-				$title = get_the_title();
-			}
-			else {
-				$title =  '';
-			}
+	    	$title 		= get_the_title();  
+	    	$link 		= ( get_post_meta($post->ID, 'post_url' , true) == '' ? $image : get_post_meta($post->ID, 'post_url' , true) );
 			
 			if ($image == '') {
 				$image = $default;
@@ -159,26 +153,33 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 /* Begin Carousel javascript */ 
     
-    $out .= <<<OUT
-	<script type="text/javascript">
-			 jQuery(document).ready(function ($) {
-			$('#carousel').elastislide({
-				imageW 		: 145,
-				speed 		: $speed,
-				margin		: 9,
-				minItems 	: 5
+    $out .= "
+	<script type='text/javascript'>
+		jQuery(document).ready(function ($) {
+		$('#carousel').elastislide({
+			imageW 		: 140,
+			speed 		: $speed,
+			margin		: 8,
+			minItems 	: 5
+		});
+		});
+		
+		jQuery(document).ready(function ($) {
+			$('.es-carousel li').each(function() {
+			if( $(this).children('a').attr('href') == $(this).children('a').children('img').attr('src') ) {
+				$(this).children('a').lightBox({
+					imageLoading:			'$root/images/portfolio/lightbox-ico-loading.gif',		
+					imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
+					imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
+					imageBtnClose:			'$root/images/portfolio/lightbox-btn-close.gif',		
+					imageBlank:				'$root/images/portfolio/lightbox-blank.gif'
 			});
+			}
 			});
-			
-		</script>
-OUT;
-
-/* End Carousel javascript */ 
-
-echo $out;
-
-/* END */ 
-?>
+		});
+	</script>"; 
+	
+	echo $out;?>
 
 		</div>
 	</div>
