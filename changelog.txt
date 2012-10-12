@@ -2,6 +2,12 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.9 (10-12-12)
+-Slider posts fix.
+-Quick edit fix.
+-Carousel fixes.
+-PIE fix.
+
 Version 1.1.8 (09-19-12)
 -Updated German translation.
 
