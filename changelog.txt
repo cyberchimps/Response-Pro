@@ -2,6 +2,11 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.10 (10-16-12)
+-Allow \ in custom css.
+-Comments - password page.
+-Slider reverted.
+
 Version 1.1.9 (10-12-12)
 -Slider posts fix.
 -Quick edit fix.
