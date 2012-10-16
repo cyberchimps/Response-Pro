@@ -44,7 +44,7 @@ function response_comments_password_required() {
 */
 function response_comments_loop() { 
 	global $post; ?>
-<?php if ( have_comments() ) : ?>
+<?php if ( have_comments() && ! post_password_required() ) : ?>
 	<div class="comments_container">
 		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
 
@@ -52,6 +52,7 @@ function response_comments_loop() {
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
 		</div>
+    <div class="clear"></div>
 
 		<ol class="commentlist">
 			<?php wp_list_comments('callback=response_comment'); ?>
@@ -61,6 +62,7 @@ function response_comments_loop() {
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
 		</div>
+    <div class="clear"></div>
 		
 	</div><!--end comments_container-->
 	
@@ -75,7 +77,7 @@ function response_comments_loop() {
 	
 <?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+<?php if ( comments_open() && ! post_password_required() ) : ?>
 
 <div class="comments_container">
 
