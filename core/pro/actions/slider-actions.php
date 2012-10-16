@@ -203,9 +203,14 @@ function response_slider_content() {
 
 	    	/* Post-specific variables */	
 				
-				$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-				$post_image = ( $type != 'custom' || $type != '0' ) ? wp_get_attachment_image_src( $post_thumbnail_id, array( $imgwidth, $height ) ) : '';
-	    	$customimage 		= ( $type == 'custom' || $type == '0' ) ? get_post_meta($post->ID, 'slider_image' , true) : $post_image[0];  /* Gets slide custom image from page/post meta option */
+				if( get_post_meta($post->ID, 'slider_image' , true) == '' ) {
+					$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+					$post_image = ( $type != 'custom' || $type != '0' ) ? wp_get_attachment_image_src( $post_thumbnail_id, array( $imgwidth, $height ) ) : '';
+					$customimage 		= $post_image[0];  /* Gets slide custom image from page/post meta option */			
+				}
+				else {
+					$customimage = get_post_meta($post->ID, 'slider_image' , true);
+				}
 	    	$customtext 		= get_post_meta($post->ID, 'slider_caption' , true); /* Gets slide caption from custom slide meta option */
 	    	$customlink 		= get_post_meta($post->ID, 'slider_url' , true); /* Gets link from custom slide meta option */
 	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
