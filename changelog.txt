@@ -2,6 +2,11 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.11 (11-07-12)
+-Google font fix.
+-Added password protection for elements.
+-Removed call to CSS color files.
+
 Version 1.1.10 (10-16-12)
 -Allow \ in custom css.
 -Comments - password page.
