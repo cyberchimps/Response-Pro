@@ -2,6 +2,12 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.12 (11-19-12)
+-Twitter bar link fix.
+-Feed title removed.
+-Custom Post Type search fix.
+-Widget comment hidden fix.
+
 Version 1.1.11 (11-07-12)
 -Google font fix.
 -Added password protection for elements.
