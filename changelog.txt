@@ -2,6 +2,10 @@ Response Pro Changelog
 
 ****************************
 
+Version 1.1.13 (11-19-12)
+
+-New updater installed
+
 Version 1.1.12 (11-19-12)
 -Twitter bar link fix.
 -Feed title removed.
