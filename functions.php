@@ -446,7 +446,7 @@ require_once ( get_template_directory() . '/includes/classy-options-init.php' );
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 // Notify user of theme update on "Updates" page in Dashboard.
-require_once( get_template_directory() . '/inc/update.php' );
+require_once( get_template_directory() . '/includes/update.php' );
 new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 102, basename( get_template_directory() ) );
 
 // Presstrends
