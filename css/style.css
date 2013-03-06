@@ -425,8 +425,26 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	padding-top: 10px;
 }
 
-#afterfootercopyright {text-align: right;}
+#afterfootercopyright {
+	text-align: right;
+}
 
+/* After footer menu*/
+
+#afterfootermenu {
+	text-align: center;
+	padding-bottom: 10px;
+}
+#afterfootermenu ul {
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none; 
+	list-style-image: none; 
+}
+#afterfootermenu li {
+	display: inline; 
+	margin-right: 5px;
+}
 #credit {text-align: left;margin-bottom: 3px;}
 
 /* WordPress Styles  */
